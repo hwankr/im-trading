@@ -1,15 +1,19 @@
-# Local runtime data and temporary PDF renders
-tmp/
+# Private account data, plans and reports (never publish)
 data/
 runs/
 logs/
 backups/
-.venv/
-__pycache__/
-*.pyc
-
-# Credentials and local account configuration
+*.local.json
 .env
 .env.*
 !.env.example
-config/*.local.json
+
+# Local tools and temporary files
+.codex/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+tmp/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "status": "UNVERIFIED",
+  "account_alias": "paper-main",
+  "paper_competition_account_confirmed": null,
+  "cash": {
+    "observed_at": null,
+    "source_report": null,
+    "platform_label": null,
+    "balance_krw": null,
+    "orderable_krw": null
+  },
+  "portfolio": {
+    "observed_at": null,
+    "source_report": null,
+    "holdings": null,
+    "total_equity_krw": null,
+    "official_return_percent": null
+  },
+  "orders": {
+    "observed_at": null,
+    "source_report": null,
+    "open_orders": null
+  },
+  "award_progress": {
+    "observed_at": null,
+    "source_report": null,
+    "official_turnover_percent": null,
+    "official_traded_security_count": null,
+    "official_trading_day_count": null,
+    "official_rank": null
+  },
+  "last_reconciled_report": null,
+  "unresolved": [
+    "최신 앱 계좌 보고와 기존 비공개 기록의 대사가 필요합니다."
+  ]
+}
