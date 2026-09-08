@@ -1,0 +1,15 @@
+# Local runtime data and temporary PDF renders
+tmp/
+data/
+runs/
+logs/
+backups/
+.venv/
+__pycache__/
+*.pyc
+
+# Credentials and local account configuration
+.env
+.env.*
+!.env.example
+config/*.local.json

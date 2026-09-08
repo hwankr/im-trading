@@ -1,0 +1,175 @@
+{
+  "schema_version": "0.2",
+  "implementation_status": "manual_decision_recording",
+  "verified_on": "2026-09-08",
+  "timezone": "Asia/Seoul",
+  "sources": {
+    "manual": {
+      "path": "docs/sources/competition-manual.pdf",
+      "pages": 22,
+      "sha256": "7766f6ad6ab54b9f060600d2d9d223cce75f9b440d1274d4c88231a3d427ded6"
+    },
+    "official_event": {
+      "url": "https://www.imfnsec.com/360.ptx",
+      "inspection_method": "browser_visual_review"
+    }
+  },
+  "competition": {
+    "name": "iM Rookie League! 대구·경북 지역 대학생 모의투자대회",
+    "mode": "paper_trading",
+    "format": "individual_return",
+    "currency": "KRW",
+    "initial_capital_krw": 100000000,
+    "capital_source": "manual:p19",
+    "registration_start": "2026-08-24",
+    "registration_end": "2026-09-28",
+    "competition_start": "2026-09-08",
+    "competition_end": "2026-10-08",
+    "dates_source": "official_event",
+    "final_valuation_at": null
+  },
+  "universe": {
+    "source": "manual:p10",
+    "allowed_markets": ["KRX_KOSPI", "KRX_KOSDAQ"],
+    "allowed_instrument_types": ["stock", "ETF"],
+    "restricted_if_current_price_below_krw": 1000,
+    "restricted_if_total_issued_shares_below": 100000,
+    "restricted_statuses": [
+      "관리종목",
+      "정리매매",
+      "투자주의",
+      "투자경고",
+      "투자위험",
+      "거래정지"
+    ],
+    "restricted_markets": ["KONEX", "K-OTC"],
+    "restricted_instrument_types": ["ETN", "ELW", "single_stock_leveraged_ETF"],
+    "sell_handling_after_restriction_change": null
+  },
+  "orders": {
+    "sources": ["manual:p11", "manual:p12", "manual:p14", "manual:p19"],
+    "allowed_types": ["limit", "market"],
+    "cash_only": true,
+    "unfunded_cash_purchase_allowed": false,
+    "credit_trading_allowed": false,
+    "short_selling_allowed": false,
+    "after_hours_trading_allowed": false,
+    "maximum_order_amount_basis": "platform_security_specific_margin_calculation"
+  },
+  "sessions_as_printed": {
+    "source": "manual:p11",
+    "opening_auction": {"start": "08:30", "end": "09:00"},
+    "continuous": {"start": "09:00", "end": "15:20"},
+    "closing_auction": {"start": "15:20", "end": "15:30"},
+    "reservation_orders": {"start": "15:20", "end": "15:30"},
+    "reservation_behavior": null,
+    "boundary_inclusivity": null,
+    "verified_trading_calendar": null
+  },
+  "concentration": {
+    "source": "manual:p17",
+    "denominator": "initial_capital",
+    "maximum_single_security_fraction": 0.5,
+    "derived_maximum_single_security_amount_krw": 50000000,
+    "position_valuation_basis": null,
+    "pending_order_treatment": null,
+    "passive_price_appreciation_treatment": null
+  },
+  "fees_as_printed": {
+    "source": "manual:p12",
+    "rate_unit": "fraction_of_transaction_value",
+    "exchange_stocks": {
+      "commission_rate": 0.0001,
+      "transaction_tax_rate": 0.0005,
+      "rural_special_tax_rate": 0.0015
+    },
+    "kosdaq_stocks": {
+      "commission_rate": 0.0001,
+      "transaction_tax_rate": 0.002
+    },
+    "ETFs": {
+      "commission_rate": 0.0001,
+      "tax_rate": 0
+    },
+    "commission_application_sides": null,
+    "tax_application_sides": null,
+    "rounding_method": null
+  },
+  "fills_and_settlement": {
+    "sources": ["manual:p14", "manual:p15"],
+    "market_trade_volume_after_order_is_relevant": true,
+    "price_touch_guarantees_full_fill": false,
+    "special_fill_conditions": ["upper_limit_buy", "lower_limit_sell"],
+    "special_fill_formula_as_printed": "floor((actual_filled_volume / total_quoted_quantity) * order_quantity * 0.1)",
+    "special_fill_measurement_window": null,
+    "settlement_label_as_printed": "3일 결제",
+    "settlement_business_day_offset": null,
+    "ipo_opening_auction_orders_allowed": false,
+    "ipo_orders_allowed_after_opening_price_determined": true,
+    "corporate_action_adjustment_time_label": "영업일 19시경",
+    "rights_adjustment_formula_as_printed": "held_quantity_at_ex_rights * (previous_close - ex_rights_price)"
+  },
+  "scoring": {
+    "sources": ["manual:p13", "manual:p17", "manual:p19"],
+    "authority": "official_platform_and_final_review",
+    "valuation_formula_as_printed": "D+1일예수금 + 당일매도금액 - 당일매수금액 + 유가증권평가금액 - 당일수수료및제세금",
+    "return_formula": "(total_valuation - initial_capital) / initial_capital * 100",
+    "cash_field_mapping": null,
+    "tie_breakers": ["higher_official_turnover", "more_official_trading_days"]
+  },
+  "award_requirements": {
+    "sources": ["manual:p17", "manual:p18", "manual:p19"],
+    "all_trade_thresholds_required": true,
+    "minimum_official_turnover_percent": 500,
+    "minimum_official_traded_security_count": 5,
+    "minimum_official_trading_day_count": 5,
+    "negative_return_excluded": true,
+    "turnover_formula": null,
+    "trade_counting_details": null,
+    "minimum_participant_age": 19,
+    "eligible_campus_regions": ["대구", "경북"],
+    "student_or_enrolled_on_leave_required": true,
+    "im_securities_stock_account_required": true,
+    "final_eligibility_review_required": true
+  },
+  "unresolved_ids": ["U01", "U02", "U03", "U04", "U05", "U06", "U07", "U08"],
+  "execution_model": {
+    "basis": "user_conversation:2026-09-08",
+    "mode": "ai_decisions_user_execution",
+    "investment_decision_owner": "ai",
+    "market_research_owner": "ai",
+    "account_observation_owner": "user",
+    "order_entry_owner": "user",
+    "order_amendment_owner": "user",
+    "order_cancellation_owner": "user",
+    "execution_feedback_source": "user_report_of_platform_records",
+    "broker_api_required": false,
+    "broker_api_availability": "not_independently_verified",
+    "operator_availability": "responsive_on_request_during_market_hours",
+    "operator_response_sla_seconds": null,
+    "automated_broker_account_access_enabled": false,
+    "automated_order_transmission_enabled": false,
+    "automated_order_cancellation_enabled": false,
+    "default_new_order_type": "limit",
+    "default_new_order_type_origin": "ai_design_for_manual_entry",
+    "submission_deadline_required": true,
+    "post_submission_open_order_plan_required": true
+  },
+  "runtime_state": {
+    "registered": true,
+    "paper_account_verified": true,
+    "registration_verification_source": "user_confirmation:account-report-0002",
+    "paper_mode_verification_source": "screenshot:account-report-0001",
+    "ai_use_conditions_verified": null,
+    "manual_handoff_rehearsal_completed": false,
+    "initial_account_report_received": true,
+    "latest_account_snapshot_id": "account-snapshot-0003",
+    "cash_orderable_amount_verified": true,
+    "recordset_path": "runs/im-rookie-2026-paper-main",
+    "data_provider": "Npay Securities web; current use limited to pre-open context and reference values",
+    "experiment_started_at": "2026-09-07T23:50:15Z",
+    "latest_decision_id": "decision-0001",
+    "latest_decision_status": "HOLD",
+    "latest_manifest_path": "runs/im-rookie-2026-paper-main/decision-manifest-0001.json"
+  }
+}
