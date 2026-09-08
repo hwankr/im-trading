@@ -447,6 +447,25 @@
       "status": "ready_to_copy",
       "published_at": null,
       "published_url": null
+    },
+    {
+      "id": "2026-09-08-020",
+      "path": "blog/worklogs/2026-09-08-020-progress-commit-push.md",
+      "title": "[AI 모의투자 실험] 기록20. 장중 기록을 GitHub에 동기화하다",
+      "written_on": "2026-09-08",
+      "written_at": "2026-09-08T12:36:05.363151+09:00",
+      "event_date": "2026-09-08",
+      "event_at": "2026-09-08T12:36:05.363151+09:00",
+      "recording_mode": "same_task_git_publish_confirmation",
+      "local_evidence": [
+        "runs/im-rookie-2026-paper-main/operations/git-publish-0002.json"
+      ],
+      "public_sources": [
+        "https://github.com/hwankr/im-trading/commit/e7bb74313398e81739e7af36211ca40745de709f"
+      ],
+      "status": "ready_to_copy",
+      "published_at": null,
+      "published_url": null
     }
   ],
   "publications": [
@@ -512,13 +531,14 @@
         "2026-09-08-016",
         "2026-09-08-017",
         "2026-09-08-018",
-        "2026-09-08-019"
+        "2026-09-08-019",
+        "2026-09-08-020"
       ],
       "status": "in_progress",
       "published_at": null,
       "published_url": null,
-      "operations_content_through": "2026-09-08T12:20:06.830107+09:00",
-      "updated_at": "2026-09-08T12:21:44.312195+09:00"
+      "operations_content_through": "2026-09-08T12:36:05.363151+09:00",
+      "updated_at": "2026-09-08T12:36:05.363151+09:00"
     }
   ],
   "scheduled_automation_scope": "market_review_and_decision_in_existing_task; user_execution_and_user_blog_publication",
