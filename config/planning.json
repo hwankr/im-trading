@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "scope": "planning_policy_only_not_competition_rules",
+  "mode": "fixed_price_plan",
+  "timezone": "Asia/Seoul",
+  "trigger": "explicit_user_request",
+  "request_sessions": [
+    "premarket",
+    "intraday",
+    "postmarket",
+    "non_trading_day"
+  ],
+  "analysis_runs_per_request": 1,
+  "continuous_monitoring": false,
+  "scheduled_reanalysis": false,
+  "automatic_orders_or_alerts": false,
+  "max_new_candidates": 3,
+  "output_order": [
+    "fixed_price_table",
+    "brief_rationale_and_plan_metrics",
+    "sources_and_timestamps"
+  ],
+  "entry": {
+    "order_type": "limit",
+    "prices_per_security": 1,
+    "chase_above_entry": false,
+    "intraday_signal_confirmation_required": false
+  },
+  "exit": {
+    "take_profit_prices_per_security": 1,
+    "stop_trigger_prices_per_security": 1,
+    "quantity_basis": "actual_remaining_sellable_quantity",
+    "time_exit_deadline_required": true,
+    "split_exits": false,
+    "trailing_stop": false,
+    "assume_automatic_stop_or_oco": false
+  },
+  "account_missing_policy": "publish_price_only_with_unknown_quantity_if_price_evidence_sufficient",
+  "confirmed_price_changes": "explicit_recalculation_or_documented_correction_as_new_version",
+  "reenter_after_full_exit": false,
+  "states": [
+    "DRAFT",
+    "READY",
+    "PRICE_ONLY",
+    "HOLD",
+    "BLOCKED"
+  ],
+  "price_validation": "0 < stop_trigger_krw < entry_limit_krw < take_profit_limit_krw",
+  "price_validation_scope": "new_long_entries_only",
+  "metrics_basis": "planned_entry_before_costs_not_realized_pnl",
+  "required_timing_fields": [
+    "generated_at",
+    "information_as_of",
+    "valid_from",
+    "entry_deadline",
+    "cancel_unfilled_at",
+    "exit_deadline"
+  ],
+  "required_source_fields": [
+    "source",
+    "observed_at",
+    "price_type"
+  ],
+  "official_rules_path": "config/competition.json",
+  "account_template_path": "templates/account.json",
+  "plan_template_path": "templates/day.md",
+  "canonical_prompt_path": "prompts/plan.md",
+  "executable_implementation": false
+}
