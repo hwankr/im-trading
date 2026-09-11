@@ -1,30 +1,51 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "scope": "planning_policy_only_not_competition_rules",
-  "mode": "fixed_price_plan",
+  "mode": "fixed_price_low_monitoring_plan",
   "timezone": "Asia/Seoul",
   "trigger": "explicit_user_request",
-  "request_sessions": [
-    "premarket",
-    "intraday",
-    "postmarket",
-    "non_trading_day"
-  ],
+  "request_sessions": ["premarket", "intraday", "postmarket", "non_trading_day"],
   "analysis_runs_per_request": 1,
   "continuous_monitoring": false,
   "scheduled_reanalysis": false,
   "automatic_orders_or_alerts": false,
   "max_new_candidates": 3,
   "output_order": [
-    "fixed_price_table",
+    "triggered_existing_exit_if_any",
+    "fixed_price_table_and_execution_mode",
     "brief_rationale_and_plan_metrics",
     "sources_and_timestamps"
   ],
+  "interaction": {
+    "objective": "reduce_intraday_monitoring_and_repeated_order_changes_not_trading_frequency_itself",
+    "daily_planning_allowed": true,
+    "daily_trading_allowed": true,
+    "weekly_only": false,
+    "trade_required_each_day": false,
+    "proposed_manual_windows_per_trading_day": 1,
+    "example_window_kst": {"start": "15:00", "end": "15:15"},
+    "example_window_is_confirmed_schedule": false,
+    "confirm_executable_window_per_plan": true,
+    "completion_within_one_window_guaranteed": false,
+    "intraday_repeated_quote_or_screenshot_requests_default": false
+  },
+  "holding_policy": {
+    "prefer_multiday_setups": true,
+    "preferred_trading_days": {"min": 2, "max": 5},
+    "preferred_range_is_mandatory": false,
+    "absolute_exit_deadline_required": true,
+    "same_day_round_trip_required": false,
+    "repeated_same_day_round_trips_default": false,
+    "must_review_overnight_gap_event_and_concentration_risk": true,
+    "widen_stop_without_resizing": false
+  },
   "entry": {
     "order_type": "limit",
     "prices_per_security": 1,
     "chase_above_entry": false,
-    "intraday_signal_confirmation_required": false
+    "intraday_signal_confirmation_required": false,
+    "align_entry_and_cancel_with_confirmed_manual_window": true,
+    "assume_overnight_order_carry": false
   },
   "exit": {
     "take_profit_prices_per_security": 1,
@@ -33,37 +54,58 @@
     "time_exit_deadline_required": true,
     "split_exits": false,
     "trailing_stop": false,
-    "assume_automatic_stop_or_oco": false
+    "assume_automatic_stop_or_oco": false,
+    "evaluation_mode_required": true,
+    "new_plan_default_candidate_mode": "scheduled_review",
+    "new_plan_supported_modes": ["scheduled_review", "verified_native_conditional"],
+    "scheduled_review": {
+      "review_times_required": true,
+      "next_review_at_required": true,
+      "user_window_confirmation_required": true,
+      "monitoring_risk_acknowledgement_required": true,
+      "intraday_touch_is_not_automatic_execution": true,
+      "do_not_relabel_preclose_price_as_close": true,
+      "missed_review_action": "reconcile_at_next_actual_check_before_any_new_entry"
+    },
+    "verified_native_conditional": {
+      "simulation_account_specific_verification_required": true,
+      "support_source_and_observed_at_required": true,
+      "verify_session_expiry_partial_fills_and_order_conflicts": true,
+      "ordinary_sell_limits_are_not_stop_or_oco": true
+    },
+    "legacy_plans": {
+      "preserve_prices_evaluation_mode_and_deadlines": true,
+      "apply_new_mode_retroactively": false,
+      "triggered_exit_precedes_style_change": true,
+      "clear_observed_exit_trigger_after_rebound": false
+    }
   },
   "account_missing_policy": "publish_price_only_with_unknown_quantity_if_price_evidence_sufficient",
+  "ready_requires_execution_mode_window_and_risk_review": true,
   "confirmed_price_changes": "explicit_recalculation_or_documented_correction_as_new_version",
   "reenter_after_full_exit": false,
-  "states": [
-    "DRAFT",
-    "READY",
-    "PRICE_ONLY",
-    "HOLD",
-    "BLOCKED"
-  ],
+  "states": ["DRAFT", "READY", "PRICE_ONLY", "HOLD", "BLOCKED"],
   "price_validation": "0 < stop_trigger_krw < entry_limit_krw < take_profit_limit_krw",
   "price_validation_scope": "new_long_entries_only",
-  "metrics_basis": "planned_entry_before_costs_not_realized_pnl",
+  "metrics_basis": "planned_entry_before_costs_not_realized_pnl_not_a_loss_cap",
   "required_timing_fields": [
-    "generated_at",
-    "information_as_of",
-    "valid_from",
-    "entry_deadline",
-    "cancel_unfilled_at",
-    "exit_deadline"
+    "generated_at", "information_as_of", "valid_from", "entry_deadline", "cancel_unfilled_at", "exit_deadline"
   ],
-  "required_source_fields": [
-    "source",
-    "observed_at",
-    "price_type"
+  "required_execution_fields": [
+    "exit_evaluation_mode", "manual_window", "monitoring_risk_acknowledged"
   ],
+  "required_source_fields": ["source", "observed_at", "price_type"],
+  "competition_progress": {
+    "authority": "official_app_values_with_observation_times",
+    "infer_official_turnover_formula": false,
+    "use_turnover_only_to_force_trades": false,
+    "conditional_examples_are_not_official": true,
+    "infer_period_turnover_from_settlement_snapshot": false
+  },
   "official_rules_path": "config/competition.json",
   "account_template_path": "templates/account.json",
   "plan_template_path": "templates/day.md",
   "canonical_prompt_path": "prompts/plan.md",
+  "low_monitoring_guide_path": "docs/low-monitoring.md",
   "executable_implementation": false
 }
