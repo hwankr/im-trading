@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.2",
+  "schema_version": "1.3",
   "scope": "planning_policy_only_not_competition_rules",
-  "mode": "fixed_price_low_monitoring_plan",
+  "mode": "fixed_price_flexible_entry_low_monitoring_plan",
   "timezone": "Asia/Seoul",
   "trigger": "explicit_user_request",
   "request_sessions": ["premarket", "intraday", "postmarket", "non_trading_day"],
@@ -17,26 +17,31 @@
     "sources_and_timestamps"
   ],
   "interaction": {
-    "objective": "reduce_intraday_monitoring_and_repeated_order_changes_not_trading_frequency_itself",
+    "objective": "reduce_monitoring_and_repeated_changes_without_artificially_short_entry_windows",
     "daily_planning_allowed": true,
     "daily_trading_allowed": true,
     "weekly_only": false,
     "trade_required_each_day": false,
-    "proposed_manual_windows_per_trading_day": 1,
-    "example_window_kst": {"start": "15:00", "end": "15:15"},
-    "example_window_is_confirmed_schedule": false,
-    "confirm_executable_window_per_plan": true,
+    "analysis_time_independent_of_entry_and_review": true,
+    "entry_submission_separate_from_daily_review": true,
+    "default_entry_submissions_per_plan": 1,
+    "default_position_reviews_per_trading_day": 1,
+    "entry_day_may_require_entry_plus_later_review": true,
     "reuse_confirmed_execution_without_repeated_question": true,
     "completion_within_one_window_guaranteed": false,
     "intraday_repeated_quote_or_screenshot_requests_default": false
   },
   "confirmed_execution": {
     "confirmed_on": "2026-09-11",
+    "entry_policy_updated_on": "2026-09-14",
     "source": "explicit_user_confirmation_in_conversation",
-    "applies_to": "new_plans_only",
+    "applies_to": "new_plans_or_explicitly_versioned_amendments_only",
     "exit_evaluation_mode": "scheduled_review",
+    "manual_window_scope": "position_review_order_reconciliation_and_exits_not_entry_restriction",
     "manual_window_kst": {"start": "15:00", "end": "15:15"},
     "review_time_kst": "15:00",
+    "review_time_is_default_not_mandatory_close_trading": true,
+    "review_price": "actually_observed_price_with_actual_timestamp",
     "trading_days_only": true,
     "monitoring_risk_acknowledged": true,
     "includes_intraday_delay_overnight_and_weekend_gap_risk": true,
@@ -48,11 +53,13 @@
     "prefer_multiday_setups": true,
     "preferred_trading_days": {"min": 2, "max": 5},
     "preferred_range_is_mandatory": false,
+    "entry_window_is_not_holding_period": true,
     "absolute_exit_deadline_required": true,
     "same_day_round_trip_required": false,
     "repeated_same_day_round_trips_default": false,
     "must_review_overnight_gap_event_and_concentration_risk": true,
-    "widen_stop_without_resizing": false
+    "widen_stop_without_resizing": false,
+    "extend_existing_holding_deadline_for_convenience": false
   },
   "prediction_policy": {
     "pre_event_entries_allowed": true,
@@ -66,7 +73,7 @@
     "do_not_fabricate_probabilities_or_expected_returns": true,
     "subjective_probabilities_must_be_labeled": true,
     "numeric_probabilities_require_basis_and_sensitivity_check": true,
-    "risk_horizon": "until_next_actual_user_review_and_execution_not_overnight_or_open_only",
+    "risk_horizon": "from_possible_fill_until_next_actual_user_review_and_execution",
     "new_policy_is_not_an_order_or_automatic_plan_replacement": true,
     "guide_path": "docs/predictive-events.md"
   },
@@ -85,15 +92,39 @@
     "limits_are_caps_not_target_allocations": true,
     "leverage_default_for_pre_event_entries": false,
     "material_limit_increase_requires_explicit_new_plan": true,
-    "actual_loss_can_exceed_stop_and_stress_budget": true
+    "actual_loss_can_exceed_stop_and_stress_budget": true,
+    "include_passive_pending_order_and_earlier_intraday_fill_risk": true
   },
   "entry": {
     "order_type": "limit",
     "prices_per_security": 1,
     "chase_above_entry": false,
     "intraday_signal_confirmation_required": false,
-    "align_entry_and_cancel_with_confirmed_manual_window": true,
-    "assume_overnight_order_carry": false
+    "align_entry_and_cancel_with_confirmed_manual_window": false,
+    "session_scope": "verified_competition_permitted_KRX_session",
+    "default_submission_window_kst": {"start": "09:00", "end_exclusive": "14:30"},
+    "default_cancel_unfilled_time_kst": "15:00",
+    "window_is_planning_default_not_exchange_rule": true,
+    "allow_one_submission_any_time_inside_valid_window": true,
+    "keep_accepted_order_pending_until_cancel_or_invalidation": true,
+    "prefer_hours_of_validity_when_feasible": true,
+    "artificial_5_to_10_minute_window_default": false,
+    "short_window_requires_market_or_execution_reason": true,
+    "intraday_request_use_remaining_session_when_feasible": true,
+    "price_selection": {
+      "consider_fill_feasibility_alongside_cost_risk_and_thesis": true,
+      "deep_pullback_is_not_required": true,
+      "marketable_limit_allowed_with_verified_quote_and_acceptable_risk": true,
+      "select_one_fixed_cap_not_repeated_user_repricing": true,
+      "do_not_invent_fill_probability_or_chase_for_turnover": true
+    },
+    "pre_submission_guard": "check_current_price_against_stop_take_profit_and_known_invalidation",
+    "ordinary_limit_has_no_automatic_stop_or_invalidation_cancel": true,
+    "first_review_on_entry_day_required": true,
+    "cancel_confirm_and_reconcile_fill_race_at_review": true,
+    "no_new_entry_after_validity_end": true,
+    "assume_overnight_order_carry": false,
+    "next_day_reuse_requires_fresh_explicitly_dated_plan": true
   },
   "exit": {
     "take_profit_prices_per_security": 1,
@@ -114,6 +145,7 @@
       "confirmation_reuse_source": "confirmed_execution",
       "intraday_touch_is_not_automatic_execution": true,
       "do_not_relabel_preclose_price_as_close": true,
+      "check_entry_day_fills_before_waiting_until_next_day": true,
       "missed_review_action": "reconcile_at_next_actual_check_before_any_new_entry"
     },
     "verified_native_conditional": {
@@ -126,7 +158,8 @@
       "preserve_prices_evaluation_mode_and_deadlines": true,
       "apply_new_mode_retroactively": false,
       "triggered_exit_precedes_style_change": true,
-      "clear_observed_exit_trigger_after_rebound": false
+      "clear_observed_exit_trigger_after_rebound": false,
+      "explicit_timing_amendment_requires_version_and_fill_reconciliation": true
     }
   },
   "account_missing_policy": "publish_price_only_with_unknown_quantity_if_price_evidence_sufficient",
@@ -141,7 +174,7 @@
     "generated_at", "information_as_of", "valid_from", "entry_deadline", "cancel_unfilled_at", "exit_deadline"
   ],
   "required_execution_fields": [
-    "exit_evaluation_mode", "manual_window", "monitoring_risk_acknowledged"
+    "exit_evaluation_mode", "entry_submission_window", "manual_window", "first_review_at", "next_review_at", "monitoring_risk_acknowledged"
   ],
   "required_source_fields": ["source", "observed_at", "price_type"],
   "competition_progress": {
