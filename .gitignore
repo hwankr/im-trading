@@ -4,6 +4,8 @@ runs/
 logs/
 backups/
 *.local.json
+im-trading-private-context-*.json
+im-trading-private-context-*.md
 .env
 .env.*
 !.env.example
