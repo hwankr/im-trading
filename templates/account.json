@@ -1,10 +1,13 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "status": "UNVERIFIED",
   "account_alias": "paper-main",
   "paper_competition_account_confirmed": null,
+  "privacy": "blank_template_only_populated_copy_must_remain_private",
   "cash": {
     "observed_at": null,
+    "reported_on": null,
+    "source_type": null,
     "source_report": null,
     "platform_label": null,
     "balance_krw": null,
@@ -12,26 +15,56 @@
   },
   "portfolio": {
     "observed_at": null,
+    "reported_on": null,
+    "source_type": null,
     "source_report": null,
     "holdings": null,
     "total_equity_krw": null,
-    "official_return_percent": null
+    "official_return_percent": null,
+    "derived_equity_from_return_krw": null
   },
   "orders": {
     "observed_at": null,
+    "reported_on": null,
+    "source_type": null,
     "source_report": null,
     "open_orders": null
   },
   "award_progress": {
     "observed_at": null,
+    "reported_on": null,
+    "source_type": null,
     "source_report": null,
     "official_turnover_percent": null,
+    "turnover_is_approximate": null,
     "official_traded_security_count": null,
     "official_trading_day_count": null,
-    "official_rank": null
+    "official_rank": null,
+    "official_cutoff_rank": null,
+    "official_cutoff_return_percent": null,
+    "turnover_formula_verified": null,
+    "turnover_formula_source": null,
+    "prior_trade_history_exists": null,
+    "prior_trade_details_complete": null
+  },
+  "prize_gap_calculation": {
+    "calculated_at": null,
+    "based_on_report": null,
+    "return_gap_percentage_points": null,
+    "required_gain_if_cutoff_unchanged_fraction": null,
+    "remaining_turnover_percentage_points": null,
+    "is_final_cutoff_prediction": false
+  },
+  "risk_profile_anchor": {
+    "profile": null,
+    "applied_at": null,
+    "confirmed_equity_krw": null,
+    "source_report": null,
+    "reset_after_loss_allowed": false
   },
   "last_reconciled_report": null,
   "unresolved": [
-    "최신 앱 계좌 보고와 기존 비공개 기록의 대사가 필요합니다."
+    "最新ではなく、最新の実際の報告を確認する。",
+    "null은 미확인, 빈 배열은 실제 확인된 없음입니다. 최신 대화·비공개 이어가기와 대사하고 과거 거래·공식 진행도를 0으로 초기화하지 않습니다."
   ]
 }
