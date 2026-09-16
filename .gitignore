@@ -1,8 +1,9 @@
-# Private account data, plans and reports (never publish)
-data/
+# data/ contains user-authorized public paper trading records.
+# Raw source caches, backups, credentials and original attachments
 runs/
 logs/
 backups/
+.codex-remote-attachments/
 *.local.json
 im-trading-private-context-*.json
 im-trading-private-context-*.md

@@ -1,0 +1,376 @@
+{
+  "schema_version": "1.1",
+  "status": "NEEDS_RECONCILIATION",
+  "account_alias": "paper-main",
+  "paper_competition_account_confirmed": true,
+  "privacy": "public_paper_trading_records_user_authorized_20260916",
+  "cash": {
+    "observed_at": null,
+    "reported_on": "2026-09-16",
+    "screen_clock_text": "09:05",
+    "source_type": "direct_app_or_screenshot",
+    "source_report": "account-report-20260916-0003",
+    "recorded_at": "2026-09-16T09:08:27.7907026+09:00",
+    "platform_label": "정산예수금",
+    "balance_krw": null,
+    "orderable_krw": 57639924,
+    "settlement_deposit_krw": 57639924,
+    "settlement_deposit_source_report": "account-report-20260916-0003",
+    "field_mapping_note": "주문가능현금 57,639,924원은 account-report-20260916-0004 사용자 텍스트 보고로 별도 확인했다. cash.orderable_report가 해당 값의 출처·시각이다. 정산예수금 57,639,924원 및 cash의 기존 화면 시각·출처는 09:05 잔고 보고를 유지한다. 두 금액이 같아도 항목을 혼동하지 않는다. 실제 예수금은 미확인이다. 매수 전 08:55 주문가능현금은 당일 이력에 보존한다.",
+    "last_confirmed_cash_availability_report": {
+      "source_report": "account-report-20260916-0004",
+      "source_type": "user_reported_official_app",
+      "reported_on": "2026-09-16",
+      "observed_at": null,
+      "recorded_at": "2026-09-16T11:05:52.945574+09:00",
+      "orderable_platform_label": "주문가능현금",
+      "orderable_krw": 57639924,
+      "prior_report_preserved_in": "data/days/2026-09-16.md#계좌-현금미체결-보고"
+    },
+    "orderable_platform_label": "주문가능현금",
+    "orderable_report": {
+      "source_report": "account-report-20260916-0004",
+      "source_type": "user_reported_official_app",
+      "reported_on": "2026-09-16",
+      "observed_at": null,
+      "recorded_at": "2026-09-16T11:05:52.945574+09:00",
+      "amount_krw": 57639924
+    }
+  },
+  "portfolio": {
+    "observed_at": null,
+    "reported_on": "2026-09-16",
+    "source_type": "direct_app_or_screenshot",
+    "source_report": "account-report-20260916-0003",
+    "holdings": [
+      {
+        "code": "123310",
+        "name": "TIGER 인버스",
+        "instrument_type": "ETF",
+        "quantity": 20000,
+        "sellable_quantity": 20000,
+        "average_price_krw": 1160,
+        "displayed_current_price_krw": 1164,
+        "price_type": "current_price_label_in_user_screenshot_quote_timestamp_unknown",
+        "price_observed_at": null,
+        "market_value_krw": 23280000,
+        "displayed_evaluation_pnl_krw": 80495,
+        "displayed_evaluation_return_percent": 0.35,
+        "account_type_label": "현금",
+        "source_report": "account-report-20260916-0003",
+        "existing_exit_conditions": {
+          "source_type": "assistant_issued_management_plan_user_authorized",
+          "authorization": "user_request_20260916_manage_inverse",
+          "plan_id": "plan-20260916-inverse-01",
+          "plan_version": 1,
+          "source_path": "data/days/2026-09-16.md",
+          "effective_from": "2026-09-16T12:43:30.583010+09:00",
+          "information_as_of": "2026-09-16T12:36:05.315678+09:00",
+          "take_profit_limit_krw": 1225,
+          "stop_trigger_krw": 1125,
+          "stop_execution_method": "manual",
+          "exit_evaluation_mode": "manual_on_observation",
+          "review_times_kst": [
+            "2026-09-16T13:00:00+09:00",
+            "2026-09-16T13:30:00+09:00",
+            "2026-09-16T14:00:00+09:00",
+            "2026-09-16T14:30:00+09:00",
+            "2026-09-16T15:00:00+09:00",
+            "2026-09-17T09:00:00+09:00",
+            "2026-09-17T09:30:00+09:00",
+            "2026-09-17T10:00:00+09:00",
+            "2026-09-17T10:30:00+09:00",
+            "2026-09-17T11:00:00+09:00",
+            "2026-09-17T11:30:00+09:00",
+            "2026-09-17T12:00:00+09:00",
+            "2026-09-17T12:30:00+09:00",
+            "2026-09-17T13:00:00+09:00",
+            "2026-09-17T13:30:00+09:00",
+            "2026-09-17T14:00:00+09:00",
+            "2026-09-17T14:30:00+09:00",
+            "2026-09-17T15:00:00+09:00"
+          ],
+          "next_review_at": "2026-09-16T13:00:00+09:00",
+          "exit_deadline": "2026-09-17T15:10:00+09:00",
+          "native_conditional_stop_verified": false,
+          "take_profit_order_placement_confirmed": false,
+          "quantity_basis": "actual_remaining_sellable_quantity_at_user_execution",
+          "last_reported_quantity": 20000,
+          "new_buy_quantity": 0,
+          "entry_submission_window": null,
+          "stop_execution": "On an actually observed price at or below 1125, cancel existing sell orders if any, confirm cancellation and actual remaining sellable shares, then user submits market sell of the remaining position. Do not wait for the next scheduled review.",
+          "take_profit_execution": "On an actually observed price at or above 1225, reconcile existing sells and submit a 1225 limit sell for actual remaining shares. Check fills; cancel any unfilled remainder, confirm cancellation, then market sell only actual remaining shares. The target is not a guaranteed fill price.",
+          "time_exit_execution": "At 2026-09-17 15:10 KST cancel any remaining sells, confirm cancellation and shares, then market sell the actual remainder, regardless of profit or loss. Aim to complete by 15:15 without guaranteeing completion.",
+          "condition_priority": [
+            "stop",
+            "time_exit",
+            "take_profit"
+          ],
+          "triggered_exit": null,
+          "price_or_instruction_is_not_fill": true,
+          "reentry_under_same_plan": false,
+          "note": "기존 1,125/1,225원과 수동 손절을 승계한다. 사용자 위임 이후 AI가 판단·기록하고 새 최종 기한을 적용한다. 실제 확인된 손절은 예약 시각 밖에서도 유효하다. 이전 가격 경로·발동 사실을 소급 변경하지 않는다. 주문 실행은 사용자 책임이며 앱 자동 감시/OCO는 없다."
+        },
+        "code_verification": {
+          "source": "https://m.stock.naver.com/api/stock/123310/basic",
+          "verified_on": "2026-09-16",
+          "name_match": "TIGER 인버스",
+          "note": "종목 식별만 보완했으며 보유 수량·평가금액·기존 청산 조건은 변경하지 않았다."
+        },
+        "linked_plan_id": "plan-20260916-inverse-01",
+        "linked_plan_version": 1,
+        "management_authorization": {
+          "authorized_on": "2026-09-16",
+          "source_type": "explicit_user_request",
+          "decision_owner": "assistant",
+          "execution_owner": "user",
+          "user_text": "인버스도 앞으로 네가 판단해서 기록해줘."
+        }
+      },
+      {
+        "code": "336260",
+        "name": "두산퓨얼셀",
+        "instrument_type": "stock",
+        "quantity": 360,
+        "sellable_quantity": 360,
+        "average_price_krw": 50697,
+        "average_price_precision": "rounded_integer_display_not_exact_fill_price",
+        "displayed_current_price_krw": 50900,
+        "price_type": "current_price_label_in_user_screenshot_quote_timestamp_unknown",
+        "price_observed_at": null,
+        "market_value_krw": 18324000,
+        "displayed_evaluation_pnl_krw": 73200,
+        "displayed_evaluation_return_percent": 0.4,
+        "account_type_label": "현금",
+        "source_report": "account-report-20260916-0003",
+        "position_confirmation": "actual_position_confirmed_by_user_screenshot",
+        "order_id": null,
+        "fill_execution_at": null,
+        "linked_plan_id": "plan-20260916-01",
+        "linked_plan_version": 1,
+        "existing_exit_conditions": {
+          "source_type": "issued_plan",
+          "plan_id": "plan-20260916-01",
+          "plan_version": 1,
+          "source_path": "data/days/2026-09-16.md",
+          "take_profit_limit_krw": 58500,
+          "stop_trigger_krw": 47500,
+          "stop_execution_method": "manual",
+          "exit_evaluation_mode": "scheduled_review",
+          "review_times_kst": [
+            "2026-09-16T15:00:00+09:00",
+            "2026-09-17T15:00:00+09:00",
+            "2026-09-18T15:00:00+09:00"
+          ],
+          "exit_deadline": "2026-09-18T15:10:00+09:00",
+          "native_conditional_stop_verified": false,
+          "note": "360주 보유를 실제 화면으로 확인했다. 예약 안내 주기 요청만으로 기존 청산 가격·평가시각·기한을 변경하지 않는다. 변경은 명시적 새 계획 버전으로 기록한다."
+        }
+      }
+    ],
+    "total_equity_krw": null,
+    "official_return_percent": null,
+    "derived_equity_from_return_krw": null,
+    "recorded_at": "2026-09-16T09:08:27.7907026+09:00",
+    "total_purchase_amount_krw": 41450305,
+    "total_market_value_krw": 41604000,
+    "displayed_evaluation_pnl_krw": 153695,
+    "displayed_evaluation_return_percent": 0.37,
+    "settlement_amount_krw": 99243924,
+    "settlement_amount_platform_label": "정산금액",
+    "fee_checkbox_checked_in_screenshot": true,
+    "actual_commission_and_tax_krw": null,
+    "field_mapping_note": "0.37%는 보유 평가수익률이며 공식 대회 수익률이 아니다. 현재가는 첨부 화면 표시값이다. 정산금액은 해당 앱 표시값으로 보존하며 공식 대회 총자산으로 확정하지 않는다.",
+    "screen_clock_text": "09:05"
+  },
+  "orders": {
+    "observed_at": null,
+    "reported_on": "2026-09-16",
+    "source_type": "user_reported_official_app",
+    "source_report": "account-report-20260916-0004",
+    "recorded_at": "2026-09-16T11:05:52.945574+09:00",
+    "open_orders": [],
+    "confirmation_text": "미체결 주문 없음.",
+    "last_confirmed_report": {
+      "observed_at": null,
+      "reported_on": "2026-09-16",
+      "source_type": "user_reported_official_app",
+      "source_report": "account-report-20260916-0004",
+      "recorded_at": "2026-09-16T11:05:52.945574+09:00",
+      "open_orders": [],
+      "confirmation_text": "미체결 주문 없음."
+    },
+    "note": "사용자가 현재 미체결 주문 없음을 명시했다. 이전 null을 확인된 빈 배열로 갱신한다. 이 보고는 특정 주문의 취소·체결 내역이나 보유수량 재확인에 해당하지 않는다."
+  },
+  "award_progress": {
+    "observed_at": null,
+    "reported_on": null,
+    "source_type": null,
+    "source_report": null,
+    "official_turnover_percent": null,
+    "turnover_is_approximate": null,
+    "official_traded_security_count": null,
+    "official_trading_day_count": null,
+    "official_rank": null,
+    "official_cutoff_rank": null,
+    "official_cutoff_return_percent": null,
+    "turnover_formula_verified": null,
+    "turnover_formula_source": null,
+    "prior_trade_history_exists": null,
+    "prior_trade_details_complete": null
+  },
+  "prize_gap_calculation": {
+    "calculated_at": null,
+    "based_on_report": null,
+    "return_gap_percentage_points": null,
+    "required_gain_if_cutoff_unchanged_fraction": null,
+    "remaining_turnover_percentage_points": null,
+    "is_final_cutoff_prediction": false
+  },
+  "risk_profile_anchor": {
+    "profile": "prize_focused_catch_up",
+    "applied_at": "2026-09-16T09:01:39.9168712+09:00",
+    "confirmed_equity_krw": null,
+    "source_report": "account-report-20260916-0002",
+    "reset_after_loss_allowed": false,
+    "provisional_planning_capital_krw": 99252549,
+    "confirmation_status": "planning_basis_reconciled_official_total_equity_unconfirmed",
+    "note": "이번 신규 계획의 최초 운용 기준을 고정 기록한다. 공식 총자산 확인 시 출처를 대사하되 손실을 이유로 기준점을 낮추거나 초기화하지 않는다."
+  },
+  "last_reconciled_report": "account-report-20260916-0004",
+  "unresolved": [
+    "최신 화면의 휴대전화 시각은 09:05이며 정확한 앱 관측·체결 시각은 미확인이다.",
+    "두산퓨얼셀 360주 보유·매도가능 360주와 표시 평균매입가 50,697원을 확인했다. 주문/체결 식별자·정확한 가중평균 체결가·실제 비용 명세는 미확인이다.",
+    "현재 주문가능현금 57,639,924원과 미체결 없음은 account-report-20260916-0004로 해소했다. 실제 예수금 및 정확한 앱 관측 시각은 미확인이다.",
+    "공식 대회 수익률·순위·10위 성적·회전율·인정 종목 수·거래일수는 미확인이다. 0.37%로 대체하지 않는다.",
+    "계좌 화면의 표시 매입가·총 매입금액·정산예수금 사이 반올림 및 비용 차이는 명세 확인 전 실제 비용으로 단정하지 않는다."
+  ],
+  "paper_account_confirmation_source": "Historical competition account confirmation and ongoing user report; no new login performed.",
+  "recordkeeping": {
+    "user_requested_on": "2026-09-16",
+    "instruction": "사용자 계좌 보고를 공개 계좌 요약과 날짜별 공개 일지에 반영하고, AI 판단·계획 변경도 버전별로 기록한다. 실제 보고와 시장 관측을 구분하며 공개 정책에 따라 GitHub에 동기화한다.",
+    "current_summary_path": "data/account.json",
+    "daily_history_directory": "data/days",
+    "automatic_account_access": false,
+    "public_records": true
+  },
+  "latest_report": {
+    "report_id": "account-report-20260916-0004",
+    "report_kind": "partial_orderable_cash_and_open_orders",
+    "reported_on": "2026-09-16",
+    "recorded_at": "2026-09-16T11:05:52.945574+09:00",
+    "observed_at": null,
+    "source_type": "user_reported_official_app",
+    "user_text": "주문가능현금 : 57639924 미체결 주문 없음.",
+    "observation_time_note": "현재 상태에 대한 사용자 텍스트 보고. 정확한 앱 확인 시각은 명시되지 않았으며 recorded_at은 저장 시각이다.",
+    "reconciliation_status": "RECONCILED",
+    "reconciliation_scope": [
+      "cash.orderable_krw",
+      "orders.open_orders"
+    ],
+    "new_trade_or_fill_reported": false
+  },
+  "last_received_report": "account-report-20260916-0004",
+  "updated_at": "2026-09-16T12:43:30.583010+09:00",
+  "history_reference": {
+    "last_instruction": "order-instruction-0001",
+    "final_status": "CANCELLED_UNFILLED_CONFIRMED",
+    "final_filled_quantity": 0,
+    "final_remaining_quantity": 0,
+    "active_instructions": 0,
+    "legacy_manifest": "runs/im-rookie-2026-paper-main/decision-manifest-0010.json",
+    "scope": "historical_report_only_not_current_active_plan_count",
+    "as_of_report": "account-report-0005"
+  },
+  "planning_capital_basis": {
+    "amount_krw": 99243924,
+    "source_type": "derived_calculation_cross_checked_to_settlement_amount",
+    "source_reports": [
+      "account-report-20260916-0003"
+    ],
+    "formula": "정산예수금 57,639,924 + 보유평가 41,604,000 = 화면 정산금액 99,243,924",
+    "calculated_at": "2026-09-16T09:08:27.7907026+09:00",
+    "is_official_competition_total_equity": false,
+    "assumption": "새 계좌 스냅샷으로 대사한 참고 기준이며 현재 주문가능현금 또는 공식 대회 총자산으로 대체하지 않는다."
+  },
+  "latest_plan_reference": {
+    "plan_id": "plan-20260916-inverse-01",
+    "version": 1,
+    "path": "data/days/2026-09-16.md",
+    "plan_is_not_order_or_fill": true
+  },
+  "monitoring_authorization": {
+    "authorized_on": "2026-09-16",
+    "source": "explicit_user_message",
+    "user_request": "9시, 9시30분 이렇게 30분 마다 어떻게 할지 안내해줘. 예약 등록해서.",
+    "review_cadence_minutes": 30,
+    "timezone": "Asia/Seoul",
+    "report_each_trading_slot": true,
+    "automatic_order_execution": false,
+    "current_order_evaluation_changes": "none_without_explicit_plan_version",
+    "operation_record": "data/operation-mode.json",
+    "automation_id": "30",
+    "registration_status": "ACTIVE",
+    "registration_verified_at": "2026-09-16T09:09:43.7687790+09:00"
+  },
+  "latest_holdings_report": {
+    "report_id": "account-report-20260916-0003",
+    "report_kind": "actual_holdings_snapshot_after_purchase",
+    "reported_on": "2026-09-16",
+    "recorded_at": "2026-09-16T09:08:27.7907026+09:00",
+    "observed_at": null,
+    "screen_clock_text": "09:05",
+    "screenshot_source_type": "direct_app_or_screenshot",
+    "attachment_name": "Photo 1.jpg (두 종목 보유)",
+    "attachment_sha256": "223cf79cd02981ac3016fa1bbc9fc687dc50ec13cf8288164efacaaa15d260fc",
+    "personal_identifiers_transcribed": false,
+    "observation_time_note": "휴대전화 시각 09:05이며 정확한 앱 데이터 갱신·체결 시각은 미확인."
+  },
+  "last_reconciliation_scope": [
+    "cash.orderable_krw",
+    "orders.open_orders"
+  ],
+  "publication_authorization": {
+    "authorized_on": "2026-09-16",
+    "recorded_at": "2026-09-16T12:43:30.583010+09:00",
+    "source_type": "explicit_user_request",
+    "scope": [
+      "paper_cash",
+      "holdings",
+      "performance",
+      "orders",
+      "plans",
+      "decisions",
+      "existing_daily_journals"
+    ],
+    "exclude": [
+      "account_numbers",
+      "real_names",
+      "credentials",
+      "original_attachments",
+      "local_user_paths"
+    ],
+    "canonical_account": "data/account.json",
+    "canonical_journals": "data/days",
+    "preserve_history": true,
+    "github_sync_authorized": true
+  },
+  "active_plan_references": [
+    {
+      "plan_id": "plan-20260916-01",
+      "version": 1,
+      "codes": [
+        "336260"
+      ],
+      "path": "data/days/2026-09-16.md"
+    },
+    {
+      "plan_id": "plan-20260916-inverse-01",
+      "version": 1,
+      "codes": [
+        "123310"
+      ],
+      "path": "data/days/2026-09-16.md"
+    }
+  ]
+}

@@ -1,14 +1,18 @@
 {
-  "schema_version": "1.5",
+  "schema_version": "1.6",
   "scope": "planning_policy_only_not_competition_rules",
   "mode": "prize_focused_fixed_price_flexible_entry_low_monitoring_plan",
   "timezone": "Asia/Seoul",
-  "trigger": "explicit_user_request",
-  "request_sessions": ["premarket", "intraday", "postmarket", "non_trading_day"],
+  "trigger": "explicit_user_request_or_user_authorized_heartbeat",
+  "request_sessions": [
+    "premarket",
+    "intraday",
+    "postmarket",
+    "non_trading_day"
+  ],
   "analysis_runs_per_request": 1,
   "continuous_monitoring": false,
-  "scheduled_reanalysis": false,
-  "automatic_orders_or_alerts": false,
+  "scheduled_reanalysis": true,
   "max_new_candidates": 3,
   "output_order": [
     "triggered_existing_exit_if_any",
@@ -64,7 +68,10 @@
     "applies_to": "new_plans_or_explicitly_versioned_amendments_only",
     "exit_evaluation_mode": "scheduled_review",
     "manual_window_scope": "position_review_order_reconciliation_and_exits_not_entry_restriction",
-    "manual_window_kst": {"start": "15:00", "end": "15:15"},
+    "manual_window_kst": {
+      "start": "15:00",
+      "end": "15:15"
+    },
     "review_time_kst": "15:00",
     "review_time_is_default_not_mandatory_close_trading": true,
     "review_price": "actually_observed_price_with_actual_timestamp",
@@ -77,7 +84,10 @@
   },
   "holding_policy": {
     "prefer_multiday_setups": true,
-    "preferred_trading_days": {"min": 1, "max": 3},
+    "preferred_trading_days": {
+      "min": 1,
+      "max": 3
+    },
     "preferred_range_is_mandatory": false,
     "longer_holding_allowed_with_catalyst_and_deadline": true,
     "entry_window_is_not_holding_period": true,
@@ -114,17 +124,29 @@
     "change_basis": "user_prioritizes_final_top_10_over_capital_preservation_in_paper_competition",
     "applies_to": "new_plans_or_explicitly_versioned_size_amendments_only",
     "capital_basis": "latest_confirmed_account_equity_not_margin_order_limit",
-    "maximum_total_initial_exposure_fraction": 0.90,
-    "opportunity_backed_total_exposure_review_range": {"min": 0.70, "max": 0.90, "mandatory": false},
-    "minimum_cash_reserve_fraction_for_new_entries": 0.10,
+    "maximum_total_initial_exposure_fraction": 0.9,
+    "opportunity_backed_total_exposure_review_range": {
+      "min": 0.7,
+      "max": 0.9,
+      "mandatory": false
+    },
+    "minimum_cash_reserve_fraction_for_new_entries": 0.1,
     "reference_position_fraction_not_required_allocation": 0.35,
-    "core_position_review_range": {"min": 0.35, "max": 0.45, "mandatory": false},
-    "satellite_position_review_range": {"min": 0.20, "max": 0.30, "mandatory": false},
+    "core_position_review_range": {
+      "min": 0.35,
+      "max": 0.45,
+      "mandatory": false
+    },
+    "satellite_position_review_range": {
+      "min": 0.2,
+      "max": 0.3,
+      "mandatory": false
+    },
     "maximum_single_security_exposure_fraction": 0.45,
     "official_initial_capital_concentration_limit_applies_separately": true,
     "maximum_simultaneous_positions": 3,
-    "initial_pre_event_position_fraction_cap": 0.40,
-    "same_event_aggregate_exposure_fraction_cap": 0.70,
+    "initial_pre_event_position_fraction_cap": 0.4,
+    "same_event_aggregate_exposure_fraction_cap": 0.7,
     "event_limits_are_inside_total_exposure_cap": true,
     "planned_stop_loss_budget_per_trade_fraction": 0.02,
     "aggregate_planned_stop_loss_budget_fraction": 0.05,
@@ -142,8 +164,8 @@
     "actual_loss_can_exceed_stop_and_stress_budget": true,
     "include_passive_pending_order_and_earlier_intraday_fill_risk": true,
     "new_entry_pause": {
-      "drawdown_fraction_from_profile_start_equity": 0.10,
-      "anchor_source": "confirmed_equity_recorded_privately_when_this_profile_is_first_applied",
+      "drawdown_fraction_from_profile_start_equity": 0.1,
+      "anchor_source": "confirmed_equity_recorded_when_profile_is_first_applied",
       "anchor_must_not_be_reset_after_losses": true,
       "observation": "at_actual_user_account_review_not_continuous_monitoring",
       "action": "pause_new_entries_reassess_then_require_explicit_new_plan_existing_exits_remain_in_force",
@@ -160,7 +182,10 @@
     "intraday_signal_confirmation_required": false,
     "align_entry_and_cancel_with_confirmed_manual_window": false,
     "session_scope": "verified_competition_permitted_KRX_session",
-    "default_submission_window_kst": {"start": "09:00", "end_exclusive": "14:30"},
+    "default_submission_window_kst": {
+      "start": "09:00",
+      "end_exclusive": "14:30"
+    },
     "default_cancel_unfilled_time_kst": "15:00",
     "window_is_planning_default_not_exchange_rule": true,
     "allow_one_submission_any_time_inside_valid_window": true,
@@ -195,7 +220,11 @@
     "assume_automatic_stop_or_oco": false,
     "evaluation_mode_required": true,
     "new_plan_default_candidate_mode": "scheduled_review",
-    "new_plan_supported_modes": ["scheduled_review", "verified_native_conditional"],
+    "new_plan_supported_modes": [
+      "scheduled_review",
+      "verified_native_conditional",
+      "manual_on_observation"
+    ],
     "scheduled_review": {
       "review_times_required": true,
       "next_review_at_required": true,
@@ -220,27 +249,62 @@
       "clear_observed_exit_trigger_after_rebound": false,
       "explicit_timing_amendment_requires_version_and_fill_reconciliation": true,
       "explicit_size_amendment_requires_version_and_total_not_additive_quantity": true
+    },
+    "manual_on_observation": {
+      "actual_observation_required": true,
+      "user_reported_intraday_trigger_remains_valid": true,
+      "scheduled_guidance_is_not_continuous_monitoring": true,
+      "automatic_orders": false,
+      "explicit_plan_and_deadline_required": true,
+      "retroactive_application": false
     }
   },
   "account_missing_policy": "publish_price_only_with_unknown_quantity_if_price_evidence_sufficient",
   "ready_requires_execution_mode_window_and_risk_review": true,
   "confirmed_price_changes": "explicit_recalculation_or_documented_correction_as_new_version",
   "reenter_after_full_exit": false,
-  "reentry_policy": {"same_plan_allowed": false, "distinct_new_plan_with_fresh_evidence_allowed": true},
-  "states": ["DRAFT", "READY", "PRICE_ONLY", "HOLD", "BLOCKED"],
+  "reentry_policy": {
+    "same_plan_allowed": false,
+    "distinct_new_plan_with_fresh_evidence_allowed": true
+  },
+  "states": [
+    "DRAFT",
+    "READY",
+    "PRICE_ONLY",
+    "HOLD",
+    "BLOCKED"
+  ],
   "price_validation": "0 < stop_trigger_krw < entry_limit_krw < take_profit_limit_krw",
   "price_validation_scope": "new_long_entries_only",
   "metrics_basis": "planned_entry_before_costs_not_realized_pnl_not_a_loss_cap",
   "required_timing_fields": [
-    "generated_at", "information_as_of", "valid_from", "entry_deadline", "cancel_unfilled_at", "exit_deadline"
+    "generated_at",
+    "information_as_of",
+    "valid_from",
+    "entry_deadline",
+    "cancel_unfilled_at",
+    "exit_deadline"
   ],
   "required_execution_fields": [
-    "exit_evaluation_mode", "entry_submission_window", "manual_window", "first_review_at", "next_review_at", "monitoring_risk_acknowledged"
+    "exit_evaluation_mode",
+    "entry_submission_window",
+    "manual_window",
+    "first_review_at",
+    "next_review_at",
+    "monitoring_risk_acknowledged"
   ],
-  "required_source_fields": ["source", "observed_at", "price_type"],
+  "required_source_fields": [
+    "source",
+    "observed_at",
+    "price_type"
+  ],
   "competition_progress": {
     "authority": "official_app_values_with_observation_times",
-    "source_types": ["direct_app_or_screenshot", "user_reported_official_app", "derived_calculation"],
+    "source_types": [
+      "direct_app_or_screenshot",
+      "user_reported_official_app",
+      "derived_calculation"
+    ],
     "user_reported_app_values_are_valid_planning_inputs_with_attribution": true,
     "unknown_observation_time_stays_null": true,
     "track_rank_and_cutoff_alongside_eligibility": true,
@@ -264,12 +328,13 @@
   },
   "context_continuity": {
     "read_prize_mandate_each_session": true,
-    "reuse_latest_accessible_conversation_project_or_private_account_record": true,
-    "private_handoff_filename_pattern": "im-trading-private-context-*.json",
-    "missing_private_file_does_not_imply_empty_account": true,
-    "public_repository_contains_policy_and_blank_templates_only": true,
-    "never_publish_personal_performance_holdings_or_orders": true,
-    "cross_session_private_context_autoload_guaranteed": false
+    "reuse_latest_accessible_conversation_project_or_account_record": true,
+    "canonical_account_path": "data/account.json",
+    "canonical_journal_directory": "data/days",
+    "legacy_private_handoff_filename_pattern": "im-trading-private-context-*.json",
+    "missing_file_does_not_imply_empty_account": true,
+    "public_repository_contains_paper_account_and_journals": true,
+    "cross_session_context_autoload_guaranteed": false
   },
   "official_rules_path": "config/competition.json",
   "account_template_path": "templates/account.json",
@@ -278,5 +343,54 @@
   "low_monitoring_guide_path": "docs/low-monitoring.md",
   "predictive_events_guide_path": "docs/predictive-events.md",
   "tournament_strategy_guide_path": "docs/tournament-strategy.md",
-  "executable_implementation": false
+  "executable_implementation": false,
+  "automatic_orders": false,
+  "scheduled_guidance_authorized": true,
+  "publication_policy": {
+    "authorized_on": "2026-09-16",
+    "source": "explicit_user_request",
+    "mode": "public_paper_trading_records",
+    "paths": [
+      "data/account.json",
+      "data/days/*.md",
+      "data/operation-mode.json",
+      "data/handoff-20260909.json"
+    ],
+    "include": [
+      "paper_holdings",
+      "cash",
+      "performance",
+      "plans",
+      "orders",
+      "decisions",
+      "historical_journals"
+    ],
+    "exclude": [
+      "account_numbers",
+      "real_names",
+      "credentials",
+      "original_attachments",
+      "local_user_paths",
+      "raw_source_caches",
+      "backups",
+      "temporary_files"
+    ],
+    "preserve_history": true,
+    "publish_after_each_completed_review": true,
+    "force_push": false,
+    "do_not_include_unrelated_changes": true,
+    "guide": "docs/record-publication.md"
+  },
+  "existing_position_management": {
+    "authorized_on": "2026-09-16",
+    "source": "explicit_user_request",
+    "instruments": [
+      "123310"
+    ],
+    "decision_owner": "assistant",
+    "order_execution_owner": "user",
+    "version_changes_required": true,
+    "lower_existing_stop_to_avoid_loss": false,
+    "erase_triggered_exit": false
+  }
 }

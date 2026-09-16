@@ -39,6 +39,10 @@
 
 `exit_evaluation_mode`, 입력 창, 보유 점검 창, 최초 매수 당일 점검, 다음 점검을 별도로 명시한다. 기존에 확인한 시간·위험 수용을 반복 질문하지 않는다.
 
+### manual_on_observation
+
+`manual_on_observation`은 기존 수동 손절을 승계해 예약 점검 또는 사용자의 별도 실제 가격 관측에서 조건을 확인하면 청산을 안내한다. 정해진 점검 밖에 실제 확인된 손절도 유효하다. 앱 자동 감시·자동 주문·점검 사이 가격 경로의 확인을 뜻하지 않는다. 적용 시작·다음 점검·최종 기한을 새 버전으로 남긴다.
+
 ### scheduled_review
 
 계획한 시각에 실제 관측한 가격으로 수동 판단하고 관측 시각을 기록한다. 손절 조건 또는 청산 기한이면 기존 익절 주문 취소 완료 후 실제 잔여수량을 시장가 청산한다. 익절은 계획한 지정가와 실제 체결 상태로 관리한다. 익절 미체결 처리 방식과 마감 시각을 미리 정한다.
@@ -69,4 +73,4 @@
 
 일반 주문 원리 참고: [iM증권 거래시간](https://www.imfnsec.com/mobile/cs/cs0201.jsp), [Investor.gov 지정가](https://www.investor.gov/introduction-investing/investing-basics/glossary/limit-orders), [Investor.gov 손절 주문](https://www.investor.gov/introduction-investing/investing-basics/glossary/stop-order). 저장소의 이전 확인일은 2026-09-14이며 오늘의 모의계좌 지원·거래 상태 재검증을 대신하지 않는다.
 
-공개 저장소는 일반 지침과 빈 양식만 보관한다. 개인 성적·잔고·보유·주문은 비공개 data/·이어가기 파일·대화에 남긴다. 이 문서는 자동 감시·알림·주문 구현이 아니다. 실제 하지 않은 저장·주문·취소를 완료했다고 쓰지 않는다.
+모의투자 계좌·성적·보유·주문·계획·일지는 사용자 승인에 따라 공개 data/account.json과 data/days/YYYY-MM-DD.md에 저장하고 GitHub에 동기화한다. 계좌번호·성명·인증정보·원본 첨부·로컬 사용자 경로는 제외한다. 기존 기록과 출처·관측 시각은 보존한다. 이 문서는 자동 감시·알림·주문 구현이 아니다. 실제 하지 않은 저장·주문·취소를 완료했다고 쓰지 않는다.

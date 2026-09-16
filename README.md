@@ -3,13 +3,13 @@
 **목표는 원금 방어가 아니라 대회 최종 10위 이내 수상이다. 요청 시 시장과 기존 보유를 함께 분석해 종목·진입가·익절가·손절가·수량·기한을 정한다.**
 2026-09-16부터 수상권 밖에서는 적극적인 추격형으로 운용한다. 일시적 10위 진입이나 회전율 충족만으로 목표가 완료되지는 않는다.
 
-이 저장소는 모의투자용 AI 지침·설정·빈 양식이다. 시세 수집기·자동 주문·손절·알림은 구현되어 있지 않으며, 실자산 운용에 자동 적용하지 않는다.
+이 저장소는 모의투자용 AI 지침·설정과 공개 계좌·계획·일지다. 저장소 자체에 자동 주문·손절은 구현되어 있지 않으며, 실자산 운용에 자동 적용하지 않는다.
 
 ## 새 채팅에서 시작하기
 
-> GitHub hwankr/im-trading의 AGENTS.md와 현재 설정, docs/tournament-strategy.md를 읽고 최종 10위 수상 목표로 판단해줘. 기존 보유와 최신 대회 성적은 대화·접근 가능한 Project의 비공개 이어가기 기록을 먼저 확인해줘.
+> GitHub hwankr/im-trading의 AGENTS.md와 현재 설정, docs/tournament-strategy.md를 읽고 최종 10위 수상 목표로 판단해줘. 기존 보유와 최신 대회 성적은 대화와 공개 data/account.json·해당 날짜 일지를 먼저 확인해줘.
 
-같은 위험 수용·점검 시간을 매번 다시 확인하지 않는다. 최신 사용자 보고가 과거 가정보다 우선하며, 계좌 파일이 없다고 과거 매매·회전율을 0으로 초기화하지 않는다. 비공개 기록이 모든 채팅에 자동으로 전달되는 것은 아니다.
+같은 위험 수용·점검 시간을 매번 다시 확인하지 않는다. 최신 사용자 보고가 과거 가정보다 우선하며, 계좌 파일이 없다고 과거 매매·회전율을 0으로 초기화하지 않는다. 공개 파일도 실제 읽은 경우에만 확인했다고 말한다.
 
 ## 공격형 운영 기준
 
@@ -68,8 +68,8 @@ config/competition.json            공식 규칙과 미확인 항목
 prompts/plan.md                     공통 가격·매매 계획 절차
 prompts/premarket.md                장전 호환 진입점
 prompts/reconcile.md                체결·계좌 대사
-templates/account.json             비공개 계좌·대회 성적 빈 양식
-templates/day.md                   비공개 주문·실행 빈 양식
+templates/account.json             계좌·대회 성적 빈 양식
+templates/day.md                   주문·실행 빈 양식
 docs/tournament-strategy.md         최종 10위 수상 중심 판단 기준
 docs/low-monitoring.md              낮은 확인 부담과 실제 주문 구분
 docs/predictive-events.md           발표 전 예측과 이벤트 노출
@@ -78,13 +78,19 @@ docs/migration.md                  과거 전환·백업 안내
 docs/sources/competition-manual.pdf 원본 매뉴얼
 ```
 
-공개 GitHub에는 일반 정책과 빈 양식만 둔다. **계좌번호·인증정보·개인 화면·성적·잔고·보유·주문은 공개하지 않는다.** 실제 기록은 비공개 `data/account.json`, `data/days/YYYY-MM-DD.md`, `im-trading-private-context-*.json` 또는 대화에 보관한다.
+모의투자 계좌·성적·보유·주문·계획·일지는 사용자 승인에 따라 공개 data/account.json과 data/days/YYYY-MM-DD.md에 저장하고 GitHub에 동기화한다. 계좌번호·성명·인증정보·원본 첨부·로컬 사용자 경로는 제외한다. 기존 기록과 출처·관측 시각은 보존한다.
+
+- [현재 계좌](data/account.json)
+- [운용 일지](data/days/2026-09-16.md)
+- [기록 공개 정책](docs/record-publication.md)
+
+TIGER 인버스도 AI가 연결된 관리 계획에 따라 보유·청산을 판단한다. 현재 대화에는 장중 30분 안내가 등록되어 있으며 앱 주문은 사용자가 실행한다.
 
 ```sh
 mkdir -p data/days
 test -e data/account.json || cp templates/account.json data/account.json
 ```
 
-기존 파일을 덮어쓰지 않는다. `null`은 미확인, `[]`는 확인된 없음이다. `data/`와 `runs/`는 Git에서 제외된다. 비공개 이어가기 파일도 공개 경로에 커밋하지 않는다. 저장·주문·알림을 실제로 수행하지 않았다면 완료했다고 쓰지 않는다.
+기존 파일을 덮어쓰지 않는다. `null`은 미확인, `[]`는 확인된 없음이다. `data/`의 계좌·일지·운영 요약은 공개한다. 과거 원본 수집 캐시·스크립트인 `runs/`, 백업·임시 파일·원본 첨부·인증정보는 Git에서 제외한다. 저장·주문·알림을 실제로 수행하지 않았다면 완료했다고 쓰지 않는다.
 
-과거 운영은 Git 이력과 `archive/pre-fixed-price-20260910`, `archive/pre-premarket-20260908`에 보존되어 있다. Git 백업은 비공개 로컬 기록을 포함하지 않는다. 저장소 수정은 실제 증권앱 주문이 아니다.
+과거 운영은 Git 이력과 `archive/pre-fixed-price-20260910`, `archive/pre-premarket-20260908`에 보존되어 있다. 공개 전환 이후 커밋에는 data/의 계좌·일지가 포함되며 원본 캐시·백업은 포함되지 않는다. 저장소 수정은 실제 증권앱 주문이 아니다.

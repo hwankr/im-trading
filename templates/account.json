@@ -3,7 +3,7 @@
   "status": "UNVERIFIED",
   "account_alias": "paper-main",
   "paper_competition_account_confirmed": null,
-  "privacy": "blank_template_only_populated_copy_must_remain_private",
+  "privacy": "public_paper_trading_record_without_identifiers",
   "cash": {
     "observed_at": null,
     "reported_on": null,
@@ -64,7 +64,7 @@
   },
   "last_reconciled_report": null,
   "unresolved": [
-    "최신 앱 계좌 보고와 기존 비공개 기록의 대사가 필요합니다.",
-    "null은 미확인, 빈 배열은 실제 확인된 없음입니다. 최신 대화·비공개 이어가기와 대사하고 과거 거래·공식 진행도를 0으로 초기화하지 않습니다."
+    "최신 앱 계좌 보고와 기존 기존 기록의 대사가 필요합니다.",
+    "null은 미확인, 빈 배열은 실제 확인된 없음입니다. 최신 대화·이어가기 기록와 대사하고 과거 거래·공식 진행도를 0으로 초기화하지 않습니다."
   ]
 }
