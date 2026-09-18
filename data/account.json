@@ -125,6 +125,19 @@
           "decision_owner": "assistant",
           "execution_owner": "user",
           "user_text": "인버스도 앞으로 네가 판단해서 기록해줘."
+        },
+        "exit_reconciliation": {
+          "checked_at": "2026-09-18T16:30:58.683096+09:00",
+          "reason": "original_time_exit_deadline_passed",
+          "original_plan_id": "plan-20260916-inverse-01",
+          "original_exit_deadline": "2026-09-17T15:10:00+09:00",
+          "deadline_passed": true,
+          "deadline_changed": false,
+          "current_remaining_quantity": null,
+          "sell_execution_confirmed": false,
+          "sell_execution_status": "UNCONFIRMED",
+          "latest_holdings_report": "account-report-20260916-0003",
+          "note": "원래 청산 기한 경과를 실제 시각과 대조했다. 현재 잔량·매도 완료는 새 사용자 보고 전 미확인이다. 기존 수량·가격을 현재 보유 또는 체결로 재확정하지 않는다."
         }
       },
       {
@@ -165,6 +178,19 @@
           "exit_deadline": "2026-09-18T15:10:00+09:00",
           "native_conditional_stop_verified": false,
           "note": "360주 보유를 실제 화면으로 확인했다. 예약 안내 주기 요청만으로 기존 청산 가격·평가시각·기한을 변경하지 않는다. 변경은 명시적 새 계획 버전으로 기록한다."
+        },
+        "exit_reconciliation": {
+          "checked_at": "2026-09-18T16:30:58.683096+09:00",
+          "reason": "original_time_exit_deadline_passed",
+          "original_plan_id": "plan-20260916-01",
+          "original_exit_deadline": "2026-09-18T15:10:00+09:00",
+          "deadline_passed": true,
+          "deadline_changed": false,
+          "current_remaining_quantity": null,
+          "sell_execution_confirmed": false,
+          "sell_execution_status": "UNCONFIRMED",
+          "latest_holdings_report": "account-report-20260916-0003",
+          "note": "원래 청산 기한 경과를 실제 시각과 대조했다. 현재 잔량·매도 완료는 새 사용자 보고 전 미확인이다. 기존 수량·가격을 현재 보유 또는 체결로 재확정하지 않는다."
         }
       }
     ],
@@ -243,7 +269,8 @@
     "두산퓨얼셀 360주 보유·매도가능 360주와 표시 평균매입가 50,697원을 확인했다. 주문/체결 식별자·정확한 가중평균 체결가·실제 비용 명세는 미확인이다.",
     "현재 주문가능현금 57,639,924원과 미체결 없음은 account-report-20260916-0004로 해소했다. 실제 예수금 및 정확한 앱 관측 시각은 미확인이다.",
     "공식 대회 수익률·순위·10위 성적·회전율·인정 종목 수·거래일수는 미확인이다. 0.37%로 대체하지 않는다.",
-    "계좌 화면의 표시 매입가·총 매입금액·정산예수금 사이 반올림 및 비용 차이는 명세 확인 전 실제 비용으로 단정하지 않는다."
+    "계좌 화면의 표시 매입가·총 매입금액·정산예수금 사이 반올림 및 비용 차이는 명세 확인 전 실제 비용으로 단정하지 않는다.",
+    "2026-09-18 장외 확인: 인버스 9/17 15:10, 두산퓨얼셀 9/18 15:10 원래 청산 기한이 지났으나 현재 잔량·매도 체결·미체결 상태는 새 사용자 보고 전 미확인이다."
   ],
   "paper_account_confirmation_source": "Historical competition account confirmation and ongoing user report; no new login performed.",
   "recordkeeping": {
@@ -271,7 +298,7 @@
     "new_trade_or_fill_reported": false
   },
   "last_received_report": "account-report-20260916-0004",
-  "updated_at": "2026-09-16T12:43:30.583010+09:00",
+  "updated_at": "2026-09-18T16:30:58.683096+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -372,5 +399,25 @@
       ],
       "path": "data/days/2026-09-16.md"
     }
-  ]
+  ],
+  "execution_follow_up": {
+    "review_id": "guard-20260918-1627",
+    "checked_at": "2026-09-18T16:30:58.683096+09:00",
+    "market_analysis_performed": false,
+    "reason": "outside_authorized_review_window_and_unconfirmed_time_exits",
+    "new_entry_status": "BLOCKED_PENDING_CURRENT_ACCOUNT_RECONCILIATION",
+    "scope": "현재 잔량·체결·미체결을 대사하기 전 신규 진입 지시 보류. 영구 대회 중단이 아님.",
+    "pending_question": {
+      "asked_at": "2026-09-18T16:30:58.683096+09:00",
+      "state": "AWAITING_USER_REPORT",
+      "requested_fields": [
+        "current_quantity_per_security",
+        "sell_quantity_and_fill_price_if_sold",
+        "open_orders"
+      ],
+      "repeat_without_new_reason": false
+    },
+    "after_hours_order_instruction_issued": false,
+    "missed_slots_replayed": false
+  }
 }
