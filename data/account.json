@@ -258,20 +258,30 @@
   },
   "award_progress": {
     "observed_at": null,
-    "reported_on": null,
-    "source_type": null,
-    "source_report": null,
+    "reported_on": "2026-09-21",
+    "source_type": "user_reported_official_app",
+    "source_report": "account-report-20260921-0002",
     "official_turnover_percent": null,
     "turnover_is_approximate": null,
     "official_traded_security_count": null,
     "official_trading_day_count": null,
     "official_rank": null,
-    "official_cutoff_rank": null,
-    "official_cutoff_return_percent": null,
+    "official_cutoff_rank": 10,
+    "official_cutoff_return_percent": 5.95,
     "turnover_formula_verified": null,
     "turnover_formula_source": null,
     "prior_trade_history_exists": null,
-    "prior_trade_details_complete": null
+    "prior_trade_details_complete": null,
+    "cutoff_report": {
+      "source_report": "account-report-20260921-0002",
+      "source_type": "user_reported_official_app",
+      "reported_on": "2026-09-21",
+      "recorded_at": "2026-09-21T08:30:37+09:00",
+      "observed_at": null,
+      "rank": 10,
+      "return_percent": 5.95,
+      "scope_note": "10위 수익률만 확인했다. 다른 공식 지표·계좌·보유·현금의 출처나 관측 시각은 갱신하지 않는다. 최종 커트라인을 고정한 값이 아니다."
+    }
   },
   "prize_gap_calculation": {
     "calculated_at": null,
@@ -279,7 +289,10 @@
     "return_gap_percentage_points": null,
     "required_gain_if_cutoff_unchanged_fraction": null,
     "remaining_turnover_percentage_points": null,
-    "is_final_cutoff_prediction": false
+    "is_final_cutoff_prediction": false,
+    "cutoff_source_report": "account-report-20260921-0002",
+    "status": "PENDING_OWN_OFFICIAL_RETURN",
+    "note": "10위 수익률 5.95%를 확인했으나 내 공식 대회 수익률이 없어 격차와 현재 자산에서 필요한 추가 수익률은 미산정이다. 보유 평가수익률 0.37%와 과거 정산금액을 대입하지 않는다."
   },
   "risk_profile_anchor": {
     "profile": "prize_focused_catch_up",
@@ -291,12 +304,12 @@
     "confirmation_status": "planning_basis_reconciled_official_total_equity_unconfirmed",
     "note": "이번 신규 계획의 최초 운용 기준을 고정 기록한다. 공식 총자산 확인 시 출처를 대사하되 손실을 이유로 기준점을 낮추거나 초기화하지 않는다."
   },
-  "last_reconciled_report": "account-report-20260921-0001",
+  "last_reconciled_report": "account-report-20260921-0002",
   "unresolved": [
     "9월21일 사용자 보고로 보유·매수·매도·미체결 상태가 그대로임을 확인했다. 정확한 앱 관측 시각은 미상이며 가격·평가손익의 마지막 계좌 화면은 9월16일 09:05다.",
     "두산퓨얼셀 360주와 인버스 20,000주를 현재 보유로 재확인했다. 매도가능수량·매입가 표시는 9월 16일 화면 출처를 유지한다. 주문/체결 식별자·정확한 가중평균 체결가·실제 비용 명세는 미확인이다.",
     "주문가능현금 57,639,924원은 9월16일 account-report-20260916-0004의 마지막 별도 확인값이다. 미체결 없음은 9월21일 재확인했다. 현금·평가액은 이번 보고로 시각을 갱신하지 않았으며 청산 후 주문가능현금 확인이 필요하다.",
-    "공식 대회 수익률·순위·10위 성적·회전율·인정 종목 수·거래일수는 미확인이다. 0.37%로 대체하지 않는다.",
+    "10위 수익률은 9월21일 사용자 보고 5.95%로 확인했다(정확한 앱 관측 시각 미상). 내 공식 대회 수익률·순위·회전율·인정 종목 수·거래일수는 미확인이고 격차는 미산정이다. 보유 평가수익률 0.37%로 대체하지 않는다.",
     "계좌 화면의 표시 매입가·총 매입금액·정산예수금 사이 반올림 및 비용 차이는 명세 확인 전 실제 비용으로 단정하지 않는다.",
     "2026-09-21 보유 그대로·미체결 없음 재확인: 인버스 9월17일15:10, 두산퓨얼셀 9월18일15:10 원래 시간 청산 전량 미집행. 오늘 허용 정규장에서 실제 매도가능잔량을 확인해 청산을 우선한다."
   ],
@@ -310,33 +323,33 @@
     "public_records": true
   },
   "latest_report": {
-    "report_id": "account-report-20260921-0001",
-    "report_kind": "unchanged_holdings_no_new_trades_and_no_open_orders",
+    "report_id": "account-report-20260921-0002",
+    "report_kind": "official_cutoff_return_only",
     "reported_on": "2026-09-21",
-    "recorded_at": "2026-09-21T08:13:33+09:00",
+    "recorded_at": "2026-09-21T08:30:37+09:00",
     "observed_at": null,
     "source_type": "user_reported_official_app",
-    "user_text": "매수, 매도, 미체결 하나도 달라진 거 없어",
-    "observation_time_note": "새 매수·매도 없고 기존 보유·미체결 없음이 그대로라는 사용자 보고. 정확한 앱 관측 시각은 미상이다.",
+    "user_text": "현재 10위는 수익률 5.95%야.",
+    "official_cutoff_rank": 10,
+    "official_cutoff_return_percent": 5.95,
+    "observation_time_note": "현재 10위 성적이라는 사용자 보고. 정확한 앱 관측 시각은 미상이며 recorded_at은 기록 시각이다.",
     "reconciliation_status": "RECONCILED",
     "reconciliation_scope": [
-      "portfolio.holdings.quantity",
-      "portfolio.holdings.exit_reconciliation.sell_execution_status",
-      "orders.open_orders"
+      "award_progress.official_cutoff_rank",
+      "award_progress.official_cutoff_return_percent"
     ],
     "new_trade_or_fill_reported": false,
-    "new_buy_fills_reported": 0,
-    "new_sell_fills_reported": 0,
     "unconfirmed_fields": [
-      "current_sellable_quantity",
-      "current_cash",
-      "current_valuation",
-      "official_competition_performance"
+      "own_official_return_percent",
+      "own_official_rank",
+      "official_turnover_percent",
+      "official_traded_security_count",
+      "official_trading_day_count"
     ],
-    "prior_holdings_report": "account-report-20260918-0001"
+    "prior_account_report": "account-report-20260921-0001"
   },
-  "last_received_report": "account-report-20260921-0001",
-  "updated_at": "2026-09-21T08:16:51+09:00",
+  "last_received_report": "account-report-20260921-0002",
+  "updated_at": "2026-09-21T08:30:37+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -408,9 +421,8 @@
     "prior_holdings_report": "account-report-20260918-0001"
   },
   "last_reconciliation_scope": [
-    "portfolio.holdings.quantity",
-    "portfolio.holdings.exit_reconciliation.sell_execution_status",
-    "orders.open_orders"
+    "award_progress.official_cutoff_rank",
+    "award_progress.official_cutoff_return_percent"
   ],
   "publication_authorization": {
     "authorized_on": "2026-09-16",
