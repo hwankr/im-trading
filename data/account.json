@@ -127,7 +127,7 @@
           "user_text": "인버스도 앞으로 네가 판단해서 기록해줘."
         },
         "exit_reconciliation": {
-          "checked_at": "2026-09-18T16:37:43+09:00",
+          "checked_at": "2026-09-21T08:13:33+09:00",
           "reason": "original_time_exit_deadline_passed",
           "original_plan_id": "plan-20260916-inverse-01",
           "original_exit_deadline": "2026-09-17T15:10:00+09:00",
@@ -136,22 +136,22 @@
           "current_remaining_quantity": 20000,
           "sell_execution_confirmed": false,
           "sell_execution_status": "NOT_EXECUTED_CONFIRMED",
-          "latest_holdings_report": "account-report-20260918-0001",
-          "note": "사용자가 미매도·동일 보유를 확인했다. 원래 시간 청산 기한은 경과했고 전량 미집행 상태다. 현재 매도가능수량·미체결 주문은 별도 확인 전 미확인이다. 다음 실제 허용 정규장에 기존 매도 주문 취소 완료와 취소 중 체결을 대사한 후 실제 잔량을 기존 계획대로 사용자 시장가 청산한다. 기한 연장·새 보유 승인이 아니다.",
+          "latest_holdings_report": "account-report-20260921-0001",
+          "note": "9월21일 사용자 보고로 기존 보유 그대로·매수/매도 없음·미체결 없음 확인. 원래 시간 청산은 전량 미집행 상태이며 기존 기한은 연장하지 않는다. 허용 정규장에서 실제 매도가능잔량을 확인해 기존 계획대로 사용자 시장가 청산을 우선한다.",
           "current_sellable_quantity": null,
           "source_type": "user_reported_official_app",
           "exit_obligation_status": "TIME_EXIT_DUE_UNEXECUTED",
           "original_deadline_preserved": true
         },
         "quantity_report": {
-          "source_report": "account-report-20260918-0001",
+          "source_report": "account-report-20260921-0001",
           "source_type": "user_reported_official_app",
-          "reported_on": "2026-09-18",
-          "recorded_at": "2026-09-18T16:37:43+09:00",
+          "reported_on": "2026-09-21",
+          "recorded_at": "2026-09-21T08:13:33+09:00",
           "observed_at": null,
           "quantity": 20000,
-          "confirmation": "unchanged_holdings_and_no_sales",
-          "note": "수량만 재확인했다. 기존 source_report의 매도가능수량·매입가·현재가·평가액·손익은 9월 16일 화면 값이며 이번 보고로 시각을 갱신하지 않는다."
+          "confirmation": "unchanged_holdings_no_new_buys_or_sales",
+          "note": "이번 사용자 보고는 보유수량·신규 매매 없음 확인이다. 매도가능수량·매입가·가격·평가손익은 원래 9월16일 화면의 출처·시각을 유지한다."
         }
       },
       {
@@ -194,7 +194,7 @@
           "note": "360주 보유를 실제 화면으로 확인했다. 예약 안내 주기 요청만으로 기존 청산 가격·평가시각·기한을 변경하지 않는다. 변경은 명시적 새 계획 버전으로 기록한다."
         },
         "exit_reconciliation": {
-          "checked_at": "2026-09-18T16:37:43+09:00",
+          "checked_at": "2026-09-21T08:13:33+09:00",
           "reason": "original_time_exit_deadline_passed",
           "original_plan_id": "plan-20260916-01",
           "original_exit_deadline": "2026-09-18T15:10:00+09:00",
@@ -203,22 +203,22 @@
           "current_remaining_quantity": 360,
           "sell_execution_confirmed": false,
           "sell_execution_status": "NOT_EXECUTED_CONFIRMED",
-          "latest_holdings_report": "account-report-20260918-0001",
-          "note": "사용자가 미매도·동일 보유를 확인했다. 원래 시간 청산 기한은 경과했고 전량 미집행 상태다. 현재 매도가능수량·미체결 주문은 별도 확인 전 미확인이다. 다음 실제 허용 정규장에 기존 매도 주문 취소 완료와 취소 중 체결을 대사한 후 실제 잔량을 기존 계획대로 사용자 시장가 청산한다. 기한 연장·새 보유 승인이 아니다.",
+          "latest_holdings_report": "account-report-20260921-0001",
+          "note": "9월21일 사용자 보고로 기존 보유 그대로·매수/매도 없음·미체결 없음 확인. 원래 시간 청산은 전량 미집행 상태이며 기존 기한은 연장하지 않는다. 허용 정규장에서 실제 매도가능잔량을 확인해 기존 계획대로 사용자 시장가 청산을 우선한다.",
           "current_sellable_quantity": null,
           "source_type": "user_reported_official_app",
           "exit_obligation_status": "TIME_EXIT_DUE_UNEXECUTED",
           "original_deadline_preserved": true
         },
         "quantity_report": {
-          "source_report": "account-report-20260918-0001",
+          "source_report": "account-report-20260921-0001",
           "source_type": "user_reported_official_app",
-          "reported_on": "2026-09-18",
-          "recorded_at": "2026-09-18T16:37:43+09:00",
+          "reported_on": "2026-09-21",
+          "recorded_at": "2026-09-21T08:13:33+09:00",
           "observed_at": null,
           "quantity": 360,
-          "confirmation": "unchanged_holdings_and_no_sales",
-          "note": "수량만 재확인했다. 기존 source_report의 매도가능수량·매입가·현재가·평가액·손익은 9월 16일 화면 값이며 이번 보고로 시각을 갱신하지 않는다."
+          "confirmation": "unchanged_holdings_no_new_buys_or_sales",
+          "note": "이번 사용자 보고는 보유수량·신규 매매 없음 확인이다. 매도가능수량·매입가·가격·평가손익은 원래 9월16일 화면의 출처·시각을 유지한다."
         }
       }
     ],
@@ -239,22 +239,22 @@
   },
   "orders": {
     "observed_at": null,
-    "reported_on": "2026-09-16",
+    "reported_on": "2026-09-21",
     "source_type": "user_reported_official_app",
-    "source_report": "account-report-20260916-0004",
-    "recorded_at": "2026-09-16T11:05:52.945574+09:00",
+    "source_report": "account-report-20260921-0001",
+    "recorded_at": "2026-09-21T08:13:33+09:00",
     "open_orders": [],
-    "confirmation_text": "미체결 주문 없음.",
+    "confirmation_text": "매수, 매도, 미체결 하나도 달라진 거 없어",
     "last_confirmed_report": {
       "observed_at": null,
-      "reported_on": "2026-09-16",
+      "reported_on": "2026-09-21",
       "source_type": "user_reported_official_app",
-      "source_report": "account-report-20260916-0004",
-      "recorded_at": "2026-09-16T11:05:52.945574+09:00",
+      "source_report": "account-report-20260921-0001",
+      "recorded_at": "2026-09-21T08:13:33+09:00",
       "open_orders": [],
-      "confirmation_text": "미체결 주문 없음."
+      "confirmation_text": "매수, 매도, 미체결 하나도 달라진 거 없어"
     },
-    "note": "사용자가 현재 미체결 주문 없음을 명시했다. 이전 null을 확인된 빈 배열로 갱신한다. 이 보고는 특정 주문의 취소·체결 내역이나 보유수량 재확인에 해당하지 않는다."
+    "note": "직전 확인된 미체결 없음이 그대로임을 오늘 사용자 보고로 재확인했다. 실제 주문/체결 식별자·취소 내역을 새로 확인한 것은 아니다."
   },
   "award_progress": {
     "observed_at": null,
@@ -291,14 +291,14 @@
     "confirmation_status": "planning_basis_reconciled_official_total_equity_unconfirmed",
     "note": "이번 신규 계획의 최초 운용 기준을 고정 기록한다. 공식 총자산 확인 시 출처를 대사하되 손실을 이유로 기준점을 낮추거나 초기화하지 않는다."
   },
-  "last_reconciled_report": "account-report-20260918-0001",
+  "last_reconciled_report": "account-report-20260921-0001",
   "unresolved": [
-    "9월 18일 사용자 보고로 두 종목 미매도·동일 보유를 확인했다. 정확한 앱 확인 시각은 미상이다. 가격·평가손익의 마지막 계좌 화면은 9월 16일 휴대전화 시각 09:05다.",
+    "9월21일 사용자 보고로 보유·매수·매도·미체결 상태가 그대로임을 확인했다. 정확한 앱 관측 시각은 미상이며 가격·평가손익의 마지막 계좌 화면은 9월16일 09:05다.",
     "두산퓨얼셀 360주와 인버스 20,000주를 현재 보유로 재확인했다. 매도가능수량·매입가 표시는 9월 16일 화면 출처를 유지한다. 주문/체결 식별자·정확한 가중평균 체결가·실제 비용 명세는 미확인이다.",
-    "주문가능현금 57,639,924원과 미체결 없음은 9월 16일 account-report-20260916-0004의 마지막 확인값이다. 9월 18일 미매도 보고는 현금·미체결 재확인이 아니며 주문 전 현재 상태 대사가 필요하다.",
+    "주문가능현금 57,639,924원은 9월16일 account-report-20260916-0004의 마지막 별도 확인값이다. 미체결 없음은 9월21일 재확인했다. 현금·평가액은 이번 보고로 시각을 갱신하지 않았으며 청산 후 주문가능현금 확인이 필요하다.",
     "공식 대회 수익률·순위·10위 성적·회전율·인정 종목 수·거래일수는 미확인이다. 0.37%로 대체하지 않는다.",
     "계좌 화면의 표시 매입가·총 매입금액·정산예수금 사이 반올림 및 비용 차이는 명세 확인 전 실제 비용으로 단정하지 않는다.",
-    "2026-09-18 사용자 미매도 확인: 인버스 9월 17일 15:10, 두산퓨얼셀 9월 18일 15:10 원래 시간 청산이 전량 미집행 상태다. 다음 실제 허용 정규장에서 현재 미체결·매도가능잔량을 대사한 뒤 기존 청산을 우선한다."
+    "2026-09-21 보유 그대로·미체결 없음 재확인: 인버스 9월17일15:10, 두산퓨얼셀 9월18일15:10 원래 시간 청산 전량 미집행. 오늘 허용 정규장에서 실제 매도가능잔량을 확인해 청산을 우선한다."
   ],
   "paper_account_confirmation_source": "Historical competition account confirmation and ongoing user report; no new login performed.",
   "recordkeeping": {
@@ -310,32 +310,33 @@
     "public_records": true
   },
   "latest_report": {
-    "report_id": "account-report-20260918-0001",
-    "report_kind": "partial_unchanged_holdings_and_no_sales",
-    "reported_on": "2026-09-18",
-    "recorded_at": "2026-09-18T16:37:43+09:00",
+    "report_id": "account-report-20260921-0001",
+    "report_kind": "unchanged_holdings_no_new_trades_and_no_open_orders",
+    "reported_on": "2026-09-21",
+    "recorded_at": "2026-09-21T08:13:33+09:00",
     "observed_at": null,
     "source_type": "user_reported_official_app",
-    "user_text": "매도한거 하나도 없어. 그대로야.",
-    "observation_time_note": "현재 보유가 그대로이며 매도하지 않았다는 사용자 텍스트 보고. 정확한 앱 확인 시각은 미상이며 recorded_at은 기록 시각이다.",
+    "user_text": "매수, 매도, 미체결 하나도 달라진 거 없어",
+    "observation_time_note": "새 매수·매도 없고 기존 보유·미체결 없음이 그대로라는 사용자 보고. 정확한 앱 관측 시각은 미상이다.",
     "reconciliation_status": "RECONCILED",
     "reconciliation_scope": [
       "portfolio.holdings.quantity",
-      "portfolio.holdings.exit_reconciliation.sell_execution_status"
+      "portfolio.holdings.exit_reconciliation.sell_execution_status",
+      "orders.open_orders"
     ],
     "new_trade_or_fill_reported": false,
-    "sales_reported_since_previous_holdings_snapshot": 0,
+    "new_buy_fills_reported": 0,
+    "new_sell_fills_reported": 0,
     "unconfirmed_fields": [
       "current_sellable_quantity",
-      "current_open_orders",
       "current_cash",
       "current_valuation",
       "official_competition_performance"
     ],
-    "prior_holdings_report": "account-report-20260916-0003"
+    "prior_holdings_report": "account-report-20260918-0001"
   },
-  "last_received_report": "account-report-20260918-0001",
-  "updated_at": "2026-09-18T16:37:43+09:00",
+  "last_received_report": "account-report-20260921-0001",
+  "updated_at": "2026-09-21T08:16:51+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -375,36 +376,41 @@
     "operation_record": "data/operation-mode.json",
     "automation_id": "30",
     "registration_status": "ACTIVE",
-    "registration_verified_at": "2026-09-16T09:09:43.7687790+09:00"
+    "registration_verified_at": "2026-09-21T08:16:51+09:00",
+    "target_thread_id": "01a0c117-2c6c-7b51-84c3-bd8b32c23371",
+    "transferred_on": "2026-09-21",
+    "transfer_record": "data/operation-mode.json"
   },
   "latest_holdings_report": {
-    "report_id": "account-report-20260918-0001",
-    "report_kind": "partial_unchanged_holdings_and_no_sales",
-    "reported_on": "2026-09-18",
-    "recorded_at": "2026-09-18T16:37:43+09:00",
+    "report_id": "account-report-20260921-0001",
+    "report_kind": "unchanged_holdings_no_new_trades_and_no_open_orders",
+    "reported_on": "2026-09-21",
+    "recorded_at": "2026-09-21T08:13:33+09:00",
     "observed_at": null,
     "source_type": "user_reported_official_app",
-    "user_text": "매도한거 하나도 없어. 그대로야.",
-    "observation_time_note": "현재 보유가 그대로이며 매도하지 않았다는 사용자 텍스트 보고. 정확한 앱 확인 시각은 미상이며 recorded_at은 기록 시각이다.",
+    "user_text": "매수, 매도, 미체결 하나도 달라진 거 없어",
+    "observation_time_note": "새 매수·매도 없고 기존 보유·미체결 없음이 그대로라는 사용자 보고. 정확한 앱 관측 시각은 미상이다.",
     "reconciliation_status": "RECONCILED",
     "reconciliation_scope": [
       "portfolio.holdings.quantity",
-      "portfolio.holdings.exit_reconciliation.sell_execution_status"
+      "portfolio.holdings.exit_reconciliation.sell_execution_status",
+      "orders.open_orders"
     ],
     "new_trade_or_fill_reported": false,
-    "sales_reported_since_previous_holdings_snapshot": 0,
+    "new_buy_fills_reported": 0,
+    "new_sell_fills_reported": 0,
     "unconfirmed_fields": [
       "current_sellable_quantity",
-      "current_open_orders",
       "current_cash",
       "current_valuation",
       "official_competition_performance"
     ],
-    "prior_holdings_report": "account-report-20260916-0003"
+    "prior_holdings_report": "account-report-20260918-0001"
   },
   "last_reconciliation_scope": [
     "portfolio.holdings.quantity",
-    "portfolio.holdings.exit_reconciliation.sell_execution_status"
+    "portfolio.holdings.exit_reconciliation.sell_execution_status",
+    "orders.open_orders"
   ],
   "publication_authorization": {
     "authorized_on": "2026-09-16",
@@ -451,35 +457,34 @@
   ],
   "execution_follow_up": {
     "review_id": "guard-20260918-1627",
-    "checked_at": "2026-09-18T16:37:43+09:00",
+    "checked_at": "2026-09-21T08:13:33+09:00",
     "market_analysis_performed": false,
     "reason": "confirmed_unsold_positions_after_original_time_exit_deadlines",
     "new_entry_status": "BLOCKED_PENDING_OVERDUE_EXITS_AND_CURRENT_ACCOUNT_RECONCILIATION",
-    "scope": "전량 보유·미매도는 대사 완료. 기존 시간 청산 집행과 현재 미체결·매도가능잔량·가용현금 대사 전 신규 진입 보류. 영구 대회 중단이 아님.",
+    "scope": "9월21일 보유수량·미체결 없음 대사 완료. 미집행 시간 청산을 우선하며 실제 매도가능잔량과 청산 후 가용현금 대사 전 신규 주문 수량 확정 보류. 가격 근거가 충분한 신규 후보 분석은 가능하다.",
     "pending_question": {
       "asked_at": "2026-09-18T16:30:58.683096+09:00",
-      "state": "PARTIALLY_ANSWERED",
+      "state": "ANSWERED",
       "requested_fields": [
         "current_quantity_per_security",
         "sell_quantity_and_fill_price_if_sold",
         "open_orders"
       ],
       "repeat_without_new_reason": false,
-      "answered_at": "2026-09-18T16:37:43+09:00",
-      "answer_report": "account-report-20260918-0001",
+      "answered_at": "2026-09-21T08:13:33+09:00",
+      "answer_report": "account-report-20260921-0001",
       "answered_fields": [
         "current_quantity_per_security",
-        "sell_quantity_and_fill_price_if_sold"
-      ],
-      "remaining_unconfirmed_fields": [
+        "sell_quantity_and_fill_price_if_sold",
         "open_orders"
       ],
+      "remaining_unconfirmed_fields": [],
       "defer_remaining_check_to_pre_execution_reconciliation": true,
-      "note": "미매도이므로 매도 체결가 질문은 해당 없음. 동일 보유 질문은 반복하지 않는다. 현재 주문 상태는 실제 주문 전 확인한다."
+      "note": "보유·미매도·미체결 없음 보고 모두 확인했다. 같은 질문은 반복하지 않는다. 새 주문 직전 상태 변화가 있으면 실제 잔량을 대사한다."
     },
     "after_hours_order_instruction_issued": false,
     "missed_slots_replayed": false,
-    "latest_account_report": "account-report-20260918-0001",
+    "latest_account_report": "account-report-20260921-0001",
     "execution_owner": "user",
     "next_execution_window": "next_actual_permitted_regular_session_of_competition_paper_account",
     "next_execution_at": null,
@@ -492,6 +497,7 @@
       "reconcile_fills_remaining_orders_and_orderable_cash_before_new_entry"
     ],
     "deadline_extension": false,
-    "orders_submitted_by_assistant": false
+    "orders_submitted_by_assistant": false,
+    "guidance_thread_id": "01a0c117-2c6c-7b51-84c3-bd8b32c23371"
   }
 }

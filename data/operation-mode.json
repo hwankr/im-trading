@@ -14,18 +14,18 @@
   "current_automation_state": "ACTIVE",
   "automation_id": "30",
   "target_workspace": ".",
-  "source_thread": "current_thread",
+  "source_thread": "01a0c117-2c6c-7b51-84c3-bd8b32c23371",
   "automatic_orders": false,
   "brokerage_api_or_app_control": false,
   "multi_agent": false,
   "existing_price_or_exit_mode_changed": false,
-  "note": "자동 안내 간격만 승인된 것이다. 실제 앱 주문·정정·취소는 사용자만 실행한다. 과거 ai-2 ACTIVE 표시는 역사 기록으로 보존하며 현재 자동화 상태로 재사용하지 않는다.",
+  "note": "사용자가 2026-09-21 새 작업에서 계속 안내하도록 요청했다. 기존 ID30을 새 작업에 연결했다. 이전 schedule_correction·first_completed_review는 역사 기록이며 새 작업의 실행 증거가 아니다. 실제 앱 주문·정정·취소는 사용자만 실행한다.",
   "automation_name": "모의투자 30분 행동 안내",
   "automation_kind": "heartbeat",
-  "target_thread_id": "01a0a771-7556-71e2-879f-52b6fe0ee9d9",
-  "registration_verified_at": "2026-09-16T09:42:42.2651906+09:00",
-  "registration_evidence": "Native automation update succeeded; persisted ACTIVE schedule and actual next_run_at independently verified. Previous 09:30 claim corrected.",
-  "first_expected_slot_kst": "2026-09-16T10:00:00+09:00",
+  "target_thread_id": "01a0c117-2c6c-7b51-84c3-bd8b32c23371",
+  "registration_verified_at": "2026-09-21T08:16:51+09:00",
+  "registration_evidence": "Native update succeeded; persisted target thread, ACTIVE status and next_run_at verified against automation TOML and read-only scheduler database.",
+  "first_expected_slot_kst": "2026-09-21T09:00:00+09:00",
   "expires_at_kst": "2026-10-08T15:30:00+09:00",
   "first_execution_verified": true,
   "host_timezone_verified": "Korea Standard Time (UTC+09:00)",
@@ -47,11 +47,11 @@
     "exact_slot_execution_guaranteed": false,
     "note": "The app stored the next run 91 seconds after the nominal 10:00 slot. The reason for this additional offset has not been verified. No database write or manual scheduler-file edit was performed."
   },
-  "next_run_at_kst": "2026-09-16T13:00:48+09:00",
+  "next_run_at_kst": "2026-09-21T09:01:59+09:00",
   "first_actual_started_at_kst": "2026-09-16T10:01:49.195000+09:00",
   "first_execution_verified_at_kst": "2026-09-16T10:07:44.804133+09:00",
   "first_execution_evidence": "Read-only native automations.last_run_at=1789520509195; first 10:00-slot review and public observations appended to private daily record. No account fill inferred.",
-  "next_run_verified_at_kst": "2026-09-16T12:44:59.273384+09:00",
+  "next_run_verified_at_kst": "2026-09-21T08:16:51+09:00",
   "last_completed_review": {
     "review_id": "review-20260916-1230",
     "recorded_at_kst": "2026-09-16T12:34:06.814912+09:00",
@@ -80,5 +80,25 @@
     "plan_id": "plan-20260916-01",
     "plan_version": 1,
     "latest_account_report": "account-report-20260916-0003"
-  }
+  },
+  "thread_transfer_history": [
+    {
+      "authorized_on": "2026-09-21",
+      "verified_at": "2026-09-21T08:16:51+09:00",
+      "previous_target_thread_id": "01a0a771-7556-71e2-879f-52b6fe0ee9d9",
+      "target_thread_id": "01a0c117-2c6c-7b51-84c3-bd8b32c23371",
+      "existing_automation_reused": true,
+      "automation_id": "30",
+      "active_trading_automation_count": 1,
+      "native_update_verified": true,
+      "persisted_toml_and_read_only_scheduler_state_verified": true,
+      "nominal_first_slot_kst": "2026-09-21T09:00:00+09:00",
+      "actual_next_run_at_kst": "2026-09-21T09:01:59+09:00",
+      "notification_policy": null,
+      "execution_verified": false,
+      "note": "첫 실행 시각은 앱 저장값이며 실제 정시 실행·알림 도착의 확인이 아니다. 기존 예약의 대상만 새 작업으로 이전했고 중복 생성하지 않았다."
+    }
+  ],
+  "single_writer_thread_id": "01a0c117-2c6c-7b51-84c3-bd8b32c23371",
+  "new_thread_first_execution_verified": false
 }
