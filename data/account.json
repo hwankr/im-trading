@@ -82,6 +82,12 @@
       "minimum_orderable_amount_krw": 97121856,
       "orderable_substitute_krw": 0,
       "credit_maximum_orderable_krw": 0
+    },
+    "latest_order_impact": {
+      "source_report": "account-report-20260921-0006",
+      "order_submitted_after_cash_snapshot": true,
+      "current_orderable_after_submission_krw": null,
+      "note": "97,121,856원은 09:19 화면의 주문 전 가용현금이다. 미체결 매수11주를 별도 예약 위험으로 반영하며 해당 금액을 새 주문에 중복 배분하지 않는다. 실제 현금 필드는 추정 차감하지 않았다."
     }
   },
   "portfolio": {
@@ -118,21 +124,69 @@
   "orders": {
     "observed_at": null,
     "reported_on": "2026-09-21",
-    "recorded_at": "2026-09-21T09:25:23+09:00",
+    "recorded_at": "2026-09-21T09:47:21+09:00",
     "source_type": "user_reported_official_app",
-    "source_report": "account-report-20260921-0005",
-    "open_orders": [],
-    "confirmation_text": "두 종목 전량 매도·미체결 없음",
+    "source_report": "account-report-20260921-0006",
+    "open_orders": [
+      {
+        "order_id": null,
+        "code": "298040",
+        "name": "효성중공업",
+        "side": "buy",
+        "order_type": "limit",
+        "order_quantity": 11,
+        "cumulative_filled_quantity": 0,
+        "remaining_quantity": 11,
+        "limit_price_krw": 2825000,
+        "status": "SUBMITTED_UNFILLED_USER_CONFIRMED",
+        "plan_id": "plan-20260921-01",
+        "plan_version": 2,
+        "source_report": "account-report-20260921-0006",
+        "source_type": "user_reported_official_app",
+        "observed_at": null,
+        "reported_on": "2026-09-21",
+        "recorded_at": "2026-09-21T09:47:21+09:00",
+        "submitted_at": null,
+        "average_fill_price_krw": null,
+        "cancel_requested": false,
+        "cancel_completed": false
+      }
+    ],
+    "confirmation_text": "2,825,000원·11주, 전량 미체결",
     "last_confirmed_report": {
       "observed_at": null,
       "reported_on": "2026-09-21",
-      "recorded_at": "2026-09-21T09:25:23+09:00",
+      "recorded_at": "2026-09-21T09:47:21+09:00",
       "source_type": "user_reported_official_app",
-      "source_report": "account-report-20260921-0005",
-      "open_orders": [],
-      "confirmation_text": "두 종목 전량 매도·미체결 없음"
+      "source_report": "account-report-20260921-0006",
+      "open_orders": [
+        {
+          "order_id": null,
+          "code": "298040",
+          "name": "효성중공업",
+          "side": "buy",
+          "order_type": "limit",
+          "order_quantity": 11,
+          "cumulative_filled_quantity": 0,
+          "remaining_quantity": 11,
+          "limit_price_krw": 2825000,
+          "status": "SUBMITTED_UNFILLED_USER_CONFIRMED",
+          "plan_id": "plan-20260921-01",
+          "plan_version": 2,
+          "source_report": "account-report-20260921-0006",
+          "source_type": "user_reported_official_app",
+          "observed_at": null,
+          "reported_on": "2026-09-21",
+          "recorded_at": "2026-09-21T09:47:21+09:00",
+          "submitted_at": null,
+          "average_fill_price_krw": null,
+          "cancel_requested": false,
+          "cancel_completed": false
+        }
+      ],
+      "confirmation_text": "2,825,000원·11주, 전량 미체결"
     },
-    "note": "전량 매도·미체결 없음이라는 새 사용자 답변으로 확인했다. 특정 취소 이력이나 주문번호·체결가를 추정하지 않는다."
+    "note": "이번 주문 보고를 1건만 반영했다. 최초 접수 언급과 후속 확인 답변은 동일 주문이며 중복 주문으로 만들지 않는다. 실제 주문 식별자·접수 시각·주문 후 가용현금은 미확인. 미체결11주는 위험 계산에서 전량 체결 가능성을 반영한다."
   },
   "award_progress": {
     "observed_at": null,
@@ -200,12 +254,13 @@
     "confirmation_status": "planning_basis_reconciled_official_total_equity_unconfirmed",
     "note": "이번 신규 계획의 최초 운용 기준을 고정 기록한다. 공식 총자산 확인 시 출처를 대사하되 손실을 이유로 기준점을 낮추거나 초기화하지 않는다."
   },
-  "last_reconciled_report": "account-report-20260921-0005",
+  "last_reconciled_report": "account-report-20260921-0006",
   "unresolved": [
     "인버스 20,000주·두산퓨얼셀 360주 전량 매도와 미체결 없음은 사용자 보고로 확인했다. 종목별 실제 체결가·체결시각·주문 식별자·실제 비용은 미확인이다.",
     "09:19 화면 주문가능현금은 97,121,856원이다. 투자원금+표시 투자손익 97,189,652원과의 차이 67,796원 원인·공식 총자산 매핑은 미확인이다.",
     "새 투자손익 화면 이익률 -2.81%와 대회 순위 화면의 산식 동일 여부는 미확인이다. 마지막 공식 성적 보고 -1.76%·124위와 10위 +5.95%는 원래 출처·시각으로 보존한다. 이전 7.71%p·추가 7.85% 계산을 새 계좌 상태의 최신 격차로 재사용하지 않는다.",
-    "공식 회전율·인정 종목 수·매매일수는 미확인이다. 새 거래가 있다고 공식 인정 수·회전율을 임의 증가시키지 않는다."
+    "공식 회전율·인정 종목 수·매매일수는 미확인이다. 새 거래가 있다고 공식 인정 수·회전율을 임의 증가시키지 않는다.",
+    "효성중공업 2,825,000원·11주 매수 접수, 누적체결0·미체결11주는 보고0006으로 확인했다. 주문 식별자·정확한 접수/관측 시각·주문 후 가용현금은 미확인이다. 추가 매수 지시로 11주를 반복 사용하지 않는다."
   ],
   "paper_account_confirmation_source": "Historical competition account confirmation and ongoing user report; no new login performed.",
   "recordkeeping": {
@@ -217,37 +272,33 @@
     "public_records": true
   },
   "latest_report": {
-    "report_id": "account-report-20260921-0005",
-    "report_kind": "full_liquidation_and_no_open_orders",
+    "report_id": "account-report-20260921-0006",
+    "report_kind": "buy_order_submitted_fully_unfilled",
     "reported_on": "2026-09-21",
-    "recorded_at": "2026-09-21T09:25:23+09:00",
+    "recorded_at": "2026-09-21T09:47:21+09:00",
     "observed_at": null,
     "source_type": "user_reported_official_app",
-    "user_text": "두 종목 전량 매도·미체결 없음",
+    "user_text": "매수 주문을 하긴 했는데, 지정가 가격으로 내려오기 위한 수준이 현재가격에서 익절가격 까지 가는 것보다 멀리 있는데,,?",
+    "clarifying_answer": "2,825,000원·11주, 전량 미체결",
+    "plan_id": "plan-20260921-01",
+    "plan_version": 2,
     "reconciliation_status": "RECONCILED",
     "reconciliation_scope": [
-      "portfolio.holdings",
       "orders.open_orders",
-      "closed_positions"
+      "current_entry_plan.execution_report"
     ],
-    "new_trade_or_fill_reported": true,
-    "reported_closed_quantities": {
-      "123310": 20000,
-      "336260": 360
-    },
-    "remaining_holdings_count": 0,
+    "new_order_reported": true,
+    "new_fill_reported": false,
     "unconfirmed_fields": [
-      "individual_fill_prices",
-      "exact_fill_times",
-      "order_ids",
-      "actual_commission_and_tax",
-      "official_current_total_equity"
+      "order_id",
+      "exact_submission_time",
+      "exact_app_observation_time",
+      "orderable_cash_after_submission"
     ],
-    "observation_time_note": "인버스 20,000주·두산퓨얼셀 360주 모두 매도됐고 미체결 없는지 묻는 질문에 대한 답변. 정확한 앱 관측·체결 시각은 미상이다.",
-    "prior_account_report": "account-report-20260921-0004"
+    "prior_account_report": "account-report-20260921-0005"
   },
-  "last_received_report": "account-report-20260921-0005",
-  "updated_at": "2026-09-21T09:39:53+09:00",
+  "last_received_report": "account-report-20260921-0006",
+  "updated_at": "2026-09-21T09:47:21+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -325,9 +376,8 @@
     "prior_account_report": "account-report-20260921-0004"
   },
   "last_reconciliation_scope": [
-    "portfolio.holdings",
     "orders.open_orders",
-    "closed_positions"
+    "current_entry_plan.execution_report"
   ],
   "publication_authorization": {
     "authorized_on": "2026-09-16",
@@ -364,13 +414,12 @@
     }
   ],
   "execution_follow_up": {
-    "review_id": "review-20260921-0930",
-    "checked_at": "2026-09-21T09:39:53+09:00",
-    "latest_account_report": "account-report-20260921-0005",
+    "review_id": "entry-rationale-review-20260921-01",
+    "checked_at": "2026-09-21T09:47:21+09:00",
+    "latest_account_report": "account-report-20260921-0006",
     "latest_cash_report": "account-report-20260921-0004",
     "exit_obligation_status": "CLOSED_USER_CONFIRMED",
-    "previous_position_remaining_quantity": 0,
-    "new_entry_status": "READY_V2_11_SHARES_SINGLE_LIMIT_SUBMISSION",
+    "new_entry_status": "SUBMITTED_UNFILLED_KEEP_EXISTING_LIMIT_NO_DUPLICATE_ENTRY",
     "plan_reference": {
       "plan_id": "plan-20260921-01",
       "version": 2,
@@ -378,22 +427,13 @@
       "path": "data/days/2026-09-21.md",
       "plan_is_not_order_or_fill": true
     },
-    "instructions": "효성중공업 2825000원 지정가 총11주를 안내 수신 후 9월21일14:30 전 한 번 입력. 입력 직전 무효 조건 확인. 15:00 취소·체결 대사 필수. 접수·체결 보고 전 계좌 보유·현금은 마지막 실제 보고 유지.",
+    "instructions": "기존 효성중공업 2825000원 11주 미체결 주문 유지. 추가 입력·가격 인상 없음. 실제 무효 조건을 확인하면 미체결 취소 우선. 9월21일15:00 미체결 취소 완료·추가 체결 대사 후 실제 보유에 기존 scheduled_review 적용.",
     "pending_question": {
       "state": "ANSWERED",
-      "answer_report": "account-report-20260921-0005",
-      "requested_fields": [
-        "full_liquidation",
-        "open_orders"
-      ],
-      "unconfirmed_details": [
-        "individual_fill_prices",
-        "exact_fill_times"
-      ],
-      "repeat_full_liquidation_question": false
+      "answer_report": "account-report-20260921-0006",
+      "repeat_question": false
     },
-    "orders_submitted_by_assistant": false,
-    "original_exit_history_preserved": true
+    "orders_submitted_by_assistant": false
   },
   "latest_market_review": {
     "review_id": "review-20260921-0930",
@@ -805,6 +845,38 @@
       "orders_submitted_by_assistant": false,
       "deadline_extension": false,
       "original_exit_history_preserved": true
+    },
+    {
+      "review_id": "review-20260921-0930",
+      "checked_at": "2026-09-21T09:39:53+09:00",
+      "latest_account_report": "account-report-20260921-0005",
+      "latest_cash_report": "account-report-20260921-0004",
+      "exit_obligation_status": "CLOSED_USER_CONFIRMED",
+      "previous_position_remaining_quantity": 0,
+      "new_entry_status": "READY_V2_11_SHARES_SINGLE_LIMIT_SUBMISSION",
+      "plan_reference": {
+        "plan_id": "plan-20260921-01",
+        "version": 2,
+        "status": "READY",
+        "path": "data/days/2026-09-21.md",
+        "plan_is_not_order_or_fill": true
+      },
+      "instructions": "효성중공업 2825000원 지정가 총11주를 안내 수신 후 9월21일14:30 전 한 번 입력. 입력 직전 무효 조건 확인. 15:00 취소·체결 대사 필수. 접수·체결 보고 전 계좌 보유·현금은 마지막 실제 보고 유지.",
+      "pending_question": {
+        "state": "ANSWERED",
+        "answer_report": "account-report-20260921-0005",
+        "requested_fields": [
+          "full_liquidation",
+          "open_orders"
+        ],
+        "unconfirmed_details": [
+          "individual_fill_prices",
+          "exact_fill_times"
+        ],
+        "repeat_full_liquidation_question": false
+      },
+      "orders_submitted_by_assistant": false,
+      "original_exit_history_preserved": true
     }
   ],
   "latest_cash_and_investment_report": {
@@ -872,9 +944,9 @@
     "quantity_is_total_not_additional": true,
     "order_type": "limit",
     "market": "KRX_regular_paper_account",
-    "actual_order_submitted": null,
-    "actual_fill_quantity": null,
-    "actual_fill_quantity_basis": "신규 계획 접수·체결 보고 전에는 미확인. 계좌 보유0은 계획 발행 전 사용자 보고0005의 상태.",
+    "actual_order_submitted": true,
+    "actual_fill_quantity": 0,
+    "actual_fill_quantity_basis": "사용자 보고 account-report-20260921-0006: 2825000원 11주 접수, 전량 미체결",
     "valid_from": "2026-09-21T09:39:53+09:00",
     "entry_deadline": "2026-09-21T14:30:00+09:00",
     "entry_deadline_exclusive": true,
@@ -882,7 +954,8 @@
       "start": "2026-09-21T09:39:53+09:00",
       "end_exclusive": "2026-09-21T14:30:00+09:00",
       "additional_start_constraint": "사용자가 본 안내를 실제 받은 뒤",
-      "maximum_submissions": 1
+      "maximum_submissions": 1,
+      "submission_consumed_by_report": "account-report-20260921-0006"
     },
     "cancel_unfilled_at": "2026-09-21T15:00:00+09:00",
     "first_review_at": "2026-09-21T15:00:00+09:00",
@@ -969,7 +1042,15 @@
     },
     "journal_path": "data/days/2026-09-21.md",
     "plan_is_not_order_or_fill": true,
-    "orders_submitted_by_assistant": false
+    "orders_submitted_by_assistant": false,
+    "execution_report": {
+      "source_report": "account-report-20260921-0006",
+      "status": "SUBMITTED_UNFILLED_USER_CONFIRMED",
+      "remaining_quantity": 11,
+      "actual_submission_time": null,
+      "order_id": null
+    },
+    "additional_submission_prohibited": true
   },
   "market_review_history": [
     {
@@ -1014,5 +1095,45 @@
       "prior_issue": "효성중공업 plan-20260921-01 v1은 PRICE_ONLY다. 기존 청산·현재 현금 선결사항은 해결됐으며 다음 수량 검토에서 기준자산·비용 차이와 현행 손실·스트레스 한도를 반영한 명시적 버전이 필요하다.",
       "resolution": "v2에서 확인 현금과 전량 청산 보고 기반 보수적 운용 기준으로 11주 산정. 공식 총자산 매핑 미확인은 유지."
     }
-  ]
+  ],
+  "order_state_history": [
+    {
+      "observed_at": null,
+      "reported_on": "2026-09-21",
+      "recorded_at": "2026-09-21T09:25:23+09:00",
+      "source_type": "user_reported_official_app",
+      "source_report": "account-report-20260921-0005",
+      "open_orders": [],
+      "confirmation_text": "두 종목 전량 매도·미체결 없음",
+      "last_confirmed_report": {
+        "observed_at": null,
+        "reported_on": "2026-09-21",
+        "recorded_at": "2026-09-21T09:25:23+09:00",
+        "source_type": "user_reported_official_app",
+        "source_report": "account-report-20260921-0005",
+        "open_orders": [],
+        "confirmation_text": "두 종목 전량 매도·미체결 없음"
+      },
+      "note": "전량 매도·미체결 없음이라는 새 사용자 답변으로 확인했다. 특정 취소 이력이나 주문번호·체결가를 추정하지 않는다."
+    }
+  ],
+  "latest_entry_rationale_review": {
+    "review_id": "entry-rationale-review-20260921-01",
+    "recorded_at": "2026-09-21T09:47:21+09:00",
+    "trigger": "explicit_user_question_about_entry_distance_and_order_submission_report",
+    "public_price_krw": 2927000,
+    "public_price_observed_at": "2026-09-21T09:44:23+09:00",
+    "price_type": "KRX_regular_market_last_price_not_bid_ask",
+    "source": "https://m.stock.naver.com/api/stock/298040/basic",
+    "decision": "KEEP_EXISTING_PULLBACK_LIMIT_WITH_EXPLICIT_MISSED_OPPORTUNITY_LIMITATION",
+    "plan_id": "plan-20260921-01",
+    "version": 2,
+    "entry_distance_from_current_percent": -3.484796720191319,
+    "target_distance_from_current_percent": 2.1523744448240567,
+    "reward_risk_if_entry_raised_to_observed_price": 0.36627906976744184,
+    "plan_prices_quantity_deadlines_changed": false,
+    "explanation": "사용자 지적대로 현재가에서 진입가까지 하락 거리가 목표까지 상승 거리보다 길다. 기존 가격표는 282.5만원까지 조정 후 반등할 경우에만 성립하며 주문 전 기대수익 또는 체결 확률을 검증한 값이 아니다. 283.4만원 부근 참고 가격대 재확인 가설은 유지하되 현재가 추격은 기존 목표/손절 기준 비용 전 손익비0.37로 불리하다. 거리만으로 선도달 확률을 단정하지 않는다.",
+    "communication_correction": "09:30 안내는 체결된다는 조건의 손익비와 목표 손익을 강조했고 미체결 기회비용·체결 후 추가 하락 가능성은 충분히 설명하지 못했다. READY는 수량/집행조건 완비 상태이지 체결 가능성이나 좋은 기대수익이 검증됐다는 뜻이 아니다.",
+    "actual_order_or_fill_inferred_from_quotes": false
+  }
 }
