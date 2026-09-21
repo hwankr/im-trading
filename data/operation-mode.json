@@ -53,9 +53,9 @@
   "first_execution_evidence": "Read-only native automations.last_run_at=1789520509195; first 10:00-slot review and public observations appended to private daily record. No account fill inferred.",
   "next_run_verified_at_kst": "2026-09-21T08:16:51+09:00",
   "last_completed_review": {
-    "review_id": "review-20260921-1030",
-    "recorded_at_kst": "2026-09-21T10:33:51+09:00",
-    "market_data_at_kst": "2026-09-21T10:31:31+09:00",
+    "review_id": "review-20260921-1100",
+    "recorded_at_kst": "2026-09-21T11:03:20+09:00",
+    "market_data_at_kst": "2026-09-21T11:01:27+09:00",
     "decision": "KEEP_EXISTING_BUY_LIMIT_NO_DUPLICATE_OR_NEW_ORDER",
     "latest_account_report": "account-report-20260921-0006",
     "source": "data/days/2026-09-21.md"
@@ -130,6 +130,14 @@
       "review_id": "review-20260921-1000",
       "recorded_at_kst": "2026-09-21T10:05:16+09:00",
       "market_data_at_kst": "2026-09-21T10:02:42+09:00",
+      "decision": "KEEP_EXISTING_BUY_LIMIT_NO_DUPLICATE_OR_NEW_ORDER",
+      "latest_account_report": "account-report-20260921-0006",
+      "source": "data/days/2026-09-21.md"
+    },
+    {
+      "review_id": "review-20260921-1030",
+      "recorded_at_kst": "2026-09-21T10:33:51+09:00",
+      "market_data_at_kst": "2026-09-21T10:31:31+09:00",
       "decision": "KEEP_EXISTING_BUY_LIMIT_NO_DUPLICATE_OR_NEW_ORDER",
       "latest_account_report": "account-report-20260921-0006",
       "source": "data/days/2026-09-21.md"
