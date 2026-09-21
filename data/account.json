@@ -298,7 +298,7 @@
     "prior_account_report": "account-report-20260921-0005"
   },
   "last_received_report": "account-report-20260921-0006",
-  "updated_at": "2026-09-21T14:04:13+09:00",
+  "updated_at": "2026-09-21T14:33:19+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -414,12 +414,12 @@
     }
   ],
   "execution_follow_up": {
-    "review_id": "entry-rationale-review-20260921-01",
-    "checked_at": "2026-09-21T09:47:21+09:00",
+    "review_id": "review-20260921-1430",
+    "checked_at": "2026-09-21T14:33:19+09:00",
     "latest_account_report": "account-report-20260921-0006",
     "latest_cash_report": "account-report-20260921-0004",
     "exit_obligation_status": "CLOSED_USER_CONFIRMED",
-    "new_entry_status": "SUBMITTED_UNFILLED_KEEP_EXISTING_LIMIT_NO_DUPLICATE_ENTRY",
+    "new_entry_status": "ENTRY_WINDOW_CLOSED_KEEP_ALREADY_SUBMITTED_ORDER_UNTIL_1500_OR_INVALIDATION",
     "plan_reference": {
       "plan_id": "plan-20260921-01",
       "version": 2,
@@ -427,7 +427,7 @@
       "path": "data/days/2026-09-21.md",
       "plan_is_not_order_or_fill": true
     },
-    "instructions": "기존 효성중공업 2825000원 11주 미체결 주문 유지. 추가 입력·가격 인상 없음. 실제 무효 조건을 확인하면 미체결 취소 우선. 9월21일15:00 미체결 취소 완료·추가 체결 대사 후 실제 보유에 기존 scheduled_review 적용.",
+    "instructions": "2026-09-21 14:30 신규 입력 창 종료. 이미 접수한 효성중공업2825000원 총11주 주문 유지, 추가 입력·가격 인상 없음. 15:00에 실제 미체결 잔량 취소 완료·취소 중 체결 대사·첫 보유 점검. 무효 사유 실제 확인 시 그 전에 미체결 취소 우선. 시간 경과는 취소 완료가 아님.",
     "pending_question": {
       "state": "ANSWERED",
       "answer_report": "account-report-20260921-0006",
@@ -436,15 +436,15 @@
     "orders_submitted_by_assistant": false
   },
   "latest_market_review": {
-    "review_id": "review-20260921-1400",
-    "recorded_at": "2026-09-21T14:04:13+09:00",
+    "review_id": "review-20260921-1430",
+    "recorded_at": "2026-09-21T14:33:19+09:00",
     "source_type": "assistant_review_of_public_market_data",
     "heartbeat_id": "30",
-    "heartbeat_received_at": "2026-09-21T14:01:28.713+09:00",
-    "clock_verified_at": "2026-09-21T14:02:23+09:00",
-    "nominal_slot_at": "2026-09-21T14:00:00+09:00",
-    "market_data_at": "2026-09-21T14:02:24+09:00",
-    "decision": "KEEP_EXISTING_BUY_LIMIT_NO_DUPLICATE_OR_NEW_ORDER",
+    "heartbeat_received_at": "2026-09-21T14:30:29.182+09:00",
+    "clock_verified_at": "2026-09-21T14:31:16+09:00",
+    "nominal_slot_at": "2026-09-21T14:30:00+09:00",
+    "market_data_at": "2026-09-21T14:31:18+09:00",
+    "decision": "KEEP_PENDING_ORDER_NEW_ENTRY_WINDOW_CLOSED",
     "latest_user_report": "account-report-20260921-0006",
     "holdings_report": "account-report-20260921-0005",
     "orders_report": "account-report-20260921-0006",
@@ -466,27 +466,28 @@
     "same_event_stress_reserved_krw": 4819826.375,
     "same_event_stress_budget_krw": 4856092.8,
     "same_event_stress_budget_remaining_krw": 36266.425,
-    "next_nominal_review_at": "2026-09-21T14:30:00+09:00",
+    "next_nominal_review_at": "2026-09-21T15:00:00+09:00",
     "journal_path": "data/days/2026-09-21.md",
     "public_quote_snapshot": [
       {
         "code": "298040",
-        "price_krw": 2893000,
-        "observed_at": "2026-09-21T14:02:22+09:00"
+        "price_krw": 2896000,
+        "observed_at": "2026-09-21T14:30:22+09:00"
       },
       {
         "code": "000660",
-        "price_krw": 1872000,
-        "observed_at": "2026-09-21T14:02:15+09:00"
+        "price_krw": 1865000,
+        "observed_at": "2026-09-21T14:31:00+09:00"
       },
       {
         "code": "005930",
-        "price_krw": 273500,
-        "observed_at": "2026-09-21T14:02:15+09:00"
+        "price_krw": 272000,
+        "observed_at": "2026-09-21T14:31:00+09:00"
       }
     ],
     "public_quote_snapshot_type": "Naver_basic_KRX_regular_last_price_not_bid_ask_or_account_fill",
-    "price_quality_note": "효성 polling2893500원은 기존1000원 호가단위에 맞지 않아 제외하고 같은 회차 basic2893000원 사용. 삼성 basic273500원은 이번 회차 유효 단위이며 직전273750원 제외 이력은 보존. KRX·NXT·시각 구분."
+    "price_quality_note": "이번 기본 시세는 호가단위에 맞는다. KRX basic·polling·NXT의 서로 다른 시각을 구분하며 이전 회차 제외값은 역사로 보존한다.",
+    "new_entry_status": "ENTRY_WINDOW_CLOSED_EXISTING_ORDER_NOT_AUTOMATICALLY_CANCELLED"
   },
   "prior_portfolio_screen_summaries": [
     {
@@ -903,6 +904,28 @@
       },
       "orders_submitted_by_assistant": false,
       "original_exit_history_preserved": true
+    },
+    {
+      "review_id": "entry-rationale-review-20260921-01",
+      "checked_at": "2026-09-21T09:47:21+09:00",
+      "latest_account_report": "account-report-20260921-0006",
+      "latest_cash_report": "account-report-20260921-0004",
+      "exit_obligation_status": "CLOSED_USER_CONFIRMED",
+      "new_entry_status": "SUBMITTED_UNFILLED_KEEP_EXISTING_LIMIT_NO_DUPLICATE_ENTRY",
+      "plan_reference": {
+        "plan_id": "plan-20260921-01",
+        "version": 2,
+        "status": "READY",
+        "path": "data/days/2026-09-21.md",
+        "plan_is_not_order_or_fill": true
+      },
+      "instructions": "기존 효성중공업 2825000원 11주 미체결 주문 유지. 추가 입력·가격 인상 없음. 실제 무효 조건을 확인하면 미체결 취소 우선. 9월21일15:00 미체결 취소 완료·추가 체결 대사 후 실제 보유에 기존 scheduled_review 적용.",
+      "pending_question": {
+        "state": "ANSWERED",
+        "answer_report": "account-report-20260921-0006",
+        "repeat_question": false
+      },
+      "orders_submitted_by_assistant": false
     }
   ],
   "latest_cash_and_investment_report": {
@@ -1396,6 +1419,59 @@
         "gap_price_path_observed": false,
         "delay_cause_verified": false
       }
+    },
+    {
+      "review_id": "review-20260921-1400",
+      "recorded_at": "2026-09-21T14:04:13+09:00",
+      "source_type": "assistant_review_of_public_market_data",
+      "heartbeat_id": "30",
+      "heartbeat_received_at": "2026-09-21T14:01:28.713+09:00",
+      "clock_verified_at": "2026-09-21T14:02:23+09:00",
+      "nominal_slot_at": "2026-09-21T14:00:00+09:00",
+      "market_data_at": "2026-09-21T14:02:24+09:00",
+      "decision": "KEEP_EXISTING_BUY_LIMIT_NO_DUPLICATE_OR_NEW_ORDER",
+      "latest_user_report": "account-report-20260921-0006",
+      "holdings_report": "account-report-20260921-0005",
+      "orders_report": "account-report-20260921-0006",
+      "cash_report": "account-report-20260921-0004",
+      "new_account_report_received": false,
+      "orders_submitted_by_assistant": false,
+      "fills_inferred_from_prices": false,
+      "session": "KRX_today_OPEN_and_imfnsec_regular_0900_1530; competition_manual_regular_only; no_new_app_access",
+      "candidate_plan": {
+        "plan_id": "plan-20260921-01",
+        "version": 2,
+        "status": "READY",
+        "path": "data/days/2026-09-21.md",
+        "plan_is_not_order_or_fill": true
+      },
+      "existing_order_action": "효성중공업 2825000원 총11주 기존 지정가 유지. 보고0006의 미체결11주를 재매수 지시로 사용하지 않는다. 실제 새 체결 여부는 미확인.",
+      "plan_prices_quantity_deadlines_changed": false,
+      "no_invalidation_observed_in_this_snapshot": true,
+      "same_event_stress_reserved_krw": 4819826.375,
+      "same_event_stress_budget_krw": 4856092.8,
+      "same_event_stress_budget_remaining_krw": 36266.425,
+      "next_nominal_review_at": "2026-09-21T14:30:00+09:00",
+      "journal_path": "data/days/2026-09-21.md",
+      "public_quote_snapshot": [
+        {
+          "code": "298040",
+          "price_krw": 2893000,
+          "observed_at": "2026-09-21T14:02:22+09:00"
+        },
+        {
+          "code": "000660",
+          "price_krw": 1872000,
+          "observed_at": "2026-09-21T14:02:15+09:00"
+        },
+        {
+          "code": "005930",
+          "price_krw": 273500,
+          "observed_at": "2026-09-21T14:02:15+09:00"
+        }
+      ],
+      "public_quote_snapshot_type": "Naver_basic_KRX_regular_last_price_not_bid_ask_or_account_fill",
+      "price_quality_note": "효성 polling2893500원은 기존1000원 호가단위에 맞지 않아 제외하고 같은 회차 basic2893000원 사용. 삼성 basic273500원은 이번 회차 유효 단위이며 직전273750원 제외 이력은 보존. KRX·NXT·시각 구분."
     }
   ],
   "resolved_planning_issues": [
