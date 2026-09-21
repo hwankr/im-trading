@@ -141,7 +141,22 @@
           "current_sellable_quantity": null,
           "source_type": "user_reported_official_app",
           "exit_obligation_status": "TIME_EXIT_DUE_UNEXECUTED",
-          "original_deadline_preserved": true
+          "original_deadline_preserved": true,
+          "additional_observed_trigger": {
+            "type": "stop",
+            "review_id": "review-20260921-0900",
+            "observed_at": "2026-09-21T09:09:25.412936+09:00",
+            "observed_price_krw": 1095,
+            "stop_trigger_krw": 1125,
+            "source_type": "public_market_quote_not_account_report",
+            "source": "https://polling.finance.naver.com/api/realtime/domestic/stock/123310",
+            "market": "KRX_KOSPI",
+            "market_status": "OPEN",
+            "exit_evaluation_mode": "manual_on_observation",
+            "original_time_exit_still_due": true,
+            "fill_confirmed": false,
+            "note": "실제 정규장 공개 가격 관측에서 기존 손절도 충족했다. 9월17일 시간 청산 미집행을 보존하며 최초 가격 통과 시각·매도 체결을 소급 추정하지 않는다."
+          }
         },
         "quantity_report": {
           "source_report": "account-report-20260921-0001",
@@ -377,7 +392,7 @@
     "prior_account_report": "account-report-20260921-0002"
   },
   "last_received_report": "account-report-20260921-0003",
-  "updated_at": "2026-09-21T08:33:08+09:00",
+  "updated_at": "2026-09-21T09:15:26+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -539,5 +554,40 @@
     "deadline_extension": false,
     "orders_submitted_by_assistant": false,
     "guidance_thread_id": "01a0c117-2c6c-7b51-84c3-bd8b32c23371"
+  },
+  "latest_market_review": {
+    "review_id": "review-20260921-0900",
+    "recorded_at": "2026-09-21T09:15:26+09:00",
+    "source_type": "assistant_review_of_public_market_data",
+    "heartbeat_id": "30",
+    "heartbeat_received_at": "2026-09-21T09:08:35.366+09:00",
+    "clock_verified_at": "2026-09-21T09:08:55+09:00",
+    "nominal_slot_at": "2026-09-21T09:00:00+09:00",
+    "market_data_at": "2026-09-21T09:09:25+09:00",
+    "decision": "SELL_OVERDUE_POSITIONS_INVERSE_STOP_ALSO_OBSERVED",
+    "latest_user_report": "account-report-20260921-0003",
+    "holdings_and_orders_report": "account-report-20260921-0001",
+    "cash_report": "account-report-20260916-0004",
+    "new_account_report_received": false,
+    "orders_submitted_by_assistant": false,
+    "fills_inferred_from_prices": false,
+    "session": "KRX_regular_market_open_confirmed_from_current_public_quotes_and_official_hours",
+    "competition_session_basis": "config/competition.json existing official manual; current public imfnsec regular hours; no new app session verification",
+    "execution": "사용자가 현재 매도가능잔량 확인 후 인버스·두산퓨얼셀 잔량을 시장가 청산한다. 미체결이 새로 생긴 경우에만 취소 완료·취소 중 체결을 대사한다. 이후 체결·잔여 주문·주문가능현금을 확인한다.",
+    "new_entry_status": "NO_BUY_INSTRUCTION_PENDING_EXITS_AND_CURRENT_ACCOUNT",
+    "candidate_plan": {
+      "plan_id": "plan-20260921-01",
+      "version": 1,
+      "status": "PRICE_ONLY",
+      "code": "298040",
+      "entry_limit_krw": 2825000,
+      "stop_trigger_krw": 2755000,
+      "take_profit_limit_krw": 2990000,
+      "quantity": null,
+      "prices_or_deadline_changed": false
+    },
+    "next_nominal_review_at": "2026-09-21T09:30:00+09:00",
+    "journal_path": "data/days/2026-09-21.md",
+    "price_quality_note": "두산퓨얼셀·SK하이닉스 polling 표시값은 기존 호가단위와 맞지 않아 basic 응답을 1회 교차 확인했다. 두산퓨얼셀 48,900원·SK하이닉스 1,875,000원은 basic 기준 09:09:23 KST다. 수집 시각과 별도이며 실제 체결·계좌 평가를 갱신하지 않았다."
   }
 }
