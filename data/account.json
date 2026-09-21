@@ -298,7 +298,7 @@
     "prior_account_report": "account-report-20260921-0005"
   },
   "last_received_report": "account-report-20260921-0006",
-  "updated_at": "2026-09-21T11:33:25+09:00",
+  "updated_at": "2026-09-21T14:00:21+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -436,14 +436,14 @@
     "orders_submitted_by_assistant": false
   },
   "latest_market_review": {
-    "review_id": "review-20260921-1130",
-    "recorded_at": "2026-09-21T11:33:25+09:00",
+    "review_id": "review-20260921-1357",
+    "recorded_at": "2026-09-21T14:00:21+09:00",
     "source_type": "assistant_review_of_public_market_data",
     "heartbeat_id": "30",
-    "heartbeat_received_at": "2026-09-21T11:30:39.584+09:00",
-    "clock_verified_at": "2026-09-21T11:31:33+09:00",
-    "nominal_slot_at": "2026-09-21T11:30:00+09:00",
-    "market_data_at": "2026-09-21T11:31:34+09:00",
+    "heartbeat_received_at": "2026-09-21T13:57:00.812+09:00",
+    "clock_verified_at": "2026-09-21T13:58:01+09:00",
+    "nominal_slot_at": null,
+    "market_data_at": "2026-09-21T13:58:03+09:00",
     "decision": "KEEP_EXISTING_BUY_LIMIT_NO_DUPLICATE_OR_NEW_ORDER",
     "latest_user_report": "account-report-20260921-0006",
     "holdings_report": "account-report-20260921-0005",
@@ -466,27 +466,37 @@
     "same_event_stress_reserved_krw": 4819826.375,
     "same_event_stress_budget_krw": 4856092.8,
     "same_event_stress_budget_remaining_krw": 36266.425,
-    "next_nominal_review_at": "2026-09-21T12:00:00+09:00",
+    "next_nominal_review_at": "2026-09-21T14:30:00+09:00",
     "journal_path": "data/days/2026-09-21.md",
     "public_quote_snapshot": [
       {
         "code": "298040",
-        "price_krw": 2905000,
-        "observed_at": "2026-09-21T11:31:21+09:00"
+        "price_krw": 2895000,
+        "observed_at": "2026-09-21T13:57:22+09:00"
       },
       {
         "code": "000660",
-        "price_krw": 1868000,
-        "observed_at": "2026-09-21T11:31:21+09:00"
+        "price_krw": 1875000,
+        "observed_at": "2026-09-21T13:57:21+09:00"
       },
       {
         "code": "005930",
-        "price_krw": 272000,
-        "observed_at": "2026-09-21T11:31:21+09:00"
+        "price_krw": null,
+        "raw_reported_price_krw": 273750,
+        "observed_at": "2026-09-21T13:57:20+09:00",
+        "price_quality": "REJECTED_TICK_UNIT_MISMATCH_BOTH_BASIC_AND_POLLING"
       }
     ],
     "public_quote_snapshot_type": "Naver_basic_KRX_regular_last_price_not_bid_ask_or_account_fill",
-    "price_quality_note": "SK polling1866500원은 기존1000원 호가단위에 맞지 않아 제외. 같은 회차 basic1868000원 사용. KRX·NXT·시각을 구분했고 추가 가격 조회 없음."
+    "price_quality_note": "삼성 basic·polling 모두273750원으로 기존500원 호가단위와 맞지 않아 KRX 거래가격으로 채택하지 않았다. NXT273500원은 별도 시장이며 대체하지 않았다. 삼성 신규 계획은 가격 검증 부족으로 개별 BLOCKED.",
+    "delay_handling": {
+      "nominal_slot_not_provided": true,
+      "processed_once_at_actual_time": true,
+      "last_recorded_review_id": "review-20260921-1130",
+      "missed_slots_replayed": false,
+      "gap_price_path_observed": false,
+      "delay_cause_verified": false
+    }
   },
   "prior_portfolio_screen_summaries": [
     {
@@ -1280,6 +1290,59 @@
       ],
       "public_quote_snapshot_type": "Naver_basic_KRX_regular_last_price_not_bid_ask_or_account_fill",
       "price_quality_note": "이번 기본 시세는 호가단위에 맞는다. KRX basic·polling·NXT는 별도 시각의 관측으로 구분했다. 이전 회차 삼성 polling 가격 제외 이력은 그대로 보존한다."
+    },
+    {
+      "review_id": "review-20260921-1130",
+      "recorded_at": "2026-09-21T11:33:25+09:00",
+      "source_type": "assistant_review_of_public_market_data",
+      "heartbeat_id": "30",
+      "heartbeat_received_at": "2026-09-21T11:30:39.584+09:00",
+      "clock_verified_at": "2026-09-21T11:31:33+09:00",
+      "nominal_slot_at": "2026-09-21T11:30:00+09:00",
+      "market_data_at": "2026-09-21T11:31:34+09:00",
+      "decision": "KEEP_EXISTING_BUY_LIMIT_NO_DUPLICATE_OR_NEW_ORDER",
+      "latest_user_report": "account-report-20260921-0006",
+      "holdings_report": "account-report-20260921-0005",
+      "orders_report": "account-report-20260921-0006",
+      "cash_report": "account-report-20260921-0004",
+      "new_account_report_received": false,
+      "orders_submitted_by_assistant": false,
+      "fills_inferred_from_prices": false,
+      "session": "KRX_today_OPEN_and_imfnsec_regular_0900_1530; competition_manual_regular_only; no_new_app_access",
+      "candidate_plan": {
+        "plan_id": "plan-20260921-01",
+        "version": 2,
+        "status": "READY",
+        "path": "data/days/2026-09-21.md",
+        "plan_is_not_order_or_fill": true
+      },
+      "existing_order_action": "효성중공업 2825000원 총11주 기존 지정가 유지. 보고0006의 미체결11주를 재매수 지시로 사용하지 않는다. 실제 새 체결 여부는 미확인.",
+      "plan_prices_quantity_deadlines_changed": false,
+      "no_invalidation_observed_in_this_snapshot": true,
+      "same_event_stress_reserved_krw": 4819826.375,
+      "same_event_stress_budget_krw": 4856092.8,
+      "same_event_stress_budget_remaining_krw": 36266.425,
+      "next_nominal_review_at": "2026-09-21T12:00:00+09:00",
+      "journal_path": "data/days/2026-09-21.md",
+      "public_quote_snapshot": [
+        {
+          "code": "298040",
+          "price_krw": 2905000,
+          "observed_at": "2026-09-21T11:31:21+09:00"
+        },
+        {
+          "code": "000660",
+          "price_krw": 1868000,
+          "observed_at": "2026-09-21T11:31:21+09:00"
+        },
+        {
+          "code": "005930",
+          "price_krw": 272000,
+          "observed_at": "2026-09-21T11:31:21+09:00"
+        }
+      ],
+      "public_quote_snapshot_type": "Naver_basic_KRX_regular_last_price_not_bid_ask_or_account_fill",
+      "price_quality_note": "SK polling1866500원은 기존1000원 호가단위에 맞지 않아 제외. 같은 회차 basic1868000원 사용. KRX·NXT·시각을 구분했고 추가 가격 조회 없음."
     }
   ],
   "resolved_planning_issues": [
