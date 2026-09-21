@@ -298,7 +298,7 @@
     "prior_account_report": "account-report-20260921-0005"
   },
   "last_received_report": "account-report-20260921-0006",
-  "updated_at": "2026-09-21T09:47:21+09:00",
+  "updated_at": "2026-09-21T10:05:16+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -436,22 +436,23 @@
     "orders_submitted_by_assistant": false
   },
   "latest_market_review": {
-    "review_id": "review-20260921-0930",
-    "recorded_at": "2026-09-21T09:39:53+09:00",
+    "review_id": "review-20260921-1000",
+    "recorded_at": "2026-09-21T10:05:16+09:00",
     "source_type": "assistant_review_of_public_market_data",
     "heartbeat_id": "30",
-    "heartbeat_received_at": "2026-09-21T09:30:34.448+09:00",
-    "clock_verified_at": "2026-09-21T09:36:05+09:00",
-    "nominal_slot_at": "2026-09-21T09:30:00+09:00",
-    "market_data_at": "2026-09-21T09:34:52+09:00",
-    "decision": "BUY_FIXED_LIMIT_HYOSUNG_11_SHARES_READY_V2",
-    "latest_user_report": "account-report-20260921-0005",
-    "holdings_and_orders_report": "account-report-20260921-0005",
+    "heartbeat_received_at": "2026-09-21T10:02:04.902+09:00",
+    "clock_verified_at": "2026-09-21T10:03:39+09:00",
+    "nominal_slot_at": "2026-09-21T10:00:00+09:00",
+    "market_data_at": "2026-09-21T10:02:42+09:00",
+    "decision": "KEEP_EXISTING_BUY_LIMIT_NO_DUPLICATE_OR_NEW_ORDER",
+    "latest_user_report": "account-report-20260921-0006",
+    "holdings_report": "account-report-20260921-0005",
+    "orders_report": "account-report-20260921-0006",
     "cash_report": "account-report-20260921-0004",
     "new_account_report_received": false,
     "orders_submitted_by_assistant": false,
     "fills_inferred_from_prices": false,
-    "session": "KRX_today_OPEN_and_imfnsec_regular_0900_1530; competition_manual_regular_only; no_app_access",
+    "session": "KRX_today_OPEN_and_imfnsec_regular_0900_1530; competition_manual_regular_only; no_new_app_access",
     "candidate_plan": {
       "plan_id": "plan-20260921-01",
       "version": 2,
@@ -459,7 +460,13 @@
       "path": "data/days/2026-09-21.md",
       "plan_is_not_order_or_fill": true
     },
-    "next_nominal_review_at": "2026-09-21T10:00:00+09:00",
+    "existing_order_action": "효성중공업 2825000원 총11주 기존 지정가 유지. 보고0006의 미체결11주를 재매수 지시로 사용하지 않는다. 실제 새 체결 여부는 미확인.",
+    "plan_prices_quantity_deadlines_changed": false,
+    "no_invalidation_observed_in_this_snapshot": true,
+    "same_event_stress_reserved_krw": 4819826.375,
+    "same_event_stress_budget_krw": 4856092.8,
+    "same_event_stress_budget_remaining_krw": 36266.425,
+    "next_nominal_review_at": "2026-09-21T10:30:00+09:00",
     "journal_path": "data/days/2026-09-21.md"
   },
   "prior_portfolio_screen_summaries": [
@@ -1087,6 +1094,33 @@
       "next_nominal_review_at": "2026-09-21T09:30:00+09:00",
       "journal_path": "data/days/2026-09-21.md",
       "price_quality_note": "두산퓨얼셀·SK하이닉스 polling 표시값은 기존 호가단위와 맞지 않아 basic 응답을 1회 교차 확인했다. 두산퓨얼셀 48,900원·SK하이닉스 1,875,000원은 basic 기준 09:09:23 KST다. 수집 시각과 별도이며 실제 체결·계좌 평가를 갱신하지 않았다."
+    },
+    {
+      "review_id": "review-20260921-0930",
+      "recorded_at": "2026-09-21T09:39:53+09:00",
+      "source_type": "assistant_review_of_public_market_data",
+      "heartbeat_id": "30",
+      "heartbeat_received_at": "2026-09-21T09:30:34.448+09:00",
+      "clock_verified_at": "2026-09-21T09:36:05+09:00",
+      "nominal_slot_at": "2026-09-21T09:30:00+09:00",
+      "market_data_at": "2026-09-21T09:34:52+09:00",
+      "decision": "BUY_FIXED_LIMIT_HYOSUNG_11_SHARES_READY_V2",
+      "latest_user_report": "account-report-20260921-0005",
+      "holdings_and_orders_report": "account-report-20260921-0005",
+      "cash_report": "account-report-20260921-0004",
+      "new_account_report_received": false,
+      "orders_submitted_by_assistant": false,
+      "fills_inferred_from_prices": false,
+      "session": "KRX_today_OPEN_and_imfnsec_regular_0900_1530; competition_manual_regular_only; no_app_access",
+      "candidate_plan": {
+        "plan_id": "plan-20260921-01",
+        "version": 2,
+        "status": "READY",
+        "path": "data/days/2026-09-21.md",
+        "plan_is_not_order_or_fill": true
+      },
+      "next_nominal_review_at": "2026-09-21T10:00:00+09:00",
+      "journal_path": "data/days/2026-09-21.md"
     }
   ],
   "resolved_planning_issues": [
