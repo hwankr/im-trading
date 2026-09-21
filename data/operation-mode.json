@@ -53,11 +53,11 @@
   "first_execution_evidence": "Read-only native automations.last_run_at=1789520509195; first 10:00-slot review and public observations appended to private daily record. No account fill inferred.",
   "next_run_verified_at_kst": "2026-09-21T08:16:51+09:00",
   "last_completed_review": {
-    "review_id": "review-20260921-1430",
-    "recorded_at_kst": "2026-09-21T14:33:19+09:00",
-    "market_data_at_kst": "2026-09-21T14:31:18+09:00",
-    "decision": "KEEP_PENDING_ORDER_NEW_ENTRY_WINDOW_CLOSED",
-    "latest_account_report": "account-report-20260921-0006",
+    "review_id": "review-20260921-1500",
+    "recorded_at_kst": "2026-09-21T15:04:44+09:00",
+    "market_data_at_kst": "2026-09-21T15:01:43+09:00",
+    "decision": "CANCELLATION_CONFIRMED_ZERO_FILL_NO_ADDITIONAL_ORDER",
+    "latest_account_report": "account-report-20260921-0007",
     "source": "data/days/2026-09-21.md"
   },
   "record_visibility": "public_paper_trading_records_user_authorized_20260916",
@@ -174,6 +174,14 @@
       "recorded_at_kst": "2026-09-21T14:04:13+09:00",
       "market_data_at_kst": "2026-09-21T14:02:24+09:00",
       "decision": "KEEP_EXISTING_BUY_LIMIT_NO_DUPLICATE_OR_NEW_ORDER",
+      "latest_account_report": "account-report-20260921-0006",
+      "source": "data/days/2026-09-21.md"
+    },
+    {
+      "review_id": "review-20260921-1430",
+      "recorded_at_kst": "2026-09-21T14:33:19+09:00",
+      "market_data_at_kst": "2026-09-21T14:31:18+09:00",
+      "decision": "KEEP_PENDING_ORDER_NEW_ENTRY_WINDOW_CLOSED",
       "latest_account_report": "account-report-20260921-0006",
       "source": "data/days/2026-09-21.md"
     }
