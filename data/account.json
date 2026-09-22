@@ -291,7 +291,7 @@
     "note": "현금만 새 관측시각으로 갱신. 대회 성적 미갱신은 값이 없거나0이라는 뜻이 아니다. 보유·주문·예수금·손익·공식총자산은 새로 보고되지 않았다."
   },
   "last_received_report": "account-report-20260921-0008",
-  "updated_at": "2026-09-21T15:36:53+09:00",
+  "updated_at": "2026-09-23T08:22:07+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -2075,5 +2075,36 @@
     "recorded_at": "2026-09-21T15:36:53+09:00",
     "official_competition_results_updated": false,
     "note": "사용자가 대회 관련 아직 미갱신이라고 보고. 기존 공식성적의 값·출처·시각을 그대로 유지하고 현재 성적이나0으로 바꾸지 않는다."
+  },
+  "last_heartbeat_gate": {
+    "gate_id": "heartbeat-gate-20260923-0820",
+    "automation_id": "30",
+    "heartbeat_received_at": "2026-09-23T08:20:33.585+09:00",
+    "clock_verified_at": "2026-09-23T08:20:51+09:00",
+    "recorded_at": "2026-09-23T08:22:07+09:00",
+    "decision": "SKIPPED_OUTSIDE_AUTHORIZED_REGULAR_SESSION",
+    "reason": "09:00 전 장전 자동 호출. 별도 장전 분석 요청 없음.",
+    "market_analysis_performed": false,
+    "quotes_disclosures_restrictions_or_catalysts_queried": false,
+    "new_order_instruction_issued": false,
+    "orders_submitted_by_assistant": false,
+    "nominal_trigger_slot": null,
+    "delay_or_off_schedule_cause_verified": false,
+    "missed_slots_replayed": false,
+    "krx_trading_calendar_reverified": false,
+    "session_gate_source": "data/operation-mode.json nominal_slots_kst; config/competition.json sessions_as_printed",
+    "last_user_report": "account-report-20260921-0008",
+    "new_account_report_received": false,
+    "reported_account_fields_changed": false,
+    "new_plan_created": false,
+    "last_known_holdings_report": "account-report-20260921-0005",
+    "last_known_orders_report": "account-report-20260921-0007",
+    "last_known_cash_report": "account-report-20260921-0008",
+    "last_known_cash_observed_at": "2026-09-21T15:30:00+09:00",
+    "account_currentness_note": "마지막 보고상 보유·미체결 없음, 현금97,189,652원. 오늘 계좌 상태를 재확인한 값이 아니다.",
+    "next_nominal_review_at": "2026-09-23T09:00:00+09:00",
+    "next_execution_or_notification_verified": false,
+    "automation_modified": false,
+    "journal_path": "data/days/2026-09-23.md"
   }
 }
