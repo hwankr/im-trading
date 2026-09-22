@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.6",
+  "schema_version": "1.7",
   "scope": "planning_policy_only_not_competition_rules",
   "mode": "prize_focused_fixed_price_flexible_entry_low_monitoring_plan",
   "timezone": "Asia/Seoul",
@@ -22,12 +22,28 @@
     "sources_and_timestamps"
   ],
   "competition_objective": {
-    "updated_on": "2026-09-16",
+    "updated_on": "2026-09-23",
     "source": "explicit_user_request_for_more_aggressive_prize_focused_paper_trading",
     "primary": "pursue_final_top_10_prize_eligibility_and_rank_retention",
     "target_final_rank_at_most": 10,
     "target_is_user_mandate_not_verified_prize_schedule": true,
     "capital_preservation_is_not_primary_objective": true,
+    "terminal_prize_objective": {
+      "clarified_on": "2026-09-23",
+      "source": "explicit_user_preference_clarification_not_official_performance_report",
+      "priority": "improve_evidence_supported_chance_of_final_top_10_subject_to_official_eligibility",
+      "positive_return_outside_final_top_10_is_objective_failure": true,
+      "hypothetical_example": {
+        "cutoff_return_percent": 10,
+        "outside_band_returns_percent": [-99, 9],
+        "equivalence_scope": "terminal_top_10_objective_failure_only",
+        "is_actual_official_performance": false
+      },
+      "remaining_capital_and_future_opportunities_differ_before_deadline": true,
+      "insufficient_portfolio_contribution_requires": "compare_candidates_size_horizon_and_capital_replacement_then_state_remaining_shortfall",
+      "numeric_win_probabilities_require_evidence": true,
+      "existing_numeric_limits_and_triggered_exits_unchanged": true
+    },
     "turnover_is_eligibility_constraint_not_primary_objective": true,
     "interim_top_10_is_not_goal_completion": true,
     "larger_paper_pnl_variation_accepted_in_principle": true,
