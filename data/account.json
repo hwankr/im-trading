@@ -369,7 +369,7 @@
     "linkage_note": "직전 유일한 효성v2 총13주 매수안에 대한 체결보고. 신규체결을 기존0주에서13주로 한 번 반영. 계좌 직접조회가 아니며 기록시각을 체결시각으로 사용하지 않는다."
   },
   "last_received_report": "account-report-20260923-0004",
-  "updated_at": "2026-09-23T10:33:50+09:00",
+  "updated_at": "2026-09-23T11:05:11+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -491,7 +491,7 @@
     }
   ],
   "execution_follow_up": {
-    "checked_at": "2026-09-23T10:33:50+09:00",
+    "checked_at": "2026-09-23T11:05:11+09:00",
     "source": "scheduled_guidance_existing_plan_unchanged",
     "latest_account_report": "account-report-20260923-0004",
     "latest_cash_report": "account-report-20260923-0003",
@@ -509,7 +509,7 @@
     "remaining_buy_order_quantity": 0,
     "order_submission_and_fill_report_pending": false,
     "next_position_review_at": "2026-09-23T15:00:00+09:00",
-    "next_guidance_slot": "2026-09-23T11:00:00+09:00",
+    "next_guidance_slot": "2026-09-23T11:30:00+09:00",
     "exit_deadline": "2026-09-23T15:10:00+09:00",
     "instructions": "효성13주보유·미체결없음.추가13주매수금지.15:00실제보유·매도가능수량·새미체결확인후기존손절/익절평가.15:10기존매도미체결이있을때만취소완료·체결대사후실제잔량시장가청산.",
     "market_analysis_performed": true,
@@ -521,26 +521,26 @@
       "current_orderable_cash_after_fill",
       "sellable_quantity"
     ],
-    "latest_review_id": "review-20260923-1030"
+    "latest_review_id": "review-20260923-1100"
   },
   "latest_market_review": {
-    "review_id": "review-20260923-1030",
-    "recorded_at": "2026-09-23T10:33:50+09:00",
+    "review_id": "review-20260923-1100",
+    "recorded_at": "2026-09-23T11:05:11+09:00",
     "heartbeat_id": "30",
-    "heartbeat_received_at": "2026-09-23T10:30:54.195+09:00",
-    "nominal_slot_at": "2026-09-23T10:30:00+09:00",
-    "clock_verified_at": "2026-09-23T10:31:10+09:00",
+    "heartbeat_received_at": "2026-09-23T11:01:54.659+09:00",
+    "nominal_slot_at": "2026-09-23T11:00:00+09:00",
+    "clock_verified_at": "2026-09-23T11:02:11+09:00",
     "decision": "HOLD_EXISTING_13_SCHEDULED_EXIT_REVIEW_UNCHANGED",
     "market_analysis_performed": true,
     "session": "KRX_REGULAR_OPEN",
     "session_basis": "당일 KRX OPEN·TRADING 및 iM 정규장 09:00~15:30 대조",
-    "market_data_at": "2026-09-23T10:31:23+09:00",
+    "market_data_at": "2026-09-23T11:02:22+09:00",
     "hyosung_quote": {
-      "price_krw": 2875000,
-      "observed_at": "2026-09-23T10:31:23+09:00",
+      "price_krw": 2849000,
+      "observed_at": "2026-09-23T11:02:22+09:00",
       "source": "https://m.stock.naver.com/api/stock/298040/basic",
-      "nxt_reference_price_krw": 2875000,
-      "nxt_reference_at": "2026-09-23T10:31:42.048+09:00"
+      "nxt_reference_price_krw": 2848000,
+      "nxt_reference_at": "2026-09-23T11:02:46.033+09:00"
     },
     "exit_evaluation": {
       "plan_id": "plan-20260923-hyosung-01",
@@ -552,7 +552,7 @@
       "exit_triggered": false,
       "reason": "현재 관측가는 기준 아래지만 15:00 정시 평가 전이다. 평가방식 변경·소급 발동 없음."
     },
-    "candidate_comparison": "8종목 비교. 신규 포스코퓨처엠186100원(10:32:09): 9/22 SK온 LFP 계약1,074,219,374,798원·2027~2029년 공급 원문 확인. 최근고점190200원까지+2.20%, 반복저점181700원까지-2.36%로 비용후 진입구조 부족해 BLOCKED. 셀트리온178200원(10:31:20)은 기존 비교안 대비 새 우위 미확보. SK1865000원·HD현대일렉트릭711000원 추가는 동일이벤트 스트레스 여유 약13만원 제약. 삼성283750원·KT&G174950원은 호가단위 미해소, 한화1041000원은 전일저점 하회.",
+    "candidate_comparison": "8종목 비교(11:02:14~22 KST). 포스코퓨처엠184500원은 최근고점190200원까지+3.09%, 반복저점181700원까지-1.52%로 가격구조 개선. 다만 당일시가187000원 아래·고점193600원에서 반락했고 9/22 장기공급계약 이후 당일 반등을 뒷받침할 새 근거가 없어 교체 우위 미확보. 셀트리온177700원도 당일저가177500원 부근으로 추가 근거 부족. KT&G174800원은 최근고점까지+1.66% 대 전일저점까지-2.86%. SK1845000원·HD현대일렉트릭708000원 추가는 동일이벤트 스트레스 여유 약13만원 제약, 삼성282250원은 호가단위 미해소, 한화1035000원은 최근저점1040000원 하회.",
     "restriction_check": {
       "source": "KIND 유가증권 주의/경고/위험/관리",
       "date": "2026-09-23",
@@ -565,16 +565,17 @@
       "pages_each": "1/1",
       "candidates_found": []
     },
-    "disclosure_and_catalyst_check": "8종목 공시목록, 효성·셀트리온 회사자료, 포스코퓨처엠9/22 계약 원문 확인. 효성 기존 수주/HVDC 촉매 변경 미확인. 포스코 계약을 오늘 신규 발표로 오인하지 않음.",
+    "disclosure_and_catalyst_check": "8종목 공시목록·효성/셀트리온 회사자료 조회에서 보유 및 후보의 핵심촉매 변경 미확인. 포스코퓨처엠 계약 원문은 직전10:30 검증을 재사용하며 새 공시로 재계상하지 않음.",
     "latest_user_report": "account-report-20260923-0004",
     "new_account_report_received": false,
     "current_cash_after_fill_krw": null,
     "orders_submitted_by_assistant": false,
     "fills_inferred_from_prices": false,
     "missed_slots_replayed": false,
-    "next_nominal_review_at": "2026-09-23T11:00:00+09:00",
+    "next_nominal_review_at": "2026-09-23T11:30:00+09:00",
     "journal_path": "data/days/2026-09-23.md",
-    "new_candidate_source": "https://m.stock.naver.com/api/stock/003670/disclosure/137592843"
+    "new_candidate_source": "https://m.stock.naver.com/api/stock/003670/disclosure/137592843",
+    "holding_rationale": "효성 2849000원으로 반복저점289만원 반등 가설 추가 약화. 새로운 호재나 반등 확률을 가정하지 않음. 15:00 정시평가 전이며 즉시 교체의 우월한 근거 미확보로 v2 유지; 손절기준·최종기한 변경 없음."
   },
   "prior_portfolio_screen_summaries": [
     {
@@ -2037,6 +2038,12 @@
     {
       "review_id": "review-20260923-1000",
       "recorded_at": "2026-09-23T10:05:50+09:00",
+      "decision": "HOLD_EXISTING_13_SCHEDULED_EXIT_REVIEW_UNCHANGED",
+      "journal_path": "data/days/2026-09-23.md"
+    },
+    {
+      "review_id": "review-20260923-1030",
+      "recorded_at": "2026-09-23T10:33:50+09:00",
       "decision": "HOLD_EXISTING_13_SCHEDULED_EXIT_REVIEW_UNCHANGED",
       "journal_path": "data/days/2026-09-23.md"
     }
