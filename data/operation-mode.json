@@ -53,15 +53,15 @@
   "first_execution_evidence": "Read-only native automations.last_run_at=1789520509195; first 10:00-slot review and public observations appended to private daily record. No account fill inferred.",
   "next_run_verified_at_kst": "2026-09-23T08:43:34+09:00",
   "last_completed_review": {
-    "review_id": "review-20260921-1530",
-    "recorded_at_kst": "2026-09-21T15:36:53+09:00",
-    "market_data_at_kst": null,
-    "decision": "SESSION_CLOSED_FLAT_CASH_CONFIRMED_OFFICIAL_RESULTS_NOT_UPDATED",
-    "latest_account_report": "account-report-20260921-0008",
-    "source": "data/days/2026-09-21.md",
-    "market_analysis_performed": false,
-    "nominal_slot_at_kst": "2026-09-21T15:30:00+09:00",
-    "actual_clock_verified_at_kst": "2026-09-21T15:32:17+09:00"
+    "review_id": "review-20260923-0900",
+    "recorded_at_kst": "2026-09-23T09:15:05+09:00",
+    "market_data_at_kst": "2026-09-23T09:02:19+09:00",
+    "decision": "BUY_HYOSUNG_FIXED_LIMIT_13_READY_V2",
+    "latest_account_report": "account-report-20260923-0003",
+    "source": "data/days/2026-09-23.md",
+    "market_analysis_performed": true,
+    "nominal_slot_at_kst": "2026-09-23T09:00:00+09:00",
+    "actual_clock_verified_at_kst": "2026-09-23T09:02:13+09:00"
   },
   "record_visibility": "public_paper_trading_records_user_authorized_20260916",
   "publication_policy": "docs/record-publication.md",
@@ -119,7 +119,7 @@
     }
   ],
   "single_writer_thread_id": "01a0cb79-10a5-7bc1-ae89-adf8dc79ef1b",
-  "new_thread_first_execution_verified": false,
+  "new_thread_first_execution_verified": true,
   "completed_review_history": [
     {
       "review_id": "review-20260916-1230",
@@ -211,9 +211,32 @@
       "decision": "CANCELLATION_CONFIRMED_ZERO_FILL_NO_ADDITIONAL_ORDER",
       "latest_account_report": "account-report-20260921-0007",
       "source": "data/days/2026-09-21.md"
+    },
+    {
+      "review_id": "review-20260921-1530",
+      "recorded_at_kst": "2026-09-21T15:36:53+09:00",
+      "market_data_at_kst": null,
+      "decision": "SESSION_CLOSED_FLAT_CASH_CONFIRMED_OFFICIAL_RESULTS_NOT_UPDATED",
+      "latest_account_report": "account-report-20260921-0008",
+      "source": "data/days/2026-09-21.md",
+      "market_analysis_performed": false,
+      "nominal_slot_at_kst": "2026-09-21T15:30:00+09:00",
+      "actual_clock_verified_at_kst": "2026-09-21T15:32:17+09:00"
     }
   ],
-  "new_thread_first_execution": null,
+  "new_thread_first_execution": {
+    "review_id": "review-20260923-0900",
+    "heartbeat_received_at_kst": "2026-09-23T09:01:53.174+09:00",
+    "clock_verified_at_kst": "2026-09-23T09:02:13+09:00",
+    "completed_review_recorded_at_kst": "2026-09-23T09:15:05+09:00",
+    "evidence": "이 대상 작업에서ID30 heartbeat실제수신·시각검증·공개자료분석·회차기록완료.사용자알림도착확인은아님.",
+    "nominal_slot_at_kst": "2026-09-23T09:00:00+09:00",
+    "prior_scheduler_expected_at_kst": "2026-09-23T09:01:41+09:00",
+    "missed_slots_replayed": false,
+    "notification_delivery_verified": false,
+    "delay_cause_verified": false,
+    "new_next_run_verified": false
+  },
   "last_heartbeat_gate": {
     "gate_id": "heartbeat-gate-20260923-0820",
     "automation_id": "30",
