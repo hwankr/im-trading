@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "status": "NEEDS_RECONCILIATION",
+  "status": "RECONCILED",
   "account_alias": "paper-main",
   "paper_competition_account_confirmed": true,
   "privacy": "public_paper_trading_records_user_authorized_20260916",
@@ -13,24 +13,32 @@
     "recorded_at": "2026-09-21T09:25:23+09:00",
     "platform_label": "예수금",
     "balance_krw": 57639924,
-    "orderable_krw": 97189652,
+    "orderable_krw": 96094357,
     "settlement_deposit_krw": 57639924,
     "settlement_deposit_source_report": "account-report-20260916-0003",
-    "field_mapping_note": "주문가능현금97,189,652원은9월23일보고0003의체결전확인값이다.이후보고0004로효성13주매수가확인됐으므로현재사용가능현금으로재사용하지않는다.체결후현금·실제비용미보고;원래현금숫자·출처·예수금과기타항목의과거시각은보존하며추정차감하지않는다.",
+    "field_mapping_note": "주문가능현금96,094,357원은 보고0005의 매도후 앱 실보고. 매도대금 추정가산 없음. 루트의 예수금·정산예수금과 출처는 과거 원본 유지; 현재 현금은 orderable_report를 따른다.",
     "last_confirmed_cash_availability_report": {
-      "source_report": "account-report-20260923-0003",
+      "source_report": "account-report-20260923-0005",
       "source_type": "user_reported_official_app",
       "reported_on": "2026-09-23",
-      "recorded_at": "2026-09-23T09:15:05+09:00",
+      "recorded_at": "2026-09-23T11:40:45+09:00",
       "observed_at": null,
-      "observation_time_precision": "relative_now_user_reported_exact_clock_not_provided",
-      "amount_krw": 97189652,
-      "observation_time_note": "사용자가 이번 회차 중 지금 확인했다고 보고; 정확한 앱 시각 미제공.",
+      "observation_time_precision": "exact_app_clock_not_provided",
+      "amount_krw": 96094357,
       "orderable_platform_label": "주문가능현금",
-      "orderable_krw": 97189652
+      "orderable_krw": 96094357
     },
     "orderable_platform_label": "주문가능현금",
     "orderable_report": {
+      "source_report": "account-report-20260923-0005",
+      "source_type": "user_reported_official_app",
+      "reported_on": "2026-09-23",
+      "recorded_at": "2026-09-23T11:40:45+09:00",
+      "observed_at": null,
+      "observation_time_precision": "exact_app_clock_not_provided",
+      "amount_krw": 96094357
+    },
+    "previous_orderable_report": {
       "source_report": "account-report-20260923-0003",
       "source_type": "user_reported_official_app",
       "reported_on": "2026-09-23",
@@ -39,15 +47,6 @@
       "observation_time_precision": "relative_now_user_reported_exact_clock_not_provided",
       "amount_krw": 97189652,
       "observation_time_note": "사용자가 이번 회차 중 지금 확인했다고 보고; 정확한 앱 시각 미제공."
-    },
-    "previous_orderable_report": {
-      "source_report": "account-report-20260921-0008",
-      "source_type": "user_reported_official_app",
-      "reported_on": "2026-09-21",
-      "recorded_at": "2026-09-21T15:36:53+09:00",
-      "observed_at": "2026-09-21T15:30:00+09:00",
-      "observation_time_precision": "minute_user_reported",
-      "amount_krw": 97189652
     },
     "settlement_deposit_report": {
       "source_report": "account-report-20260916-0003",
@@ -87,14 +86,14 @@
       "credit_maximum_orderable_krw": 0
     },
     "latest_order_impact": {
-      "source_report": "account-report-20260923-0004",
-      "pre_trade_cash_source_report": "account-report-20260923-0003",
-      "order_submitted_after_cash_snapshot": true,
-      "confirmed_gross_purchase_amount_krw": 37921000,
-      "remaining_buy_quantity": 0,
-      "current_orderable_after_purchase_krw": null,
-      "actual_buy_fee_krw": null,
-      "note": "기존97,189,652원은체결전현금실보고.평균체결단가와수량으로현금필드를추정차감하지않으며체결후가용현금은미확인."
+      "source_report": "account-report-20260923-0005",
+      "sell_filled_quantity": 13,
+      "remaining_holding_quantity": 0,
+      "remaining_order_quantity": 0,
+      "current_orderable_after_liquidation_krw": 96094357,
+      "gross_sale_amount_krw": 36907000,
+      "cash_is_user_snapshot_not_sale_proceeds_added": true,
+      "actual_fee_tax_krw": null
     },
     "order_impact_history": [
       {
@@ -111,52 +110,28 @@
         "current_orderable_after_cancellation_krw": 97189652,
         "cash_observed_at": "2026-09-21T15:30:00+09:00",
         "note": "취소완료는0007, 취소후 주문가능현금97,189,652원은0008의15:30 실제 보고로 별도 확인. 취소금액을 추정 가산한 값이 아니다."
+      },
+      {
+        "source_report": "account-report-20260923-0004",
+        "status": "BUY_CONFIRMED_POST_BUY_CASH_WAS_UNREPORTED",
+        "resolved_by_post_liquidation_report": "account-report-20260923-0005",
+        "source": "data/days/2026-09-23.md"
       }
     ],
-    "latest_cash_update_report": "account-report-20260923-0003",
-    "orderable_currentness": "PRE_TRADE_SNAPSHOT_NOT_CURRENT_AFTER_REPORTED_FILL"
+    "latest_cash_update_report": "account-report-20260923-0005",
+    "orderable_currentness": "POST_LIQUIDATION_USER_REPORTED_SNAPSHOT"
   },
   "portfolio": {
     "observed_at": null,
     "reported_on": "2026-09-23",
     "source_type": "user_reported_official_app",
-    "source_report": "account-report-20260923-0004",
-    "holdings": [
-      {
-        "code": "298040",
-        "name": "효성중공업",
-        "quantity": 13,
-        "sellable_quantity": null,
-        "sellable_quantity_note": "보유13주는 체결 보고로 확인, 매도가능수량은 앱 별도필드 미보고; 청산 직전 실제 매도가능잔량 확인.",
-        "average_price_krw": 2917000,
-        "purchase_amount_krw": 37921000,
-        "purchase_amount_basis": "derived_from_user_reported_quantity_and_average_price_before_actual_costs",
-        "source_type": "user_reported_official_app",
-        "source_report": "account-report-20260923-0004",
-        "reported_on": "2026-09-23",
-        "observed_at": null,
-        "recorded_at": "2026-09-23T09:22:10+09:00",
-        "plan_id": "plan-20260923-hyosung-01",
-        "plan_version": 3,
-        "take_profit_limit_krw": 3005000,
-        "stop_trigger_krw": 2885000,
-        "exit_evaluation_mode": "scheduled_review",
-        "first_review_at": "2026-09-23T11:34:27+09:00",
-        "next_review_at": "2026-09-23T11:34:27+09:00",
-        "exit_deadline": "2026-09-23T11:34:27+09:00",
-        "current_price_krw": null,
-        "market_value_krw": null,
-        "unrealized_pnl_krw": null,
-        "actual_commission_and_tax_krw": null,
-        "exit_obligation_id": "exit-decision-20260923-hyosung-01",
-        "exit_obligation_status": "EXIT_REQUIRED_NOT_FILLED"
-      }
-    ],
+    "source_report": "account-report-20260923-0005",
+    "holdings": [],
     "total_equity_krw": null,
     "official_return_percent": -2.81,
     "derived_equity_from_return_krw": null,
-    "recorded_at": "2026-09-23T09:22:10+09:00",
-    "total_purchase_amount_krw": 37921000,
+    "recorded_at": "2026-09-23T11:40:45+09:00",
+    "total_purchase_amount_krw": 0,
     "total_market_value_krw": null,
     "displayed_evaluation_pnl_krw": null,
     "displayed_evaluation_return_percent": null,
@@ -164,7 +139,7 @@
     "settlement_amount_platform_label": "정산금액",
     "fee_checkbox_checked_in_screenshot": null,
     "actual_commission_and_tax_krw": null,
-    "field_mapping_note": "보유·평균매입가는오늘체결보고0004,매입금액37,921,000원은비용전계산.평가액·평가손익·총자산·체결후현금은미보고.공식수익률-2.81%와출처08:34보고0002는유지하고체결보고로성적을갱신하지않음.",
+    "field_mapping_note": "보고0005로 효성13주 전량매도·잔여보유0 확인. 공식수익률은08:34 보고0002 유지; 현금이나 체결가격으로 갱신하지 않음.",
     "screen_clock_text": null,
     "official_return_report": {
       "source_report": "account-report-20260923-0002",
@@ -175,24 +150,21 @@
       "return_percent": -2.81,
       "scope_note": "이번 실제 공식 앱 보고. 예수금·공식총자산·과거 화면 항목은 재확인하지 않음."
     },
-    "position_aggregate_basis": "reported_fill_quantity_times_average_price_not_current_market_valuation"
+    "position_aggregate_basis": "13주 전량매도 보고로 잔여 보유0; 공식총자산·평가손익 미보고"
   },
   "orders": {
     "observed_at": null,
     "reported_on": "2026-09-23",
-    "recorded_at": "2026-09-23T09:22:10+09:00",
+    "recorded_at": "2026-09-23T11:40:45+09:00",
     "source_type": "user_reported_official_app",
-    "source_report": "account-report-20260923-0004",
+    "source_report": "account-report-20260923-0005",
     "open_orders": [],
-    "confirmation_text": "효성중공업13주전량체결·평균2,917,000원·미체결없음",
+    "confirmation_text": "효성13주 전량매도·평균2,839,000원·미체결없음",
     "last_confirmed_report": {
-      "source_report": "account-report-20260923-0004",
-      "source_type": "user_reported_official_app",
-      "reported_on": "2026-09-23",
-      "recorded_at": "2026-09-23T09:22:10+09:00",
+      "source_report": "account-report-20260923-0005",
       "observed_at": null,
-      "open_orders": [],
-      "confirmation_text": "미체결 없음"
+      "recorded_at": "2026-09-23T11:40:45+09:00",
+      "open_orders": []
     },
     "cancelled_orders": [
       {
@@ -221,7 +193,7 @@
         "cancel_completed_at": null
       }
     ],
-    "note": "효성v2 신규매수13주전량체결확인.9/21효성11주취소이력은보존.실제주문번호·유형·지정가필드·체결시각은미보고이며계획지정가와실제평균체결가를구분.",
+    "note": "매수13주와 매도13주 각각 사용자 실보고로 연결. 실제 주문유형·번호·체결시각·비용은 미보고.",
     "filled_orders": [
       {
         "order_id": null,
@@ -246,6 +218,29 @@
         "recorded_at": "2026-09-23T09:22:10+09:00",
         "observed_at": null,
         "submitted_at": null,
+        "filled_at": null,
+        "actual_costs_krw": null
+      },
+      {
+        "order_id": null,
+        "code": "298040",
+        "name": "효성중공업",
+        "side": "sell",
+        "order_type": null,
+        "planned_order_type": "market",
+        "order_quantity": 13,
+        "cumulative_filled_quantity": 13,
+        "remaining_quantity": 0,
+        "limit_price_krw": null,
+        "average_fill_price_krw": 2839000,
+        "status": "FILLED_CONFIRMED",
+        "plan_id": "plan-20260923-hyosung-01",
+        "plan_version": 3,
+        "source_report": "account-report-20260923-0005",
+        "source_type": "user_reported_official_app",
+        "reported_on": "2026-09-23",
+        "recorded_at": "2026-09-23T11:40:45+09:00",
+        "observed_at": null,
         "filled_at": null,
         "actual_costs_krw": null
       }
@@ -319,12 +314,12 @@
     "confirmation_status": "planning_basis_reconciled_official_total_equity_unconfirmed",
     "note": "이번 신규 계획의 최초 운용 기준을 고정 기록한다. 공식 총자산 확인 시 출처를 대사하되 손실을 이유로 기준점을 낮추거나 초기화하지 않는다."
   },
-  "last_reconciled_report": "account-report-20260923-0004",
+  "last_reconciled_report": "account-report-20260923-0005",
   "unresolved": [
     "과거 인버스·두산퓨얼셀의 전량 매도 완료는 확인됐으나 종목별 체결가·정확한 시각·주문번호·실제 비용은 미확인.",
     "공식 회전율187.74%는 확인. 인정 종목 수·인정 매매일수·공식 회전율 산식·정확한 잔여 거래대금은 미확인.",
     "이전09:19 주문가능현금과 이후 현금 차이67,796원의 원인·공식 총자산 필드 매핑은 미확인. 최신 공식수익률은 과거 팝업과 별도 실제 보고로 확인.",
-    "효성13주평균2,917,000원전량체결·미체결없음은보고0004로확인.정확한체결시각·주문번호·실제비용·체결후주문가능현금·매도가능수량별도필드는미확인.기존97,189,652원은체결전값으로현재현금에재사용하지않는다."
+    "효성 매수13주·매도13주·매도후 주문가능현금은 확인. 정확한 체결시각·주문번호·실제비용·공식 순손익은 미확인."
   ],
   "paper_account_confirmation_source": "Historical competition account confirmation and ongoing user report; no new login performed.",
   "recordkeeping": {
@@ -336,42 +331,43 @@
     "public_records": true
   },
   "latest_report": {
-    "report_id": "account-report-20260923-0004",
+    "report_id": "account-report-20260923-0005",
     "reported_on": "2026-09-23",
-    "recorded_at": "2026-09-23T09:22:10+09:00",
+    "recorded_at": "2026-09-23T11:40:45+09:00",
     "observed_at": null,
     "source_type": "user_reported_official_app",
-    "report_kind": "full_buy_fill_and_no_unfilled_order",
-    "user_text": "채결 수량 : 13\n평균 단가 : 2,917,000\n미체결 : 없음",
+    "report_kind": "full_sell_fill_no_unfilled_and_orderable_cash",
+    "user_text": "체결수량 : 13\n평균매도가 : 2,839,000원\n미체결 : 없음\n주문가능현금 : 96,094,357",
     "code": "298040",
     "name": "효성중공업",
-    "side": "buy",
+    "side": "sell",
     "plan_id": "plan-20260923-hyosung-01",
-    "plan_version": 2,
+    "plan_version": 3,
     "cumulative_filled_quantity": 13,
     "newly_confirmed_filled_quantity": 13,
-    "average_fill_price_krw": 2917000,
+    "average_fill_price_krw": 2839000,
     "remaining_order_quantity": 0,
-    "gross_purchase_amount_krw": 37921000,
-    "gross_amount_basis": "13주 × 사용자 보고 평균단가2,917,000원; 실제비용 제외 계산",
+    "remaining_holding_quantity": 0,
+    "orderable_cash_krw": 96094357,
     "reconciliation_status": "RECONCILED",
     "reconciliation_scope": [
       "portfolio.holdings",
       "orders.open_orders",
-      "current_entry_plan.execution_report"
+      "orders.filled_orders",
+      "cash.orderable_krw",
+      "current_entry_plan.exit_execution_report"
     ],
     "unconfirmed_fields": [
       "exact_fill_time",
       "order_id",
+      "actual_order_type",
       "actual_commission_and_tax",
-      "current_orderable_cash_after_fill",
-      "sellable_quantity"
+      "official_current_total_equity"
     ],
-    "new_trade_or_fill_reported": true,
-    "linkage_note": "직전 유일한 효성v2 총13주 매수안에 대한 체결보고. 신규체결을 기존0주에서13주로 한 번 반영. 계좌 직접조회가 아니며 기록시각을 체결시각으로 사용하지 않는다."
+    "linkage_note": "직전 효성 v3 보유13주 전량매도 지시에 대한 첫 체결보고. 매도 누적0→13주 한 번 반영. 앱 현금 스냅샷에 매도대금을 다시 가산하지 않음."
   },
-  "last_received_report": "account-report-20260923-0004",
-  "updated_at": "2026-09-23T11:34:27+09:00",
+  "last_received_report": "account-report-20260923-0005",
+  "updated_at": "2026-09-23T11:40:45+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -397,7 +393,8 @@
   "latest_plan_reference": {
     "plan_id": "plan-20260923-hyosung-01",
     "version": 3,
-    "status": "EXIT_REQUIRED",
+    "status": "CLOSED_CONFIRMED",
+    "closure_report": "account-report-20260923-0005",
     "path": "data/days/2026-09-23.md",
     "plan_is_not_order_or_fill": true
   },
@@ -419,44 +416,20 @@
     "transfer_record": "data/operation-mode.json"
   },
   "latest_holdings_report": {
-    "report_id": "account-report-20260923-0004",
-    "reported_on": "2026-09-23",
-    "recorded_at": "2026-09-23T09:22:10+09:00",
+    "report_id": "account-report-20260923-0005",
+    "recorded_at": "2026-09-23T11:40:45+09:00",
     "observed_at": null,
     "source_type": "user_reported_official_app",
-    "report_kind": "full_buy_fill_and_no_unfilled_order",
-    "user_text": "채결 수량 : 13\n평균 단가 : 2,917,000\n미체결 : 없음",
-    "code": "298040",
-    "name": "효성중공업",
-    "side": "buy",
-    "plan_id": "plan-20260923-hyosung-01",
-    "plan_version": 2,
-    "cumulative_filled_quantity": 13,
-    "newly_confirmed_filled_quantity": 13,
-    "average_fill_price_krw": 2917000,
-    "remaining_order_quantity": 0,
-    "gross_purchase_amount_krw": 37921000,
-    "gross_amount_basis": "13주 × 사용자 보고 평균단가2,917,000원; 실제비용 제외 계산",
-    "reconciliation_status": "RECONCILED",
-    "reconciliation_scope": [
-      "portfolio.holdings",
-      "orders.open_orders",
-      "current_entry_plan.execution_report"
-    ],
-    "unconfirmed_fields": [
-      "exact_fill_time",
-      "order_id",
-      "actual_commission_and_tax",
-      "current_orderable_cash_after_fill",
-      "sellable_quantity"
-    ],
-    "new_trade_or_fill_reported": true,
-    "linkage_note": "직전 유일한 효성v2 총13주 매수안에 대한 체결보고. 신규체결을 기존0주에서13주로 한 번 반영. 계좌 직접조회가 아니며 기록시각을 체결시각으로 사용하지 않는다."
+    "report_kind": "full_sell_fill_no_unfilled_and_orderable_cash",
+    "remaining_holdings_count": 0,
+    "source": "data/days/2026-09-23.md"
   },
   "last_reconciliation_scope": [
     "portfolio.holdings",
     "orders.open_orders",
-    "current_entry_plan.execution_report"
+    "orders.filled_orders",
+    "cash.orderable_krw",
+    "current_entry_plan.exit_execution_report"
   ],
   "publication_authorization": {
     "authorized_on": "2026-09-16",
@@ -483,45 +456,38 @@
     "preserve_history": true,
     "github_sync_authorized": true
   },
-  "active_plan_references": [
-    {
-      "plan_id": "plan-20260923-hyosung-01",
-      "version": 3,
-      "status": "EXIT_REQUIRED",
-      "path": "data/days/2026-09-23.md",
-      "plan_is_not_order_or_fill": true
-    }
-  ],
+  "active_plan_references": [],
   "execution_follow_up": {
-    "checked_at": "2026-09-23T11:34:27+09:00",
-    "source": "scheduled_guidance_prospective_discretionary_exit",
-    "latest_account_report": "account-report-20260923-0004",
-    "latest_cash_report": "account-report-20260923-0003",
-    "cash_report_is_pre_trade": true,
+    "checked_at": "2026-09-23T11:40:45+09:00",
+    "source": "user_fill_report_reconciliation_only",
+    "latest_account_report": "account-report-20260923-0005",
+    "latest_cash_report": "account-report-20260923-0005",
+    "cash_report_is_pre_trade": false,
     "plan_reference": {
       "plan_id": "plan-20260923-hyosung-01",
       "version": 3,
-      "status": "EXIT_REQUIRED",
+      "status": "CLOSED_CONFIRMED",
+      "closure_report": "account-report-20260923-0005",
       "path": "data/days/2026-09-23.md",
       "plan_is_not_order_or_fill": true
     },
-    "exit_obligation_status": "DISCRETIONARY_EXIT_REQUIRED_SELL_UNCONFIRMED",
-    "new_entry_status": "BLOCKED_PENDING_EXIT_AND_CURRENT_CASH_RECONCILIATION",
-    "known_held_quantity": 13,
+    "exit_obligation_status": "FULFILLED_NO_REMAINING_HOLDINGS_OR_ORDERS",
+    "new_entry_status": "NO_ACTIVE_ENTRY_PLAN_REQUIRES_NEW_REVIEW",
+    "known_held_quantity": 0,
     "remaining_buy_order_quantity": 0,
-    "order_submission_and_fill_report_pending": true,
-    "next_position_review_at": "2026-09-23T11:34:27+09:00",
+    "order_submission_and_fill_report_pending": false,
+    "next_position_review_at": null,
     "next_guidance_slot": "2026-09-23T12:00:00+09:00",
-    "exit_deadline": "2026-09-23T11:34:27+09:00",
-    "instructions": "안내 수신 후 즉시 실제 매도가능잔량 확인. 매도 미체결이 있을 때만 취소 완료·취소 중 추가체결 대사 후 실제 잔량 시장가 매도(보고상13주). 12:00 또는 옛15:00까지 기다리지 않는다. 체결수량·평균가·미체결·주문가능현금 보고로 대사.",
-    "market_analysis_performed": true,
+    "exit_deadline": null,
+    "instructions": "효성13주 전량매도·미체결0·주문가능현금96,094,357원 확인. v3 종료; 같은 계획의 추가매도·재진입 없음. 다음 명목안내2026-09-23 12:00 KST.",
+    "market_analysis_performed": false,
     "orders_submitted_by_assistant": false,
     "unconfirmed_fields": [
       "exact_fill_time",
       "order_id",
+      "actual_order_type",
       "actual_commission_and_tax",
-      "current_orderable_cash_after_fill",
-      "sellable_quantity"
+      "official_current_total_equity"
     ],
     "latest_review_id": "review-20260923-1130",
     "exit_decision_id": "exit-decision-20260923-hyosung-01"
@@ -842,6 +808,32 @@
         }
       },
       "note": "전량 청산은 사용자 보고로 확인했다. 이전 스냅샷의 시간 청산 미집행·인버스 손절 발동은 역사로 보존하며 현재 추가 매도 지시로 재사용하지 않는다. 종목별 체결가·비용은 임의로 역산하지 않는다."
+    },
+    {
+      "code": "298040",
+      "name": "효성중공업",
+      "status": "CLOSED_USER_CONFIRMED",
+      "plan_id": "plan-20260923-hyosung-01",
+      "plan_version": 3,
+      "remaining_quantity": 0,
+      "reported_sold_quantity": 13,
+      "average_buy_price_krw": 2917000,
+      "average_sell_price_krw": 2839000,
+      "gross_purchase_amount_krw": 37921000,
+      "gross_sale_amount_krw": 36907000,
+      "gross_realized_pnl_before_costs_krw": -1014000,
+      "net_realized_pnl_krw": null,
+      "actual_costs_krw": null,
+      "calculation_basis": "사용자 보고 매수·매도 평균가와13주로 계산한 비용 전 손익. 공식 앱 실현손익 아님.",
+      "buy_source_report": "account-report-20260923-0004",
+      "source_report": "account-report-20260923-0005",
+      "source_type": "user_reported_official_app",
+      "reported_on": "2026-09-23",
+      "recorded_at": "2026-09-23T11:40:45+09:00",
+      "observed_at": null,
+      "fill_execution_at": null,
+      "exit_decision_id": "exit-decision-20260923-hyosung-01",
+      "history_reference": "data/days/2026-09-23.md"
     }
   ],
   "closed_plan_references": [
@@ -875,6 +867,14 @@
       "codes": [
         "298040"
       ]
+    },
+    {
+      "plan_id": "plan-20260923-hyosung-01",
+      "version": 3,
+      "status": "CLOSED_CONFIRMED",
+      "closure_report": "account-report-20260923-0005",
+      "path": "data/days/2026-09-23.md",
+      "plan_is_not_order_or_fill": true
     }
   ],
   "app_investment_summary": {
@@ -1167,6 +1167,14 @@
       },
       "exit_obligation_status": "SCHEDULED_REVIEW_PENDING_NO_EXIT_TRIGGER_CONFIRMED",
       "source": "data/days/2026-09-23.md"
+    },
+    {
+      "checked_at": "2026-09-23T11:34:27+09:00",
+      "plan_id": "plan-20260923-hyosung-01",
+      "version": 3,
+      "exit_obligation_status": "DISCRETIONARY_EXIT_REQUIRED_SELL_UNCONFIRMED",
+      "resolved_by_report": "account-report-20260923-0005",
+      "source": "data/days/2026-09-23.md"
     }
   ],
   "latest_cash_and_investment_report": {
@@ -1262,7 +1270,7 @@
   "current_entry_plan": {
     "plan_id": "plan-20260923-hyosung-01",
     "version": 3,
-    "status": "EXIT_REQUIRED",
+    "status": "CLOSED_CONFIRMED",
     "code": "298040",
     "name": "효성중공업",
     "generated_at": "2026-09-23T09:15:05+09:00",
@@ -1297,7 +1305,7 @@
     "entry_deadline_exclusive": true,
     "cancel_unfilled_at": "2026-09-23T11:34:27+09:00",
     "first_review_at": "2026-09-23T11:34:27+09:00",
-    "next_review_at": "2026-09-23T12:00:00+09:00",
+    "next_review_at": null,
     "exit_deadline": "2026-09-23T11:34:27+09:00",
     "exit_evaluation_mode": "scheduled_review",
     "order_type": "limit",
@@ -1403,7 +1411,7 @@
         "rejection": "합산비중은늘어나지만비용·종목별집행여유차감후목표계좌기여는효성13주단독919,167.5원보다낮음.비교가격은주문지시가아님."
       }
     },
-    "execution_status": "BUY_FILLED_EXIT_INSTRUCTED_UNCONFIRMED",
+    "execution_status": "CLOSED_CONFIRMED",
     "actual_average_fill_price_krw": 2917000,
     "actual_purchase_gross_krw": 37921000,
     "actual_fill_at": null,
@@ -1422,7 +1430,7 @@
       "order_id": null,
       "actual_costs_krw": null
     },
-    "execution_status_note": "매수13주 체결 보고는 유지. 매도 안내만 발행했으며 접수·체결·현금은 미확인. 기존 가격·scheduled_review를 소급 변경하지 않고 별도의 가설훼손 청산으로 15:00 평가보다 먼저 집행.",
+    "execution_status_note": "보고0005로13주 전량매도·미체결0 확인. v3 조기청산 이행 완료. 같은 계획으로 재진입·추가매도 없음.",
     "original_exit_terms": {
       "first_review_at": "2026-09-23T15:00:00+09:00",
       "next_review_at": "2026-09-23T15:10:00+09:00",
@@ -1445,12 +1453,30 @@
       "observed_reference_price_krw": 2835000,
       "observed_at": "2026-09-23T11:31:00+09:00",
       "original_scheduled_stop_triggered": false,
-      "exit_required": true,
+      "exit_required": false,
       "not_revoked_by_rebound": true,
-      "fill_confirmed": false
+      "fill_confirmed": true,
+      "was_required": true,
+      "fulfilled_by_report": "account-report-20260923-0005",
+      "status": "FULFILLED"
     },
     "thesis_status": "INVALIDATED_FOR_CONTINUED_HOLDING_BY_V3",
-    "original_entry_fields_scope": "진입가·입력창·thesis·quote_qualification·metrics·risk는 v2 진입시 원본. 신규 매수·익절 대기 근거가 아니며 실제 매도 확인 전 위험노출은 계속 반영."
+    "original_entry_fields_scope": "진입가·입력창·thesis·quote_qualification·metrics·risk는 v2 진입시 원본. 신규 매수·익절 대기 근거가 아니며 실제 매도 확인 전 위험노출은 계속 반영.",
+    "closure_report": "account-report-20260923-0005",
+    "closed_recorded_at": "2026-09-23T11:40:45+09:00",
+    "closed_at": null,
+    "actual_sell_quantity": 13,
+    "actual_average_sell_price_krw": 2839000,
+    "actual_remaining_holding_quantity": 0,
+    "exit_execution_report": {
+      "source_report": "account-report-20260923-0005",
+      "filled_quantity": 13,
+      "average_sell_price_krw": 2839000,
+      "remaining_holding_quantity": 0,
+      "remaining_order_quantity": 0,
+      "observed_at": null,
+      "recorded_at": "2026-09-23T11:40:45+09:00"
+    }
   },
   "market_review_history": [
     {
@@ -2468,6 +2494,13 @@
       ],
       "new_trade_or_fill_reported": false,
       "note": "09:00 회차 중 현재 금액을 직접 확인했다는 사용자 보고. 기록 시각을 앱 관측 초 단위 시각으로 대체하지 않는다. 성적·보유·미체결은 각 기존 오늘 보고의 출처·시각을 유지한다."
+    },
+    {
+      "report_id": "account-report-20260923-0004",
+      "recorded_at": "2026-09-23T09:22:10+09:00",
+      "report_kind": "full_buy_fill_and_no_unfilled_order",
+      "source": "data/days/2026-09-23.md",
+      "prior_state_commit": "b3c9f9660410a27ef9f0415681e8cde8645a1b8d"
     }
   ],
   "entry_plan_history": [
@@ -3192,6 +3225,13 @@
         }
       ],
       "latest_cash_update_report": "account-report-20260921-0008"
+    },
+    {
+      "source_report": "account-report-20260923-0003",
+      "orderable_krw": 97189652,
+      "orderable_currentness": "PRE_TRADE_SNAPSHOT_NOT_CURRENT_AFTER_REPORTED_FILL",
+      "superseded_by_report": "account-report-20260923-0005",
+      "source": "data/days/2026-09-23.md"
     }
   ],
   "latest_official_results_availability_report": {
@@ -3414,5 +3454,19 @@
       "transferred_on": "2026-09-21",
       "transfer_record": "data/operation-mode.json"
     }
-  ]
+  ],
+  "trade_cash_reconciliation": {
+    "source_reports": [
+      "account-report-20260923-0003",
+      "account-report-20260923-0004",
+      "account-report-20260923-0005"
+    ],
+    "pre_trade_cash_krw": 97189652,
+    "post_trade_cash_krw": 96094357,
+    "reported_cash_change_krw": -1095295,
+    "gross_trade_pnl_krw": -1014000,
+    "difference_cash_change_minus_gross_pnl_krw": -81295,
+    "difference_cause": null,
+    "note": "현금 차이와 비용 전 거래손익의81,295원 차이는 실제 수수료·세금으로 확정하지 않음."
+  }
 }
