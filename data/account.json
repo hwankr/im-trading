@@ -369,7 +369,7 @@
     "linkage_note": "직전 유일한 효성v2 총13주 매수안에 대한 체결보고. 신규체결을 기존0주에서13주로 한 번 반영. 계좌 직접조회가 아니며 기록시각을 체결시각으로 사용하지 않는다."
   },
   "last_received_report": "account-report-20260923-0004",
-  "updated_at": "2026-09-23T09:34:58+09:00",
+  "updated_at": "2026-09-23T10:05:50+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -491,7 +491,7 @@
     }
   ],
   "execution_follow_up": {
-    "checked_at": "2026-09-23T09:34:58+09:00",
+    "checked_at": "2026-09-23T10:05:50+09:00",
     "source": "scheduled_guidance_existing_plan_unchanged",
     "latest_account_report": "account-report-20260923-0004",
     "latest_cash_report": "account-report-20260923-0003",
@@ -509,7 +509,7 @@
     "remaining_buy_order_quantity": 0,
     "order_submission_and_fill_report_pending": false,
     "next_position_review_at": "2026-09-23T15:00:00+09:00",
-    "next_guidance_slot": "2026-09-23T10:00:00+09:00",
+    "next_guidance_slot": "2026-09-23T10:30:00+09:00",
     "exit_deadline": "2026-09-23T15:10:00+09:00",
     "instructions": "효성13주보유·미체결없음.추가13주매수금지.15:00실제보유·매도가능수량·새미체결확인후기존손절/익절평가.15:10기존매도미체결이있을때만취소완료·체결대사후실제잔량시장가청산.",
     "market_analysis_performed": true,
@@ -521,76 +521,38 @@
       "current_orderable_cash_after_fill",
       "sellable_quantity"
     ],
-    "latest_review_id": "review-20260923-0930"
+    "latest_review_id": "review-20260923-1000"
   },
   "latest_market_review": {
-    "review_id": "review-20260923-0930",
-    "recorded_at": "2026-09-23T09:34:58+09:00",
+    "review_id": "review-20260923-1000",
+    "recorded_at": "2026-09-23T10:05:50+09:00",
     "heartbeat_id": "30",
-    "heartbeat_received_at": "2026-09-23T09:31:53.479+09:00",
-    "nominal_slot_at": "2026-09-23T09:30:00+09:00",
-    "clock_verified_at": "2026-09-23T09:32:11+09:00",
-    "decision": "HOLD_EXISTING_13_NO_ADDITIONAL_ORDER",
+    "heartbeat_received_at": "2026-09-23T10:00:23.762+09:00",
+    "nominal_slot_at": "2026-09-23T10:00:00+09:00",
+    "clock_verified_at": "2026-09-23T10:00:40+09:00",
+    "decision": "HOLD_EXISTING_13_SCHEDULED_EXIT_REVIEW_UNCHANGED",
     "market_analysis_performed": true,
     "session": "KRX_REGULAR_OPEN",
-    "session_basis": "당일09:32 KRX구분체결·OPEN과iM공식09:00~15:30시간표대조",
-    "market_data_at": "2026-09-23T09:32:23+09:00",
-    "public_quote_snapshot": [
-      {
-        "code": "298040",
-        "price_krw": 2903000,
-        "observed_at": "2026-09-23T09:32:23+09:00"
-      },
-      {
-        "code": "000660",
-        "price_krw": 1878000,
-        "observed_at": "2026-09-23T09:32:21+09:00"
-      },
-      {
-        "code": "005930",
-        "price_krw": 284500,
-        "observed_at": "2026-09-23T09:32:21+09:00"
-      },
-      {
-        "code": "068270",
-        "price_krw": 179000,
-        "observed_at": "2026-09-23T09:32:19+09:00"
-      },
-      {
-        "code": "033780",
-        "price_krw": 175000,
-        "observed_at": "2026-09-23T09:32:22+09:00"
-      },
-      {
-        "code": "012450",
-        "price_krw": 1051000,
-        "observed_at": "2026-09-23T09:32:19+09:00"
-      },
-      {
-        "code": "267260",
-        "price_krw": 715000,
-        "observed_at": "2026-09-23T09:32:20+09:00"
-      }
-    ],
-    "quote_source_pattern": "https://m.stock.naver.com/api/stock/{code}/basic",
-    "hyosung_nxt_reference": {
-      "price_krw": 2903000,
-      "observed_at": "2026-09-23T09:33:02.546+09:00"
+    "session_basis": "당일 KRX OPEN·TRADING 및 iM 정규장 09:00~15:30 대조",
+    "market_data_at": "2026-09-23T10:01:23+09:00",
+    "hyosung_quote": {
+      "price_krw": 2875000,
+      "observed_at": "2026-09-23T10:01:23+09:00",
+      "source": "https://m.stock.naver.com/api/stock/298040/basic",
+      "nxt_reference_price_krw": 2875000,
+      "nxt_reference_at": "2026-09-23T10:01:32.993+09:00"
     },
-    "hyosung_intraday_low": {
-      "price_krw": 2879000,
-      "source": "https://m.stock.naver.com/api/stock/298040/price",
-      "occurred_at": null,
-      "after_account_fill_verified": false,
-      "triggers_existing_scheduled_exit": false,
-      "note": "15:00정시평가계획.당일저가를회차사이실제관측·소급손절·체결로처리하지않음."
-    },
-    "plan_reference": {
+    "exit_evaluation": {
       "plan_id": "plan-20260923-hyosung-01",
       "version": 2,
-      "status": "HOLD"
+      "mode": "scheduled_review",
+      "stop_threshold_krw": 2885000,
+      "quote_below_threshold": true,
+      "scheduled_review_at": "2026-09-23T15:00:00+09:00",
+      "exit_triggered": false,
+      "reason": "현재 관측가는 기준 아래지만 15:00 정시 평가 전이다. 평가방식 변경·소급 발동 없음."
     },
-    "latest_user_report": "account-report-20260923-0004",
+    "candidate_comparison": "효성의 반복저점 289만원 반등 가설은 약화. 기존 수주/HVDC 촉매 변경 공시 미확인. 셀트리온178700원(10:01:20)→최근고점182200원 여유1.96%, KT&G basic175550원(10:01:23)은 호가단위 불일치로 신규 가격근거 BLOCKED. 삼성 basic283250원도 호가단위 확인 필요. SK1857000원·HD현대일렉트릭710000원은 기존 동일이벤트 스트레스 여유 부족, 한화1046000원은 전일저점1055000원 아래. 7종목 비교 후 새 교체계획 근거 부족.",
     "restriction_check": {
       "source": "KIND 유가증권 주의/경고/위험/관리",
       "date": "2026-09-23",
@@ -603,13 +565,14 @@
       "pages_each": "1/1",
       "candidates_found": []
     },
-    "rationale": "효성현재가격은손절·익절사이이고조회공시/회사촉매변화없음.셀트리온179000원→최근고점182200원여유1.79%,KT&G175000원→177700원1.54%로현가격대교체매력약화.반도체/전력추가는상관스트레스여유부족,한화는전일저점아래.7종목비교후유지.",
-    "current_cash_after_fill_krw": null,
+    "disclosure_and_catalyst_check": "7종목 공개 공시목록·효성 회사자료 조회. 보유 가설을 바꾸는 새 공시 미확인. 반도체 장전 강세 보도는 현재 호가·매수 근거로 대체하지 않음.",
+    "latest_user_report": "account-report-20260923-0004",
     "new_account_report_received": false,
+    "current_cash_after_fill_krw": null,
     "orders_submitted_by_assistant": false,
     "fills_inferred_from_prices": false,
     "missed_slots_replayed": false,
-    "next_nominal_review_at": "2026-09-23T10:00:00+09:00",
+    "next_nominal_review_at": "2026-09-23T10:30:00+09:00",
     "journal_path": "data/days/2026-09-23.md"
   },
   "prior_portfolio_screen_summaries": [
@@ -2063,6 +2026,12 @@
       "source": "data/days/2026-09-23.md",
       "plan_id": "plan-20260923-hyosung-01",
       "plan_version": 2
+    },
+    {
+      "review_id": "review-20260923-0930",
+      "recorded_at": "2026-09-23T09:34:58+09:00",
+      "decision": "HOLD_EXISTING_13_NO_ADDITIONAL_ORDER",
+      "journal_path": "data/days/2026-09-23.md"
     }
   ],
   "resolved_planning_issues": [
