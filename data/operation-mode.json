@@ -53,15 +53,15 @@
   "first_execution_evidence": "Read-only native automations.last_run_at=1789520509195; first 10:00-slot review and public observations appended to private daily record. No account fill inferred.",
   "next_run_verified_at_kst": "2026-09-23T08:43:34+09:00",
   "last_completed_review": {
-    "review_id": "review-20260923-0900",
-    "recorded_at_kst": "2026-09-23T09:15:05+09:00",
-    "market_data_at_kst": "2026-09-23T09:02:19+09:00",
-    "decision": "BUY_HYOSUNG_FIXED_LIMIT_13_READY_V2",
-    "latest_account_report": "account-report-20260923-0003",
+    "review_id": "review-20260923-0930",
+    "recorded_at_kst": "2026-09-23T09:34:58+09:00",
+    "market_data_at_kst": "2026-09-23T09:32:23+09:00",
+    "decision": "HOLD_EXISTING_13_NO_ADDITIONAL_ORDER",
+    "latest_account_report": "account-report-20260923-0004",
     "source": "data/days/2026-09-23.md",
     "market_analysis_performed": true,
-    "nominal_slot_at_kst": "2026-09-23T09:00:00+09:00",
-    "actual_clock_verified_at_kst": "2026-09-23T09:02:13+09:00"
+    "nominal_slot_at_kst": "2026-09-23T09:30:00+09:00",
+    "actual_clock_verified_at_kst": "2026-09-23T09:32:11+09:00"
   },
   "record_visibility": "public_paper_trading_records_user_authorized_20260916",
   "publication_policy": "docs/record-publication.md",
@@ -222,6 +222,12 @@
       "market_analysis_performed": false,
       "nominal_slot_at_kst": "2026-09-21T15:30:00+09:00",
       "actual_clock_verified_at_kst": "2026-09-21T15:32:17+09:00"
+    },
+    {
+      "review_id": "review-20260923-0900",
+      "recorded_at_kst": "2026-09-23T09:15:05+09:00",
+      "decision": "BUY_HYOSUNG_FIXED_LIMIT_13_READY_V2",
+      "source": "data/days/2026-09-23.md"
     }
   ],
   "new_thread_first_execution": {

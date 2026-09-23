@@ -369,7 +369,7 @@
     "linkage_note": "직전 유일한 효성v2 총13주 매수안에 대한 체결보고. 신규체결을 기존0주에서13주로 한 번 반영. 계좌 직접조회가 아니며 기록시각을 체결시각으로 사용하지 않는다."
   },
   "last_received_report": "account-report-20260923-0004",
-  "updated_at": "2026-09-23T09:22:10+09:00",
+  "updated_at": "2026-09-23T09:34:58+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -491,8 +491,8 @@
     }
   ],
   "execution_follow_up": {
-    "checked_at": "2026-09-23T09:22:10+09:00",
-    "source": "user_fill_reconciliation_no_market_analysis",
+    "checked_at": "2026-09-23T09:34:58+09:00",
+    "source": "scheduled_guidance_existing_plan_unchanged",
     "latest_account_report": "account-report-20260923-0004",
     "latest_cash_report": "account-report-20260923-0003",
     "cash_report_is_pre_trade": true,
@@ -509,10 +509,10 @@
     "remaining_buy_order_quantity": 0,
     "order_submission_and_fill_report_pending": false,
     "next_position_review_at": "2026-09-23T15:00:00+09:00",
-    "next_guidance_slot": "2026-09-23T09:30:00+09:00",
+    "next_guidance_slot": "2026-09-23T10:00:00+09:00",
     "exit_deadline": "2026-09-23T15:10:00+09:00",
     "instructions": "효성13주보유·미체결없음.추가13주매수금지.15:00실제보유·매도가능수량·새미체결확인후기존손절/익절평가.15:10기존매도미체결이있을때만취소완료·체결대사후실제잔량시장가청산.",
-    "market_analysis_performed": false,
+    "market_analysis_performed": true,
     "orders_submitted_by_assistant": false,
     "unconfirmed_fields": [
       "exact_fill_time",
@@ -520,426 +520,96 @@
       "actual_commission_and_tax",
       "current_orderable_cash_after_fill",
       "sellable_quantity"
-    ]
+    ],
+    "latest_review_id": "review-20260923-0930"
   },
   "latest_market_review": {
-    "review_id": "review-20260923-0900",
-    "recorded_at": "2026-09-23T09:15:05+09:00",
-    "source_type": "assistant_public_market_review_with_separate_user_cash_report",
+    "review_id": "review-20260923-0930",
+    "recorded_at": "2026-09-23T09:34:58+09:00",
     "heartbeat_id": "30",
-    "heartbeat_received_at": "2026-09-23T09:01:53.174+09:00",
-    "nominal_slot_at": "2026-09-23T09:00:00+09:00",
-    "clock_verified_at": "2026-09-23T09:02:13+09:00",
-    "market_data_at": "2026-09-23T09:02:19+09:00",
-    "additional_candidate_data_at": "2026-09-23T09:05:20+09:00",
+    "heartbeat_received_at": "2026-09-23T09:31:53.479+09:00",
+    "nominal_slot_at": "2026-09-23T09:30:00+09:00",
+    "clock_verified_at": "2026-09-23T09:32:11+09:00",
+    "decision": "HOLD_EXISTING_13_NO_ADDITIONAL_ORDER",
     "market_analysis_performed": true,
-    "decision": "BUY_HYOSUNG_FIXED_LIMIT_13_READY_V2",
     "session": "KRX_REGULAR_OPEN",
-    "krx_trading_day_basis": "오늘 날짜의9시 이후 KRX 구분 최근체결·OPEN을 다수종목에서 확인하고 iM 공식09:00~15:30 거래시간과 대조. 전체KRX연간달력을완료검증했다고표현하지않음.",
-    "session_hours_source": "https://www.imfnsec.com/mobile/cs/cs0201.jsp",
-    "competition_session_source": "config/competition.json 공식매뉴얼11·19쪽",
-    "latest_user_report": "account-report-20260923-0003",
-    "holdings_report": "account-report-20260923-0001",
-    "orders_report": "account-report-20260923-0001",
-    "official_performance_report": "account-report-20260923-0002",
-    "cash_report": "account-report-20260923-0003",
-    "new_account_report_received": true,
-    "candidate_plan": {
-      "plan_id": "plan-20260923-hyosung-01",
-      "version": 2,
-      "status": "READY",
-      "path": "data/days/2026-09-23.md",
-      "plan_is_not_order_or_fill": true
-    },
+    "session_basis": "당일09:32 KRX구분체결·OPEN과iM공식09:00~15:30시간표대조",
+    "market_data_at": "2026-09-23T09:32:23+09:00",
     "public_quote_snapshot": [
       {
         "code": "298040",
-        "name": "효성중공업",
-        "status": "READY",
-        "reason": "9/15확정수주·9/17HVDC와반복저점289만원/최근고점300.9만원 가설 유지;39.06% 총13주",
-        "krx_last_price_krw": 2912000,
-        "observed_at": "2026-09-23T09:02:19+09:00",
-        "market_status": "OPEN",
-        "trade_stop_type": "TRADING",
-        "source": "https://m.stock.naver.com/api/stock/298040/basic",
-        "price_type": "KRX_regular_last_trade",
-        "nxt_reference": {
-          "tradingSessionType": "REGULAR_MARKET",
-          "overMarketStatus": "OPEN",
-          "overPrice": "2,911,000",
-          "compareToPreviousPrice": {
-            "code": "2",
-            "text": "상승",
-            "name": "RISING"
-          },
-          "compareToPreviousClosePrice": "10,000",
-          "fluctuationsRatio": "0.34",
-          "localTradedAt": "2026-09-23T09:03:04.691+09:00",
-          "tradeStopType": {
-            "code": "1",
-            "text": "운영.Trading",
-            "name": "TRADING"
-          },
-          "tradableStatus": "tradable",
-          "tradableStatusCode": "ok",
-          "tradableStatusUpdatedAt": "2026-09-23T07:10:21.039+09:00"
-        }
+        "price_krw": 2903000,
+        "observed_at": "2026-09-23T09:32:23+09:00"
       },
       {
         "code": "000660",
-        "name": "SK하이닉스",
-        "status": "BLOCKED",
-        "reason": "189.4만원에서최근고점193.5만원까지2.16% 대 전일저점180.7만원까지4.59%; 갭상승 추격의 비용후 구조 부족",
-        "krx_last_price_krw": 1894000,
-        "observed_at": "2026-09-23T09:02:19+09:00",
-        "market_status": "OPEN",
-        "trade_stop_type": "TRADING",
-        "source": "https://m.stock.naver.com/api/stock/000660/basic",
-        "price_type": "KRX_regular_last_trade",
-        "nxt_reference": {
-          "tradingSessionType": "REGULAR_MARKET",
-          "overMarketStatus": "OPEN",
-          "overPrice": "1,894,000",
-          "compareToPreviousPrice": {
-            "code": "2",
-            "text": "상승",
-            "name": "RISING"
-          },
-          "compareToPreviousClosePrice": "54,000",
-          "fluctuationsRatio": "2.93",
-          "localTradedAt": "2026-09-23T09:03:04.689+09:00",
-          "tradeStopType": {
-            "code": "1",
-            "text": "운영.Trading",
-            "name": "TRADING"
-          },
-          "tradableStatus": "tradable",
-          "tradableStatusCode": "ok",
-          "tradableStatusUpdatedAt": "2026-09-23T07:10:12.062+09:00"
-        }
+        "price_krw": 1878000,
+        "observed_at": "2026-09-23T09:32:21+09:00"
       },
       {
         "code": "005930",
-        "name": "삼성전자",
-        "status": "BLOCKED",
-        "reason": "28.45만원에서장전기록의8/18고점28.8만원까지1.23%; 높은 새 목표 근거 부족",
-        "krx_last_price_krw": 284500,
-        "observed_at": "2026-09-23T09:02:17+09:00",
-        "market_status": "OPEN",
-        "trade_stop_type": "TRADING",
-        "source": "https://m.stock.naver.com/api/stock/005930/basic",
-        "price_type": "KRX_regular_last_trade",
-        "nxt_reference": {
-          "tradingSessionType": "REGULAR_MARKET",
-          "overMarketStatus": "OPEN",
-          "overPrice": "284,000",
-          "compareToPreviousPrice": {
-            "code": "2",
-            "text": "상승",
-            "name": "RISING"
-          },
-          "compareToPreviousClosePrice": "7,500",
-          "fluctuationsRatio": "2.71",
-          "localTradedAt": "2026-09-23T09:03:04.691+09:00",
-          "tradeStopType": {
-            "code": "1",
-            "text": "운영.Trading",
-            "name": "TRADING"
-          },
-          "tradableStatus": "tradable",
-          "tradableStatusCode": "ok",
-          "tradableStatusUpdatedAt": "2026-09-23T07:10:13.438+09:00"
-        }
-      },
-      {
-        "code": "267260",
-        "name": "HD현대일렉트릭",
-        "status": "BLOCKED",
-        "reason": "71.2만원은전일71만원저점부근이나새단기촉매 원문검증 부족; 효성과 동일AI전력 스트레스 예산을 공유",
-        "krx_last_price_krw": 712000,
-        "observed_at": "2026-09-23T09:02:18+09:00",
-        "market_status": "OPEN",
-        "trade_stop_type": "TRADING",
-        "source": "https://m.stock.naver.com/api/stock/267260/basic",
-        "price_type": "KRX_regular_last_trade",
-        "nxt_reference": {
-          "tradingSessionType": "REGULAR_MARKET",
-          "overMarketStatus": "OPEN",
-          "overPrice": "712,000",
-          "compareToPreviousPrice": {
-            "code": "5",
-            "text": "하락",
-            "name": "FALLING"
-          },
-          "compareToPreviousClosePrice": "-2,000",
-          "fluctuationsRatio": "-0.28",
-          "localTradedAt": "2026-09-23T09:03:04.69+09:00",
-          "tradeStopType": {
-            "code": "1",
-            "text": "운영.Trading",
-            "name": "TRADING"
-          },
-          "tradableStatus": "tradable",
-          "tradableStatusCode": "ok",
-          "tradableStatusUpdatedAt": "2026-09-23T07:10:20.581+09:00"
-        }
-      },
-      {
-        "code": "034020",
-        "name": "두산에너빌리티",
-        "status": "BLOCKED",
-        "reason": "8.53만원으로시가8.7만원대비하락;9/17해명·9/22IR목록만 확인되어 신규상승촉매 핵심내용 미확인",
-        "krx_last_price_krw": 85300,
-        "observed_at": "2026-09-23T09:02:18+09:00",
-        "market_status": "OPEN",
-        "trade_stop_type": "TRADING",
-        "source": "https://m.stock.naver.com/api/stock/034020/basic",
-        "price_type": "KRX_regular_last_trade",
-        "nxt_reference": {
-          "tradingSessionType": "REGULAR_MARKET",
-          "overMarketStatus": "OPEN",
-          "overPrice": "85,200",
-          "compareToPreviousPrice": {
-            "code": "5",
-            "text": "하락",
-            "name": "FALLING"
-          },
-          "compareToPreviousClosePrice": "-1,300",
-          "fluctuationsRatio": "-1.50",
-          "localTradedAt": "2026-09-23T09:03:04.734+09:00",
-          "tradeStopType": {
-            "code": "1",
-            "text": "운영.Trading",
-            "name": "TRADING"
-          },
-          "tradableStatus": "tradable",
-          "tradableStatusCode": "ok",
-          "tradableStatusUpdatedAt": "2026-09-23T07:10:15.511+09:00"
-        }
-      },
-      {
-        "code": "012450",
-        "name": "한화에어로스페이스",
-        "status": "BLOCKED",
-        "reason": "105만원은전일저점105.5만원을하회;9/11계약이후의단기지지 재형성 근거 부족",
-        "krx_last_price_krw": 1050000,
-        "observed_at": "2026-09-23T09:02:17+09:00",
-        "market_status": "OPEN",
-        "trade_stop_type": "TRADING",
-        "source": "https://m.stock.naver.com/api/stock/012450/basic",
-        "price_type": "KRX_regular_last_trade",
-        "nxt_reference": {
-          "tradingSessionType": "REGULAR_MARKET",
-          "overMarketStatus": "OPEN",
-          "overPrice": "1,050,000",
-          "compareToPreviousPrice": {
-            "code": "5",
-            "text": "하락",
-            "name": "FALLING"
-          },
-          "compareToPreviousClosePrice": "-7,000",
-          "fluctuationsRatio": "-0.66",
-          "localTradedAt": "2026-09-23T09:03:04.747+09:00",
-          "tradeStopType": {
-            "code": "1",
-            "text": "운영.Trading",
-            "name": "TRADING"
-          },
-          "tradableStatus": "tradable",
-          "tradableStatusCode": "ok",
-          "tradableStatusUpdatedAt": "2026-09-23T07:10:14.289+09:00"
-        }
-      },
-      {
-        "code": "009540",
-        "name": "HD한국조선해양",
-        "status": "BLOCKED",
-        "reason": "33.85만원은전일저점33.8만원부근;9/17미확정해명·9/14잠정실적의새가격재평가근거 확인부족",
-        "krx_last_price_krw": 338500,
-        "observed_at": "2026-09-23T09:03:02+09:00",
-        "market_status": "OPEN",
-        "trade_stop_type": "TRADING",
-        "source": "https://m.stock.naver.com/api/stock/009540/basic",
-        "price_type": "KRX_regular_last_trade",
-        "nxt_reference": {
-          "tradingSessionType": "REGULAR_MARKET",
-          "overMarketStatus": "OPEN",
-          "overPrice": "337,000",
-          "compareToPreviousPrice": {
-            "code": "5",
-            "text": "하락",
-            "name": "FALLING"
-          },
-          "compareToPreviousClosePrice": "-2,500",
-          "fluctuationsRatio": "-0.74",
-          "localTradedAt": "2026-09-23T09:03:04.734+09:00",
-          "tradeStopType": {
-            "code": "1",
-            "text": "운영.Trading",
-            "name": "TRADING"
-          },
-          "tradableStatus": "tradable",
-          "tradableStatusCode": "ok",
-          "tradableStatusUpdatedAt": "2026-09-23T07:10:13.936+09:00"
-        }
-      },
-      {
-        "code": "005380",
-        "name": "현대차",
-        "status": "BLOCKED",
-        "reason": "36.2만원에서전일고점37만원까지2.21%;9/17소각변경상장은과거결정 집행으로 별도당일재료로가정하지 않음",
-        "krx_last_price_krw": 362000,
-        "observed_at": "2026-09-23T09:03:00+09:00",
-        "market_status": "OPEN",
-        "trade_stop_type": "TRADING",
-        "source": "https://m.stock.naver.com/api/stock/005380/basic",
-        "price_type": "KRX_regular_last_trade",
-        "nxt_reference": {
-          "tradingSessionType": "REGULAR_MARKET",
-          "overMarketStatus": "OPEN",
-          "overPrice": "363,000",
-          "compareToPreviousPrice": {
-            "code": "2",
-            "text": "상승",
-            "name": "RISING"
-          },
-          "compareToPreviousClosePrice": "2,500",
-          "fluctuationsRatio": "0.69",
-          "localTradedAt": "2026-09-23T09:03:04.735+09:00",
-          "tradeStopType": {
-            "code": "1",
-            "text": "운영.Trading",
-            "name": "TRADING"
-          },
-          "tradableStatus": "tradable",
-          "tradableStatusCode": "ok",
-          "tradableStatusUpdatedAt": "2026-09-23T07:10:13.267+09:00"
-        }
-      },
-      {
-        "code": "207940",
-        "name": "삼성바이오로직스",
-        "status": "BLOCKED",
-        "reason": "138.8만원은최근반복저점138.9만원아래;9/10계약원문·9/4기업행위후보정보를새계획까지검증하지못함",
-        "krx_last_price_krw": 1388000,
-        "observed_at": "2026-09-23T09:02:19+09:00",
-        "market_status": "OPEN",
-        "trade_stop_type": "TRADING",
-        "source": "https://m.stock.naver.com/api/stock/207940/basic",
-        "price_type": "KRX_regular_last_trade",
-        "nxt_reference": {
-          "tradingSessionType": "REGULAR_MARKET",
-          "overMarketStatus": "OPEN",
-          "overPrice": "1,388,000",
-          "compareToPreviousPrice": {
-            "code": "5",
-            "text": "하락",
-            "name": "FALLING"
-          },
-          "compareToPreviousClosePrice": "-3,000",
-          "fluctuationsRatio": "-0.22",
-          "localTradedAt": "2026-09-23T09:03:04.766+09:00",
-          "tradeStopType": {
-            "code": "1",
-            "text": "운영.Trading",
-            "name": "TRADING"
-          },
-          "tradableStatus": "tradable",
-          "tradableStatusCode": "ok",
-          "tradableStatusUpdatedAt": "2026-09-23T07:10:19.894+09:00"
-        }
-      },
-      {
-        "code": "033780",
-        "name": "KT&G",
-        "status": "BLOCKED",
-        "reason": "9/22자사주취득·소각은회사공시목록으로확인.17.41만원에서전일고점17.77만원여유2.07%보다전일저점16.98만원거리2.47%가커현재진입구조열위",
-        "krx_last_price_krw": 174100,
-        "observed_at": "2026-09-23T09:05:20+09:00",
-        "market_status": "OPEN",
-        "trade_stop_type": "TRADING",
-        "source": "https://m.stock.naver.com/api/stock/033780/basic",
-        "price_type": "KRX_regular_last_trade",
-        "nxt_reference": {
-          "tradingSessionType": "REGULAR_MARKET",
-          "overMarketStatus": "OPEN",
-          "overPrice": "174,200",
-          "compareToPreviousPrice": {
-            "code": "5",
-            "text": "하락",
-            "name": "FALLING"
-          },
-          "compareToPreviousClosePrice": "-3,100",
-          "fluctuationsRatio": "-1.75",
-          "localTradedAt": "2026-09-23T09:06:19.187+09:00",
-          "tradeStopType": {
-            "code": "1",
-            "text": "운영.Trading",
-            "name": "TRADING"
-          },
-          "tradableStatus": "tradable",
-          "tradableStatusCode": "ok",
-          "tradableStatusUpdatedAt": "2026-09-23T07:10:15.494+09:00"
-        }
+        "price_krw": 284500,
+        "observed_at": "2026-09-23T09:32:21+09:00"
       },
       {
         "code": "068270",
-        "name": "셀트리온",
-        "status": "HOLD_CANDIDATE_NOT_ORDER",
-        "reason": "9/22EU-GMP갱신·생산량15%확대는회사원문확인.17.81만원과최근고점18.22만원을비교했으나아래별도대안계산에서합산스트레스·추가집행여유대비채택효율열위;영구제외아님",
-        "krx_last_price_krw": 178100,
-        "observed_at": "2026-09-23T09:05:17+09:00",
-        "market_status": "OPEN",
-        "trade_stop_type": "TRADING",
-        "source": "https://m.stock.naver.com/api/stock/068270/basic",
-        "price_type": "KRX_regular_last_trade",
-        "nxt_reference": {
-          "tradingSessionType": "REGULAR_MARKET",
-          "overMarketStatus": "OPEN",
-          "overPrice": "178,100",
-          "compareToPreviousPrice": {
-            "code": "5",
-            "text": "하락",
-            "name": "FALLING"
-          },
-          "compareToPreviousClosePrice": "-400",
-          "fluctuationsRatio": "-0.22",
-          "localTradedAt": "2026-09-23T09:06:19.186+09:00",
-          "tradeStopType": {
-            "code": "1",
-            "text": "운영.Trading",
-            "name": "TRADING"
-          },
-          "tradableStatus": "tradable",
-          "tradableStatusCode": "ok",
-          "tradableStatusUpdatedAt": "2026-09-23T07:10:16.947+09:00"
-        }
+        "price_krw": 179000,
+        "observed_at": "2026-09-23T09:32:19+09:00"
+      },
+      {
+        "code": "033780",
+        "price_krw": 175000,
+        "observed_at": "2026-09-23T09:32:22+09:00"
+      },
+      {
+        "code": "012450",
+        "price_krw": 1051000,
+        "observed_at": "2026-09-23T09:32:19+09:00"
+      },
+      {
+        "code": "267260",
+        "price_krw": 715000,
+        "observed_at": "2026-09-23T09:32:20+09:00"
       }
     ],
-    "restriction_check": {
-      "source": "KIND KOSPI 주의/경고/위험/관리 목록",
-      "checked_on": "2026-09-23",
-      "request_date_range": "2026-09-23~2026-09-23; 조회기간 중 지정중 종목",
-      "caution_count": 1,
-      "warning_count": 2,
-      "risk_count": 0,
-      "administrative_count": 46,
-      "all_list_pages_read": true,
-      "pages_each": "1/1",
-      "candidates_found": [],
-      "app_order_acceptance_verified": false
+    "quote_source_pattern": "https://m.stock.naver.com/api/stock/{code}/basic",
+    "hyosung_nxt_reference": {
+      "price_krw": 2903000,
+      "observed_at": "2026-09-23T09:33:02.546+09:00"
     },
-    "source_limitations": [
-      "bid/ask미확인",
-      "KRX basic전일참고값과Naver과거일봉종가차이 미해소",
-      "공시목록API의시간대미표시는정확한공시시각으로변환하지않음;날짜와본문만사용",
-      "당일고저는진행중스냅샷이며최종일봉이아님"
-    ],
-    "correlation_and_allocation": "총13주39.06%가동일이벤트스트레스5%예산의상한.다른업종을독립무위험으로추가하지않고현금대기기회비용과대안11개를비교.70~90%채택은이번근거·한도로미충족.",
+    "hyosung_intraday_low": {
+      "price_krw": 2879000,
+      "source": "https://m.stock.naver.com/api/stock/298040/price",
+      "occurred_at": null,
+      "after_account_fill_verified": false,
+      "triggers_existing_scheduled_exit": false,
+      "note": "15:00정시평가계획.당일저가를회차사이실제관측·소급손절·체결로처리하지않음."
+    },
+    "plan_reference": {
+      "plan_id": "plan-20260923-hyosung-01",
+      "version": 2,
+      "status": "HOLD"
+    },
+    "latest_user_report": "account-report-20260923-0004",
+    "restriction_check": {
+      "source": "KIND 유가증권 주의/경고/위험/관리",
+      "date": "2026-09-23",
+      "counts": [
+        1,
+        2,
+        0,
+        46
+      ],
+      "pages_each": "1/1",
+      "candidates_found": []
+    },
+    "rationale": "효성현재가격은손절·익절사이이고조회공시/회사촉매변화없음.셀트리온179000원→최근고점182200원여유1.79%,KT&G175000원→177700원1.54%로현가격대교체매력약화.반도체/전력추가는상관스트레스여유부족,한화는전일저점아래.7종목비교후유지.",
+    "current_cash_after_fill_krw": null,
+    "new_account_report_received": false,
     "orders_submitted_by_assistant": false,
     "fills_inferred_from_prices": false,
     "missed_slots_replayed": false,
-    "next_nominal_review_at": "2026-09-23T09:30:00+09:00",
+    "next_nominal_review_at": "2026-09-23T10:00:00+09:00",
     "journal_path": "data/days/2026-09-23.md"
   },
   "prior_portfolio_screen_summaries": [
@@ -2385,6 +2055,14 @@
       "allocation_intent": "현행70~90% 검토 우선;3종목을의무로채우지않음. 효성한후보로수상격차해소는부족하며다음회차에검증된대안·계좌기여확대검토. 상관위험·스트레스예산을명시해검증.",
       "next_nominal_review_at": "2026-09-23T09:00:00+09:00",
       "journal_path": "data/days/2026-09-23.md"
+    },
+    {
+      "review_id": "review-20260923-0900",
+      "recorded_at": "2026-09-23T09:15:05+09:00",
+      "decision": "BUY_HYOSUNG_FIXED_LIMIT_13_READY_V2",
+      "source": "data/days/2026-09-23.md",
+      "plan_id": "plan-20260923-hyosung-01",
+      "plan_version": 2
     }
   ],
   "resolved_planning_issues": [
