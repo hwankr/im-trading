@@ -274,35 +274,24 @@
     "new_next_run_verified": false
   },
   "last_heartbeat_gate": {
-    "gate_id": "heartbeat-gate-20260923-0820",
+    "gate_id": "heartbeat-gate-20260925-1954",
     "automation_id": "30",
-    "heartbeat_received_at": "2026-09-23T08:20:33.585+09:00",
-    "clock_verified_at": "2026-09-23T08:20:51+09:00",
-    "recorded_at": "2026-09-23T08:22:07+09:00",
+    "heartbeat_received_at": "2026-09-25T19:54:38.330+09:00",
+    "clock_verified_at": "2026-09-25T19:55:07+09:00",
+    "recorded_at": "2026-09-25T19:55:37+09:00",
     "decision": "SKIPPED_OUTSIDE_AUTHORIZED_REGULAR_SESSION",
-    "reason": "09:00 전 장전 자동 호출. 별도 장전 분석 요청 없음.",
+    "reason": "19:55 KST로 승인된09:00~15:30 밖. 미실행 회차 소급 재생 없음.",
     "market_analysis_performed": false,
     "quotes_disclosures_restrictions_or_catalysts_queried": false,
+    "holiday_calendar_reverified": false,
     "new_order_instruction_issued": false,
     "orders_submitted_by_assistant": false,
-    "nominal_trigger_slot": null,
-    "delay_or_off_schedule_cause_verified": false,
     "missed_slots_replayed": false,
-    "krx_trading_calendar_reverified": false,
-    "session_gate_source": "data/operation-mode.json nominal_slots_kst; config/competition.json sessions_as_printed",
-    "last_user_report": "account-report-20260921-0008",
     "new_account_report_received": false,
-    "reported_account_fields_changed": false,
-    "new_plan_created": false,
-    "last_known_holdings_report": "account-report-20260921-0005",
-    "last_known_orders_report": "account-report-20260921-0007",
-    "last_known_cash_report": "account-report-20260921-0008",
-    "last_known_cash_observed_at": "2026-09-21T15:30:00+09:00",
-    "account_currentness_note": "마지막 보고상 보유·미체결 없음, 현금97,189,652원. 오늘 계좌 상태를 재확인한 값이 아니다.",
-    "next_nominal_review_at": "2026-09-23T09:00:00+09:00",
-    "next_execution_or_notification_verified": false,
+    "last_actual_account_report": "account-report-20260923-0005",
+    "pending_reconciliation_reference": "context-gate-20260925-1951",
     "automation_modified": false,
-    "journal_path": "data/days/2026-09-23.md"
+    "journal_path": "data/days/2026-09-25.md"
   },
   "prior_thread_first_execution_evidence": [
     {
@@ -343,5 +332,13 @@
     "no_fill_or_cancellation_inferred": true,
     "last_actual_account_report": "account-report-20260923-0005",
     "journal_path": "data/days/2026-09-25.md"
-  }
+  },
+  "heartbeat_gate_history": [
+    {
+      "gate_id": "heartbeat-gate-20260923-0820",
+      "recorded_at": "2026-09-23T08:22:07+09:00",
+      "decision": "SKIPPED_OUTSIDE_AUTHORIZED_REGULAR_SESSION",
+      "journal_path": "data/days/2026-09-23.md"
+    }
+  ]
 }
