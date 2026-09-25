@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "status": "RECONCILED",
+  "status": "NEEDS_RECONCILIATION",
   "account_alias": "paper-main",
   "paper_competition_account_confirmed": true,
   "privacy": "public_paper_trading_records_user_authorized_20260916",
@@ -119,7 +119,7 @@
       }
     ],
     "latest_cash_update_report": "account-report-20260923-0005",
-    "orderable_currentness": "POST_LIQUIDATION_USER_REPORTED_SNAPSHOT"
+    "orderable_currentness": "LAST_REPORTED_20260923_NOT_RECONFIRMED_AFTER_SEMCO_PLAN"
   },
   "portfolio": {
     "observed_at": null,
@@ -150,7 +150,8 @@
       "return_percent": -2.81,
       "scope_note": "이번 실제 공식 앱 보고. 예수금·공식총자산·과거 화면 항목은 재확인하지 않음."
     },
-    "position_aggregate_basis": "13주 전량매도 보고로 잔여 보유0; 공식총자산·평가손익 미보고"
+    "position_aggregate_basis": "13주 전량매도 보고로 잔여 보유0; 공식총자산·평가손익 미보고",
+    "currentness_note": "보유없음은9/23 보고0005 시점. 이후 삼성전기 계획의 주문·체결 여부가 미보고되어 현재 상태로 단정하지 않음."
   },
   "orders": {
     "observed_at": null,
@@ -244,7 +245,8 @@
         "filled_at": null,
         "actual_costs_krw": null
       }
-    ]
+    ],
+    "currentness_note": "미체결없음은9/23 보고0005 시점. 이후 발행한 삼성전기 계획의 실제 접수·체결 여부 미확인."
   },
   "award_progress": {
     "observed_at": "2026-09-23T08:34:00+09:00",
@@ -319,7 +321,8 @@
     "과거 인버스·두산퓨얼셀의 전량 매도 완료는 확인됐으나 종목별 체결가·정확한 시각·주문번호·실제 비용은 미확인.",
     "공식 회전율187.74%는 확인. 인정 종목 수·인정 매매일수·공식 회전율 산식·정확한 잔여 거래대금은 미확인.",
     "이전09:19 주문가능현금과 이후 현금 차이67,796원의 원인·공식 총자산 필드 매핑은 미확인. 최신 공식수익률은 과거 팝업과 별도 실제 보고로 확인.",
-    "효성 매수13주·매도13주·매도후 주문가능현금은 확인. 정확한 체결시각·주문번호·실제비용·공식 순손익은 미확인."
+    "효성 매수13주·매도13주·매도후 주문가능현금은 확인. 정확한 체결시각·주문번호·실제비용·공식 순손익은 미확인.",
+    "9/23 삼성전기22주 계획의 주문 실행·체결 여부 미보고.9/25 실제 시각에 입력·청산기한 경과를 확인하여 현재 보유·미체결·현금 대사 필요."
   ],
   "paper_account_confirmation_source": "Historical competition account confirmation and ongoing user report; no new login performed.",
   "recordkeeping": {
@@ -367,7 +370,7 @@
     "linkage_note": "직전 효성 v3 보유13주 전량매도 지시에 대한 첫 체결보고. 매도 누적0→13주 한 번 반영. 앱 현금 스냅샷에 매도대금을 다시 가산하지 않음."
   },
   "last_received_report": "account-report-20260923-0005",
-  "updated_at": "2026-09-23T12:09:41+09:00",
+  "updated_at": "2026-09-25T19:53:10+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -391,7 +394,7 @@
   "latest_plan_reference": {
     "plan_id": "plan-20260923-semco-01",
     "version": 1,
-    "status": "READY",
+    "status": "ENTRY_EXPIRED_EXECUTION_UNCONFIRMED",
     "path": "data/days/2026-09-23.md",
     "plan_is_not_order_or_fill": true
   },
@@ -457,36 +460,40 @@
     {
       "plan_id": "plan-20260923-semco-01",
       "version": 1,
-      "status": "READY",
+      "status": "ENTRY_EXPIRED_EXECUTION_UNCONFIRMED",
       "path": "data/days/2026-09-23.md",
       "plan_is_not_order_or_fill": true
     }
   ],
   "execution_follow_up": {
-    "checked_at": "2026-09-23T12:09:41+09:00",
-    "source": "scheduled_guidance_new_distinct_entry_plan",
+    "checked_at": "2026-09-25T19:53:10+09:00",
+    "source": "actual_clock_gate_after_environment_date_change",
     "latest_account_report": "account-report-20260923-0005",
     "latest_cash_report": "account-report-20260923-0005",
     "cash_report_is_pre_trade": true,
     "plan_reference": {
       "plan_id": "plan-20260923-semco-01",
       "version": 1,
-      "status": "READY",
+      "status": "ENTRY_EXPIRED_EXECUTION_UNCONFIRMED",
       "path": "data/days/2026-09-23.md",
       "plan_is_not_order_or_fill": true
     },
-    "exit_obligation_status": "NONE_HYOSUNG_CLOSED_CONFIRMED",
-    "new_entry_status": "READY_UNSUBMITTED_USER_EXECUTION_REQUIRED",
-    "known_held_quantity": 0,
+    "exit_obligation_status": "IF_FILLED_ORIGINAL_EXIT_DEADLINE_PASSED_RECONCILIATION_REQUIRED",
+    "new_entry_status": "EXPIRED_NO_REUSE_BLOCKED_PENDING_ACCOUNT_REPORT",
+    "known_held_quantity": null,
     "remaining_buy_order_quantity": null,
     "order_submission_and_fill_report_pending": true,
-    "next_position_review_at": "2026-09-23T12:30:00+09:00",
-    "next_guidance_slot": "2026-09-23T12:30:00+09:00",
+    "next_position_review_at": null,
+    "next_guidance_slot": null,
     "exit_deadline": "2026-09-23T15:10:00+09:00",
-    "instructions": "삼성전기1482000원 지정가 총22주, 실제수신후14:30전 한번. 익절1540000원/손절1450000원 실제관측 수동청산.15:00 매수미체결 취소·대사,15:10 최종잔량청산. 주문접수·체결보고 전 중복주문 금지.",
-    "market_analysis_performed": true,
+    "instructions": "9/23 삼성전기 신규매수안은 기한 만료로 재사용하지 않는다. 장외인 현재 신규 주문 없음. 삼성전기 주문 실행 여부·현재 보유·미체결·주문가능현금 보고를 받아 대사. 실제 보유 확인 시 원래9/23 15:10 청산기한 경과를 적용하되 거래 가능한 다음 세션에 실제 잔량을 기준으로 안내.",
+    "market_analysis_performed": false,
     "orders_submitted_by_assistant": false,
-    "latest_review_id": "review-20260923-1200"
+    "latest_review_id": "review-20260923-1200",
+    "last_reported_held_quantity": 0,
+    "last_reported_holdings_source": "account-report-20260923-0005",
+    "pending_question": "삼성전기 주문 실행 여부·현재 보유·미체결·주문가능현금",
+    "latest_context_gate_id": "context-gate-20260925-1951"
   },
   "latest_market_review": {
     "review_id": "review-20260923-1200",
@@ -1166,6 +1173,14 @@
       "exit_obligation_status": "DISCRETIONARY_EXIT_REQUIRED_SELL_UNCONFIRMED",
       "resolved_by_report": "account-report-20260923-0005",
       "source": "data/days/2026-09-23.md"
+    },
+    {
+      "checked_at": "2026-09-23T12:09:41+09:00",
+      "plan_id": "plan-20260923-semco-01",
+      "version": 1,
+      "new_entry_status": "READY_UNSUBMITTED_USER_EXECUTION_REQUIRED",
+      "source": "data/days/2026-09-23.md",
+      "superseded_by_gate": "context-gate-20260925-1951"
     }
   ],
   "latest_cash_and_investment_report": {
@@ -1285,7 +1300,7 @@
   "current_entry_plan": {
     "plan_id": "plan-20260923-semco-01",
     "version": 1,
-    "status": "READY",
+    "status": "ENTRY_EXPIRED_EXECUTION_UNCONFIRMED",
     "code": "009150",
     "name": "삼성전기",
     "generated_at": "2026-09-23T12:09:41+09:00",
@@ -1304,7 +1319,7 @@
     "entry_deadline_exclusive": true,
     "cancel_unfilled_at": "2026-09-23T15:00:00+09:00",
     "first_review_at": "2026-09-23T12:30:00+09:00",
-    "next_review_at": "2026-09-23T13:00:00+09:00",
+    "next_review_at": null,
     "mandatory_first_day_reconciliation_at": "2026-09-23T15:00:00+09:00",
     "exit_deadline": "2026-09-23T15:10:00+09:00",
     "next_guidance_slot": "2026-09-23T12:30:00+09:00",
@@ -1313,9 +1328,9 @@
     "order_type": "limit",
     "market": "KRX_regular_paper_account",
     "maximum_entry_submissions": 1,
-    "actual_order_submitted": false,
-    "actual_fill_quantity": 0,
-    "execution_status": "READY_UNSUBMITTED",
+    "actual_order_submitted": null,
+    "actual_fill_quantity": null,
+    "execution_status": "UNKNOWN_AFTER_ENTRY_WINDOW_EXPIRED",
     "plan_is_not_order_or_fill": true,
     "orders_submitted_by_assistant": false,
     "thesis": "9/1 AI서버 MLCC 1.072조원 계약 원문과 최근9/18~22 상승을 확인. 현재148.2만원은9/22 저점145.2만원 위에서의 조정이며, 이미 같은 지지를 하회한 효성과 구분한다. 당일154.4만원·전일154.8만원 고점 재접근 가설로154만원 익절, 전일저점 아래145만원 손절. 현재호가는 미확인이고 상승·체결 확률은 미산정.",
@@ -1392,7 +1407,10 @@
       "https://samsungsem.co.kr/kr/newsroom/news/view.do?id=10501",
       "https://www.sem.samsung.co.kr/global/about-us/investor-relations/stock.do"
     ],
-    "journal_path": "data/days/2026-09-23.md"
+    "journal_path": "data/days/2026-09-23.md",
+    "entry_reuse_prohibited": true,
+    "expiry_checked_at": "2026-09-25T19:53:10+09:00",
+    "expiry_note": "실제 현재2026-09-25 19:51 KST.9/23 입력마감14:30·청산15:10 모두 경과. 안내·계획발행을 주문접수나 체결로 보지 않으며 주문 미실행도 추정하지 않음. 보유/미체결 대사 전 새 진입 금지."
   },
   "market_review_history": [
     {
@@ -2927,6 +2945,14 @@
       "closure_report": "account-report-20260923-0005",
       "source": "data/days/2026-09-23.md",
       "prior_state_commit": "a97d127f2e9410c4407b72b2970a62bad1e8464e"
+    },
+    {
+      "plan_id": "plan-20260923-semco-01",
+      "version": 1,
+      "status": "READY",
+      "source": "data/days/2026-09-23.md",
+      "prior_state_commit": "58a718768908fbf1886c9dec6bc243bc59fbdc58",
+      "transition_reason": "환경 날짜 갱신 후 실제 시각 검증으로 진입기한 경과 확인"
     }
   ],
   "resolved_account_issues": [
@@ -3398,5 +3424,23 @@
     "difference_cash_change_minus_gross_pnl_krw": -81295,
     "difference_cause": null,
     "note": "현금 차이와 비용 전 거래손익의81,295원 차이는 실제 수수료·세금으로 확정하지 않음."
+  },
+  "latest_context_gate": {
+    "gate_id": "context-gate-20260925-1951",
+    "recorded_at": "2026-09-25T19:53:10+09:00",
+    "clock_verified_at": "2026-09-25T19:51:16+09:00",
+    "trigger": "environment_date_changed_while_finishing_20260923_review",
+    "decision": "OUTSIDE_REGULAR_SESSION_EXPIRED_PLAN_NO_NEW_ORDER",
+    "market_analysis_performed": false,
+    "quotes_disclosures_restrictions_or_catalysts_queried": false,
+    "holiday_calendar_reverified": false,
+    "gate_basis": "19:51 KST로 승인된 정규장 밖; 휴장 여부와 무관하게 분석/신규주문 없음",
+    "plan_id": "plan-20260923-semco-01",
+    "plan_version": 1,
+    "entry_expired": true,
+    "execution_unconfirmed": true,
+    "no_fill_or_cancellation_inferred": true,
+    "last_actual_account_report": "account-report-20260923-0005",
+    "journal_path": "data/days/2026-09-25.md"
   }
 }

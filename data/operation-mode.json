@@ -325,5 +325,23 @@
     "source": "data/days/2026-09-23.md",
     "latest_account_report": "account-report-20260923-0002",
     "is_scheduled_slot": false
+  },
+  "latest_context_gate": {
+    "gate_id": "context-gate-20260925-1951",
+    "recorded_at": "2026-09-25T19:53:10+09:00",
+    "clock_verified_at": "2026-09-25T19:51:16+09:00",
+    "trigger": "environment_date_changed_while_finishing_20260923_review",
+    "decision": "OUTSIDE_REGULAR_SESSION_EXPIRED_PLAN_NO_NEW_ORDER",
+    "market_analysis_performed": false,
+    "quotes_disclosures_restrictions_or_catalysts_queried": false,
+    "holiday_calendar_reverified": false,
+    "gate_basis": "19:51 KST로 승인된 정규장 밖; 휴장 여부와 무관하게 분석/신규주문 없음",
+    "plan_id": "plan-20260923-semco-01",
+    "plan_version": 1,
+    "entry_expired": true,
+    "execution_unconfirmed": true,
+    "no_fill_or_cancellation_inferred": true,
+    "last_actual_account_report": "account-report-20260923-0005",
+    "journal_path": "data/days/2026-09-25.md"
   }
 }
