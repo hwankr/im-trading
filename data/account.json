@@ -367,7 +367,7 @@
     "linkage_note": "직전 효성 v3 보유13주 전량매도 지시에 대한 첫 체결보고. 매도 누적0→13주 한 번 반영. 앱 현금 스냅샷에 매도대금을 다시 가산하지 않음."
   },
   "last_received_report": "account-report-20260923-0005",
-  "updated_at": "2026-09-23T11:40:45+09:00",
+  "updated_at": "2026-09-23T12:09:41+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -379,22 +379,19 @@
     "as_of_report": "account-report-0005"
   },
   "planning_capital_basis": {
-    "amount_krw": 97189652,
-    "source_type": "derived_planning_basis_from_current_user_confirmed_cash_and_flat_account",
-    "source_reports": [
-      "account-report-20260923-0001",
-      "account-report-20260923-0003"
-    ],
-    "calculated_at": "2026-09-23T09:15:05+09:00",
-    "formula": "오늘 보유·미체결 없음 보고와 오늘 재확인 주문가능현금97,189,652원을 결합한 모의 계획 기준",
-    "is_official_competition_total_equity": false,
-    "assumption": "실제 공식 총자산 필드는 미확인. 계좌 수익률로 역산하지 않았으며, 과거 더 작은 현금 기준의 차이는 오늘 실제 금액 재확인으로만 대사한다. 최초 손실 재검토 기준자산99,252,549원은 유지한다."
+    "amount_krw": 96094357,
+    "source_report": "account-report-20260923-0005",
+    "source_type": "user_reported_orderable_cash_with_reconciled_flat_portfolio",
+    "observed_at": null,
+    "recorded_at": "2026-09-23T12:09:41+09:00",
+    "official_total_equity_confirmed": false,
+    "margin_multiplier_used": false,
+    "risk_anchor_reset": false
   },
   "latest_plan_reference": {
-    "plan_id": "plan-20260923-hyosung-01",
-    "version": 3,
-    "status": "CLOSED_CONFIRMED",
-    "closure_report": "account-report-20260923-0005",
+    "plan_id": "plan-20260923-semco-01",
+    "version": 1,
+    "status": "READY",
     "path": "data/days/2026-09-23.md",
     "plan_is_not_order_or_fill": true
   },
@@ -456,97 +453,91 @@
     "preserve_history": true,
     "github_sync_authorized": true
   },
-  "active_plan_references": [],
+  "active_plan_references": [
+    {
+      "plan_id": "plan-20260923-semco-01",
+      "version": 1,
+      "status": "READY",
+      "path": "data/days/2026-09-23.md",
+      "plan_is_not_order_or_fill": true
+    }
+  ],
   "execution_follow_up": {
-    "checked_at": "2026-09-23T11:40:45+09:00",
-    "source": "user_fill_report_reconciliation_only",
+    "checked_at": "2026-09-23T12:09:41+09:00",
+    "source": "scheduled_guidance_new_distinct_entry_plan",
     "latest_account_report": "account-report-20260923-0005",
     "latest_cash_report": "account-report-20260923-0005",
-    "cash_report_is_pre_trade": false,
+    "cash_report_is_pre_trade": true,
     "plan_reference": {
-      "plan_id": "plan-20260923-hyosung-01",
-      "version": 3,
-      "status": "CLOSED_CONFIRMED",
-      "closure_report": "account-report-20260923-0005",
+      "plan_id": "plan-20260923-semco-01",
+      "version": 1,
+      "status": "READY",
       "path": "data/days/2026-09-23.md",
       "plan_is_not_order_or_fill": true
     },
-    "exit_obligation_status": "FULFILLED_NO_REMAINING_HOLDINGS_OR_ORDERS",
-    "new_entry_status": "NO_ACTIVE_ENTRY_PLAN_REQUIRES_NEW_REVIEW",
+    "exit_obligation_status": "NONE_HYOSUNG_CLOSED_CONFIRMED",
+    "new_entry_status": "READY_UNSUBMITTED_USER_EXECUTION_REQUIRED",
     "known_held_quantity": 0,
-    "remaining_buy_order_quantity": 0,
-    "order_submission_and_fill_report_pending": false,
-    "next_position_review_at": null,
-    "next_guidance_slot": "2026-09-23T12:00:00+09:00",
-    "exit_deadline": null,
-    "instructions": "효성13주 전량매도·미체결0·주문가능현금96,094,357원 확인. v3 종료; 같은 계획의 추가매도·재진입 없음. 다음 명목안내2026-09-23 12:00 KST.",
-    "market_analysis_performed": false,
+    "remaining_buy_order_quantity": null,
+    "order_submission_and_fill_report_pending": true,
+    "next_position_review_at": "2026-09-23T12:30:00+09:00",
+    "next_guidance_slot": "2026-09-23T12:30:00+09:00",
+    "exit_deadline": "2026-09-23T15:10:00+09:00",
+    "instructions": "삼성전기1482000원 지정가 총22주, 실제수신후14:30전 한번. 익절1540000원/손절1450000원 실제관측 수동청산.15:00 매수미체결 취소·대사,15:10 최종잔량청산. 주문접수·체결보고 전 중복주문 금지.",
+    "market_analysis_performed": true,
     "orders_submitted_by_assistant": false,
-    "unconfirmed_fields": [
-      "exact_fill_time",
-      "order_id",
-      "actual_order_type",
-      "actual_commission_and_tax",
-      "official_current_total_equity"
-    ],
-    "latest_review_id": "review-20260923-1130",
-    "exit_decision_id": "exit-decision-20260923-hyosung-01"
+    "latest_review_id": "review-20260923-1200"
   },
   "latest_market_review": {
-    "review_id": "review-20260923-1130",
-    "recorded_at": "2026-09-23T11:34:27+09:00",
+    "review_id": "review-20260923-1200",
+    "recorded_at": "2026-09-23T12:09:41+09:00",
     "heartbeat_id": "30",
-    "heartbeat_received_at": "2026-09-23T11:30:25.019+09:00",
-    "nominal_slot_at": "2026-09-23T11:30:00+09:00",
-    "clock_verified_at": "2026-09-23T11:30:39+09:00",
-    "decision": "SELL_REPORTED_13_DISCRETIONARY_EARLY_EXIT_V3",
+    "heartbeat_received_at": "2026-09-23T12:02:25.433+09:00",
+    "nominal_slot_at": "2026-09-23T12:00:00+09:00",
+    "clock_verified_at": "2026-09-23T12:02:40+09:00",
+    "market_data_at": "2026-09-23T12:03:22+09:00",
+    "decision": "BUY_SEMCO_FIXED_LIMIT_22_NEW_PLAN_V1",
     "market_analysis_performed": true,
     "session": "KRX_REGULAR_OPEN",
-    "session_basis": "당일 KRX OPEN·TRADING 및 iM 정규장 09:00~15:30 대조",
-    "market_data_at": "2026-09-23T11:31:00+09:00",
-    "hyosung_quote": {
-      "price_krw": 2835000,
-      "observed_at": "2026-09-23T11:31:00+09:00",
-      "source": "https://m.stock.naver.com/api/stock/298040/basic",
-      "nxt_reference_price_krw": 2835000,
-      "nxt_reference_at": "2026-09-23T11:31:13.106+09:00"
+    "session_basis": "오늘 KOSPI/KOSDAQ OPEN·TRADING과 iM 모의 정규장시간 대조",
+    "latest_user_report": "account-report-20260923-0005",
+    "plan_reference": {
+      "plan_id": "plan-20260923-semco-01",
+      "version": 1,
+      "status": "READY",
+      "path": "data/days/2026-09-23.md",
+      "plan_is_not_order_or_fill": true
     },
-    "exit_evaluation": {
-      "plan_id": "plan-20260923-hyosung-01",
-      "version": 3,
-      "mode": "scheduled_review",
-      "original_price_review_at": "2026-09-23T15:00:00+09:00",
-      "original_stop_threshold_krw": 2885000,
-      "original_scheduled_stop_triggered": false,
-      "discretionary_exit_required": true,
-      "decision_id": "exit-decision-20260923-hyosung-01",
-      "execute_now_on_receipt": true,
-      "reason": "v3 change_reason 참조. 종전 정시 손절 발동과 구분한 이번 회차 재량 조기청산."
-    },
-    "candidate_comparison": "8종목 비교. SK1840000원·HD현대일렉트릭703000원은 추가 약세 및 청산 전 동일이벤트 스트레스 여유 부족. 삼성282000원은 현재 호가단위 정상이나 최근 참고고점288000원까지2.13%로 교체 유인 부족. KT&G175200원은 최근고점177700원 여유1.43%, 셀트리온177600원은 당일저가177500원 부근. 한화1022000원은 지지 훼손 확대. 포스코퓨처엠basic182800원(11:31:08)과 같은 조회 price183400원/당일저가183000원 불일치로 신규 가격계획 BLOCKED. 체결후 현금 확인 전 신규 매수 수량 미산정.",
+    "candidate_comparison": "11종목 검토. 삼성전기 MLCC 확정계약과 전일저점 위의 조정/고점 재접근을 채택. SK스퀘어1168000원은 전일고점1189000원까지1.80%로 여유 작음. 엑스게이트18630원은9/15 단기과열 지정예고와 당일고저14% 급변, 최근저항18860원 여유1.23%로 제외. 셀트리온177100원은9/17저점177400원 하회, 포스코퓨처엠182600원은 당일저가182400원 부근으로 하락 압력 유지. KT&G175300원은 최근저항177700원까지1.37%. 효성 재진입근거 없음; 한화1019000원·HD703000원 지지 약화. 삼성전자/하이닉스는 대체가격여유·업종중복 대비 삼성전기 선택. 이들을 독립 스트레스 예산으로 추가하지 않음.",
     "restriction_check": {
-      "source": "KIND 유가증권 주의/경고/위험/관리",
       "date": "2026-09-23",
-      "counts": [
+      "kospi_counts_caution_warning_risk_admin": [
         1,
         2,
         0,
         46
       ],
-      "pages_each": "1/1",
+      "kosdaq_counts_caution_warning_risk_admin": [
+        20,
+        21,
+        1,
+        134
+      ],
+      "all_pages_checked": true,
+      "kosdaq_admin_pages": "1/2 and 2/2",
       "candidates_found": []
     },
-    "disclosure_and_catalyst_check": "8종목 공시목록·효성/셀트리온 회사자료 조회에서 핵심촉매 변경 미확인. 새 악재 공시가 아니라 가격·업종의 약화에 따른 당일 반등 가설 종료. 회차 사이 연속 경로를 확인했다고 주장하지 않음.",
-    "latest_user_report": "account-report-20260923-0004",
+    "correction": {
+      "prior_error": "삼성전자/KT&G의 일반 지정가 단위 사이 체결가를 오류로 간주해 제외",
+      "corrected_rule": "KRX 중간가호가 체결이 가능하므로 체결가의 단위만으로 오류라고 단정할 수 없음. 해당 제외근거 철회. 실제 개별체결 주문유형은 미확인. 신규 지정가는 정규 호가단위 준수.",
+      "source": "https://regulation.krx.co.kr/contents/RGL/03/03010208/RGL03010208.jsp"
+    },
     "new_account_report_received": false,
-    "current_cash_after_fill_krw": null,
     "orders_submitted_by_assistant": false,
     "fills_inferred_from_prices": false,
     "missed_slots_replayed": false,
-    "next_nominal_review_at": "2026-09-23T12:00:00+09:00",
-    "journal_path": "data/days/2026-09-23.md",
-    "new_candidate_source": "https://m.stock.naver.com/api/stock/003670/disclosure/137592843",
-    "holding_rationale": "plan-20260923-hyosung-01 v3 change_reason 참조. 반복지지 하회 확대와 전력주 약세로 당일 반등 가설 종료."
+    "next_nominal_review_at": "2026-09-23T12:30:00+09:00",
+    "journal_path": "data/days/2026-09-23.md"
   },
   "prior_portfolio_screen_summaries": [
     {
@@ -1220,6 +1211,22 @@
       "formula": "min(투자원금+표시 투자손익 97,189,652원, 전량 청산·미체결 없음 상태의 주문가능현금 97,121,856원)",
       "is_official_competition_total_equity": false,
       "assumption": "보유·미체결 없음 및 대용·신용 0의 최신 보고를 결합한 운용 기준이다. 67,796원 차이를 예산에 더하지 않고 더 작은 확인 현금만 사용한다. 최대주문가능 242,804,640원은 배제한다. 공식 총자산 매핑은 여전히 미확인이며 손실 중단 기준자산을 재설정하지 않는다."
+    },
+    {
+      "prior_basis": {
+        "amount_krw": 97189652,
+        "source_type": "derived_planning_basis_from_current_user_confirmed_cash_and_flat_account",
+        "source_reports": [
+          "account-report-20260923-0001",
+          "account-report-20260923-0003"
+        ],
+        "calculated_at": "2026-09-23T09:15:05+09:00",
+        "formula": "오늘 보유·미체결 없음 보고와 오늘 재확인 주문가능현금97,189,652원을 결합한 모의 계획 기준",
+        "is_official_competition_total_equity": false,
+        "assumption": "실제 공식 총자산 필드는 미확인. 계좌 수익률로 역산하지 않았으며, 과거 더 작은 현금 기준의 차이는 오늘 실제 금액 재확인으로만 대사한다. 최초 손실 재검토 기준자산99,252,549원은 유지한다."
+      },
+      "superseded_at": "2026-09-23T12:09:41+09:00",
+      "reason": "전량청산후 현금 보고0005로 신규계획 자본갱신; 위험기준점 재설정 아님"
     }
   ],
   "plan_reference_history": [
@@ -1265,218 +1272,127 @@
       "status": "HOLD",
       "path": "data/days/2026-09-23.md",
       "plan_is_not_order_or_fill": true
+    },
+    {
+      "plan_id": "plan-20260923-hyosung-01",
+      "version": 3,
+      "status": "CLOSED_CONFIRMED",
+      "closure_report": "account-report-20260923-0005",
+      "path": "data/days/2026-09-23.md",
+      "plan_is_not_order_or_fill": true
     }
   ],
   "current_entry_plan": {
-    "plan_id": "plan-20260923-hyosung-01",
-    "version": 3,
-    "status": "CLOSED_CONFIRMED",
-    "code": "298040",
-    "name": "효성중공업",
-    "generated_at": "2026-09-23T09:15:05+09:00",
-    "information_as_of": "2026-09-23T11:34:27+09:00",
-    "entry_limit_krw": 2920000,
-    "take_profit_limit_krw": 3005000,
-    "stop_trigger_krw": 2885000,
-    "total_quantity": 13,
-    "notional_krw": 37960000,
-    "actual_order_submitted": true,
-    "actual_fill_quantity": 13,
-    "quantity_status": "SIZED_FROM_CURRENT_USER_CONFIRMED_CASH_AND_ALL_APPLICABLE_LIMITS",
-    "replaces": {
-      "plan_id": "plan-20260923-hyosung-01",
-      "version": 2,
-      "status": "HOLD",
-      "scope": "prospective_early_exit_only",
-      "actual_order_cancellation_confirmed": false
-    },
-    "relationship_to_old_plan": "9월21일 v2는취소종료. 이 계획은별도 ID의 새 가설이며 기존11주를 재사용하지 않는다.",
-    "thesis": "미 빅테크 수주·HVDC 확인 재료와9월21~22일 저점289만원 반복,9월22일 고점300.9만원을 참고한 당일 저항 재접근.292만원 진입은9월22일 참고 종가291.9만원 부근,288.5만원은반복저점 아래,300.5만원은고점 아래. 확률·기대수익 검증값이 아니다.",
-    "quote_qualification": "KRX basic OPEN의09:02:19 최근체결2,912,000원, 별도 NXT09:03:04.691의2,911,000원. 당일일봉은 진행중. basic 전일참고2,901,000원과 과거일봉9/22 종가2,919,000원 차이는 시장/필드가 섞인 가능성을 해소하지 못했으므로 수익률을 서로 혼합하지 않는다. 원래 가격 근거의 과거 고저는 참고자료로 유지. bid/ask 조회404로 스프레드·즉시체결 미확인.",
-    "sources": [
-      "https://m.stock.naver.com/api/stock/298040/basic",
-      "https://m.stock.naver.com/api/stock/298040/price",
-      "https://fchart.stock.naver.com/sise.nhn?symbol=298040&timeframe=day&count=10&requestType=0",
-      "https://www.hyosung.com/kr/newsroom/view/19332",
-      "https://www.hyosung.com/kr/newsroom/view/19335"
-    ],
-    "valid_from": "2026-09-23T09:15:05+09:00",
+    "plan_id": "plan-20260923-semco-01",
+    "version": 1,
+    "status": "READY",
+    "code": "009150",
+    "name": "삼성전기",
+    "generated_at": "2026-09-23T12:09:41+09:00",
+    "information_as_of": "2026-09-23T12:09:41+09:00",
+    "market_data_as_of": "2026-09-23T12:03:22+09:00",
+    "entry_limit_krw": 1482000,
+    "take_profit_limit_krw": 1540000,
+    "stop_trigger_krw": 1450000,
+    "total_quantity": 22,
+    "quantity_is_total_not_additional": true,
+    "notional_krw": 32604000,
+    "planning_capital_basis_krw": 96094357,
+    "account_report": "account-report-20260923-0005",
+    "valid_from": "2026-09-23T12:09:41+09:00",
     "entry_deadline": "2026-09-23T14:30:00+09:00",
     "entry_deadline_exclusive": true,
-    "cancel_unfilled_at": "2026-09-23T11:34:27+09:00",
-    "first_review_at": "2026-09-23T11:34:27+09:00",
-    "next_review_at": null,
-    "exit_deadline": "2026-09-23T11:34:27+09:00",
-    "exit_evaluation_mode": "scheduled_review",
+    "cancel_unfilled_at": "2026-09-23T15:00:00+09:00",
+    "first_review_at": "2026-09-23T12:30:00+09:00",
+    "next_review_at": "2026-09-23T13:00:00+09:00",
+    "mandatory_first_day_reconciliation_at": "2026-09-23T15:00:00+09:00",
+    "exit_deadline": "2026-09-23T15:10:00+09:00",
+    "next_guidance_slot": "2026-09-23T12:30:00+09:00",
+    "exit_evaluation_mode": "manual_on_observation",
+    "evaluation_effective_from": "2026-09-23T12:09:41+09:00",
     "order_type": "limit",
     "market": "KRX_regular_paper_account",
-    "entry_execution": "보고0004로 총13주 매수 완료. 추가 매수·재진입 없음.",
-    "exit_execution": "안내 수신 후 즉시 실제 매도가능잔량 확인. 매도 미체결이 있을 때만 취소 완료·취소 중 추가체결 대사 후 실제 잔량 시장가 매도(보고상13주). 12:00 또는 옛15:00까지 기다리지 않는다. 체결수량·평균가·미체결·주문가능현금 보고로 대사.",
-    "holding_horizon_reason": "당일 반등 가설 종료로 v3 안내 수신 즉시 조기청산. 기존15:10 청산보다 앞당김.",
-    "pre_submission_guard": "입력 직전 KRX 현재가가2,885,000원 이하 또는3,005,000원 이상, 거래제한·알려진 가설무효·중복보유/주문이면 입력하지 않는다. 현금이 다른 주문에 사용됐으면 먼저 대사한다.",
-    "first_day_review_required": true,
-    "same_event_group": "AI_capex_power_infrastructure_and_risk_on",
-    "risk_sizing_inputs": {
-      "stress_price_decline_fraction": 0.12,
-      "stress_basis": "9월17일참고장중범위150000/2811000 약5.34%와9월22일119000/2949000 약4.04%를 확인. 가능한최초체결~15시점검·확인지연 급락시나리오는그두배를넘는12%로설정.9월21일3거래일가설의15%와 달리이번은당일15:10종료로휴장보유없음. 수량을맞추기위한임의축소가아니며보장손실상한아님.",
-      "buy_fee_assumption": 0.0001,
-      "sell_fee_tax_assumption": 0.0021,
-      "execution_cost_buffer_krw": 100000,
-      "actual_fee_unverified": true,
-      "quantity_not_computed": false
-    },
-    "metrics": {
-      "gross_target_percent": 2.910958904109595,
-      "gross_stop_percent": 1.1986301369863006,
-      "gross_reward_risk": 2.4285714285714284,
-      "net_target_per_share_before_additional_buffer_krw": 78397.5,
-      "notional_krw": 37960000,
-      "exposure_percent": 39.05765605581137,
-      "gross_target_profit_krw": 1105000,
-      "estimated_net_target_profit_krw": 1019167.5,
-      "estimated_net_target_account_percent": 1.0486378735052986,
-      "net_target_after_additional_buffer_krw": 919167.5,
-      "planned_stop_loss_including_assumed_fees_and_buffer_krw": 637556.5,
-      "stress_loss_including_assumed_fees_and_buffer_krw": 4729146.08,
-      "cash_after_max_buy_and_assumed_buy_fee_krw": 59225856.0,
-      "values_are_scenarios_not_expected_returns": true
-    },
+    "maximum_entry_submissions": 1,
+    "actual_order_submitted": false,
+    "actual_fill_quantity": 0,
+    "execution_status": "READY_UNSUBMITTED",
     "plan_is_not_order_or_fill": true,
     "orders_submitted_by_assistant": false,
-    "journal_path": "data/days/2026-09-23.md",
-    "market_data_as_of": "2026-09-23T11:31:00+09:00",
-    "quantity_is_total_not_additional": true,
-    "actual_fill_quantity_basis": "사용자체결보고account-report-20260923-0004",
-    "change_reason": "9/21~22 반복저점289만원 반등 가설을 재평가. 실제 회차 관측이10:31 2875000원→11:02 2849000원→11:31 2835000원으로 낮아졌고 HD현대일렉트릭도11:02 708000원→11:30 703000원으로 약화. 기존 수주/HVDC는 유효하나 당일 반등 가설을 더 유지할 근거가 부족하다고 판단해 조기청산. v2의15:00 정시 손절을 소급 발동한 것이 아닌 이번 회차의 재량 청산 결정.",
-    "planning_capital_basis_krw": 97189652,
-    "entry_submission_window": {
-      "start": "2026-09-23T09:15:05+09:00",
-      "end_exclusive": "2026-09-23T14:30:00+09:00",
-      "additional_start_constraint": "안내를 실제 받은 뒤",
-      "maximum_submissions": 1,
-      "submission_consumed_by_report": "account-report-20260923-0004"
-    },
-    "manual_window": {
-      "start": "2026-09-23T15:00:00+09:00",
-      "end": "2026-09-23T15:15:00+09:00"
-    },
-    "monitoring_risk_acknowledged": true,
-    "monitoring_confirmation_source": "config/planning.json confirmed_execution; 2026-09-11 합의 재사용",
-    "next_guidance_slot": "2026-09-23T12:00:00+09:00",
-    "pending_order_rule": "접수된 일반 지정가는 급락·가설훼손으로 자동취소되지 않는다. 무효 사유를 실제 확인하면 잔량 취소 우선. 부분체결·취소중추가체결은 실제 보고로 대사한다.",
-    "missed_review_rule": "즉시 청산 실행이 미확인이면 다음 실제 확인에서 보유·미체결을 대사하고 잔량 청산을 우선한다. 반등으로 취소하거나 옛15:00까지 미루지 않으며 신규 진입은 보류한다.",
+    "thesis": "9/1 AI서버 MLCC 1.072조원 계약 원문과 최근9/18~22 상승을 확인. 현재148.2만원은9/22 저점145.2만원 위에서의 조정이며, 이미 같은 지지를 하회한 효성과 구분한다. 당일154.4만원·전일154.8만원 고점 재접근 가설로154만원 익절, 전일저점 아래145만원 손절. 현재호가는 미확인이고 상승·체결 확률은 미산정.",
+    "entry_execution": "실제 안내 수신 후 오늘14:30전 중 한번, 삼성전기1482000원 지정가 총22주. 추격정정·시장가 매수전환·다음날 자동승계 없음. 입력 직전 현재가가1450000원 이하/1540000원 이상·거래제한·가설무효·중복주문이면 입력하지 않음.",
+    "exit_execution": "이 버전 적용 후 실제 관측에서1450000원 이하이면 매수미체결 취소완료·추가체결 대사 후, 기존 매도미체결이 있을 때만 취소완료·추가체결 대사하고 실제 매도가능잔량 시장가 매도.1540000원 이상이면 매수미체결 취소대사 후 실제 잔량1540000원 지정가 매도.15:00 매수미체결 취소완료·당일체결/보유대사 필수.15:10 가격무관 매도미체결 취소완료·추가체결 대사 후 실제 잔량 시장가 청산. 손절→시간청산→익절 순.",
+    "evaluation_note": "승인된30분 안내 회차와 사용자 별도 실제 가격 관측에서만 수동 평가. 신규 계획에만 적용하며 자동감시·자동주문·OCO·회차 사이 가격통과 확인이 아님.12:30 이후에도 매30분 안내에서 실제 관측하되 사용자의 즉시 대응은 보장하지 않아 지연 스트레스 유지.",
+    "holding_horizon_reason": "당일·전일고점 재접근 가설만 채택.1~3거래일 보유도 검토했으나 휴장공백을 넘겨 더 높은 목표를 지지할 새 근거가 부족해 오늘15:10 종료.",
     "risk": {
-      "quantity_caps": {
-        "cash_reserve": 29,
-        "total_exposure": 29,
-        "single_exposure": 14,
-        "official_initial_principal_limit": 17,
-        "same_event_exposure": 23,
-        "per_trade_stop": 44,
-        "aggregate_stop": 115,
-        "same_event_stress": 13
-      },
-      "limiting_constraint": "same_event_stress_5pct",
-      "planned_stop_budget_krw": 1943793.04,
-      "aggregate_stop_budget_krw": 4859482.600000001,
-      "same_event_stress_budget_krw": 4859482.600000001,
-      "stress_price_decline_fraction": 0.12,
-      "stress_basis": "9월17일참고장중범위150000/2811000 약5.34%와9월22일119000/2949000 약4.04%를 확인. 가능한최초체결~15시점검·확인지연 급락시나리오는그두배를넘는12%로설정.9월21일3거래일가설의15%와 달리이번은당일15:10종료로휴장보유없음. 수량을맞추기위한임의축소가아니며보장손실상한아님.",
+      "same_event_group": "AI_capex_semiconductors_and_market_risk",
+      "stress_decline_fraction": 0.14,
+      "stress_basis": "9/22 일중범위(1548000-1452000)/1491000=6.44%, 두 배12.88%와 다음 실제 점검/집행 지연을 포함해14%. 더 짧은 관측 주기를 이유로 낮추지 않음.",
       "buy_fee_assumption": 0.0001,
       "sell_fee_tax_assumption": 0.0021,
-      "additional_execution_and_cost_buffer_krw": 100000,
-      "actual_fee_unverified": true,
-      "pre_announcement_initial_cap_applies": false,
-      "pre_announcement_reason": "9/15수주·9/17HVDC 공개 이후 진입이며 미공개 발표 선취매가 아니다.",
+      "execution_buffer_krw": 100000,
+      "pre_announcement_cap_applies": false,
+      "quantity_caps": {
+        "cash_reserve": 58,
+        "total90": 58,
+        "single45": 29,
+        "official50m": 33,
+        "event70": 45,
+        "trade_stop2": 51,
+        "aggregate_stop5": 133,
+        "event_stress5": 22
+      },
+      "limiting_constraint": "same_event_stress_5pct",
+      "stop_scenario_krw": 874250.3999999999,
+      "stress_scenario_krw": 4726703.224,
+      "stress_budget_krw": 4804717.850000001,
+      "next_share_stress_krw": 4937007.916,
+      "existing_holdings_and_pending_orders": 0,
       "maximum_positions": 3,
-      "positions_if_fully_filled": 1,
-      "existing_and_pending_exposure_krw": 0,
-      "full_issued_plan_notional_reserved_until_execution_status_reconciled_krw": 37960000,
-      "correlated_risk_note": "효성·HD현대일렉트릭·두산에너빌리티·반도체를 독립 이벤트 예산으로 보지 않는다. 추가 종목은 발행13주 전량체결 가능성을 포함해 시장 급락·AI투자 공통요인의 합산 스트레스를 재계산한다.",
-      "same_event_stress_budget_remaining_after_this_plan_krw": 130336.52000000048,
-      "next_share_stress_loss_krw": 5085234.239999999,
-      "risk_profile_anchor_changed": false,
-      "actual_losses_may_exceed_scenario": true,
-      "portfolio_alternative_screen": {
-        "is_order_plan": false,
-        "hyosung_quantity": 7,
-        "celltrion_quantity": 148,
-        "celltrion_comparison_entry": 178200,
-        "celltrion_comparison_target": 182000,
-        "celltrion_comparison_stop": 176000,
-        "celltrion_stress_fraction": 0.08,
-        "combined_stress_with_two_buffers_krw": 4856096.2752,
-        "combined_exposure_percent": 48.167267848638865,
-        "target_after_two_buffers_krw": 851979.54,
-        "rejection": "합산비중은늘어나지만비용·종목별집행여유차감후목표계좌기여는효성13주단독919,167.5원보다낮음.비교가격은주문지시가아님."
-      }
+      "risk_anchor_unchanged_krw": 99252549,
+      "cash_basis_decline_from_anchor_pct": 3.181975709258611,
+      "capital_is_planning_proxy_not_official_equity": true,
+      "pending_buy_counts_in_full_until_reconciled": true
     },
-    "execution_status": "CLOSED_CONFIRMED",
-    "actual_average_fill_price_krw": 2917000,
-    "actual_purchase_gross_krw": 37921000,
-    "actual_fill_at": null,
-    "remaining_order_quantity": 0,
-    "additional_submission_prohibited": true,
-    "entry_submission_consumed": true,
-    "execution_report": {
-      "source_report": "account-report-20260923-0004",
-      "status": "FILLED_CONFIRMED",
-      "cumulative_filled_quantity": 13,
-      "newly_confirmed_filled_quantity": 13,
-      "average_fill_price_krw": 2917000,
-      "remaining_quantity": 0,
-      "observed_at": null,
-      "recorded_at": "2026-09-23T09:22:10+09:00",
-      "order_id": null,
-      "actual_costs_krw": null
+    "metrics": {
+      "gross_target_pct": 3.9136302294197067,
+      "gross_stop_pct": 2.1592442645074206,
+      "gross_reward_risk": 1.8125,
+      "exposure_pct": 33.92915153175956,
+      "net_target_before_buffer_krw": 1201591.6,
+      "net_target_after_buffer_krw": 1101591.6,
+      "target_account_after_buffer_pct": 1.1463645050458062,
+      "cash_after_assumed_buy_fee_krw": 63487096.6,
+      "values_are_scenarios_not_expected_or_realized_returns": true
     },
-    "execution_status_note": "보고0005로13주 전량매도·미체결0 확인. v3 조기청산 이행 완료. 같은 계획으로 재진입·추가매도 없음.",
-    "original_exit_terms": {
-      "first_review_at": "2026-09-23T15:00:00+09:00",
-      "next_review_at": "2026-09-23T15:10:00+09:00",
-      "cancel_unfilled_at": "2026-09-23T15:00:00+09:00",
-      "exit_deadline": "2026-09-23T15:10:00+09:00",
-      "exit_evaluation_mode": "scheduled_review",
-      "take_profit_limit_krw": 3005000,
-      "stop_trigger_krw": 2885000
+    "eligibility": {
+      "market": "KRX_KOSPI",
+      "stock_code": "009150",
+      "common_shares_not_preferred": true,
+      "published_listed_shares": 74693696,
+      "shares_source": "https://www.sem.samsung.co.kr/global/about-us/investor-relations/stock.do",
+      "price_above_1000": true,
+      "limit_tick_krw": 1000,
+      "KIND_current_restricted_lists_match": false,
+      "public_feed_trading": true,
+      "app_acceptance_not_directly_verified": true
     },
-    "amended_at": "2026-09-23T11:34:27+09:00",
-    "effective_at": "2026-09-23T11:34:27+09:00",
-    "exit_decision": {
-      "decision_id": "exit-decision-20260923-hyosung-01",
-      "basis": "DISCRETIONARY_THESIS_INVALIDATION",
-      "decided_at": "2026-09-23T11:34:27+09:00",
-      "effective_on": "USER_RECEIPT_EXECUTE_WITHOUT_DELAY",
-      "quantity_basis": "reported_13_subject_to_actual_sellable_remaining",
-      "order_type": "market_sell",
-      "limit_price_krw": null,
-      "observed_reference_price_krw": 2835000,
-      "observed_at": "2026-09-23T11:31:00+09:00",
-      "original_scheduled_stop_triggered": false,
-      "exit_required": false,
-      "not_revoked_by_rebound": true,
-      "fill_confirmed": true,
-      "was_required": true,
-      "fulfilled_by_report": "account-report-20260923-0005",
-      "status": "FULFILLED"
+    "quote": {
+      "krx_last_krw": 1482000,
+      "krx_at": "2026-09-23T12:03:22+09:00",
+      "nxt_reference_krw": 1482000,
+      "nxt_at": "2026-09-23T12:03:30.157+09:00",
+      "bid_ask_spread_verified": false,
+      "basic_prior_reference_and_historical_close_differ": true,
+      "note": "현재 KRX 최근체결·NXT·과거일봉을 구분. 과거고저는 참고구간이고 서로 다른 전일종가 필드로 수익률을 혼합 계산하지 않음."
     },
-    "thesis_status": "INVALIDATED_FOR_CONTINUED_HOLDING_BY_V3",
-    "original_entry_fields_scope": "진입가·입력창·thesis·quote_qualification·metrics·risk는 v2 진입시 원본. 신규 매수·익절 대기 근거가 아니며 실제 매도 확인 전 위험노출은 계속 반영.",
-    "closure_report": "account-report-20260923-0005",
-    "closed_recorded_at": "2026-09-23T11:40:45+09:00",
-    "closed_at": null,
-    "actual_sell_quantity": 13,
-    "actual_average_sell_price_krw": 2839000,
-    "actual_remaining_holding_quantity": 0,
-    "exit_execution_report": {
-      "source_report": "account-report-20260923-0005",
-      "filled_quantity": 13,
-      "average_sell_price_krw": 2839000,
-      "remaining_holding_quantity": 0,
-      "remaining_order_quantity": 0,
-      "observed_at": null,
-      "recorded_at": "2026-09-23T11:40:45+09:00"
-    }
+    "sources": [
+      "https://m.stock.naver.com/api/stock/009150/basic",
+      "https://m.stock.naver.com/api/stock/009150/price",
+      "https://m.stock.naver.com/api/stock/009150/disclosure/119228677",
+      "https://samsungsem.co.kr/kr/newsroom/news/view.do?id=10501",
+      "https://www.sem.samsung.co.kr/global/about-us/investor-relations/stock.do"
+    ],
+    "journal_path": "data/days/2026-09-23.md"
   },
   "market_review_history": [
     {
@@ -2131,6 +2047,12 @@
       "review_id": "review-20260923-1100",
       "recorded_at": "2026-09-23T11:05:11+09:00",
       "decision": "HOLD_EXISTING_13_SCHEDULED_EXIT_REVIEW_UNCHANGED",
+      "journal_path": "data/days/2026-09-23.md"
+    },
+    {
+      "review_id": "review-20260923-1130",
+      "recorded_at": "2026-09-23T11:34:27+09:00",
+      "decision": "SELL_REPORTED_13_DISCRETIONARY_EARLY_EXIT_V3",
       "journal_path": "data/days/2026-09-23.md"
     }
   ],
@@ -2997,6 +2919,14 @@
         "exit_deadline"
       ],
       "original_price_and_evaluation_mode_preserved": true
+    },
+    {
+      "plan_id": "plan-20260923-hyosung-01",
+      "version": 3,
+      "status": "CLOSED_CONFIRMED",
+      "closure_report": "account-report-20260923-0005",
+      "source": "data/days/2026-09-23.md",
+      "prior_state_commit": "a97d127f2e9410c4407b72b2970a62bad1e8464e"
     }
   ],
   "resolved_account_issues": [
