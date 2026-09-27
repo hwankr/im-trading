@@ -330,11 +330,13 @@
     }
   ],
   "last_user_requested_analysis": {
-    "review_id": "review-20260923-premarket",
-    "recorded_at_kst": "2026-09-23T08:43:34+09:00",
-    "source": "data/days/2026-09-23.md",
-    "latest_account_report": "account-report-20260923-0002",
-    "is_scheduled_slot": false
+    "review_id": "review-20260928-premarket",
+    "recorded_at_kst": "2026-09-28T08:42:54+09:00",
+    "source": "data/days/2026-09-28.md",
+    "latest_account_report": "account-report-20260928-0001",
+    "is_scheduled_slot": false,
+    "plan_id": "plan-20260928-samsung-01",
+    "version": 1
   },
   "latest_context_gate": {
     "gate_id": "context-gate-20260925-1951",
@@ -366,7 +368,12 @@
     "requested_on": "2026-09-28",
     "kind": "current_date_replan_and_premarket_analysis",
     "destination_thread_id": "01a0e532-76a8-7b01-a924-c5352c73e678",
-    "state": "IN_PROGRESS_AT_DESTINATION",
-    "scheduled_slot": false
-  }
+    "state": "COMPLETED",
+    "scheduled_slot": false,
+    "completed_at": "2026-09-28T08:45:12+09:00",
+    "review_id": "review-20260928-premarket",
+    "journal_path": "data/days/2026-09-28.md"
+  },
+  "single_writer_handoff_accepted_at": "2026-09-28T08:42:54+09:00",
+  "single_writer_handoff_base_commit": "440c7d05a6c403a1a28f05711d22d259875bd80e"
 }
