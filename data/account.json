@@ -123,7 +123,7 @@
     "source_report": "account-report-20260928-0001",
     "holdings": [],
     "total_equity_krw": null,
-    "official_return_percent": -2.81,
+    "official_return_percent": -3.91,
     "derived_equity_from_return_krw": null,
     "recorded_at": "2026-09-28T08:42:54+09:00",
     "total_purchase_amount_krw": 0,
@@ -134,16 +134,16 @@
     "settlement_amount_platform_label": "정산금액",
     "fee_checkbox_checked_in_screenshot": null,
     "actual_commission_and_tax_krw": null,
-    "field_mapping_note": "현재 보유0만 재확인. 공식 수익률은 9/23 08:34 보고0002 유지; 현금으로 수익률이나 공식총자산을 갱신하지 않음.",
+    "field_mapping_note": "보유0은9/28보고0001, 공식수익률-3.91%는9/28보고0002. 각각정확한앱시각미제공.",
     "screen_clock_text": null,
     "official_return_report": {
-      "source_report": "account-report-20260923-0002",
+      "source_report": "account-report-20260928-0002",
       "source_type": "user_reported_official_app",
-      "observed_at": "2026-09-23T08:34:00+09:00",
-      "reported_on": "2026-09-23",
-      "recorded_at": "2026-09-23T08:43:34+09:00",
-      "return_percent": -2.81,
-      "scope_note": "이번 실제 공식 앱 보고. 예수금·공식총자산·과거 화면 항목은 재확인하지 않음."
+      "reported_on": "2026-09-28",
+      "observed_at": null,
+      "recorded_at": "2026-09-28T08:57:50+09:00",
+      "return_percent": -3.91,
+      "scope_note": "공식수익률만갱신. 현금·보유는보고0001출처와시각유지. 공식총자산역산없음."
     },
     "position_aggregate_basis": "보고0001의 오늘 전체 보유 없음",
     "currentness_note": "9/28 현재 보유 없음 사용자 보고. 새 계획은 주문·체결 증거가 아님."
@@ -244,62 +244,75 @@
     "currentness_note": "9/28 보고0001 시점 미체결0. 새 삼성전자 계획의 실제 입력·체결은 미보고."
   },
   "award_progress": {
-    "observed_at": "2026-09-23T08:34:00+09:00",
-    "reported_on": "2026-09-23",
+    "observed_at": null,
+    "reported_on": "2026-09-28",
     "source_type": "user_reported_official_app",
-    "source_report": "account-report-20260923-0002",
-    "official_turnover_percent": 187.74,
+    "source_report": "account-report-20260928-0002",
+    "official_turnover_percent": 262,
     "turnover_is_approximate": false,
     "official_traded_security_count": null,
     "official_trading_day_count": null,
-    "official_rank": 151,
+    "official_rank": null,
     "official_cutoff_rank": 10,
-    "official_cutoff_return_percent": 6.64,
+    "official_cutoff_return_percent": 9.35,
     "turnover_formula_verified": null,
     "turnover_formula_source": null,
     "prior_trade_history_exists": true,
     "prior_trade_details_complete": null,
     "cutoff_report": {
-      "source_report": "account-report-20260923-0002",
+      "source_report": "account-report-20260928-0002",
       "source_type": "user_reported_official_app",
-      "observed_at": "2026-09-23T08:34:00+09:00",
+      "reported_on": "2026-09-28",
+      "observed_at": null,
+      "recorded_at": "2026-09-28T08:57:50+09:00",
       "rank": 10,
-      "return_percent": 6.64
+      "return_percent": 9.35
     },
     "own_performance_report": {
-      "source_report": "account-report-20260923-0002",
+      "source_report": "account-report-20260928-0002",
       "source_type": "user_reported_official_app",
-      "observed_at": "2026-09-23T08:34:00+09:00",
-      "return_percent": -2.81,
-      "rank": 151
+      "reported_on": "2026-09-28",
+      "observed_at": null,
+      "recorded_at": "2026-09-28T08:57:50+09:00",
+      "return_percent": -3.91,
+      "rank": null
     },
-    "recorded_at": "2026-09-23T08:43:34+09:00",
+    "recorded_at": "2026-09-28T08:57:50+09:00",
     "turnover_report": {
-      "source_report": "account-report-20260923-0002",
+      "source_report": "account-report-20260928-0002",
       "source_type": "user_reported_official_app",
-      "observed_at": "2026-09-23T08:34:00+09:00",
-      "turnover_percent": 187.74,
+      "reported_on": "2026-09-28",
+      "observed_at": null,
+      "recorded_at": "2026-09-28T08:57:50+09:00",
+      "turnover_percent": 262,
       "formula_verified": false
+    },
+    "latest_known_rank_report": {
+      "source_report": "account-report-20260923-0002",
+      "observed_at": "2026-09-23T08:34:00+09:00",
+      "rank": 151,
+      "is_current_rank": false
     }
   },
   "prize_gap_calculation": {
-    "calculated_at": "2026-09-23T08:43:34+09:00",
-    "based_on_report": "account-report-20260923-0002",
-    "cutoff_source_report": "account-report-20260923-0002",
+    "calculated_at": "2026-09-28T08:57:50+09:00",
+    "based_on_report": "account-report-20260928-0002",
+    "cutoff_source_report": "account-report-20260928-0002",
     "based_on_reports": [
-      "account-report-20260923-0002"
+      "account-report-20260928-0002"
     ],
     "source_type": "derived_calculation_from_user_reported_official_app",
-    "observed_at": "2026-09-23T08:34:00+09:00",
-    "own_return_percent_input": -2.81,
-    "cutoff_return_percent_input": 6.64,
-    "return_gap_percentage_points": 9.45,
-    "required_gain_if_cutoff_unchanged_fraction": 0.0972322255376068,
-    "remaining_turnover_percentage_points": 312.26,
+    "observed_at": null,
+    "reported_on": "2026-09-28",
+    "own_return_percent_input": -3.91,
+    "cutoff_return_percent_input": 9.35,
+    "return_gap_percentage_points": 13.26,
+    "required_gain_if_cutoff_unchanged_fraction": 0.1379956290977209,
+    "remaining_turnover_percentage_points": 238,
     "remaining_trade_value_krw": null,
     "is_final_cutoff_prediction": false,
     "status": "CURRENT_AS_OF_USER_REPORTED_OBSERVATION",
-    "note": "표시수익률 반올림을 반영한 근사 계산.10위 성적 불변 가정이며 최종기준선·수상보장·수익전망이 아니다. 현금·총자산을 역산 갱신하지 않는다. 회전율 산식 미확인으로 잔여 거래대금 미산정."
+    "note": "표시수익률 반올림을반영한근사계산.10위성적불변가정. 공식총자산·현금역산없음. 회전율산식미확인."
   },
   "risk_profile_anchor": {
     "profile": "prize_focused_catch_up",
@@ -311,10 +324,10 @@
     "confirmation_status": "planning_basis_reconciled_official_total_equity_unconfirmed",
     "note": "이번 신규 계획의 최초 운용 기준을 고정 기록한다. 공식 총자산 확인 시 출처를 대사하되 손실을 이유로 기준점을 낮추거나 초기화하지 않는다."
   },
-  "last_reconciled_report": "account-report-20260928-0001",
+  "last_reconciled_report": "account-report-20260928-0002",
   "unresolved": [
     "과거 인버스·두산퓨얼셀의 전량 매도 완료는 확인됐으나 종목별 체결가·정확한 시각·주문번호·실제 비용은 미확인.",
-    "공식 회전율187.74%는 확인. 인정 종목 수·인정 매매일수·공식 회전율 산식·정확한 잔여 거래대금은 미확인.",
+    "9/28 사용자보고 공식 회전율262%는 확인(정확한 앱시각 미제공). 인정 종목 수·인정 매매일수·공식 회전율 산식·정확한 잔여 거래대금은 미확인.",
     "이전09:19 주문가능현금과 이후 현금 차이67,796원의 원인·공식 총자산 필드 매핑은 미확인. 최신 공식수익률은 과거 팝업과 별도 실제 보고로 확인.",
     "효성 매수13주·매도13주·매도후 주문가능현금은 확인. 정확한 체결시각·주문번호·실제비용·공식 순손익은 미확인."
   ],
@@ -329,26 +342,24 @@
     "single_writer_thread_id": "01a0e532-76a8-7b01-a924-c5352c73e678"
   },
   "latest_report": {
-    "report_id": "account-report-20260928-0001",
+    "report_id": "account-report-20260928-0002",
     "reported_on": "2026-09-28",
-    "recorded_at": "2026-09-28T08:42:54+09:00",
+    "recorded_at": "2026-09-28T08:57:50+09:00",
     "observed_at": null,
     "observation_time_precision": "exact_app_clock_not_provided",
     "source_type": "user_reported_official_app",
-    "report_kind": "non_execution_flat_account_cash_reconfirmation",
-    "user_text": "삼성전기 매수 매도 하나도 안했고, 보유중인 것도 하나도 없어. 미체결도 없고. 주문가능 현금은 96,094,357원",
-    "linked_plan_id": "plan-20260923-semco-01",
-    "linked_plan_version": 1,
-    "prior_plan_order_submitted": false,
-    "prior_plan_filled_quantity": 0,
-    "holdings_count": 0,
-    "open_orders_count": 0,
-    "orderable_cash_krw": 96094357,
-    "official_performance_updated": false,
-    "reconciliation_status": "RECONCILED"
+    "report_kind": "official_performance_and_turnover_update",
+    "official_return_percent": -3.91,
+    "official_cutoff_rank": 10,
+    "official_cutoff_return_percent": 9.35,
+    "official_turnover_percent": 262,
+    "official_rank": null,
+    "account_holdings_cash_or_orders_updated": false,
+    "reconciliation_status": "RECONCILED",
+    "user_text": "10위9.35%, 내수익률-3.91%, 회전율262%. 최종10위 수상과 회전율500%초과 목표."
   },
-  "last_received_report": "account-report-20260928-0001",
-  "updated_at": "2026-09-28T08:42:54+09:00",
+  "last_received_report": "account-report-20260928-0002",
+  "updated_at": "2026-09-28T08:57:50+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -371,7 +382,7 @@
   },
   "latest_plan_reference": {
     "plan_id": "plan-20260928-samsung-01",
-    "version": 1,
+    "version": 2,
     "status": "READY",
     "path": "data/days/2026-09-28.md",
     "plan_is_not_order_or_fill": true
@@ -403,10 +414,9 @@
     "source": "data/days/2026-09-28.md"
   },
   "last_reconciliation_scope": [
-    "portfolio.holdings",
-    "orders.open_orders",
-    "cash.orderable_krw",
-    "prior_semco_plan_non_execution"
+    "portfolio.official_return_percent",
+    "award_progress",
+    "prize_gap_calculation"
   ],
   "publication_authorization": {
     "authorized_on": "2026-09-16",
@@ -436,6 +446,13 @@
   "active_plan_references": [
     {
       "plan_id": "plan-20260928-samsung-01",
+      "version": 2,
+      "status": "READY",
+      "path": "data/days/2026-09-28.md",
+      "plan_is_not_order_or_fill": true
+    },
+    {
+      "plan_id": "plan-20260928-lg-01",
       "version": 1,
       "status": "READY",
       "path": "data/days/2026-09-28.md",
@@ -443,13 +460,13 @@
     }
   ],
   "execution_follow_up": {
-    "checked_at": "2026-09-28T08:42:54+09:00",
-    "source": "user_report_and_new_premarket_plan",
-    "latest_account_report": "account-report-20260928-0001",
+    "checked_at": "2026-09-28T08:57:50+09:00",
+    "source": "official_results_and_approved_risk_amendment",
+    "latest_account_report": "account-report-20260928-0002",
     "latest_cash_report": "account-report-20260928-0001",
     "plan_reference": {
       "plan_id": "plan-20260928-samsung-01",
-      "version": 1,
+      "version": 2,
       "status": "READY",
       "path": "data/days/2026-09-28.md",
       "plan_is_not_order_or_fill": true
@@ -464,25 +481,50 @@
     "next_position_review_at": "2026-09-28T09:30:00+09:00",
     "next_guidance_slot": "2026-09-28T09:00:00+09:00",
     "exit_deadline": "2026-09-30T15:10:00+09:00",
-    "instructions": "기존삼성전기미실행종료. 새 삼성전자v1은09:00후한번입력가능하나 현재접수·체결은미확인. 가격도달로체결추정금지.",
-    "orders_submitted_by_assistant": false
+    "instructions": "삼성전자v1을v2총134주로대체,LG125주신규. 기존삼성전자주문있으면취소완료·추가체결대사후누적매수를뺀잔량만입력. 실제앱주문/체결미확인.15시대사및9/30 15:10청산유지.",
+    "orders_submitted_by_assistant": false,
+    "latest_holdings_report": "account-report-20260928-0001",
+    "plan_references": [
+      {
+        "plan_id": "plan-20260928-samsung-01",
+        "version": 2,
+        "status": "READY",
+        "path": "data/days/2026-09-28.md",
+        "plan_is_not_order_or_fill": true
+      },
+      {
+        "plan_id": "plan-20260928-lg-01",
+        "version": 1,
+        "status": "READY",
+        "path": "data/days/2026-09-28.md",
+        "plan_is_not_order_or_fill": true
+      }
+    ]
   },
   "latest_market_review": {
-    "review_id": "review-20260928-premarket",
-    "recorded_at": "2026-09-28T08:42:54+09:00",
-    "clock_verified_at": "2026-09-28T08:38:38+09:00",
+    "review_id": "review-20260928-risk-amendment",
+    "recorded_at": "2026-09-28T08:57:50+09:00",
+    "clock_verified_at": "2026-09-28T08:57:50+09:00",
     "session": "USER_REQUESTED_PREMARKET",
     "market_analysis_performed": true,
-    "decision": "BUY_SAMSUNG_FIXED_LIMIT_124_READY_V1_FROM_0900",
-    "latest_user_report": "account-report-20260928-0001",
-    "plan_reference": {
-      "plan_id": "plan-20260928-samsung-01",
-      "version": 1,
-      "status": "READY",
-      "path": "data/days/2026-09-28.md",
-      "plan_is_not_order_or_fill": true
-    },
-    "candidate_comparison": "삼성전자 채택. 삼성전기NXT08:29 1,539,000은최근고점1,548,000까지0.58%로여유작음. SK하이닉스NXT08:32 1,832,000은전일참고저점1,836,000하회. LG전자NXT08:35 216,500은9/22냉각승인원문확인에도최근고점225,500까지4.16%,9/23저점207,000까지4.39%로삼성전자보다가격비대칭이불리. 효성9/23종가2,896,000은9/21대비정체,KT&G174,300은최근고점178,800까지2.58%로이번수상추격핵심에서제외. 인버스는확인된반도체상승과맞서는하락우위근거부족.",
+    "decision": "SAMSUNG_134_V2_AND_LG_125_V1",
+    "latest_user_report": "account-report-20260928-0002",
+    "plan_references": [
+      {
+        "plan_id": "plan-20260928-samsung-01",
+        "version": 2,
+        "status": "READY",
+        "path": "data/days/2026-09-28.md",
+        "plan_is_not_order_or_fill": true
+      },
+      {
+        "plan_id": "plan-20260928-lg-01",
+        "version": 1,
+        "status": "READY",
+        "path": "data/days/2026-09-28.md",
+        "plan_is_not_order_or_fill": true
+      }
+    ],
     "restriction_check": {
       "date": "2026-09-28",
       "scope": "KIND_all_markets_default_selection",
@@ -502,7 +544,9 @@
       },
       "selected_candidate_found": false
     },
-    "official_results_reused_from": "account-report-20260923-0002",
+    "restriction_note": "오전08:31~08:38 후보대조한KIND전페이지결과재사용.삼성전자·LG해당없음.앱접수직접확인아님.",
+    "candidate_comparison": "LG새촉매·214,000원상한으로손익비개선후보조채택. 삼성전기고점인접·SK상대약세·효성정체·KT&G낮은기여로제외. 같은AI위험합산.",
+    "official_results_reused_from": "account-report-20260928-0002",
     "new_account_report_received": true,
     "orders_submitted_by_assistant": false,
     "fills_inferred_from_prices": false,
@@ -1282,22 +1326,29 @@
       "closure_report": "account-report-20260923-0005",
       "path": "data/days/2026-09-23.md",
       "plan_is_not_order_or_fill": true
+    },
+    {
+      "plan_id": "plan-20260928-samsung-01",
+      "version": 1,
+      "status": "SUPERSEDED",
+      "source": "data/days/2026-09-28.md",
+      "replaced_at": "2026-09-28T08:57:50+09:00"
     }
   ],
   "current_entry_plan": {
     "plan_id": "plan-20260928-samsung-01",
-    "version": 1,
+    "version": 2,
     "status": "READY",
     "code": "005930",
     "name": "삼성전자",
-    "generated_at": "2026-09-28T08:42:54+09:00",
-    "information_as_of": "2026-09-28T08:42:54+09:00",
+    "generated_at": "2026-09-28T08:57:50+09:00",
+    "information_as_of": "2026-09-28T08:57:50+09:00",
     "entry_limit_krw": 285500,
     "take_profit_limit_krw": 298500,
     "stop_trigger_krw": 279000,
-    "total_quantity": 124,
+    "total_quantity": 134,
     "quantity_is_total_not_additional": true,
-    "notional_krw": 35402000,
+    "notional_krw": 38257000,
     "planning_capital_basis_krw": 96094357,
     "account_report": "account-report-20260928-0001",
     "valid_from": "2026-09-28T09:00:00+09:00",
@@ -1339,7 +1390,7 @@
     "execution_status": "PLAN_ISSUED_ORDER_UNCONFIRMED",
     "plan_is_not_order_or_fill": true,
     "orders_submitted_by_assistant": false,
-    "entry_execution": "9/28 09:00 개장 후 14:30 전 편한 때 한 번 285,500원 지정가 총124주. 입력 직전 실제 가격이279,000원 이하/298,500원 이상, 거래제한, 가설무효, 중복주문이면 입력하지 않음. 현재 매도호가 미확인으로 즉시체결을 보장하지 않으며 추격정정·시장가 매수·익일잔량승계 없음.",
+    "entry_execution": "285,500원 지정가 총134주. 구v1주문이있으면먼저취소완료·취소중체결대사후134에서실제누적매수를뺀잔량만입력.134주추가가아님. 입력직전가격≤279,000또는≥298,500·제한·가설무효·발동청산이면입력없음.추격정정·시장가매수없음.",
     "exit_execution": "실제 체결수량 확인 후 그 매도가능수량만298,500원 익절 지정가. 이 버전 적용 후 실제 KRX 가격279,000원 이하 관측 또는9/30 15:10 기한이면 매수미체결 취소완료·추가체결 대사, 기존 매도미체결 취소완료·추가체결 대사 후 실제 잔여 매도가능수량 시장가 청산. 손절→시간청산→익절 순. 손절은 보장체결가나 자동주문이 아님.",
     "daily_execution": "9/28 15:00 매수미체결 전량 취소완료·취소중추가체결·보유 필수 대사. 9/29·9/30 15:00에도 실제 보유와 매도주문을 대사하고, 전일 익절주문이 만료된 경우 중복 없음을 확인한 실제 잔량만 같은298,500원으로 재입력. 당일취소·최종대사 후 신규매수 없음. 첫날점검 누락 시 다음 실제 대사 전 신규 진입 보류. 최종9/30 15:10 익절미체결잔량도 시장가 청산.",
     "evaluation_note": "승인된30분 안내와 사용자 별도 실제 KRX 가격관측에서 수동평가. 장전 NXT·KRX 예상가·과거 종가를 실제 KRX 정규장 체결가로 대체하지 않음. 회차사이 경로·자동감시·사용자의즉시대응·앱OCO를 가정하지 않으며 지연된 공개시세에는 원 관측시각을 표시.",
@@ -1347,7 +1398,7 @@
     "price_rationale": "NXT285,500원 부근에서 단일 진입상한 선택. Naver KRX 일봉 참고의9/22 범위283,500-271,500=12,000원을9/23 고점286,500에 더한298,500원을 기술적 연장 목표로 선택(실제저항/수익예측 아님). 손절279,000원은9/23 참고저점281,000 아래로가설훼손 판단. KIND9/23종가285,500와Naver일봉종가286,500의차이는 미해명; 현재호가/수익률로 혼합하지 않고 고저구간만참고.",
     "holding_horizon_reason": "9/28~30 최대3거래일. Micron9/30 14:30 MDT=10/1 05:30 KST 공식실적콜보다 앞선9/30 15:10 종료. 컨센서스초과 실적을 예측하는 전략이 아니라 발표 전 추세가설이며, 발표를 넘겨 익절·기한을 연장하지 않음.",
     "risk": {
-      "same_event_group": "AI_capex_semiconductors_and_broad_market",
+      "same_event_group": "AI_capex_semiconductors_cooling_and_broad_market",
       "stress_decline_fraction": 0.13,
       "stress_basis": "KIND삼성전자8/24 -8.70%와9/14 -4.05%의비연속하락을3거래일내두충격으로가정하면1-(1-.087)*(1-.0405)=12.40%; 장중·야간갭·실제15시대응지연을포함해13%로올림한판단시나리오. 통계분위·보장최대손실 아님.",
       "buy_fee_assumption": 0.0001,
@@ -1363,13 +1414,12 @@
         "eventAggregate": 235,
         "stop": 256,
         "aggregateStop": 661,
-        "stress": 124
+        "stress": 252
       },
-      "limiting_constraint": "same_event_stress_5pct",
-      "planned_stop_loss_krw": 982191.7999999999,
-      "stress_loss_krw": 4770479.654000001,
-      "stress_budget_krw": 4804717.850000001,
-      "next_share_stress_krw": 4808144.812500001,
+      "limiting_constraint": "initial_pre_event_position_40pct",
+      "planned_stop_loss_krw": 1053336.3,
+      "stress_loss_krw": 5147131.239,
+      "stress_budget_krw": 9609435.700000001,
       "pending_buy_counts_in_full": true,
       "existing_holdings_and_pending_orders": 0,
       "risk_anchor_unchanged_krw": 99252549,
@@ -1379,11 +1429,10 @@
     "metrics": {
       "gross_target_pct": 4.553415061295962,
       "gross_stop_pct": 2.276707530647981,
-      "gross_reward_risk": 2,
-      "exposure_pct": 36.840872976547416,
-      "net_target_after_assumed_cost_and_buffer_krw": 1430730.4000000001,
-      "target_account_after_cost_buffer_pct": 1.488880767473162,
-      "cash_after_assumed_buy_fee_krw": 60688816.8,
+      "gross_reward_risk": 2.0,
+      "exposure_pct": 39.81191111981737,
+      "net_target_after_assumed_cost_and_buffer_krw": 1554176.4,
+      "target_account_after_cost_buffer_pct": 1.617344086084056,
       "values_are_scenarios_not_expected_or_realized_returns": true
     },
     "eligibility": {
@@ -1421,7 +1470,10 @@
       "https://securities.miraeasset.com/bbs/download/2140126.pdf?attachmentId=2140126",
       "https://www.imfnsec.com/360.ptx"
     ],
-    "journal_path": "data/days/2026-09-28.md"
+    "journal_path": "data/days/2026-09-28.md",
+    "policy_version": "1.8",
+    "amendment_reason": "사용자 승인 스트레스10%적용. 삼성전자총124→134주, 가격·기한유지. LG와위험합산.",
+    "replaces_plan_version": 1
   },
   "market_review_history": [
     {
@@ -2088,6 +2140,12 @@
       "review_id": "review-20260923-1200",
       "source": "data/days/2026-09-23.md",
       "superseded_by": "review-20260928-premarket"
+    },
+    {
+      "review_id": "review-20260928-premarket",
+      "recorded_at": "2026-09-28T08:42:54+09:00",
+      "source": "data/days/2026-09-28.md",
+      "decision": "BUY_SAMSUNG_FIXED_LIMIT_124_READY_V1_FROM_0900"
     }
   ],
   "resolved_planning_issues": [
@@ -2278,10 +2336,24 @@
     }
   ],
   "latest_entry_rationale_review": {
-    "plan_id": "plan-20260928-samsung-01",
-    "version": 1,
-    "recorded_at": "2026-09-28T08:42:54+09:00",
-    "decision": "SELECT_SAMSUNG_THREE_SESSION_TREND_PLAN",
+    "recorded_at": "2026-09-28T08:57:50+09:00",
+    "plan_references": [
+      {
+        "plan_id": "plan-20260928-samsung-01",
+        "version": 2,
+        "status": "READY",
+        "path": "data/days/2026-09-28.md",
+        "plan_is_not_order_or_fill": true
+      },
+      {
+        "plan_id": "plan-20260928-lg-01",
+        "version": 1,
+        "status": "READY",
+        "path": "data/days/2026-09-28.md",
+        "plan_is_not_order_or_fill": true
+      }
+    ],
+    "decision": "EXPAND_EXPOSURE_UNDER_APPROVED_STRESS_BUDGET",
     "source": "data/days/2026-09-28.md"
   },
   "account_report_history": [
@@ -2452,6 +2524,13 @@
       "recorded_at": "2026-09-28T08:42:54+09:00",
       "source": "data/days/2026-09-28.md",
       "changes": "삼성전기 주문 미실행 확인; 오늘 보유0·미체결0·주문가능현금96,094,357원 재확인. 공식성적 변화 보고 없음."
+    },
+    {
+      "report_id": "account-report-20260928-0002",
+      "recorded_at": "2026-09-28T08:57:50+09:00",
+      "previous_report": "account-report-20260928-0001",
+      "source": "data/days/2026-09-28.md",
+      "changes": "공식수익률-3.91%·10위9.35%·회전율262% 갱신. 보유·현금·미체결은보고0001유지. 현순위미보고."
     }
   ],
   "entry_plan_history": [
@@ -2976,6 +3055,15 @@
       "order_submitted": false,
       "filled_quantity": 0,
       "note": "원본 가격·수량·기한은 9/23 일지 보존. 미실행 보고로 종료하며 취소나 매도 체결을 생성하지 않음."
+    },
+    {
+      "plan_id": "plan-20260928-samsung-01",
+      "version": 1,
+      "total_quantity": 124,
+      "superseded_at": "2026-09-28T08:57:50+09:00",
+      "replacement_version": 2,
+      "source": "data/days/2026-09-28.md",
+      "status": "SUPERSEDED_NOT_AN_APP_ORDER_CHANGE"
     }
   ],
   "resolved_account_issues": [
@@ -3220,10 +3308,11 @@
     }
   ],
   "latest_official_results_availability_report": {
-    "source_report": "account-report-20260923-0002",
+    "source_report": "account-report-20260928-0002",
     "source_type": "user_reported_official_app",
-    "observed_at": "2026-09-23T08:34:00+09:00",
-    "recorded_at": "2026-09-23T08:43:34+09:00",
+    "reported_on": "2026-09-28",
+    "observed_at": null,
+    "recorded_at": "2026-09-28T08:57:50+09:00",
     "official_competition_results_updated": true
   },
   "last_heartbeat_gate": {
@@ -3379,6 +3468,16 @@
         "return_percent": -1.76,
         "scope_note": "본인 공식 수익률·순위 보고. 10위 5.95%는 별도 cutoff_report 출처를 유지하며 회전율·종목 수·매매일수는 미확인이다."
       }
+    },
+    {
+      "source_report": "account-report-20260923-0002",
+      "observed_at": "2026-09-23T08:34:00+09:00",
+      "official_return_percent": -2.81,
+      "official_rank": 151,
+      "official_cutoff_return_percent": 6.64,
+      "official_turnover_percent": 187.74,
+      "status": "SUPERSEDED_BY_NEW_REPORT",
+      "source": "data/days/2026-09-23.md"
     }
   ],
   "user_directive_history": [
@@ -3387,6 +3486,13 @@
       "recorded_at": "2026-09-23T08:43:34+09:00",
       "text": "냉정하게 공격적일 필요가 있고, 자산도 전체적으로 굴려야 해. 한국이라 10월8일까지 연휴가 많아서 문제야.",
       "interpretation": "기회가 검증되면70~90% 편입 검토를 우선. 현행90/45/10 및 손절·스트레스 한도를 임의 변경하지 않으며 깊은 눌림·소액·현금을 기본값으로 삼지 않음."
+    },
+    {
+      "reported_on": "2026-09-28",
+      "recorded_at": "2026-09-28T08:57:50+09:00",
+      "text": "최종10위 수상과 회전율500%초과. 스트레스 예산10% 상향승인.",
+      "numeric_amendment": "same_event_stress_5_to_10_percent_only",
+      "other_limits_and_anchor_unchanged": true
     }
   ],
   "prize_gap_calculation_history": [
@@ -3408,6 +3514,15 @@
       "own_return_percent_input": -1.76,
       "cutoff_return_percent_input": 5.95,
       "currentness_note": "이 계산은 account-report-20260921-0002/0003의 이전 공식 성적 조합이다. 이후 투자손익 화면 -2.81%가 제시되어 최신 격차로 재사용하지 않는다. 새 화면과 공식 대회 수익률 산식 동일 여부는 아직 미확인이다."
+    },
+    {
+      "based_on_report": "account-report-20260923-0002",
+      "observed_at": "2026-09-23T08:34:00+09:00",
+      "return_gap_percentage_points": 9.45,
+      "required_gain_if_cutoff_unchanged_fraction": 0.0972322255376068,
+      "remaining_turnover_percentage_points": 312.26,
+      "status": "SUPERSEDED_BY_NEW_REPORT",
+      "source": "data/days/2026-09-23.md"
     }
   ],
   "monitoring_authorization_history": [
@@ -3485,5 +3600,174 @@
     "old_entry_plan_reuse_prohibited": true,
     "operation_record": "data/operation-mode.json",
     "source_writer_stops_after_this_handoff_commit": true
+  },
+  "additional_entry_plans": [
+    {
+      "valid_from": "2026-09-28T09:00:00+09:00",
+      "entry_deadline": "2026-09-28T14:30:00+09:00",
+      "entry_deadline_exclusive": true,
+      "cancel_unfilled_at": "2026-09-28T15:00:00+09:00",
+      "entry_submission_window": {
+        "start": "2026-09-28T09:00:00+09:00",
+        "end_exclusive": "2026-09-28T14:30:00+09:00",
+        "maximum_submissions": 1
+      },
+      "first_review_at": "2026-09-28T09:30:00+09:00",
+      "next_review_at": "2026-09-28T09:30:00+09:00",
+      "next_guidance_slot": "2026-09-28T09:00:00+09:00",
+      "mandatory_first_day_reconciliation_at": "2026-09-28T15:00:00+09:00",
+      "mandatory_daily_reconciliations": [
+        "2026-09-28T15:00:00+09:00",
+        "2026-09-29T15:00:00+09:00",
+        "2026-09-30T15:00:00+09:00"
+      ],
+      "manual_window": {
+        "start_kst": "15:00",
+        "end_kst": "15:15",
+        "on_dates": [
+          "2026-09-28",
+          "2026-09-29",
+          "2026-09-30"
+        ],
+        "authorization": "confirmed_execution_20260911_reused"
+      },
+      "exit_deadline": "2026-09-30T15:10:00+09:00",
+      "exit_evaluation_mode": "manual_on_observation",
+      "evaluation_effective_from": "2026-09-28T09:00:00+09:00",
+      "monitoring_risk_acknowledged": true,
+      "plan_id": "plan-20260928-lg-01",
+      "version": 1,
+      "status": "READY",
+      "code": "066570",
+      "name": "LG전자",
+      "generated_at": "2026-09-28T08:57:50+09:00",
+      "information_as_of": "2026-09-28T08:57:50+09:00",
+      "policy_version": "1.8",
+      "entry_limit_krw": 214000,
+      "take_profit_limit_krw": 225500,
+      "stop_trigger_krw": 207000,
+      "total_quantity": 125,
+      "quantity_is_total_not_additional": true,
+      "planning_capital_basis_krw": 96094357,
+      "account_report": "account-report-20260928-0001",
+      "order_type": "limit",
+      "market": "KRX_regular_paper_account",
+      "actual_order_submitted": null,
+      "actual_fill_quantity": null,
+      "execution_status": "PLAN_ISSUED_ORDER_UNCONFIRMED",
+      "plan_is_not_order_or_fill": true,
+      "orders_submitted_by_assistant": false,
+      "journal_path": "data/days/2026-09-28.md",
+      "entry_execution": "9/28유효창에214,000원 지정가총125주한번. 입력전실제가격≤207,000또는≥225,500·제한·가설무효·중복이면입력하지않음. 삼성전자134주전량위험반영. 잔여예산임의이전·추격정정·시장가매수없음.호가미확인으로즉시체결단정없음.",
+      "exit_execution": "실제체결확인후매도가능잔량225,500원익절지정가. 실제KRX207,000원이하관측또는9/30 15:10도달시 매수미체결취소·추가체결대사→매도미체결취소완료·추가체결대사→실제잔량시장가.손절→시간→익절순.전량청산후동일계획재진입없음.",
+      "daily_execution": "9/28 15:00매수미체결취소완료·추가체결·보유필수대사.9/29·30에도15:00점검,처리창15:00~15:15.익절주문만료시중복없음확인후실제잔량만같은가격재입력.첫날점검누락시대사전신규진입보류.",
+      "evaluation_note": "승인된30분 안내와 사용자 별도 실제 KRX 가격관측에서 수동평가. 장전 NXT·KRX 예상가·과거 종가를 실제 KRX 정규장 체결가로 대체하지 않음. 회차사이 경로·자동감시·사용자의즉시대응·앱OCO를 가정하지 않으며 지연된 공개시세에는 원 관측시각을 표시.",
+      "thesis": "9/22 LG공식NVIDIA DSX Ready CDU승인과9/27 NPN가입보도로AI냉각사업재평가 검토. 파트너등록·승인은확정수주·매출이아님. 앞선216,500원안의손익비를개선해214,000원상한으로선택.",
+      "price_rationale": "NXT08:35 216,500원과장전통합저가213,500원참고.214,000원은저가한틱위. 익절225,500원은9/7고점,손절207,000원은9/23저점. 현재KRX호가미확인. Naver일봉9/23종가210,500과오늘표시기준209,000차이원인미해명,혼합수익률계산없음.",
+      "holding_horizon_reason": "9/28~30최대3거래일 뉴스후속반응·이전고점접근. Micron콜10/1 05:30KST 전AI위험합산포지션종료.",
+      "risk": {
+        "same_event_group": "AI_capex_semiconductors_cooling_and_broad_market",
+        "stress_basis": "Naver참고9/7고가225,500→9/14저가192,600 낙폭14.59%를참조해16%하락가정.6개거래일구간을3거래일에압축한판단시나리오이며통계분위·최대손실아님.",
+        "buy_fee_assumption": 0.0001,
+        "sell_fee_tax_assumption": 0.0021,
+        "execution_buffer_krw": 100000,
+        "pre_announcement_cap_applies": true,
+        "pending_buy_counts_in_full": true,
+        "risk_anchor_unchanged_krw": 99252549,
+        "capital_is_planning_proxy_not_official_equity": true,
+        "stress_decline_fraction": 0.16,
+        "planned_stop_loss_krw": 1032012.5,
+        "stress_loss_krw": 4429862.0,
+        "stress_budget_krw": 9609435.700000001,
+        "quantity_caps_after_full_core_allocation": {
+          "cash": 224,
+          "total": 225,
+          "single": 202,
+          "official": 233,
+          "eventInitial": 179,
+          "eventAggregate": 135,
+          "stop": 244,
+          "aggregateStop": 489,
+          "stress": 125
+        },
+        "limiting_constraint": "same_event_aggregate_stress_10pct_after_full_samsung_134",
+        "next_share_aggregate_stress_krw": 9611632.135
+      },
+      "eligibility": {
+        "market": "KRX_KOSPI",
+        "common_shares_not_preferred": true,
+        "published_listed_shares": 162884638,
+        "price_above_1000": true,
+        "limit_tick_krw": 500,
+        "restricted_list_match": false,
+        "public_restrictions_checked_at": "2026-09-28T08:42:54+09:00",
+        "app_acceptance_directly_verified": false
+      },
+      "quote": {
+        "price_krw": 216500,
+        "observed_at": "2026-09-28T08:35:00+09:00",
+        "observation_time_precision": "minute_as_displayed_seconds_not_provided",
+        "price_type": "NXT_premarket_last_not_KRX_executable_quote",
+        "source": "https://stock.naver.com/domestic/stock/066570/price",
+        "premarket_integrated_low_krw": 213500,
+        "krx_bid_ask_verified": false
+      },
+      "sources": [
+        "https://stock.naver.com/domestic/stock/066570/price",
+        "https://stock.naver.com/domestic/stock/066570/info/company",
+        "https://www.lg.co.kr/media/release/30594",
+        "https://www.ajupress.com/view/20260927152070064",
+        "https://kind.krx.co.kr/investwarn/investattentwarnrisky.do?method=investattentwarnriskyMain",
+        "https://kind.krx.co.kr/investwarn/adminissue.do?method=searchAdminIssueList",
+        "https://kind.krx.co.kr/investwarn/tradinghaltissue.do?method=searchTradingHaltIssueMain"
+      ],
+      "notional_krw": 26750000,
+      "metrics": {
+        "gross_target_pct": 5.3738317757009435,
+        "gross_stop_pct": 3.2710280373831724,
+        "gross_reward_risk": 1.6428571428571428,
+        "exposure_pct": 27.83722253326488,
+        "net_target_after_assumed_cost_and_buffer_krw": 1275631.25,
+        "target_account_after_cost_buffer_pct": 1.3274777935191346,
+        "values_are_scenarios_not_expected_or_realized_returns": true
+      }
+    }
+  ],
+  "current_portfolio_plan": {
+    "recorded_at": "2026-09-28T08:57:50+09:00",
+    "policy_version": "1.8",
+    "planning_capital_basis_krw": 96094357,
+    "account_report": "account-report-20260928-0001",
+    "performance_report": "account-report-20260928-0002",
+    "plan_references": [
+      {
+        "plan_id": "plan-20260928-samsung-01",
+        "version": 2,
+        "status": "READY",
+        "path": "data/days/2026-09-28.md",
+        "plan_is_not_order_or_fill": true
+      },
+      {
+        "plan_id": "plan-20260928-lg-01",
+        "version": 1,
+        "status": "READY",
+        "path": "data/days/2026-09-28.md",
+        "plan_is_not_order_or_fill": true
+      }
+    ],
+    "same_event_group": "AI_capex_semiconductors_cooling_and_broad_market",
+    "total_notional_krw": 65007000,
+    "exposure_pct": 67.64913365308225,
+    "cash_after_assumed_buy_fees_krw": 31080856.299999997,
+    "planned_stop_loss_krw": 2085348.8,
+    "planned_stop_loss_account_pct": 2.170105368414089,
+    "stress_loss_krw": 9576993.239,
+    "stress_loss_account_pct": 9.966238953032382,
+    "stress_budget_krw": 9609435.700000001,
+    "target_net_after_cost_and_buffers_krw": 2829807.65,
+    "target_account_gain_pct": 2.94482187960319,
+    "further_gain_needed_if_both_targets_fill_and_cutoff_unchanged_pct": 10.5442321740707,
+    "status": "SCENARIO_NOT_ACTUAL_ACCOUNT_OR_GUARANTEED_MAX_LOSS",
+    "reason_below_70_to_90": "LG126주면합산스트레스10%초과. 삼성전자135주면최초종목40%초과. 같은AI위험을분리하지않음."
   }
 }

@@ -330,13 +330,27 @@
     }
   ],
   "last_user_requested_analysis": {
-    "review_id": "review-20260928-premarket",
-    "recorded_at_kst": "2026-09-28T08:42:54+09:00",
+    "review_id": "review-20260928-risk-amendment",
+    "recorded_at_kst": "2026-09-28T08:57:50+09:00",
     "source": "data/days/2026-09-28.md",
-    "latest_account_report": "account-report-20260928-0001",
+    "latest_account_report": "account-report-20260928-0002",
     "is_scheduled_slot": false,
-    "plan_id": "plan-20260928-samsung-01",
-    "version": 1
+    "plan_references": [
+      {
+        "plan_id": "plan-20260928-samsung-01",
+        "version": 2,
+        "status": "READY",
+        "path": "data/days/2026-09-28.md",
+        "plan_is_not_order_or_fill": true
+      },
+      {
+        "plan_id": "plan-20260928-lg-01",
+        "version": 1,
+        "status": "READY",
+        "path": "data/days/2026-09-28.md",
+        "plan_is_not_order_or_fill": true
+      }
+    ]
   },
   "latest_context_gate": {
     "gate_id": "context-gate-20260925-1951",
@@ -366,14 +380,25 @@
   ],
   "current_user_requested_analysis": {
     "requested_on": "2026-09-28",
-    "kind": "current_date_replan_and_premarket_analysis",
-    "destination_thread_id": "01a0e532-76a8-7b01-a924-c5352c73e678",
+    "kind": "official_results_update_and_approved_stress_budget_amendment",
     "state": "COMPLETED",
     "scheduled_slot": false,
-    "completed_at": "2026-09-28T08:45:12+09:00",
-    "review_id": "review-20260928-premarket",
+    "completed_at": "2026-09-28T08:57:50+09:00",
+    "review_id": "review-20260928-risk-amendment",
     "journal_path": "data/days/2026-09-28.md"
   },
   "single_writer_handoff_accepted_at": "2026-09-28T08:42:54+09:00",
-  "single_writer_handoff_base_commit": "440c7d05a6c403a1a28f05711d22d259875bd80e"
+  "single_writer_handoff_base_commit": "440c7d05a6c403a1a28f05711d22d259875bd80e",
+  "risk_policy_update": {
+    "authorized_on": "2026-09-28",
+    "recorded_at": "2026-09-28T08:57:50+09:00",
+    "same_event_stress_loss_budget_fraction": 0.1,
+    "previous_fraction": 0.05,
+    "other_limits_unchanged": true,
+    "automation_prompt_update_verified": true,
+    "automation_id": "30",
+    "verified_at": "2026-09-28T08:58:31+09:00",
+    "verification": "native_update_success_and_persisted_toml_policy_report_plan_target_schedule_checks",
+    "new_schedule_execution_verified": false
+  }
 }
