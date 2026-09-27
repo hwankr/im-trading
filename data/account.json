@@ -331,7 +331,8 @@
     "current_summary_path": "data/account.json",
     "daily_history_directory": "data/days",
     "automatic_account_access": false,
-    "public_records": true
+    "public_records": true,
+    "single_writer_thread_id": "01a0e532-76a8-7b01-a924-c5352c73e678"
   },
   "latest_report": {
     "report_id": "account-report-20260923-0005",
@@ -370,7 +371,7 @@
     "linkage_note": "직전 효성 v3 보유13주 전량매도 지시에 대한 첫 체결보고. 매도 누적0→13주 한 번 반영. 앱 현금 스냅샷에 매도대금을 다시 가산하지 않음."
   },
   "last_received_report": "account-report-20260923-0005",
-  "updated_at": "2026-09-25T19:55:37+09:00",
+  "updated_at": "2026-09-28T08:31:06+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -410,9 +411,9 @@
     "operation_record": "data/operation-mode.json",
     "automation_id": "30",
     "registration_status": "ACTIVE",
-    "registration_verified_at": "2026-09-23T08:43:34+09:00",
-    "target_thread_id": "01a0cb79-10a5-7bc1-ae89-adf8dc79ef1b",
-    "transferred_on": "2026-09-23",
+    "registration_verified_at": "2026-09-28T08:31:06+09:00",
+    "target_thread_id": "01a0e532-76a8-7b01-a924-c5352c73e678",
+    "transferred_on": "2026-09-28",
     "transfer_record": "data/operation-mode.json"
   },
   "latest_holdings_report": {
@@ -484,7 +485,7 @@
     "remaining_buy_order_quantity": null,
     "order_submission_and_fill_report_pending": true,
     "next_position_review_at": null,
-    "next_guidance_slot": null,
+    "next_guidance_slot": "2026-09-28T09:00:00+09:00",
     "exit_deadline": "2026-09-23T15:10:00+09:00",
     "instructions": "9/23 삼성전기 신규매수안은 기한 만료로 재사용하지 않는다. 장외인 현재 신규 주문 없음. 삼성전기 주문 실행 여부·현재 보유·미체결·주문가능현금 보고를 받아 대사. 실제 보유 확인 시 원래9/23 15:10 청산기한 경과를 적용하되 거래 가능한 다음 세션에 실제 잔량을 기준으로 안내.",
     "market_analysis_performed": false,
@@ -3398,6 +3399,13 @@
       "target_thread_id": "01a0c117-2c6c-7b51-84c3-bd8b32c23371",
       "transferred_on": "2026-09-21",
       "transfer_record": "data/operation-mode.json"
+    },
+    {
+      "automation_id": "30",
+      "target_thread_id": "01a0cb79-10a5-7bc1-ae89-adf8dc79ef1b",
+      "registration_verified_at": "2026-09-23T08:43:34+09:00",
+      "transferred_on": "2026-09-23",
+      "transfer_record": "data/operation-mode.json"
     }
   ],
   "trade_cash_reconciliation": {
@@ -3439,5 +3447,15 @@
       "decision": "SKIPPED_OUTSIDE_AUTHORIZED_REGULAR_SESSION",
       "journal_path": "data/days/2026-09-23.md"
     }
-  ]
+  ],
+  "latest_handoff": {
+    "authorized_on": "2026-09-28",
+    "recorded_at": "2026-09-28T08:31:06+09:00",
+    "destination_thread_id": "01a0e532-76a8-7b01-a924-c5352c73e678",
+    "latest_account_report": "account-report-20260923-0005",
+    "pending_account_reconciliation": "삼성전기 주문실행 여부·오늘 보유/미체결/주문가능현금",
+    "old_entry_plan_reuse_prohibited": true,
+    "operation_record": "data/operation-mode.json",
+    "source_writer_stops_after_this_handoff_commit": true
+  }
 }
