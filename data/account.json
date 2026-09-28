@@ -359,7 +359,7 @@
     "user_text": "10위9.35%, 내수익률-3.91%, 회전율262%. 최종10위 수상과 회전율500%초과 목표."
   },
   "last_received_report": "account-report-20260928-0002",
-  "updated_at": "2026-09-28T09:06:36+09:00",
+  "updated_at": "2026-09-28T09:41:23+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -460,8 +460,8 @@
     }
   ],
   "execution_follow_up": {
-    "checked_at": "2026-09-28T09:06:36+09:00",
-    "source": "scheduled_public_market_review_no_new_account_report",
+    "checked_at": "2026-09-28T09:41:23+09:00",
+    "source": "scheduled_review_no_new_fill_report",
     "latest_account_report": "account-report-20260928-0002",
     "latest_cash_report": "account-report-20260928-0001",
     "plan_reference": {
@@ -478,10 +478,10 @@
     "order_submission_and_fill_report_pending": true,
     "pending_question": null,
     "prior_semco_reconciliation_resolved_by": "account-report-20260928-0001",
-    "next_position_review_at": "2026-09-28T09:30:00+09:00",
-    "next_guidance_slot": "2026-09-28T09:30:00+09:00",
+    "next_position_review_at": "2026-09-28T10:00:00+09:00",
+    "next_guidance_slot": "2026-09-28T10:00:00+09:00",
     "exit_deadline": "2026-09-30T15:10:00+09:00",
-    "instructions": "미입력이면삼성285,500원총134주·LG214,000원총125주기존지정가.이미입력했다면중복없음.삼성구v1미체결은취소완료·체결대사후총134주에서체결을뺀잔량만입력.오늘14:30전입력종료·15시미체결취소/보유대사.가격·수량·익절·손절·9/30청산기한유지.",
+    "instructions": "기존삼성v2·LGv1유지,추가/중복매수없음. 미입력이라면기존지정가총수량과입력직전실제가격가드만적용. 삼성279,000원이하실제확인시매수미체결취소·추가체결대사→매도미체결취소완료·체결대사→실제잔량시장가. 미체결0·보유0으로새로추정하지않음. 실제체결수량/평균가/미체결보고미수신.15시필수대사유지.",
     "orders_submitted_by_assistant": false,
     "latest_holdings_report": "account-report-20260928-0001",
     "plan_references": [
@@ -504,14 +504,14 @@
     "execution_reconfirmation_status": "TODAY_ORDER_SUBMISSION_AND_FILL_NOT_REPORTED"
   },
   "latest_market_review": {
-    "review_id": "review-20260928-0900",
-    "recorded_at": "2026-09-28T09:06:36+09:00",
-    "clock_verified_at": "2026-09-28T09:00:56+09:00",
-    "heartbeat_received_at": "2026-09-28T09:00:40.668+09:00",
-    "nominal_slot_at": "2026-09-28T09:00:00+09:00",
+    "review_id": "review-20260928-0930",
+    "recorded_at": "2026-09-28T09:41:23+09:00",
+    "clock_verified_at": "2026-09-28T09:31:27+09:00",
+    "heartbeat_received_at": "2026-09-28T09:31:11.074+09:00",
+    "nominal_slot_at": "2026-09-28T09:30:00+09:00",
     "session": "KRX_REGULAR",
     "market_analysis_performed": true,
-    "decision": "KEEP_SAMSUNG_V2_AND_LG_V1_FIXED_LIMITS_NO_DUPLICATES",
+    "decision": "KEEP_EXISTING_PLANS_SAMSUNG_NEAR_STOP_NO_DUPLICATE_BUYS",
     "plan_references": [
       {
         "plan_id": "plan-20260928-samsung-01",
@@ -531,9 +531,9 @@
     "quotes": [
       {
         "code": "005930",
-        "price_krw": 285000,
-        "observed_at": "2026-09-28T09:02:00+09:00",
-        "source": "https://stock.naver.com/domestic/stock/005930/notice",
+        "price_krw": 280500,
+        "observed_at": "2026-09-28T09:32:00+09:00",
+        "source": "https://stock.naver.com/domestic/stock/005930/notice/111004140",
         "price_type": "public_KRX_regular_session_last",
         "observation_time_precision": "displayed_minute_seconds_not_provided",
         "bid_ask_verified": false
@@ -541,34 +541,18 @@
       {
         "code": "066570",
         "price_krw": 219000,
-        "observed_at": "2026-09-28T09:02:00+09:00",
-        "source": "https://stock.naver.com/domestic/stock/066570/notice/124801366",
-        "price_type": "public_KRX_regular_session_last",
-        "observation_time_precision": "displayed_minute_seconds_not_provided",
-        "bid_ask_verified": false
-      },
-      {
-        "code": "009150",
-        "price_krw": 1560000,
-        "observed_at": "2026-09-28T09:04:00+09:00",
-        "source": "https://stock.naver.com/domestic/stock/009150/price",
-        "price_type": "public_KRX_regular_session_last",
-        "observation_time_precision": "displayed_minute_seconds_not_provided",
-        "bid_ask_verified": false
-      },
-      {
-        "code": "000660",
-        "price_krw": 1822000,
-        "observed_at": "2026-09-28T09:04:00+09:00",
-        "source": "https://stock.naver.com/domestic/stock/000660/price",
+        "observed_at": "2026-09-28T09:32:00+09:00",
+        "source": "https://stock.naver.com/domestic/stock/066570/notice",
         "price_type": "public_KRX_regular_session_last",
         "observation_time_precision": "displayed_minute_seconds_not_provided",
         "bid_ask_verified": false
       }
     ],
+    "triggered_exit_observed": false,
+    "trigger_evaluation_scope": "09:32 실제관측값에한정. 이후가격경로및현재체결상태미확인.",
     "restriction_check": {
       "date": "2026-09-28",
-      "scope": "KIND_KOSPI_selected_all_relevant_pages",
+      "scope": "KIND_KOSPI_all_relevant_pages",
       "caution_records": 4,
       "warning_records": 2,
       "risk_records": 0,
@@ -576,29 +560,33 @@
       "halt_records": 29,
       "all_pages_checked": true,
       "candidates_matched": [],
-      "app_acceptance_directly_verified": false,
-      "checked_at": "2026-09-28T09:06:36+09:00",
-      "time_precision": "review_completion_clock_not_each_page_timestamp"
+      "checked_at": "2026-09-28T09:41:23+09:00",
+      "time_precision": "review_completion_clock_not_each_page_timestamp",
+      "app_acceptance_directly_verified": false
     },
-    "disclosure_review": "삼성전자공시목록최신8/24·8/21로신규철회/손상근거미관측. LG최신9/7해명은베어로보틱스상장미확정·10/6재공시예정으로냉각사업계획의확정매출근거로사용하지않음. 검색에노출된오늘21:10기사는정보기준이후라제외.",
-    "candidate_comparison": "삼성전기09:04 1,560,000은최근고점1,548,000위로돌파해관심유지하나직전계획대비더좋은새가격·목표·스트레스조합은미확립. SK하이닉스1,822,000(-2.15%)으로상대약세. 삼성전자추세·LG냉각촉매를대체할근거부족하여두고정계획유지. AI스트레스예산을이미9.97%사용하는전량체결시나리오로추가주문없음.",
-    "triggered_exit_observed": false,
+    "disclosure_review": "삼성공시목록최신8/24,LG최신9/7로새공시없음. 추가로8/21주주환원공시와9/21IR배당기준일공고를확인. 삼성30조원내외분기배당계획은10월말세부결정예정. 대회매뉴얼15쪽의권리락일19시현금보정규정과대조해자동조기청산근거로쓰지않음.",
+    "candidate_comparison": "삼성전기9/1 AI서버MLCC1조722억원계약원문재확인. 새Naver시세조회는DNS실패; KIND1,567,000원은20분지연·원체결시각미표시라현재교체가격으로쓰지않음. 후보의새실행계획은BLOCKED_PRICE_FRESHNESS. 기존삼성·LG가격근거전체를무효화하거나새매수로위험예산을추가사용하지않음.",
+    "data_quality": {
+      "naver_alternative_quote_error": "DNS_resolution_failed",
+      "last_time_stamped_selected_quotes": "2026-09-28T09:32:00+09:00",
+      "fallback_source": "KIND",
+      "fallback_delay_minutes_as_disclosed": 20,
+      "fallback_original_quote_timestamp": null,
+      "fallback_not_current_or_final_close": true,
+      "fallback_reference_prices_krw": {
+        "005930": 284250,
+        "009150": 1567000
+      },
+      "fallback_fetched_at": "2026-09-28T09:38:55+09:00",
+      "fallback_not_used_to_erase_trigger": true
+    },
     "account_report": "account-report-20260928-0001",
     "official_results_report": "account-report-20260928-0002",
     "new_account_report_received": false,
     "orders_submitted_by_assistant": false,
     "fills_inferred_from_prices": false,
     "missed_slots_replayed": false,
-    "next_nominal_review_at": "2026-09-28T09:30:00+09:00",
-    "sources": [
-      "https://stock.naver.com/domestic/stock/005930/notice",
-      "https://stock.naver.com/domestic/stock/066570/notice/124801366",
-      "https://stock.naver.com/domestic/stock/009150/price",
-      "https://stock.naver.com/domestic/stock/000660/price",
-      "https://kind.krx.co.kr/investwarn/investattentwarnrisky.do?method=investattentwarnriskyMain",
-      "https://kind.krx.co.kr/investwarn/adminissue.do?method=searchAdminIssueList",
-      "https://kind.krx.co.kr/investwarn/tradinghaltissue.do?method=searchTradingHaltIssueMain"
-    ],
+    "next_nominal_review_at": "2026-09-28T10:00:00+09:00",
     "journal_path": "data/days/2026-09-28.md"
   },
   "prior_portfolio_screen_summaries": [
@@ -2198,6 +2186,12 @@
       "review_id": "review-20260928-risk-amendment",
       "recorded_at": "2026-09-28T08:57:50+09:00",
       "decision": "SAMSUNG_134_V2_AND_LG_125_V1",
+      "source": "data/days/2026-09-28.md"
+    },
+    {
+      "review_id": "review-20260928-0900",
+      "recorded_at": "2026-09-28T09:06:36+09:00",
+      "decision": "KEEP_SAMSUNG_V2_AND_LG_V1_FIXED_LIMITS_NO_DUPLICATES",
       "source": "data/days/2026-09-28.md"
     }
   ],
@@ -3822,5 +3816,24 @@
     "further_gain_needed_if_both_targets_fill_and_cutoff_unchanged_pct": 10.5442321740707,
     "status": "SCENARIO_NOT_ACTUAL_ACCOUNT_OR_GUARANTEED_MAX_LOSS",
     "reason_below_70_to_90": "LG126주면합산스트레스10%초과. 삼성전자135주면최초종목40%초과. 같은AI위험을분리하지않음."
+  },
+  "corporate_action_review": {
+    "reviewed_at": "2026-09-28T09:41:23+09:00",
+    "code": "005930",
+    "record_date": "2026-09-30",
+    "record_date_source": "https://www.samsung.com/sec/ir/reports-disclosures/notices/",
+    "record_date_announcement_date": "2026-09-21",
+    "shareholder_return_source": "https://stock.naver.com/domestic/stock/005930/notice/110965760",
+    "announced_q3_distribution_plan_krw": 30000000000000,
+    "distribution_plan_is_approximate": true,
+    "board_details_expected": "2026-10",
+    "per_share_dividend_confirmed": false,
+    "dividend_per_share_krw": null,
+    "contest_adjustment_source": "docs/sources/competition-manual.pdf",
+    "contest_adjustment_source_page": 15,
+    "contest_rule_as_printed": "대회기간 중 유,무상 및 배당 등 권리 발생종목은 권리락일 모의투자 결제시점(영업일19시경) 현금입금. 권리락시 보유수량*(전일종가-권리락가격) 금액보정.",
+    "specific_adjustment_amount_krw": null,
+    "actual_credit_confirmed": false,
+    "review_decision": "실제배당지급이지연된다는이유로대회수익반영0을가정하지않음. 개별보정액은미확인. 기존손절·기한유지, 배당만을위한추가매수나손절하향없음."
   }
 }
