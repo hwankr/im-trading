@@ -13,36 +13,37 @@
     "recorded_at": "2026-09-21T09:25:23+09:00",
     "platform_label": "예수금",
     "balance_krw": 57639924,
-    "orderable_krw": 96094357,
+    "orderable_krw": 95149466,
     "settlement_deposit_krw": 57639924,
     "settlement_deposit_source_report": "account-report-20260916-0003",
-    "field_mapping_note": "주문가능96,094,357원은보고0001의매수전값과출처보존. 보고0003 삼성매수·LG미체결 후 가용현금은미보고. 예수금·정산예수금의과거값/출처유지.",
+    "field_mapping_note": "보고0005 현금매수가능95,149,466원직접보고. 예수금·정산예수금의과거출처유지. LG주문예약반영방식은미확인으로미체결금액을가감하거나공식총자산·순손익을역산하지않음.",
     "last_confirmed_cash_availability_report": {
-      "source_report": "account-report-20260928-0001",
+      "source_report": "account-report-20260928-0005",
       "source_type": "user_reported_official_app",
       "reported_on": "2026-09-28",
-      "recorded_at": "2026-09-28T08:42:54+09:00",
+      "recorded_at": "2026-09-28T09:54:24+09:00",
       "observed_at": null,
       "observation_time_precision": "exact_app_clock_not_provided",
-      "amount_krw": 96094357,
-      "orderable_platform_label": "주문가능현금",
-      "orderable_krw": 96094357
+      "amount_krw": 95149466,
+      "orderable_platform_label": "현금매수가능금액",
+      "orderable_krw": 95149466
     },
-    "orderable_platform_label": "주문가능현금",
+    "orderable_platform_label": "현금매수가능금액",
     "orderable_report": {
-      "source_report": "account-report-20260928-0001",
+      "source_report": "account-report-20260928-0005",
       "source_type": "user_reported_official_app",
       "reported_on": "2026-09-28",
-      "recorded_at": "2026-09-28T08:42:54+09:00",
+      "recorded_at": "2026-09-28T09:54:24+09:00",
       "observed_at": null,
       "observation_time_precision": "exact_app_clock_not_provided",
-      "amount_krw": 96094357
+      "platform_label": "현금매수가능금액",
+      "amount_krw": 95149466
     },
     "previous_orderable_report": {
-      "source_report": "account-report-20260923-0005",
+      "source_report": "account-report-20260928-0001",
       "source_type": "user_reported_official_app",
-      "reported_on": "2026-09-23",
-      "recorded_at": "2026-09-23T11:40:45+09:00",
+      "reported_on": "2026-09-28",
+      "recorded_at": "2026-09-28T08:42:54+09:00",
       "observed_at": null,
       "observation_time_precision": "exact_app_clock_not_provided",
       "amount_krw": 96094357
@@ -85,15 +86,15 @@
       "credit_maximum_orderable_krw": 0
     },
     "latest_order_impact": {
-      "source_report": "account-report-20260928-0003",
-      "confirmed_Samsung_held_quantity": 134,
-      "LG_buy_fully_unfilled": true,
-      "current_orderable_after_submission_krw": null,
-      "prior_cash_report": "account-report-20260928-0001",
-      "note": "96,094,357원은 매수 전 보고값. 매수·미체결 예약 후 가용현금으로 재사용하거나 추정 차감하지 않음.",
-      "LG_pending_quantity": 124,
-      "LG_pending_limit_price_krw": 214000,
-      "LG_order_details_report": "account-report-20260928-0004"
+      "source_report": "account-report-20260928-0005",
+      "Samsung_fully_sold_quantity": 134,
+      "post_sale_reported_cash_buying_power_krw": 95149466,
+      "LG_last_pending_report": "account-report-20260928-0004",
+      "LG_last_pending_quantity": 124,
+      "LG_last_pending_limit_price_krw": 214000,
+      "LG_current_state_reconfirmed": false,
+      "pending_buy_reservation_reflected_in_reported_cash": null,
+      "actual_costs_krw": null
     },
     "order_impact_history": [
       {
@@ -121,37 +122,28 @@
         "source_report": "account-report-20260928-0001",
         "state": "PRE_TODAY_ENTRY_FLAT_CASH_SNAPSHOT",
         "source": "data/days/2026-09-28.md"
+      },
+      {
+        "source_report": "account-report-20260928-0003",
+        "LG_order_details_report": "account-report-20260928-0004",
+        "state": "SAMSUNG_134_HELD_LG_124_PENDING_POST_BUY_CASH_UNREPORTED",
+        "resolved_cash_report": "account-report-20260928-0005",
+        "source": "data/days/2026-09-28.md"
       }
     ],
-    "latest_cash_update_report": "account-report-20260928-0001",
-    "orderable_currentness": "STALE_AFTER_CONFIRMED_BUY_AND_PENDING_BUY_ORDER"
+    "latest_cash_update_report": "account-report-20260928-0005",
+    "orderable_currentness": "USER_REPORTED_POST_SAMSUNG_LIQUIDATION_LG_ORDER_RESERVATION_TREATMENT_UNCONFIRMED"
   },
   "portfolio": {
     "observed_at": null,
     "reported_on": "2026-09-28",
     "source_type": "user_reported_official_app",
-    "source_report": "account-report-20260928-0003",
-    "holdings": [
-      {
-        "code": "005930",
-        "name": "삼성전자",
-        "quantity": 134,
-        "sellable_quantity": null,
-        "average_price_krw": 283940,
-        "plan_id": "plan-20260928-samsung-01",
-        "plan_version": 2,
-        "source_report": "account-report-20260928-0003",
-        "source_type": "user_reported_official_app",
-        "reported_on": "2026-09-28",
-        "observed_at": null,
-        "recorded_at": "2026-09-28T09:50:17+09:00",
-        "quantity_basis": "user_reported_current_holding_snapshot_not_additional_fill_delta"
-      }
-    ],
+    "source_report": "account-report-20260928-0005",
+    "holdings": [],
     "total_equity_krw": null,
     "official_return_percent": -3.91,
     "derived_equity_from_return_krw": null,
-    "recorded_at": "2026-09-28T09:50:17+09:00",
+    "recorded_at": "2026-09-28T09:54:24+09:00",
     "total_purchase_amount_krw": null,
     "total_market_value_krw": null,
     "displayed_evaluation_pnl_krw": null,
@@ -160,7 +152,7 @@
     "settlement_amount_platform_label": "정산금액",
     "fee_checkbox_checked_in_screenshot": null,
     "actual_commission_and_tax_krw": null,
-    "field_mapping_note": "보유는보고0003, 공식수익률-3.91%는보고0002. 정확한앱시각은각각미제공.",
+    "field_mapping_note": "삼성청산은보고0005,공식수익률은보고0002. 삼성평균매도가·현재총자산·순손익미확인.",
     "screen_clock_text": null,
     "official_return_report": {
       "source_report": "account-report-20260928-0002",
@@ -171,15 +163,15 @@
       "return_percent": -3.91,
       "scope_note": "공식수익률만갱신. 현금·보유는보고0001출처와시각유지. 공식총자산역산없음."
     },
-    "position_aggregate_basis": "삼성134주 보유 직접보고; LG 신규계획 체결0. 평가액·총매입금액·총자산은 미보고.",
-    "currentness_note": "보고0003 보유134주 확인. 현재가격·평가손익·공식성적은 이 매입가 보고로 갱신하지 않음."
+    "position_aggregate_basis": "삼성134주전량매도확인. LG는보고0004미체결이후변경미보고이므로전체계좌무보유재확인으로확대하지않음.",
+    "currentness_note": "삼성보유0은보고0005. LG주문은보고0004출처유지;현금으로LG체결/취소나공식총자산을추정하지않음."
   },
   "orders": {
     "observed_at": null,
     "reported_on": "2026-09-28",
-    "recorded_at": "2026-09-28T09:50:56+09:00",
+    "recorded_at": "2026-09-28T09:54:24+09:00",
     "source_type": "user_reported_official_app",
-    "source_report": "account-report-20260928-0004",
+    "source_report": "account-report-20260928-0005",
     "open_orders": [
       {
         "order_id": null,
@@ -207,14 +199,14 @@
         "variance_from_planned_quantity": -1
       }
     ],
-    "confirmation_text": "LG전자 미체결124주·214,000원, 삼성 익절 매도주문 미입력",
+    "confirmation_text": "삼성134주전량시장가매도확인;LG미체결124주214,000원은직전보고0004",
     "last_confirmed_report": {
-      "source_report": "account-report-20260928-0004",
+      "source_report": "account-report-20260928-0005",
       "source_type": "user_reported_official_app",
       "reported_on": "2026-09-28",
+      "recorded_at": "2026-09-28T09:54:24+09:00",
       "observed_at": null,
-      "recorded_at": "2026-09-28T09:50:56+09:00",
-      "scope": "LG_buy_124_fully_unfilled_at_214000_and_Samsung_no_sell_order",
+      "scope": "Samsung_full_market_sale_only_LG_not_reconfirmed",
       "all_open_orders_confirmed": false
     },
     "cancelled_orders": [
@@ -321,19 +313,44 @@
         "reported_on": "2026-09-28",
         "observed_at": null,
         "recorded_at": "2026-09-28T09:50:17+09:00"
+      },
+      {
+        "order_id": null,
+        "code": "005930",
+        "name": "삼성전자",
+        "side": "sell",
+        "order_type": "market",
+        "order_quantity": 134,
+        "cumulative_filled_quantity": 134,
+        "remaining_quantity": 0,
+        "average_fill_price_krw": null,
+        "limit_price_krw": null,
+        "actual_costs_krw": null,
+        "status": "FILLED_CONFIRMED",
+        "plan_id": "plan-20260928-samsung-01",
+        "plan_version": 2,
+        "filled_at": null,
+        "quantity_basis": "previous_confirmed_134_shares_fully_sold",
+        "source_report": "account-report-20260928-0005",
+        "source_type": "user_reported_official_app",
+        "reported_on": "2026-09-28",
+        "recorded_at": "2026-09-28T09:54:24+09:00",
+        "observed_at": null
       }
     ],
-    "currentness_note": "삼성134주 보유·평균283,940원은보고0003, LG실제미체결124주·214,000원과삼성익절매도미입력은보고0004. 그밖의미보고주문은추정하지않음.",
+    "currentness_note": "LG open_orders 항목의보고0004시각·출처보존. 보고0005는삼성전량매도와현금만확인하며LG취소/체결을뜻하지않음.",
     "Samsung_sell_order_status": {
-      "source_report": "account-report-20260928-0004",
+      "source_report": "account-report-20260928-0005",
       "source_type": "user_reported_official_app",
       "reported_on": "2026-09-28",
+      "recorded_at": "2026-09-28T09:54:24+09:00",
       "observed_at": null,
-      "recorded_at": "2026-09-28T09:50:56+09:00",
-      "status": "NOT_SUBMITTED_CONFIRMED",
-      "side": "sell",
       "code": "005930",
-      "scope": "질문에대한답변의익절매도주문미입력;매도가능수량은별도미보고"
+      "side": "sell",
+      "status": "MARKET_SALE_FULLY_FILLED_CONFIRMED",
+      "cumulative_filled_quantity": 134,
+      "remaining_quantity": 0,
+      "prior_take_profit_not_submitted_report": "account-report-20260928-0004"
     }
   },
   "award_progress": {
@@ -417,7 +434,7 @@
     "confirmation_status": "planning_basis_reconciled_official_total_equity_unconfirmed",
     "note": "이번 신규 계획의 최초 운용 기준을 고정 기록한다. 공식 총자산 확인 시 출처를 대사하되 손실을 이유로 기준점을 낮추거나 초기화하지 않는다."
   },
-  "last_reconciled_report": "account-report-20260928-0004",
+  "last_reconciled_report": "account-report-20260928-0005",
   "unresolved": [
     "과거 인버스·두산퓨얼셀의 전량 매도 완료는 확인됐으나 종목별 체결가·정확한 시각·주문번호·실제 비용은 미확인.",
     "9/28 사용자보고 공식 회전율262%는 확인(정확한 앱시각 미제공). 인정 종목 수·인정 매매일수·공식 회전율 산식·정확한 잔여 거래대금은 미확인.",
@@ -435,26 +452,26 @@
     "single_writer_thread_id": "01a0e532-76a8-7b01-a924-c5352c73e678"
   },
   "latest_report": {
-    "report_id": "account-report-20260928-0004",
+    "report_id": "account-report-20260928-0005",
+    "source_type": "user_reported_official_app",
     "reported_on": "2026-09-28",
-    "recorded_at": "2026-09-28T09:50:56+09:00",
+    "recorded_at": "2026-09-28T09:54:24+09:00",
     "observed_at": null,
     "observation_time_precision": "exact_app_clock_not_provided",
-    "source_type": "user_reported_official_app",
-    "report_kind": "pending_order_details_and_take_profit_not_submitted",
-    "user_text": "LG전자 미체결 124주, 주문가격 214,000원. 삼성전자 아직 아무 주문 안했음.",
-    "interpretation_note": "삼성전자 익절 매도주문 유무를 물은 질문의 답변으로 매도주문 미입력 확인. 직전134주 매수 보유보고를 취소하거나 미체결로 바꾸지 않음.",
+    "report_kind": "Samsung_full_market_sale_and_cash_update",
+    "user_text": "삼성전자 전량 시장가 매도했고, 이제 현금매수가능금액 95,149,466원이야.",
     "reconciliation_status": "RECONCILED",
     "unconfirmed_fields": [
-      "current_orderable_cash",
-      "Samsung_sellable_quantity",
+      "average_sell_price",
       "actual_costs",
-      "exact_app_and_fill_times",
-      "order_ids"
-    ]
+      "exact_fill_time",
+      "LG_order_current_state",
+      "cash_reservation_treatment_of_LG_pending_order"
+    ],
+    "scope_note": "기존삼성134주전량매도완료로대사. 손절발동/관측가격/매도사유는미보고이며 시장가주문완료보고를손절관측증거로바꾸지않음."
   },
-  "last_received_report": "account-report-20260928-0004",
-  "updated_at": "2026-09-28T09:50:56+09:00",
+  "last_received_report": "account-report-20260928-0005",
+  "updated_at": "2026-09-28T09:54:24+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -477,12 +494,12 @@
     "currentness_note": "보고0001의진입전계획기준이며매수후현재가용현금이아님. 기준자산초기화없음."
   },
   "latest_plan_reference": {
-    "plan_id": "plan-20260928-samsung-01",
-    "version": 2,
-    "status": "HOLD",
+    "plan_id": "plan-20260928-lg-01",
+    "version": 1,
+    "status": "READY",
     "path": "data/days/2026-09-28.md",
     "plan_is_not_order_or_fill": true,
-    "execution_report": "account-report-20260928-0003"
+    "execution_report": "account-report-20260928-0004"
   },
   "monitoring_authorization": {
     "authorized_on": "2026-09-16",
@@ -502,20 +519,22 @@
     "transfer_record": "data/operation-mode.json"
   },
   "latest_holdings_report": {
-    "report_id": "account-report-20260928-0003",
-    "recorded_at": "2026-09-28T09:50:17+09:00",
+    "report_id": "account-report-20260928-0005",
+    "recorded_at": "2026-09-28T09:54:24+09:00",
     "observed_at": null,
     "source_type": "user_reported_official_app",
-    "report_kind": "Samsung_holding_confirmed_LG_unfilled",
     "source": "data/days/2026-09-28.md",
-    "known_holding_codes": [
-      "005930"
-    ]
+    "report_kind": "Samsung_full_liquidation",
+    "reported_sold_quantity": 134,
+    "remaining_Samsung_quantity": 0,
+    "all_account_positions_reconfirmed": false,
+    "LG_last_order_report": "account-report-20260928-0004"
   },
   "last_reconciliation_scope": [
-    "orders.open_orders.quantity_and_price",
-    "orders.Samsung_sell_order_not_submitted",
-    "execution_follow_up"
+    "portfolio.Samsung_full_liquidation",
+    "orders.Samsung_market_sale",
+    "cash.orderable_report",
+    "Samsung_plan_closed"
   ],
   "publication_authorization": {
     "authorized_on": "2026-09-16",
@@ -544,14 +563,6 @@
   },
   "active_plan_references": [
     {
-      "plan_id": "plan-20260928-samsung-01",
-      "version": 2,
-      "status": "HOLD",
-      "path": "data/days/2026-09-28.md",
-      "plan_is_not_order_or_fill": true,
-      "execution_report": "account-report-20260928-0003"
-    },
-    {
       "plan_id": "plan-20260928-lg-01",
       "version": 1,
       "status": "READY",
@@ -561,28 +572,20 @@
     }
   ],
   "execution_follow_up": {
-    "checked_at": "2026-09-28T09:50:56+09:00",
+    "checked_at": "2026-09-28T09:54:24+09:00",
     "source": "user_report_reconciliation_no_market_reanalysis",
-    "latest_account_report": "account-report-20260928-0004",
-    "latest_cash_report": "account-report-20260928-0001",
-    "latest_holdings_report": "account-report-20260928-0003",
+    "latest_account_report": "account-report-20260928-0005",
+    "latest_cash_report": "account-report-20260928-0005",
+    "latest_holdings_report": "account-report-20260928-0005",
     "plan_reference": {
-      "plan_id": "plan-20260928-samsung-01",
-      "version": 2,
-      "status": "HOLD",
+      "plan_id": "plan-20260928-lg-01",
+      "version": 1,
+      "status": "READY",
       "path": "data/days/2026-09-28.md",
       "plan_is_not_order_or_fill": true,
-      "execution_report": "account-report-20260928-0003"
+      "execution_report": "account-report-20260928-0004"
     },
     "plan_references": [
-      {
-        "plan_id": "plan-20260928-samsung-01",
-        "version": 2,
-        "status": "HOLD",
-        "path": "data/days/2026-09-28.md",
-        "plan_is_not_order_or_fill": true,
-        "execution_report": "account-report-20260928-0003"
-      },
       {
         "plan_id": "plan-20260928-lg-01",
         "version": 1,
@@ -592,24 +595,25 @@
         "execution_report": "account-report-20260928-0004"
       }
     ],
-    "known_held_quantity": 134,
+    "known_held_quantity": 0,
     "remaining_buy_order_quantity": 124,
-    "remaining_buy_order_quantity_note": "LG 실제미체결124주·214,000원 보고0004 확인. 계획125주대비1주추가하지않음.",
+    "remaining_buy_order_quantity_note": "마지막보고0004의LG124주214,000원. 이번삼성청산/현금보고로최신성갱신하지않음.",
     "order_submission_and_fill_report_pending": false,
     "pending_details": [
-      "current_orderable_cash",
-      "Samsung_sellable_quantity"
+      "Samsung_average_sell_price_and_actual_costs",
+      "LG_current_order_status"
     ],
-    "execution_reconfirmation_status": "SAMSUNG_HOLDING_134_TP_NOT_SUBMITTED_LG_PENDING_124_CONFIRMED",
-    "exit_obligation_status": "NO_NEW_TRIGGER_IN_FILL_REPORT_OR_PRIOR_OBSERVATION_REVIEW",
+    "execution_reconfirmation_status": "SAMSUNG_CLOSED_CASH_UPDATED_LG_LAST_PENDING_SNAPSHOT_RETAINED",
+    "exit_obligation_status": "SAMSUNG_LIQUIDATION_COMPLETED_NO_FURTHER_SELL",
     "last_price_review_reference": "review-20260928-0930",
-    "new_entry_status": "SAMSUNG_PLANNED_QUANTITY_FILLED_NO_ADDITIONAL_BUY_LG_EXISTING_ORDER_ONLY",
+    "new_entry_status": "SAMSUNG_SAME_PLAN_CLOSED_NO_REENTRY_LG_EXISTING_ORDER_ONLY",
     "next_position_review_at": "2026-09-28T10:00:00+09:00",
     "next_guidance_slot": "2026-09-28T10:00:00+09:00",
     "mandatory_reconciliation_at": "2026-09-28T15:00:00+09:00",
     "exit_deadline": "2026-09-30T15:10:00+09:00",
     "orders_submitted_by_assistant": false,
-    "instructions": "삼성134주보유확인·추가매수없음. 익절매도주문미입력확인: 실제매도가능134주확인후298,500원익절지정가;가능수량이다르면실제잔량만입력. 실제관측279,000원이하또는9/30 15:10기한이면실제잔량확인→매도미체결있을때만취소완료·취소중체결대사→남은실제잔량시장가. LG실제미체결124주214,000원유지,1주추가/추격정정없음. 오늘15:00미체결취소완료·추가체결·보유대사. 현금은매수전보고0001뿐이라추가가용액으로사용하지않음."
+    "instructions": "삼성134주매도완료로기존익절등록·추가매도안내종료,동일계획재진입없음. LG마지막미체결124주214,000원은보고0004를유지하며현재상태확인;가격/수량추격변경없음. 9/28 15:00실제잔여매수미체결취소완료·추가체결대사. 다음회차10:00새후보/자금교체검토. 현금95,149,466원은보고값이며LG예약금반영방식미확인. 평균매도가/실제비용미보고라실현손익역산없음.",
+    "known_held_quantity_scope": "삼성잔량0확인,LG현재주문/보유는보고0004이후미확인"
   },
   "latest_market_review": {
     "review_id": "review-20260928-0930",
@@ -983,6 +987,33 @@
       "fill_execution_at": null,
       "exit_decision_id": "exit-decision-20260923-hyosung-01",
       "history_reference": "data/days/2026-09-23.md"
+    },
+    {
+      "code": "005930",
+      "name": "삼성전자",
+      "status": "CLOSED_USER_CONFIRMED",
+      "plan_id": "plan-20260928-samsung-01",
+      "plan_version": 2,
+      "remaining_quantity": 0,
+      "reported_sold_quantity": 134,
+      "quantity_basis": "직전확인보유134주의전량매도보고",
+      "average_buy_price_krw": 283940,
+      "average_sell_price_krw": null,
+      "order_type": "market",
+      "actual_costs_krw": null,
+      "gross_realized_pnl_before_costs_krw": null,
+      "net_realized_pnl_krw": null,
+      "fill_execution_at": null,
+      "buy_source_report": "account-report-20260928-0003",
+      "exit_reason": null,
+      "stop_trigger_observed_from_this_report": false,
+      "original_exit_deadline": "2026-09-30T15:10:00+09:00",
+      "history_reference": "data/days/2026-09-28.md",
+      "source_report": "account-report-20260928-0005",
+      "source_type": "user_reported_official_app",
+      "reported_on": "2026-09-28",
+      "recorded_at": "2026-09-28T09:54:24+09:00",
+      "observed_at": null
     }
   ],
   "closed_plan_references": [
@@ -1032,6 +1063,13 @@
       "previous_status": "ENTRY_EXPIRED_EXECUTION_UNCONFIRMED",
       "closure_report": "account-report-20260928-0001",
       "path": "data/days/2026-09-23.md"
+    },
+    {
+      "plan_id": "plan-20260928-samsung-01",
+      "version": 2,
+      "status": "CLOSED_CONFIRMED",
+      "closure_report": "account-report-20260928-0005",
+      "path": "data/days/2026-09-28.md"
     }
   ],
   "app_investment_summary": {
@@ -1353,6 +1391,12 @@
       "source": "data/days/2026-09-28.md",
       "previous_status": "TODAY_ORDER_SUBMISSION_AND_FILL_NOT_REPORTED",
       "resolved_by_report": "account-report-20260928-0003"
+    },
+    {
+      "checked_at": "2026-09-28T09:50:56+09:00",
+      "source": "data/days/2026-09-28.md",
+      "prior_instruction": "Samsung_134_take_profit_limit_setup_LG_124_pending",
+      "superseded_by_report": "account-report-20260928-0005"
     }
   ],
   "latest_cash_and_investment_report": {
@@ -1487,7 +1531,7 @@
   "current_entry_plan": {
     "plan_id": "plan-20260928-samsung-01",
     "version": 2,
-    "status": "HOLD",
+    "status": "CLOSED_CONFIRMED",
     "code": "005930",
     "name": "삼성전자",
     "generated_at": "2026-09-28T08:57:50+09:00",
@@ -1536,7 +1580,7 @@
     "market": "KRX_regular_paper_account",
     "actual_order_submitted": true,
     "actual_fill_quantity": 134,
-    "execution_status": "PLANNED_TOTAL_FILLED_HOLDING_CONFIRMED",
+    "execution_status": "FULLY_LIQUIDATED_USER_CONFIRMED",
     "plan_is_not_order_or_fill": true,
     "orders_submitted_by_assistant": false,
     "entry_execution": "285,500원 지정가 총134주. 구v1주문이있으면먼저취소완료·취소중체결대사후134에서실제누적매수를뺀잔량만입력.134주추가가아님. 입력직전가격≤279,000또는≥298,500·제한·가설무효·발동청산이면입력없음.추격정정·시장가매수없음.",
@@ -1627,7 +1671,13 @@
     "execution_report": "account-report-20260928-0003",
     "remaining_planned_entry_quantity": 0,
     "take_profit_order_submitted": false,
-    "take_profit_order_report": "account-report-20260928-0004"
+    "take_profit_order_report": "account-report-20260928-0004",
+    "closure_report": "account-report-20260928-0005",
+    "actual_sell_quantity": 134,
+    "actual_remaining_holding_quantity": 0,
+    "actual_average_sell_price_krw": null,
+    "reentry_allowed_under_same_plan": false,
+    "take_profit_order_status": "NO_NEW_ORDER_POSITION_CLOSED"
   },
   "market_review_history": [
     {
@@ -2718,6 +2768,13 @@
       "recorded_at": "2026-09-28T09:50:56+09:00",
       "source": "data/days/2026-09-28.md",
       "changes": "LG 실제 미체결124주·주문가214,000원 확인(계획125주 대비1주 적음). 삼성 익절 매도주문 미입력 확인. 현금 미보고."
+    },
+    {
+      "report_id": "account-report-20260928-0005",
+      "previous_report": "account-report-20260928-0004",
+      "recorded_at": "2026-09-28T09:54:24+09:00",
+      "source": "data/days/2026-09-28.md",
+      "changes": "삼성전자134주전량시장가매도완료·현금매수가능95,149,466원확인. 평균매도가/비용미보고. LG기존미체결124주214,000원은보고0004출처유지,현재상태재확인없음."
     }
   ],
   "entry_plan_history": [
@@ -3492,6 +3549,14 @@
       "orderable_currentness": "PRE_TRADE_SNAPSHOT_NOT_CURRENT_AFTER_REPORTED_FILL",
       "superseded_by_report": "account-report-20260923-0005",
       "source": "data/days/2026-09-23.md"
+    },
+    {
+      "source_report": "account-report-20260928-0001",
+      "orderable_krw": 96094357,
+      "orderable_platform_label": "주문가능현금",
+      "recorded_at": "2026-09-28T08:42:54+09:00",
+      "source": "data/days/2026-09-28.md",
+      "superseded_by_report": "account-report-20260928-0005"
     }
   ],
   "latest_official_results_availability_report": {
@@ -3591,6 +3656,14 @@
       "source": "data/days/2026-09-28.md",
       "state": "FLAT_AND_NO_PENDING_ORDERS_AS_OF_REPORT_0001",
       "superseded_by_report": "account-report-20260928-0003"
+    },
+    {
+      "source_report": "account-report-20260928-0003",
+      "code": "005930",
+      "quantity": 134,
+      "average_price_krw": 283940,
+      "source": "data/days/2026-09-28.md",
+      "closed_by_report": "account-report-20260928-0005"
     }
   ],
   "holdings_report_history": [
@@ -3630,6 +3703,11 @@
       "source": "data/days/2026-09-28.md",
       "state": "FLAT_AND_NO_PENDING_ORDERS_AS_OF_REPORT_0001",
       "superseded_by_report": "account-report-20260928-0003"
+    },
+    {
+      "report_id": "account-report-20260928-0003",
+      "source": "data/days/2026-09-28.md",
+      "superseded_by_report": "account-report-20260928-0005"
     }
   ],
   "award_progress_history": [
@@ -3974,7 +4052,9 @@
     "target_account_gain_pct": 2.94482187960319,
     "further_gain_needed_if_both_targets_fill_and_cutoff_unchanged_pct": 10.5442321740707,
     "status": "SCENARIO_NOT_ACTUAL_ACCOUNT_OR_GUARANTEED_MAX_LOSS",
-    "reason_below_70_to_90": "LG126주면합산스트레스10%초과. 삼성전자135주면최초종목40%초과. 같은AI위험을분리하지않음."
+    "reason_below_70_to_90": "LG126주면합산스트레스10%초과. 삼성전자135주면최초종목40%초과. 같은AI위험을분리하지않음.",
+    "execution_currentness_note": "원래발행시나리오수치보존. 보고0005삼성전량청산후현재보유/활성계획으로재사용하지않으며active_plan_references우선.",
+    "execution_change_report": "account-report-20260928-0005"
   },
   "corporate_action_review": {
     "reviewed_at": "2026-09-28T09:41:23+09:00",
