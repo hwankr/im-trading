@@ -359,7 +359,7 @@
     "user_text": "10위9.35%, 내수익률-3.91%, 회전율262%. 최종10위 수상과 회전율500%초과 목표."
   },
   "last_received_report": "account-report-20260928-0002",
-  "updated_at": "2026-09-28T08:57:50+09:00",
+  "updated_at": "2026-09-28T09:06:36+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -460,8 +460,8 @@
     }
   ],
   "execution_follow_up": {
-    "checked_at": "2026-09-28T08:57:50+09:00",
-    "source": "official_results_and_approved_risk_amendment",
+    "checked_at": "2026-09-28T09:06:36+09:00",
+    "source": "scheduled_public_market_review_no_new_account_report",
     "latest_account_report": "account-report-20260928-0002",
     "latest_cash_report": "account-report-20260928-0001",
     "plan_reference": {
@@ -471,17 +471,17 @@
       "path": "data/days/2026-09-28.md",
       "plan_is_not_order_or_fill": true
     },
-    "exit_obligation_status": "NONE_FOR_CONFIRMED_FLAT_ACCOUNT",
-    "new_entry_status": "READY_FOR_20260928_0900_KRX_SESSION",
+    "exit_obligation_status": "NO_NEW_EXIT_TRIGGER_OBSERVED_ACTUAL_HOLDINGS_UNCONFIRMED_AFTER_PLAN_ISSUANCE",
+    "new_entry_status": "EXISTING_DATED_PLANS_VALID_NO_DUPLICATE_SUBMISSION",
     "known_held_quantity": 0,
     "remaining_buy_order_quantity": 0,
     "order_submission_and_fill_report_pending": true,
     "pending_question": null,
     "prior_semco_reconciliation_resolved_by": "account-report-20260928-0001",
     "next_position_review_at": "2026-09-28T09:30:00+09:00",
-    "next_guidance_slot": "2026-09-28T09:00:00+09:00",
+    "next_guidance_slot": "2026-09-28T09:30:00+09:00",
     "exit_deadline": "2026-09-30T15:10:00+09:00",
-    "instructions": "삼성전자v1을v2총134주로대체,LG125주신규. 기존삼성전자주문있으면취소완료·추가체결대사후누적매수를뺀잔량만입력. 실제앱주문/체결미확인.15시대사및9/30 15:10청산유지.",
+    "instructions": "미입력이면삼성285,500원총134주·LG214,000원총125주기존지정가.이미입력했다면중복없음.삼성구v1미체결은취소완료·체결대사후총134주에서체결을뺀잔량만입력.오늘14:30전입력종료·15시미체결취소/보유대사.가격·수량·익절·손절·9/30청산기한유지.",
     "orders_submitted_by_assistant": false,
     "latest_holdings_report": "account-report-20260928-0001",
     "plan_references": [
@@ -499,16 +499,19 @@
         "path": "data/days/2026-09-28.md",
         "plan_is_not_order_or_fill": true
       }
-    ]
+    ],
+    "snapshot_account_report": "account-report-20260928-0001",
+    "execution_reconfirmation_status": "TODAY_ORDER_SUBMISSION_AND_FILL_NOT_REPORTED"
   },
   "latest_market_review": {
-    "review_id": "review-20260928-risk-amendment",
-    "recorded_at": "2026-09-28T08:57:50+09:00",
-    "clock_verified_at": "2026-09-28T08:57:50+09:00",
-    "session": "USER_REQUESTED_PREMARKET",
+    "review_id": "review-20260928-0900",
+    "recorded_at": "2026-09-28T09:06:36+09:00",
+    "clock_verified_at": "2026-09-28T09:00:56+09:00",
+    "heartbeat_received_at": "2026-09-28T09:00:40.668+09:00",
+    "nominal_slot_at": "2026-09-28T09:00:00+09:00",
+    "session": "KRX_REGULAR",
     "market_analysis_performed": true,
-    "decision": "SAMSUNG_134_V2_AND_LG_125_V1",
-    "latest_user_report": "account-report-20260928-0002",
+    "decision": "KEEP_SAMSUNG_V2_AND_LG_V1_FIXED_LIMITS_NO_DUPLICATES",
     "plan_references": [
       {
         "plan_id": "plan-20260928-samsung-01",
@@ -525,33 +528,77 @@
         "plan_is_not_order_or_fill": true
       }
     ],
+    "quotes": [
+      {
+        "code": "005930",
+        "price_krw": 285000,
+        "observed_at": "2026-09-28T09:02:00+09:00",
+        "source": "https://stock.naver.com/domestic/stock/005930/notice",
+        "price_type": "public_KRX_regular_session_last",
+        "observation_time_precision": "displayed_minute_seconds_not_provided",
+        "bid_ask_verified": false
+      },
+      {
+        "code": "066570",
+        "price_krw": 219000,
+        "observed_at": "2026-09-28T09:02:00+09:00",
+        "source": "https://stock.naver.com/domestic/stock/066570/notice/124801366",
+        "price_type": "public_KRX_regular_session_last",
+        "observation_time_precision": "displayed_minute_seconds_not_provided",
+        "bid_ask_verified": false
+      },
+      {
+        "code": "009150",
+        "price_krw": 1560000,
+        "observed_at": "2026-09-28T09:04:00+09:00",
+        "source": "https://stock.naver.com/domestic/stock/009150/price",
+        "price_type": "public_KRX_regular_session_last",
+        "observation_time_precision": "displayed_minute_seconds_not_provided",
+        "bid_ask_verified": false
+      },
+      {
+        "code": "000660",
+        "price_krw": 1822000,
+        "observed_at": "2026-09-28T09:04:00+09:00",
+        "source": "https://stock.naver.com/domestic/stock/000660/price",
+        "price_type": "public_KRX_regular_session_last",
+        "observation_time_precision": "displayed_minute_seconds_not_provided",
+        "bid_ask_verified": false
+      }
+    ],
     "restriction_check": {
       "date": "2026-09-28",
-      "scope": "KIND_all_markets_default_selection",
-      "caution_records": 23,
-      "warning_records": 26,
-      "risk_records": 1,
-      "admin_records": 180,
-      "halt_records": 123,
+      "scope": "KIND_KOSPI_selected_all_relevant_pages",
+      "caution_records": 4,
+      "warning_records": 2,
+      "risk_records": 0,
+      "admin_records": 45,
+      "halt_records": 29,
       "all_pages_checked": true,
-      "page_size": 100,
-      "pages": {
-        "caution": 1,
-        "warning": 1,
-        "risk": 1,
-        "admin": 2,
-        "halt": 2
-      },
-      "selected_candidate_found": false
+      "candidates_matched": [],
+      "app_acceptance_directly_verified": false,
+      "checked_at": "2026-09-28T09:06:36+09:00",
+      "time_precision": "review_completion_clock_not_each_page_timestamp"
     },
-    "restriction_note": "오전08:31~08:38 후보대조한KIND전페이지결과재사용.삼성전자·LG해당없음.앱접수직접확인아님.",
-    "candidate_comparison": "LG새촉매·214,000원상한으로손익비개선후보조채택. 삼성전기고점인접·SK상대약세·효성정체·KT&G낮은기여로제외. 같은AI위험합산.",
-    "official_results_reused_from": "account-report-20260928-0002",
-    "new_account_report_received": true,
+    "disclosure_review": "삼성전자공시목록최신8/24·8/21로신규철회/손상근거미관측. LG최신9/7해명은베어로보틱스상장미확정·10/6재공시예정으로냉각사업계획의확정매출근거로사용하지않음. 검색에노출된오늘21:10기사는정보기준이후라제외.",
+    "candidate_comparison": "삼성전기09:04 1,560,000은최근고점1,548,000위로돌파해관심유지하나직전계획대비더좋은새가격·목표·스트레스조합은미확립. SK하이닉스1,822,000(-2.15%)으로상대약세. 삼성전자추세·LG냉각촉매를대체할근거부족하여두고정계획유지. AI스트레스예산을이미9.97%사용하는전량체결시나리오로추가주문없음.",
+    "triggered_exit_observed": false,
+    "account_report": "account-report-20260928-0001",
+    "official_results_report": "account-report-20260928-0002",
+    "new_account_report_received": false,
     "orders_submitted_by_assistant": false,
     "fills_inferred_from_prices": false,
     "missed_slots_replayed": false,
-    "next_nominal_review_at": "2026-09-28T09:00:00+09:00",
+    "next_nominal_review_at": "2026-09-28T09:30:00+09:00",
+    "sources": [
+      "https://stock.naver.com/domestic/stock/005930/notice",
+      "https://stock.naver.com/domestic/stock/066570/notice/124801366",
+      "https://stock.naver.com/domestic/stock/009150/price",
+      "https://stock.naver.com/domestic/stock/000660/price",
+      "https://kind.krx.co.kr/investwarn/investattentwarnrisky.do?method=investattentwarnriskyMain",
+      "https://kind.krx.co.kr/investwarn/adminissue.do?method=searchAdminIssueList",
+      "https://kind.krx.co.kr/investwarn/tradinghaltissue.do?method=searchTradingHaltIssueMain"
+    ],
     "journal_path": "data/days/2026-09-28.md"
   },
   "prior_portfolio_screen_summaries": [
@@ -2146,6 +2193,12 @@
       "recorded_at": "2026-09-28T08:42:54+09:00",
       "source": "data/days/2026-09-28.md",
       "decision": "BUY_SAMSUNG_FIXED_LIMIT_124_READY_V1_FROM_0900"
+    },
+    {
+      "review_id": "review-20260928-risk-amendment",
+      "recorded_at": "2026-09-28T08:57:50+09:00",
+      "decision": "SAMSUNG_134_V2_AND_LG_125_V1",
+      "source": "data/days/2026-09-28.md"
     }
   ],
   "resolved_planning_issues": [
