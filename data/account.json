@@ -586,7 +586,7 @@
     "reconciliation_status": "RECONCILED_REPORTED_FIELDS_PRIOR_LG_BUY_ORDER_LINEAGE_UNRESOLVED"
   },
   "last_received_report": "account-report-20260928-0010",
-  "updated_at": "2026-09-28T11:06:51+09:00",
+  "updated_at": "2026-09-28T11:35:20+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -695,8 +695,8 @@
     }
   ],
   "execution_follow_up": {
-    "checked_at": "2026-09-28T11:06:51+09:00",
-    "source": "scheduled_review_and_cancel_report",
+    "checked_at": "2026-09-28T11:35:20+09:00",
+    "source": "scheduled_public_review_no_new_account_report",
     "latest_account_report": "account-report-20260928-0010",
     "latest_cash_report": "account-report-20260928-0009",
     "latest_holdings_report": "account-report-20260928-0008",
@@ -738,26 +738,28 @@
     ],
     "execution_reconfirmation_status": "SEOJIN_633_PENDING_AND_LG_125_TAKE_PROFIT_PENDING_CONFIRMED",
     "exit_obligation_status": "NO_NEW_STOP_OR_TIME_EXIT_OBSERVED_LG_TAKE_PROFIT_SUBMITTED",
-    "last_price_review_reference": "review-20260928-1100",
+    "last_price_review_reference": "review-20260928-1130",
     "new_entry_status": "KEEP_EXISTING_633_FIXED_LIMIT_NO_NEW_OR_DUPLICATE_ENTRY",
-    "next_position_review_at": "2026-09-28T11:30:00+09:00",
-    "next_guidance_slot": "2026-09-28T11:30:00+09:00",
+    "next_position_review_at": "2026-09-28T12:00:00+09:00",
+    "next_guidance_slot": "2026-09-28T12:00:00+09:00",
     "mandatory_reconciliation_at": "2026-09-28T15:00:00+09:00",
     "exit_deadline": "2026-09-30T15:10:00+09:00",
     "orders_submitted_by_assistant": false,
     "instructions": "서진4주취소완료대사:남은633주35,500원지정가유지,추격/추가633주/반복4주취소없음. LG125주225,500원익절매도미체결유지. 실제손절관측시고정기준과기존매도취소완료·체결대사순서준수.9/28 14:30입력종료·15:00매수미체결취소대사·최종9/30 15:10유지.",
-    "known_held_quantity_scope": "LG125주보고0008;서진누적체결0·삼성잔량0기존보고유지"
+    "known_held_quantity_scope": "LG125주보고0008;서진누적체결0·삼성잔량0기존보고유지",
+    "actual_order_state_reconfirmed_this_review": false,
+    "actual_order_state_reference": "account-report-20260928-0010"
   },
   "latest_market_review": {
-    "review_id": "review-20260928-1100",
-    "recorded_at": "2026-09-28T11:06:51+09:00",
-    "clock_verified_at": "2026-09-28T11:00:51+09:00",
-    "heartbeat_received_at": "2026-09-28T11:00:42.524+09:00",
-    "nominal_slot_at": "2026-09-28T11:00:00+09:00",
+    "review_id": "review-20260928-1130",
+    "recorded_at": "2026-09-28T11:35:20+09:00",
+    "clock_verified_at": "2026-09-28T11:30:21+09:00",
+    "heartbeat_received_at": "2026-09-28T11:30:13.042+09:00",
+    "nominal_slot_at": "2026-09-28T11:30:00+09:00",
     "session": "KRX_REGULAR",
     "session_gate": "동일날짜확인거래일및공개KRX정규장표시;주말/휴장/세션밖아님",
     "market_analysis_performed": true,
-    "decision": "HOLD_LG_125_TAKE_PROFIT_AND_SEOJIN_633_PENDING_CANCEL_CONFIRMED",
+    "decision": "KEEP_EXISTING_LG_SELL_AND_SEOJIN_BUY_LIMITS_NO_NEW_ORDER",
     "plan_references": [
       {
         "plan_id": "plan-20260928-seojin-01",
@@ -781,7 +783,7 @@
       {
         "code": "066570",
         "price_krw": 215500,
-        "observed_at": "2026-09-28T11:01:00+09:00",
+        "observed_at": "2026-09-28T11:30:00+09:00",
         "observation_time_precision": "displayed_minute",
         "price_type": "public_KRX_regular_session_last",
         "source": "https://stock.naver.com/domestic/stock/066570/notice",
@@ -789,8 +791,8 @@
       },
       {
         "code": "178320",
-        "price_krw": 36450,
-        "observed_at": "2026-09-28T11:01:00+09:00",
+        "price_krw": 36100,
+        "observed_at": "2026-09-28T11:31:00+09:00",
         "observation_time_precision": "displayed_minute",
         "price_type": "public_KRX_regular_session_last",
         "source": "https://stock.naver.com/domestic/stock/178320/notice",
@@ -798,10 +800,10 @@
       }
     ],
     "triggered_exit_observed": false,
-    "trigger_evaluation_scope": "11:01실제공개관측두가격은고정손절/익절사이.회차사이가격경로·체결추정없음.",
+    "trigger_evaluation_scope": "LG11:30 215,500원·서진11:31 36,100원은각고정손절/익절사이. 서진매수상한근접을체결로추정하지않음;회차사이경로미관측.",
     "restriction_check": {
       "source": "KIND_all_markets_all_pages",
-      "observed_window_kst": "2026-09-28 11:01~11:06",
+      "observed_window_kst": "2026-09-28 11:31~11:35",
       "caution_rows": 23,
       "warning_rows": 26,
       "risk_rows": 1,
@@ -825,31 +827,42 @@
       "name": "한화솔루션",
       "status": "BLOCKED",
       "quote": {
-        "price_krw": 32500,
-        "observed_at": "2026-09-28T11:02:00+09:00",
+        "price_krw": 32300,
+        "observed_at": "2026-09-28T11:31:00+09:00",
         "price_type": "public_KRX_regular_session_last",
-        "source": "https://stock.naver.com/domestic/stock/009830/news"
+        "source": "https://stock.naver.com/domestic/stock/009830/price"
       },
-      "catalyst": "9/28언론의미국태양광모듈/폴리실리콘가격상승및관세수혜기대. 실제신규수주/확정실적과구분.",
-      "decision_reason": "강세는확인했지만급등후1~3일고정진입/익절/손절의비용후우위를뒷받침할가격근거미확립. 일부보도12월이후전망은대회종료밖;정책발효일공식검증전확정이벤트로사용하지않음.",
+      "catalyst": "미국태양광가격상승및12월이후정책수혜기대보도유지. 12월일정을대회내확정이벤트로사용하지않음.",
+      "screen_only_not_order_plan": {
+        "hypothetical_entry_krw": 32300,
+        "reference_today_high_krw": 33650,
+        "illustrative_invalidation_krw": 30300,
+        "illustrative_invalidation_basis": "표시당일시가30,400/저가30,350아래",
+        "gross_upside_pct": 4.179566563467496,
+        "gross_downside_pct": 6.19195046439629,
+        "gross_reward_risk": 0.675,
+        "today_row_not_final_close": true,
+        "krx_nxt_combined_header_range_not_intraday_path": true
+      },
+      "decision_reason": "현재가매수·당일고가재시험가정상방4.18%/하방6.19%·비용전손익비0.675. 더높은단기목표를뒷받침할근거미확립으로LG/서진교체없음. 낮은가격의별도신규계획도이번미발행;계좌정보만부족한PRICE_ONLY가아님.",
       "sources": [
-        "https://n.news.naver.com/article/003/0014216987",
-        "https://n.news.naver.com/article/001/0016339826",
-        "https://n.news.naver.com/article/277/0005820938"
+        "https://stock.naver.com/domestic/stock/009830/price",
+        "https://www.hankyung.com/article/2026092885526",
+        "https://www.mt.co.kr/stock/2026/09/28/2026092809333810994"
       ]
     },
-    "allocation_review": "계획총편입51.73%·동일이벤트스트레스9.9976%로추가동일이벤트편입여력없음. 한화솔루션교체/추가를검토했으나단기실행근거미확립으로기존계획유지.",
+    "allocation_review": "기존계획총편입51.73%·동일이벤트스트레스9.9976%유지. 동일이벤트추가여력없음;한화현재가매수비교손익비0.675로교체우위미확립. 목표기여부족을익절상향/의무매수로메우지않음.",
     "latest_account_report": "account-report-20260928-0010",
     "official_results_report": "account-report-20260928-0002",
-    "new_account_report_received": true,
+    "new_account_report_received": false,
     "orders_submitted_by_assistant": false,
     "fills_inferred_from_prices": false,
     "missed_slots_replayed": false,
-    "next_nominal_review_at": "2026-09-28T11:30:00+09:00",
+    "next_nominal_review_at": "2026-09-28T12:00:00+09:00",
     "journal_path": "data/days/2026-09-28.md",
     "sources": [
-      "https://v.daum.net/v/20260928074304018",
-      "https://zdnet.co.kr/view/?no=20260927090045"
+      "https://www.yna.co.kr/view/AKR20260928020800008?input=feed_police",
+      "https://www.hankyung.com/article/2026092885526"
     ]
   },
   "prior_portfolio_screen_summaries": [
@@ -1574,6 +1587,12 @@
       "source": "data/days/2026-09-28.md",
       "review_reference": "review-20260928-1030",
       "superseded_by": "review-20260928-1100"
+    },
+    {
+      "checked_at": "2026-09-28T11:06:51+09:00",
+      "source": "data/days/2026-09-28.md",
+      "review_reference": "review-20260928-1100",
+      "superseded_by": "review-20260928-1130"
     }
   ],
   "latest_cash_and_investment_report": {
@@ -2602,6 +2621,11 @@
       "review_id": "review-20260928-1030",
       "source": "data/days/2026-09-28.md",
       "superseded_by": "review-20260928-1100"
+    },
+    {
+      "review_id": "review-20260928-1100",
+      "source": "data/days/2026-09-28.md",
+      "superseded_by": "review-20260928-1130"
     }
   ],
   "resolved_planning_issues": [
@@ -4436,10 +4460,10 @@
     "note": "현금표시값차이와비용전매매손익차이81,931원을실제수수료·세금으로확정하지않음. LG미체결예약반영방식도미확인."
   },
   "latest_candidate_universe_review": {
-    "review_id": "review-20260928-1100",
-    "recorded_at": "2026-09-28T11:06:51+09:00",
+    "review_id": "review-20260928-1130",
+    "recorded_at": "2026-09-28T11:35:20+09:00",
     "source": "data/days/2026-09-28.md",
-    "decision": "KEEP_LG_AND_SEOJIN_HANWHA_SHORT_HORIZON_PRICE_BASIS_BLOCKED",
+    "decision": "KEEP_EXISTING_PLANS_HANWHA_CURRENT_PRICE_SCREEN_UNFAVORABLE",
     "candidate_codes": [
       "066570",
       "178320",
