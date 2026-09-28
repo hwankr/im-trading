@@ -53,16 +53,16 @@
   "first_execution_evidence": "Read-only native automations.last_run_at=1789520509195; first 10:00-slot review and public observations appended to private daily record. No account fill inferred.",
   "next_run_verified_at_kst": "2026-09-28T08:31:06+09:00",
   "last_completed_review": {
-    "review_id": "review-20260928-1030",
-    "recorded_at_kst": "2026-09-28T10:44:08+09:00",
-    "market_data_at_kst": "2026-09-28T10:32:00+09:00",
-    "decision": "PARTIAL_CANCEL_SEOJIN_4_KEEP_LG_125_FIXED_EXITS",
-    "latest_account_report": "account-report-20260928-0009",
+    "review_id": "review-20260928-1100",
+    "recorded_at_kst": "2026-09-28T11:06:51+09:00",
+    "market_data_at_kst": "2026-09-28T11:02:00+09:00",
+    "decision": "HOLD_LG_125_TAKE_PROFIT_AND_SEOJIN_633_PENDING_CANCEL_CONFIRMED",
+    "latest_account_report": "account-report-20260928-0010",
     "source": "data/days/2026-09-28.md",
     "market_analysis_performed": true,
-    "nominal_slot_at_kst": "2026-09-28T10:30:00+09:00",
-    "actual_clock_verified_at_kst": "2026-09-28T10:31:27+09:00",
-    "heartbeat_received_at_kst": "2026-09-28T10:31:12.079+09:00",
+    "nominal_slot_at_kst": "2026-09-28T11:00:00+09:00",
+    "actual_clock_verified_at_kst": "2026-09-28T11:00:51+09:00",
+    "heartbeat_received_at_kst": "2026-09-28T11:00:42.524+09:00",
     "new_account_report_received": true,
     "missed_slots_replayed": false
   },
@@ -300,6 +300,12 @@
       "recorded_at": "2026-09-28T10:19:59+09:00",
       "decision": "BUY_SEOJIN_637_FIXED_LIMIT_KEEP_LG_124_PENDING",
       "source": "data/days/2026-09-28.md"
+    },
+    {
+      "review_id": "review-20260928-1030",
+      "recorded_at": "2026-09-28T10:44:08+09:00",
+      "decision": "PARTIAL_CANCEL_SEOJIN_4_KEEP_LG_125_FIXED_EXITS",
+      "source": "data/days/2026-09-28.md"
     }
   ],
   "new_thread_first_execution": {
@@ -419,5 +425,5 @@
     "verification": "native_update_success_and_persisted_toml_policy_report_plan_target_schedule_checks",
     "new_schedule_execution_verified": false
   },
-  "next_nominal_slot_kst": "2026-09-28T11:00:00+09:00"
+  "next_nominal_slot_kst": "2026-09-28T11:30:00+09:00"
 }
