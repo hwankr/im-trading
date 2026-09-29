@@ -615,7 +615,15 @@
       },
       "submission_source_report": "account-report-20260928-0012"
     },
-    "latest_execution_report": "account-report-20260929-0005"
+    "latest_execution_report": "account-report-20260929-0005",
+    "latest_no_fill_change_report": {
+      "report_id": "account-report-20260929-0006",
+      "since_report": "account-report-20260929-0005",
+      "recorded_at": "2026-09-29T15:37:14+09:00",
+      "observed_at": null,
+      "new_buy_or_sell_fill_reported": false,
+      "order_cancellations_or_expiry_reconfirmed": false
+    }
   },
   "award_progress": {
     "observed_at": null,
@@ -702,7 +710,7 @@
     "confirmation_status": "planning_basis_reconciled_official_total_equity_unconfirmed",
     "note": "이번 신규 계획의 최초 운용 기준을 고정 기록한다. 공식 총자산 확인 시 출처를 대사하되 손실을 이유로 기준점을 낮추거나 초기화하지 않는다."
   },
-  "last_reconciled_report": "account-report-20260929-0005",
+  "last_reconciled_report": "account-report-20260929-0006",
   "unresolved": [
     "과거 인버스·두산퓨얼셀의 전량 매도 완료는 확인됐으나 종목별 체결가·정확한 시각·주문번호·실제 비용은 미확인.",
     "이전09:19 주문가능현금과 이후 현금 차이67,796원의 원인·공식 총자산 필드 매핑은 미확인. 최신 공식수익률은 과거 팝업과 별도 실제 보고로 확인.",
@@ -723,23 +731,20 @@
     "single_writer_thread_id": "01a0eb14-192a-7c01-928e-ac319a1b8e42"
   },
   "latest_report": {
-    "report_id": "account-report-20260929-0005",
+    "report_id": "account-report-20260929-0006",
     "source_type": "user_reported_official_app",
     "reported_on": "2026-09-29",
-    "recorded_at": "2026-09-29T15:08:37+09:00",
+    "recorded_at": "2026-09-29T15:37:14+09:00",
     "observed_at": null,
     "observation_time_precision": "exact_app_clock_not_provided",
-    "report_kind": "15h_reconciliation_and_LG_take_profit_confirmation",
-    "user_text_parts": [
-      "매수 미체결 없고, 매도된 거 하나도 없고 현금 똑같아",
-      "총 202주 접수됨"
-    ],
-    "second_answer_context": "LG225,500원익절매도총202주접수여부질문",
+    "report_kind": "closing_no_fill_change_confirmation",
+    "user_text": "체결 변화 없어",
     "reconciliation_status": "RECONCILED_REPORTED_FIELDS",
+    "scope": "15시 보고 이후 체결 변화 없음. 현금 재확인·장마감 총자산은 미제공.",
     "source": "data/days/2026-09-29.md"
   },
-  "last_received_report": "account-report-20260929-0005",
-  "updated_at": "2026-09-29T15:08:37+09:00",
+  "last_received_report": "account-report-20260929-0006",
+  "updated_at": "2026-09-29T15:37:14+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -863,7 +868,7 @@
   "execution_follow_up": {
     "checked_at": "2026-09-29T15:08:37+09:00",
     "source": "scheduled_public_market_review_reusing_user_reports",
-    "latest_account_report": "account-report-20260929-0005",
+    "latest_account_report": "account-report-20260929-0006",
     "latest_cash_report": "account-report-20260929-0005",
     "latest_holdings_report": "account-report-20260929-0004",
     "plan_reference": {
@@ -916,7 +921,7 @@
     "mandatory_reconciliation_at": "2026-09-29T15:00:00+09:00",
     "exit_deadline": "2026-09-30T15:10:00+09:00",
     "orders_submitted_by_assistant": false,
-    "instructions": "오늘 신규 주문 없음. 최신 보고의 LG202주225,500원·서진633주39,400원 익절 조건 유지. 15시 이후 체결·현금 변화와 장마감 총자산은 보고 대기이며 기존 보고를 종가·마감잔고로 바꾸지 않음. 다음 예약점검2026-09-30 09:00 KST에서 세션과 실제 보유·매도 미체결 재확인; 기존 주문을 중복 입력하지 않음. 손절207,000/33,400·manual_on_observation·최종2026-09-30 15:10 KST 유지.",
+    "instructions": "오늘 신규 주문 없음. 0006보고로15시 이후 체결 변화 없음 확인: LG202주·서진633주 보유 및 익절225,500/39,400원 계획 유지. 현금은0005의29,645,091원 재사용; 장마감 총자산 미제공. 다음 예약점검2026-09-30 09:00 KST에서 세션과 실제 보유·매도 미체결 재확인; 중복 입력 금지. 손절207,000/33,400·manual_on_observation·최종2026-09-30 15:10 KST 유지.",
     "known_held_quantity_scope": "LG202주는0004,서진633주는0001 마지막보고 합계. 매도가능잔량은 별도확인.",
     "actual_order_state_reconfirmed_this_review": false,
     "actual_order_state_reference": "account-report-20260929-0001",
@@ -934,7 +939,8 @@
     "take_profit_order_report_pending": false,
     "confirmed_additional_fill_quantity": 77,
     "latest_session_summary_reference": "review-20260929-1530",
-    "closing_account_report_pending": true
+    "closing_account_report_pending": true,
+    "closing_no_fill_change_report": "account-report-20260929-0006"
   },
   "latest_market_review": {
     "review_id": "review-20260929-1500",
@@ -3412,6 +3418,13 @@
       "recorded_at": "2026-09-29T15:08:37+09:00",
       "source": "data/days/2026-09-29.md",
       "changes": "매수미체결0·매도체결0·현금29,645,091원동일 및 LG익절225,500원총202주접수확인. 개별주문수미추정."
+    },
+    {
+      "report_id": "account-report-20260929-0006",
+      "previous_report": "account-report-20260929-0005",
+      "recorded_at": "2026-09-29T15:37:14+09:00",
+      "source": "data/days/2026-09-29.md",
+      "changes": "장마감 체결 변화 없음 확인. 보유·기존 익절 조건 유지; 현금은0005, 총자산은0003 원출처 유지."
     }
   ],
   "entry_plan_history": [
@@ -5021,13 +5034,15 @@
     "decision": "HOLD_DELAYED_CLOSING_SUMMARY_ONLY",
     "market_analysis_performed": false,
     "orders_instructed": false,
-    "latest_account_report": "account-report-20260929-0005",
+    "latest_account_report": "account-report-20260929-0006",
     "latest_holdings_report": "account-report-20260929-0004",
     "last_market_review_reference": "review-20260929-1500",
     "closing_account_report_pending": true,
     "closing_total_equity_krw": null,
     "new_fills_or_order_cancellations_inferred": false,
     "next_nominal_review_at": "2026-09-30T09:00:00+09:00",
-    "journal_path": "data/days/2026-09-29.md"
+    "journal_path": "data/days/2026-09-29.md",
+    "closing_no_fill_change_report": "account-report-20260929-0006",
+    "closing_reconciliation_status": "PARTIAL_NO_FILL_CHANGE_CONFIRMED_EQUITY_NOT_PROVIDED"
   }
 }
