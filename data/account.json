@@ -703,7 +703,7 @@
     "source": "data/days/2026-09-29.md"
   },
   "last_received_report": "account-report-20260929-0003",
-  "updated_at": "2026-09-29T13:42:02+09:00",
+  "updated_at": "2026-09-29T13:52:29+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -869,13 +869,13 @@
     "execution_reconfirmation_status": "KNOWN_HOLDINGS_ALL_OPEN_ORDERS_AND_CASH_RECONFIRMED",
     "exit_obligation_status": "NO_STOP_OR_TIME_EXIT_OBSERVED_BOTH_TAKE_PROFIT_ORDERS_SUBMITTED",
     "last_price_review_reference": "review-20260929-1330",
-    "new_entry_status": "NO_NEW_PLAN_SAME_SCENARIO_STRESS_HEADROOM_AND_CANDIDATE_SETUP_INSUFFICIENT",
+    "new_entry_status": "NO_NEW_PLAN_STRESS_GATE_REMOVED_CANDIDATE_REVIEW_PENDING",
     "next_position_review_at": "2026-09-29T14:00:00+09:00",
     "next_guidance_slot": "2026-09-29T14:00:00+09:00",
     "mandatory_reconciliation_at": "2026-09-28T15:00:00+09:00",
     "exit_deadline": "2026-09-30T15:10:00+09:00",
     "orders_submitted_by_assistant": false,
-    "instructions": "LG125주225,500원·서진633주39,400원 기존익절매도 유지·중복입력 없음. 손절207,000/33,400원 실제관측 또는9/30 15:10 도달시 매도가능잔량 확인→매도미체결 있으면 취소완료·취소중체결 대사→실제잔량시장가. 다음9/29 14:00,오늘15:00 보유·미체결 대사. 신규매수계획 없음.",
+    "instructions": "LG125주225,500원·서진633주39,400원 기존익절매도 유지·중복입력 없음. 손절207,000/33,400원 실제관측 또는9/30 15:10 도달시 매도가능잔량 확인→매도미체결 있으면 취소완료·취소중체결 대사→실제잔량시장가. 다음9/29 14:00,오늘15:00 보유·미체결 대사. 신규매수계획 없음. 9/29 스트레스 손실 한도 폐지: 이후 신규/수량수정 계획에서 과거 스트레스 여유를 진입·수량 제한에 쓰지 않음. 후보 실행근거는 별도 검토.",
     "known_held_quantity_scope": "9/29-0001에서 확인한 LG125주·서진633주 합계. 실제 매도가능수량은 청산 시 재확인.",
     "actual_order_state_reconfirmed_this_review": false,
     "actual_order_state_reference": "account-report-20260929-0001",
@@ -884,7 +884,9 @@
     "mandatory_reconciliation_report": "account-report-20260928-0013",
     "mandatory_reconciliation_recorded_at": "2026-09-28T15:06:43+09:00",
     "next_mandatory_reconciliation_at": "2026-09-29T15:00:00+09:00",
-    "prior_order_inventory_uncertainty_resolved_by_report": "account-report-20260929-0001"
+    "prior_order_inventory_uncertainty_resolved_by_report": "account-report-20260929-0001",
+    "policy_change_reference": "policy-20260929-stress-cap-removal",
+    "policy_change_recorded_at": "2026-09-29T13:52:29+09:00"
   },
   "latest_market_review": {
     "review_id": "review-20260929-1330",
@@ -4506,6 +4508,15 @@
       "text": "최종10위 수상과 회전율500%초과. 스트레스 예산10% 상향승인.",
       "numeric_amendment": "same_event_stress_5_to_10_percent_only",
       "other_limits_and_anchor_unchanged": true
+    },
+    {
+      "directive_id": "policy-20260929-stress-cap-removal",
+      "reported_on": "2026-09-29",
+      "recorded_at": "2026-09-29T13:52:29+09:00",
+      "text": "그냥 스트레스 제한을 없애자. 일단 수익률을 끌어올려서 하이리스크 하이리턴으로 10위권 진입이 먼저 같아.",
+      "numeric_amendment": "same_event_stress_loss_cap_removed_10_percent_to_none",
+      "other_limits_and_anchor_unchanged": true,
+      "source": "data/days/2026-09-29.md"
     }
   ],
   "prize_gap_calculation_history": [
@@ -4935,6 +4946,20 @@
     "recalculation_only_not_plan_amendment": true,
     "original_plan_values_preserved": true,
     "risk_anchor_reset": false,
-    "order_quantity_changed": false
+    "order_quantity_changed": false,
+    "stress_budget_gate_superseded_by_policy": "policy-20260929-stress-cap-removal",
+    "stress_budget_gate_superseded_at": "2026-09-29T13:52:29+09:00",
+    "historical_stress_headroom_is_current_entry_constraint": false
+  },
+  "current_risk_policy_reference": {
+    "policy_id": "policy-20260929-stress-cap-removal",
+    "recorded_at": "2026-09-29T13:52:29+09:00",
+    "source": "config/planning.json",
+    "same_event_stress_loss_budget_fraction": null,
+    "same_event_stress_loss_budget_enforced": false,
+    "stress_scenario_reporting_required": true,
+    "applies_to": "new_plans_or_explicitly_versioned_size_amendments_only",
+    "historical_stress_capacity_is_not_current_entry_constraint": true,
+    "existing_plan_prices_quantities_and_deadlines_unchanged": true
   }
 }

@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.8",
+  "schema_version": "1.9",
   "scope": "planning_policy_only_not_competition_rules",
   "mode": "prize_focused_fixed_price_flexible_entry_low_monitoring_plan",
   "timezone": "Asia/Seoul",
@@ -139,8 +139,8 @@
   "risk_policy": {
     "scope": "competition_operating_limits_not_competition_rules_or_guaranteed_loss_caps",
     "profile": "prize_focused_catch_up",
-    "updated_on": "2026-09-28",
-    "change_basis": "explicit_user_approval_to_raise_same_event_stress_5_to_10_percent",
+    "updated_on": "2026-09-29",
+    "change_basis": "explicit_user_directive_to_remove_same_event_stress_loss_cap",
     "applies_to": "new_plans_or_explicitly_versioned_size_amendments_only",
     "capital_basis": "latest_confirmed_account_equity_not_margin_order_limit",
     "maximum_total_initial_exposure_fraction": 0.9,
@@ -169,10 +169,9 @@
     "event_limits_are_inside_total_exposure_cap": true,
     "planned_stop_loss_budget_per_trade_fraction": 0.02,
     "aggregate_planned_stop_loss_budget_fraction": 0.05,
-    "same_event_stress_loss_budget_fraction": 0.1,
+    "same_event_stress_loss_budget_fraction": null,
     "fees_and_execution_buffer_required": true,
     "stress_move_requires_evidence_not_arbitrary_tightening": true,
-    "size_to_smallest_cash_exposure_stop_and_stress_limit": true,
     "pending_buys_count_at_full_remaining_quantity_for_risk": true,
     "correlated_names_are_not_independent_risk_budgets": true,
     "limits_are_caps_not_target_allocations": true,
@@ -180,7 +179,6 @@
     "leverage_default_for_pre_event_entries": false,
     "do_not_use_margin_or_leverage_to_manufacture_turnover": true,
     "material_limit_increase_requires_explicit_new_plan": true,
-    "actual_loss_can_exceed_stop_and_stress_budget": true,
     "include_passive_pending_order_and_earlier_intraday_fill_risk": true,
     "new_entry_pause": {
       "drawdown_fraction_from_profile_start_equity": 0.1,
@@ -194,15 +192,36 @@
       "automatic_reset": false
     },
     "stress_budget_amendment": {
-      "authorized_on": "2026-09-28",
-      "recorded_at": "2026-09-28T08:57:50+09:00",
-      "user_answer": "스트레스 예산 10%로 상향",
-      "previous_fraction": 0.05,
-      "current_fraction": 0.1,
+      "policy_id": "policy-20260929-stress-cap-removal",
+      "authorized_on": "2026-09-29",
+      "recorded_at": "2026-09-29T13:52:29+09:00",
+      "user_text": "그냥 스트레스 제한을 없애자. 일단 수익률을 끌어올려서 하이리스크 하이리턴으로 10위권 진입이 먼저 같아.",
+      "previous_fraction": 0.1,
+      "current_fraction": null,
+      "enforced": false,
+      "null_means": "no_stress_loss_cap_not_missing_data_or_zero_risk",
+      "stress_reporting": "informational_only_not_sizing_or_entry_gate",
       "other_numeric_limits_unchanged": true,
       "anchor_reset": false,
-      "applies_to": "new_plans_or_explicitly_versioned_amendments_only"
-    }
+      "applies_to": "new_plans_or_explicitly_versioned_size_amendments_only"
+    },
+    "same_event_stress_loss_budget_enforced": false,
+    "stress_scenario_reporting_required": true,
+    "stress_scenario_is_not_sizing_or_entry_gate": true,
+    "size_to_smallest_cash_exposure_and_planned_stop_limit": true,
+    "actual_loss_can_exceed_planned_stop_budget_and_stress_scenario": true,
+    "stress_budget_amendment_history": [
+      {
+        "authorized_on": "2026-09-28",
+        "recorded_at": "2026-09-28T08:57:50+09:00",
+        "user_answer": "스트레스 예산 10%로 상향",
+        "previous_fraction": 0.05,
+        "current_fraction": 0.1,
+        "other_numeric_limits_unchanged": true,
+        "anchor_reset": false,
+        "applies_to": "new_plans_or_explicitly_versioned_amendments_only"
+      }
+    ]
   },
   "entry": {
     "order_type": "limit",

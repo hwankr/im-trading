@@ -522,18 +522,35 @@
   "single_writer_handoff_publication_commit": "5685117a5ec1b6a77b51652d3506a53a27f5fee5",
   "single_writer_handoff_base_commit": "660c1c1f25c146c4d6905b84666c7a810072ae0b",
   "risk_policy_update": {
-    "authorized_on": "2026-09-28",
-    "recorded_at": "2026-09-28T08:57:50+09:00",
-    "same_event_stress_loss_budget_fraction": 0.1,
-    "previous_fraction": 0.05,
+    "policy_id": "policy-20260929-stress-cap-removal",
+    "authorized_on": "2026-09-29",
+    "recorded_at": "2026-09-29T13:52:29+09:00",
+    "same_event_stress_loss_budget_fraction": null,
+    "same_event_stress_loss_budget_enforced": false,
+    "previous_fraction": 0.1,
+    "stress_reporting_only": true,
     "other_limits_unchanged": true,
     "automation_prompt_update_verified": true,
     "automation_id": "30",
-    "verified_at": "2026-09-28T08:58:31+09:00",
-    "verification": "native_update_success_and_persisted_toml_policy_report_plan_target_schedule_checks",
-    "new_schedule_execution_verified": false
+    "new_schedule_execution_verified": false,
+    "verified_at": "2026-09-29T13:53:00+09:00",
+    "verification": "native_update_success_and_persisted_toml_prompt_schedule_target_status_comparison"
   },
   "next_nominal_slot_kst": "2026-09-29T14:00:00+09:00",
   "single_writer_handoff_prepared_at": "2026-09-29T11:53:49+09:00",
-  "single_writer_handoff_status": "ACCEPTED_SINGLE_WRITER"
+  "single_writer_handoff_status": "ACCEPTED_SINGLE_WRITER",
+  "risk_policy_update_history": [
+    {
+      "authorized_on": "2026-09-28",
+      "recorded_at": "2026-09-28T08:57:50+09:00",
+      "same_event_stress_loss_budget_fraction": 0.1,
+      "previous_fraction": 0.05,
+      "other_limits_unchanged": true,
+      "automation_prompt_update_verified": true,
+      "automation_id": "30",
+      "verified_at": "2026-09-28T08:58:31+09:00",
+      "verification": "native_update_success_and_persisted_toml_policy_report_plan_target_schedule_checks",
+      "new_schedule_execution_verified": false
+    }
+  ]
 }
