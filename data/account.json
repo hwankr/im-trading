@@ -911,12 +911,12 @@
     "exit_obligation_status": "NO_STOP_OR_TIME_EXIT_OBSERVED_LG_202_TAKE_PROFIT_CONFIRMED",
     "last_price_review_reference": "review-20260929-1500",
     "new_entry_status": "NO_NEW_ENTRY_AFTER_DEADLINE_BOTH_PLANNED_BUYS_COMPLETE",
-    "next_position_review_at": "2026-09-29T15:30:00+09:00",
-    "next_guidance_slot": "2026-09-29T15:30:00+09:00",
+    "next_position_review_at": "2026-09-30T09:00:00+09:00",
+    "next_guidance_slot": "2026-09-30T09:00:00+09:00",
     "mandatory_reconciliation_at": "2026-09-29T15:00:00+09:00",
     "exit_deadline": "2026-09-30T15:10:00+09:00",
     "orders_submitted_by_assistant": false,
-    "instructions": "LG202주225,500원·서진633주39,400원익절매도유지. 매수미체결0이므로취소없음·추가주문없음. 손절207,000/33,400실제관측 또는9/30 15:10도달시 매도가능잔량확인→매도미체결있으면취소완료·취소중체결대사→실제잔량청산. 다음9/29 15:30종료요약·계좌대사.",
+    "instructions": "오늘 신규 주문 없음. 최신 보고의 LG202주225,500원·서진633주39,400원 익절 조건 유지. 15시 이후 체결·현금 변화와 장마감 총자산은 보고 대기이며 기존 보고를 종가·마감잔고로 바꾸지 않음. 다음 예약점검2026-09-30 09:00 KST에서 세션과 실제 보유·매도 미체결 재확인; 기존 주문을 중복 입력하지 않음. 손절207,000/33,400·manual_on_observation·최종2026-09-30 15:10 KST 유지.",
     "known_held_quantity_scope": "LG202주는0004,서진633주는0001 마지막보고 합계. 매도가능잔량은 별도확인.",
     "actual_order_state_reconfirmed_this_review": false,
     "actual_order_state_reference": "account-report-20260929-0001",
@@ -924,7 +924,7 @@
     "mandatory_reconciliation_status": "REPORTED_SCOPE_RECONCILED_NO_BUY_PENDING_AND_NO_SELL_FILLS",
     "mandatory_reconciliation_report": "account-report-20260929-0005",
     "mandatory_reconciliation_recorded_at": "2026-09-29T15:08:37+09:00",
-    "next_mandatory_reconciliation_at": "2026-09-29T15:30:00+09:00",
+    "next_mandatory_reconciliation_at": "2026-09-30T09:00:00+09:00",
     "prior_order_inventory_uncertainty_resolved_by_report": "account-report-20260929-0001",
     "policy_change_reference": "policy-20260929-stress-cap-removal",
     "policy_change_recorded_at": "2026-09-29T13:52:29+09:00",
@@ -932,7 +932,9 @@
     "execution_report_requested_this_review": true,
     "first_review_account_reconciliation_pending": false,
     "take_profit_order_report_pending": false,
-    "confirmed_additional_fill_quantity": 77
+    "confirmed_additional_fill_quantity": 77,
+    "latest_session_summary_reference": "review-20260929-1530",
+    "closing_account_report_pending": true
   },
   "latest_market_review": {
     "review_id": "review-20260929-1500",
@@ -5009,5 +5011,23 @@
     "applies_to": "new_plans_or_explicitly_versioned_size_amendments_only",
     "historical_stress_capacity_is_not_current_entry_constraint": true,
     "existing_plan_prices_quantities_and_deadlines_unchanged": true
+  },
+  "latest_session_summary": {
+    "review_id": "review-20260929-1530",
+    "recorded_at": "2026-09-29T15:35:54+09:00",
+    "nominal_slot_at": "2026-09-29T15:30:00+09:00",
+    "heartbeat_received_at": "2026-09-29T15:31:05.404+09:00",
+    "clock_verified_at": "2026-09-29T15:31:35+09:00",
+    "decision": "HOLD_DELAYED_CLOSING_SUMMARY_ONLY",
+    "market_analysis_performed": false,
+    "orders_instructed": false,
+    "latest_account_report": "account-report-20260929-0005",
+    "latest_holdings_report": "account-report-20260929-0004",
+    "last_market_review_reference": "review-20260929-1500",
+    "closing_account_report_pending": true,
+    "closing_total_equity_krw": null,
+    "new_fills_or_order_cancellations_inferred": false,
+    "next_nominal_review_at": "2026-09-30T09:00:00+09:00",
+    "journal_path": "data/days/2026-09-29.md"
   }
 }

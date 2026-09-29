@@ -53,18 +53,18 @@
   "first_execution_evidence": "Read-only native automations.last_run_at=1789520509195; first 10:00-slot review and public observations appended to private daily record. No account fill inferred.",
   "next_run_verified_at_kst": null,
   "last_completed_review": {
-    "review_id": "review-20260929-1500",
-    "recorded_at_kst": "2026-09-29T15:08:37+09:00",
-    "decision": "HOLD_REPORTED_15H_RECONCILIATION_COMPLETE",
+    "review_id": "review-20260929-1530",
+    "recorded_at_kst": "2026-09-29T15:35:54+09:00",
+    "decision": "HOLD_DELAYED_CLOSING_SUMMARY_ONLY",
     "latest_account_report": "account-report-20260929-0005",
     "source": "data/days/2026-09-29.md",
-    "market_analysis_performed": true,
-    "nominal_slot_at_kst": "2026-09-29T15:00:00+09:00",
-    "actual_clock_verified_at_kst": "2026-09-29T15:00:46+09:00",
-    "heartbeat_received_at_kst": "2026-09-29T15:00:30.711+09:00",
-    "new_account_report_received": true,
+    "market_analysis_performed": false,
+    "nominal_slot_at_kst": "2026-09-29T15:30:00+09:00",
+    "actual_clock_verified_at_kst": "2026-09-29T15:31:35+09:00",
+    "heartbeat_received_at_kst": "2026-09-29T15:31:05.404+09:00",
+    "new_account_report_received": false,
     "missed_slots_replayed": false,
-    "first_review_account_reconciliation_pending": false
+    "closing_account_report_pending": true
   },
   "record_visibility": "public_paper_trading_records_user_authorized_20260916",
   "publication_policy": "docs/record-publication.md",
@@ -407,6 +407,12 @@
       "recorded_at_kst": "2026-09-29T14:36:58+09:00",
       "source": "data/days/2026-09-29.md",
       "superseded_by": "review-20260929-1500"
+    },
+    {
+      "review_id": "review-20260929-1500",
+      "recorded_at_kst": "2026-09-29T15:08:37+09:00",
+      "source": "data/days/2026-09-29.md",
+      "superseded_by": "review-20260929-1530"
     }
   ],
   "new_thread_first_execution": {
@@ -555,7 +561,7 @@
     "verified_at": "2026-09-29T13:53:00+09:00",
     "verification": "native_update_success_and_persisted_toml_prompt_schedule_target_status_comparison"
   },
-  "next_nominal_slot_kst": "2026-09-29T15:30:00+09:00",
+  "next_nominal_slot_kst": "2026-09-30T09:00:00+09:00",
   "single_writer_handoff_prepared_at": "2026-09-29T11:53:49+09:00",
   "single_writer_handoff_status": "ACCEPTED_SINGLE_WRITER",
   "risk_policy_update_history": [
