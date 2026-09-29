@@ -728,7 +728,9 @@
     "daily_history_directory": "data/days",
     "automatic_account_access": false,
     "public_records": true,
-    "single_writer_thread_id": "01a0eb14-192a-7c01-928e-ac319a1b8e42"
+    "single_writer_thread_id": "01a0ef88-1397-79c2-84d7-1deb6466b467",
+    "handoff_authorized_on": "2026-09-30",
+    "handoff_recorded_at": "2026-09-30T08:39:12+09:00"
   },
   "latest_report": {
     "report_id": "account-report-20260929-0006",

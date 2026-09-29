@@ -14,18 +14,18 @@
   "current_automation_state": "ACTIVE",
   "automation_id": "30",
   "target_workspace": ".",
-  "source_thread": "01a0eb14-192a-7c01-928e-ac319a1b8e42",
+  "source_thread": "01a0ef88-1397-79c2-84d7-1deb6466b467",
   "automatic_orders": false,
   "brokerage_api_or_app_control": false,
   "multi_agent": false,
   "existing_price_or_exit_mode_changed": false,
-  "note": "2026-09-29 사용자요청으로 기존ID30을 새 채팅으로 이전. 이전 채팅은 이 인계기록 게시 후 계좌·일지 작성을 종료하고 새 채팅이 단일 작성자로 운용한다. 별도 중복 예약 없음.",
+  "note": "2026-09-30 사용자 요청으로 기존 예약30을 새 채팅으로 이전. 이전 채팅은 이 인계 기록의 저장·게시 시도 후 계좌·일지 작성을 종료하며 새 채팅이 단일 작성자로 장전 준비와 매회 안내를 이어간다. 중복 예약 없음.",
   "automation_name": "모의투자 30분 행동 안내",
   "automation_kind": "heartbeat",
-  "target_thread_id": "01a0eb14-192a-7c01-928e-ac319a1b8e42",
-  "registration_verified_at": "2026-09-29T11:53:49+09:00",
-  "registration_evidence": "Native automation30 update succeeded; persisted TOML confirmed target, ACTIVE, unchanged schedule/end and refreshed account handoff. One active trading automation. Actual next run and notification delivery not verified.",
-  "first_expected_slot_kst": "2026-09-29T12:00:00+09:00",
+  "target_thread_id": "01a0ef88-1397-79c2-84d7-1deb6466b467",
+  "registration_verified_at": "2026-09-30T08:39:12+09:00",
+  "registration_evidence": "Native automation30 update succeeded; persisted TOML confirmed new target, ACTIVE, unchanged schedule/end and LG202/v2 handoff. Future runs and notification delivery not verified.",
+  "first_expected_slot_kst": "2026-09-30T09:00:00+09:00",
   "expires_at_kst": "2026-10-08T15:30:00+09:00",
   "first_execution_verified": true,
   "host_timezone_verified": "Korea Standard Time (UTC+09:00)",
@@ -152,10 +152,26 @@
       "notification_policy": null,
       "execution_verified": false,
       "note": "기존 거래일09:00~15:30 30분 간격·2026-10-08 15:30 종료 유지. 도구 변경 성공 및 저장된 대상·일정·ACTIVE·최신 계좌문구 확인. 새 대상 정시 실행과 알림 도착은 아직 미확인."
+    },
+    {
+      "authorized_on": "2026-09-30",
+      "verified_at": "2026-09-30T08:39:12+09:00",
+      "previous_target_thread_id": "01a0eb14-192a-7c01-928e-ac319a1b8e42",
+      "target_thread_id": "01a0ef88-1397-79c2-84d7-1deb6466b467",
+      "existing_automation_reused": true,
+      "automation_id": "30",
+      "native_update_verified": true,
+      "persisted_toml_verified": true,
+      "read_only_scheduler_state_verified": false,
+      "nominal_first_slot_kst": "2026-09-30T09:00:00+09:00",
+      "actual_next_run_at_kst": null,
+      "notification_policy": null,
+      "execution_verified": false,
+      "note": "기존 거래일09:00~15:30 30분 간격·2026-10-08 15:30 종료 유지. 새 채팅 장전조사 시작 확인; 정시 예약실행·알림도착은 미확인. GitHub fetch 연결 실패로 원격 최신성은 미확인."
     }
   ],
-  "single_writer_thread_id": "01a0eb14-192a-7c01-928e-ac319a1b8e42",
-  "new_thread_first_execution_verified": true,
+  "single_writer_thread_id": "01a0ef88-1397-79c2-84d7-1deb6466b467",
+  "new_thread_first_execution_verified": false,
   "completed_review_history": [
     {
       "review_id": "review-20260916-1230",
@@ -417,21 +433,11 @@
     }
   ],
   "new_thread_first_execution": {
-    "execution_verified": true,
-    "nominal_first_slot_kst": "2026-09-29T12:00:00+09:00",
-    "persisted_next_run_at_kst": null,
+    "target_thread_id": "01a0ef88-1397-79c2-84d7-1deb6466b467",
+    "execution_verified": false,
+    "nominal_first_slot_kst": "2026-09-30T09:00:00+09:00",
     "notification_delivery_verified": false,
-    "target_thread_id": "01a0eb14-192a-7c01-928e-ac319a1b8e42",
-    "heartbeat_received_at_kst": "2026-09-29T11:53:57.922+09:00",
-    "clock_verified_at_kst": "2026-09-29T11:54:06+09:00",
-    "decision": "SKIPPED_DUPLICATE_EFFECTIVE_REVIEW_WINDOW",
-    "completed_review_reference": "review-20260929-1136",
-    "first_market_review_completed": true,
-    "market_analysis_performed": false,
-    "evidence": "첫11:53:57 호출은 중복회차로건너뜀. 이후12:00:57.966 호출에서 실제12:01 시작한 정규회차 분석과 기록 완료. 사용자 알림 도착은 미확인.",
-    "journal_path": "data/days/2026-09-29.md",
-    "first_market_review_id": "review-20260929-1200",
-    "first_market_review_recorded_at_kst": "2026-09-29T12:07:27+09:00"
+    "note": "사용자 요청 장전분석의 시작은 확인했으나 새 대상의 예약 회차 실행은 아직 미확인."
   },
   "last_heartbeat_gate": {
     "gate_id": "heartbeat-gate-20260928-1509",
@@ -546,7 +552,7 @@
   },
   "single_writer_handoff_accepted_at": "2026-09-29T11:54:40+09:00",
   "single_writer_handoff_publication_commit": "5685117a5ec1b6a77b51652d3506a53a27f5fee5",
-  "single_writer_handoff_base_commit": "660c1c1f25c146c4d6905b84666c7a810072ae0b",
+  "single_writer_handoff_base_commit": "61271897b633957be72e6b6c7e595b1c41129ffd",
   "risk_policy_update": {
     "policy_id": "policy-20260929-stress-cap-removal",
     "authorized_on": "2026-09-29",
@@ -563,8 +569,8 @@
     "verification": "native_update_success_and_persisted_toml_prompt_schedule_target_status_comparison"
   },
   "next_nominal_slot_kst": "2026-09-30T09:00:00+09:00",
-  "single_writer_handoff_prepared_at": "2026-09-29T11:53:49+09:00",
-  "single_writer_handoff_status": "ACCEPTED_SINGLE_WRITER",
+  "single_writer_handoff_prepared_at": "2026-09-30T08:39:12+09:00",
+  "single_writer_handoff_status": "RELEASED_TO_NEW_THREAD",
   "risk_policy_update_history": [
     {
       "authorized_on": "2026-09-28",
@@ -587,5 +593,24 @@
     "automation_prompt_update_verified": true,
     "verified_at": "2026-09-29T13:56:20+09:00",
     "verification": "native_update_success_and_persisted_prompt_schedule_target_comparison"
-  }
+  },
+  "new_thread_first_execution_history": [
+    {
+      "execution_verified": true,
+      "nominal_first_slot_kst": "2026-09-29T12:00:00+09:00",
+      "persisted_next_run_at_kst": null,
+      "notification_delivery_verified": false,
+      "target_thread_id": "01a0eb14-192a-7c01-928e-ac319a1b8e42",
+      "heartbeat_received_at_kst": "2026-09-29T11:53:57.922+09:00",
+      "clock_verified_at_kst": "2026-09-29T11:54:06+09:00",
+      "decision": "SKIPPED_DUPLICATE_EFFECTIVE_REVIEW_WINDOW",
+      "completed_review_reference": "review-20260929-1136",
+      "first_market_review_completed": true,
+      "market_analysis_performed": false,
+      "evidence": "첫11:53:57 호출은 중복회차로건너뜀. 이후12:00:57.966 호출에서 실제12:01 시작한 정규회차 분석과 기록 완료. 사용자 알림 도착은 미확인.",
+      "journal_path": "data/days/2026-09-29.md",
+      "first_market_review_id": "review-20260929-1200",
+      "first_market_review_recorded_at_kst": "2026-09-29T12:07:27+09:00"
+    }
+  ]
 }
