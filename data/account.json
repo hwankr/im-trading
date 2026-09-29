@@ -688,7 +688,7 @@
     "daily_history_directory": "data/days",
     "automatic_account_access": false,
     "public_records": true,
-    "single_writer_thread_id": "01a0e532-76a8-7b01-a924-c5352c73e678"
+    "single_writer_thread_id": "01a0eb14-192a-7c01-928e-ac319a1b8e42"
   },
   "latest_report": {
     "report_id": "account-report-20260929-0002",
@@ -703,7 +703,7 @@
     "source": "data/days/2026-09-29.md"
   },
   "last_received_report": "account-report-20260929-0002",
-  "updated_at": "2026-09-29T11:49:45+09:00",
+  "updated_at": "2026-09-29T11:53:49+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -747,9 +747,9 @@
     "operation_record": "data/operation-mode.json",
     "automation_id": "30",
     "registration_status": "ACTIVE",
-    "registration_verified_at": "2026-09-28T08:31:06+09:00",
-    "target_thread_id": "01a0e532-76a8-7b01-a924-c5352c73e678",
-    "transferred_on": "2026-09-28",
+    "registration_verified_at": "2026-09-29T11:53:49+09:00",
+    "target_thread_id": "01a0eb14-192a-7c01-928e-ac319a1b8e42",
+    "transferred_on": "2026-09-29",
     "transfer_record": "data/operation-mode.json"
   },
   "latest_holdings_report": {
@@ -4533,6 +4533,14 @@
       "registration_verified_at": "2026-09-23T08:43:34+09:00",
       "transferred_on": "2026-09-23",
       "transfer_record": "data/operation-mode.json"
+    },
+    {
+      "automation_id": "30",
+      "target_thread_id": "01a0e532-76a8-7b01-a924-c5352c73e678",
+      "transferred_on": "2026-09-28",
+      "registration_verified_at": "2026-09-28T08:31:06+09:00",
+      "superseded_by_transfer_on": "2026-09-29",
+      "source": "data/operation-mode.json"
     }
   ],
   "trade_cash_reconciliation": {
