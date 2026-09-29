@@ -945,20 +945,16 @@
     "closing_no_fill_change_report": "account-report-20260929-0006"
   },
   "latest_market_review": {
-    "review_id": "review-20260929-1500",
-    "recorded_at": "2026-09-29T15:08:37+09:00",
-    "clock_verified_at": "2026-09-29T15:00:46+09:00",
-    "heartbeat_received_at": "2026-09-29T15:00:30.711+09:00",
-    "nominal_slot_at": "2026-09-29T15:00:00+09:00",
-    "session": "KRX_REGULAR",
-    "decision": "HOLD_REPORTED_15H_RECONCILIATION_COMPLETE",
-    "journal_path": "data/days/2026-09-29.md",
-    "new_account_report_received": true,
-    "latest_account_report": "account-report-20260929-0005",
+    "review_id": "review-20260930-preopen",
+    "recorded_at": "2026-09-30T08:40:33+09:00",
+    "clock_verified_at": "2026-09-30T08:37:55+09:00",
+    "session": "EXPLICITLY_REQUESTED_PREMARKET_ANALYSIS",
+    "decision": "HOLD_NO_NEW_ENTRY_PENDING_CANDIDATE_PRICE_AND_ELIGIBILITY_VALIDATION",
+    "journal_path": "data/days/2026-09-30.md",
+    "latest_account_report": "account-report-20260929-0006",
     "new_exit_trigger_observed": false,
-    "next_nominal_review_at": "2026-09-29T15:30:00+09:00",
-    "fills_inferred_from_prices": false,
-    "restriction_note": "KIND주의/경고/위험/관리/정지재대조완료,정리매매이번DNS실패·web대체실제행없음. 마지막성공14:33:53표시를이번검증으로승격하지않음."
+    "next_nominal_review_at": "2026-09-30T09:00:00+09:00",
+    "fills_inferred_from_prices": false
   },
   "prior_portfolio_screen_summaries": [
     {

@@ -53,19 +53,9 @@
   "first_execution_evidence": "Read-only native automations.last_run_at=1789520509195; first 10:00-slot review and public observations appended to private daily record. No account fill inferred.",
   "next_run_verified_at_kst": null,
   "last_completed_review": {
-    "review_id": "review-20260929-1530",
-    "recorded_at_kst": "2026-09-29T15:35:54+09:00",
-    "decision": "HOLD_DELAYED_CLOSING_SUMMARY_ONLY",
-    "latest_account_report": "account-report-20260929-0006",
-    "source": "data/days/2026-09-29.md",
-    "market_analysis_performed": false,
-    "nominal_slot_at_kst": "2026-09-29T15:30:00+09:00",
-    "actual_clock_verified_at_kst": "2026-09-29T15:31:35+09:00",
-    "heartbeat_received_at_kst": "2026-09-29T15:31:05.404+09:00",
-    "new_account_report_received": true,
-    "missed_slots_replayed": false,
-    "closing_account_report_pending": true,
-    "closing_report_recorded_at_kst": "2026-09-29T15:37:14+09:00"
+    "review_id": "review-20260930-preopen",
+    "recorded_at": "2026-09-30T08:40:33+09:00",
+    "journal_path": "data/days/2026-09-30.md"
   },
   "record_visibility": "public_paper_trading_records_user_authorized_20260916",
   "publication_policy": "docs/record-publication.md",
@@ -502,12 +492,11 @@
     }
   ],
   "last_user_requested_analysis": {
-    "review_id": "review-20260928-universe-expansion",
-    "recorded_at_kst": "2026-09-28T10:00:50+09:00",
-    "source": "data/days/2026-09-28.md",
-    "latest_account_report": "account-report-20260928-0006",
-    "is_scheduled_slot": false,
-    "decision": "EXPAND_UNIVERSE_BEYOND_LARGE_CAPS_KEEP_LG_EXISTING_PENDING_NO_NEW_PLAN"
+    "review_id": "review-20260930-preopen",
+    "completed_at": "2026-09-30T08:40:33+09:00",
+    "kind": "authorized_premarket_preparation",
+    "journal_path": "data/days/2026-09-30.md",
+    "scheduled_slot": false
   },
   "latest_context_gate": {
     "gate_id": "context-gate-20260925-1951",
@@ -550,7 +539,7 @@
     "review_id": "review-20260928-universe-expansion",
     "journal_path": "data/days/2026-09-28.md"
   },
-  "single_writer_handoff_accepted_at": "2026-09-29T11:54:40+09:00",
+  "single_writer_handoff_accepted_at": "2026-09-30T08:40:33+09:00",
   "single_writer_handoff_publication_commit": "5685117a5ec1b6a77b51652d3506a53a27f5fee5",
   "single_writer_handoff_base_commit": "61271897b633957be72e6b6c7e595b1c41129ffd",
   "risk_policy_update": {
@@ -570,7 +559,7 @@
   },
   "next_nominal_slot_kst": "2026-09-30T09:00:00+09:00",
   "single_writer_handoff_prepared_at": "2026-09-30T08:39:12+09:00",
-  "single_writer_handoff_status": "RELEASED_TO_NEW_THREAD",
+  "single_writer_handoff_status": "ACCEPTED_SINGLE_WRITER",
   "risk_policy_update_history": [
     {
       "authorized_on": "2026-09-28",
