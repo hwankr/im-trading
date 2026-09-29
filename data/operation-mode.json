@@ -156,7 +156,7 @@
     }
   ],
   "single_writer_thread_id": "01a0eb14-192a-7c01-928e-ac319a1b8e42",
-  "new_thread_first_execution_verified": false,
+  "new_thread_first_execution_verified": true,
   "completed_review_history": [
     {
       "review_id": "review-20260916-1230",
@@ -370,12 +370,19 @@
     }
   ],
   "new_thread_first_execution": {
-    "execution_verified": false,
+    "execution_verified": true,
     "nominal_first_slot_kst": "2026-09-29T12:00:00+09:00",
     "persisted_next_run_at_kst": null,
     "notification_delivery_verified": false,
     "target_thread_id": "01a0eb14-192a-7c01-928e-ac319a1b8e42",
-    "evidence": "예약 대상 이전 및 인계만 확인. 새 채팅의 첫 heartbeat는 아직 확인하지 않음."
+    "heartbeat_received_at_kst": "2026-09-29T11:53:57.922+09:00",
+    "clock_verified_at_kst": "2026-09-29T11:54:06+09:00",
+    "decision": "SKIPPED_DUPLICATE_EFFECTIVE_REVIEW_WINDOW",
+    "completed_review_reference": "review-20260929-1136",
+    "first_market_review_completed": false,
+    "market_analysis_performed": false,
+    "evidence": "새 대상에서 예약30 수신·실제시각 검증·중복 회차 건너뛰기 완료. 11:30 회차는 기존11:36 검토로 처리되어 시장 재분석 없음. 사용자 알림 도착과12:00 회차 실행은 미확인.",
+    "journal_path": "data/days/2026-09-29.md"
   },
   "last_heartbeat_gate": {
     "gate_id": "heartbeat-gate-20260928-1509",
@@ -488,7 +495,8 @@
     "review_id": "review-20260928-universe-expansion",
     "journal_path": "data/days/2026-09-28.md"
   },
-  "single_writer_handoff_accepted_at": null,
+  "single_writer_handoff_accepted_at": "2026-09-29T11:54:40+09:00",
+  "single_writer_handoff_publication_commit": "5685117a5ec1b6a77b51652d3506a53a27f5fee5",
   "single_writer_handoff_base_commit": "660c1c1f25c146c4d6905b84666c7a810072ae0b",
   "risk_policy_update": {
     "authorized_on": "2026-09-28",
@@ -504,5 +512,5 @@
   },
   "next_nominal_slot_kst": "2026-09-29T12:00:00+09:00",
   "single_writer_handoff_prepared_at": "2026-09-29T11:53:49+09:00",
-  "single_writer_handoff_status": "TRANSFERRED_AWAITING_RECIPIENT_ACK_AFTER_PUBLICATION"
+  "single_writer_handoff_status": "ACCEPTED_SINGLE_WRITER"
 }
