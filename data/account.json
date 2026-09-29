@@ -703,7 +703,7 @@
     "source": "data/days/2026-09-29.md"
   },
   "last_received_report": "account-report-20260929-0002",
-  "updated_at": "2026-09-29T12:37:56+09:00",
+  "updated_at": "2026-09-29T13:06:48+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -827,7 +827,7 @@
     }
   ],
   "execution_follow_up": {
-    "checked_at": "2026-09-29T12:37:56+09:00",
+    "checked_at": "2026-09-29T13:06:48+09:00",
     "source": "scheduled_public_market_review_reusing_user_reports",
     "latest_account_report": "account-report-20260929-0002",
     "latest_cash_report": "account-report-20260929-0001",
@@ -872,14 +872,14 @@
     ],
     "execution_reconfirmation_status": "KNOWN_HOLDINGS_ALL_OPEN_ORDERS_AND_CASH_RECONFIRMED",
     "exit_obligation_status": "NO_STOP_OR_TIME_EXIT_OBSERVED_BOTH_TAKE_PROFIT_ORDERS_SUBMITTED",
-    "last_price_review_reference": "review-20260929-1230",
+    "last_price_review_reference": "review-20260929-1300",
     "new_entry_status": "NO_NEW_PLAN_CANDIDATE_THESIS_OR_PRICE_SETUP_INSUFFICIENT_CURRENT_EQUITY_UNREPORTED",
-    "next_position_review_at": "2026-09-29T13:00:00+09:00",
-    "next_guidance_slot": "2026-09-29T13:00:00+09:00",
+    "next_position_review_at": "2026-09-29T13:30:00+09:00",
+    "next_guidance_slot": "2026-09-29T13:30:00+09:00",
     "mandatory_reconciliation_at": "2026-09-28T15:00:00+09:00",
     "exit_deadline": "2026-09-30T15:10:00+09:00",
     "orders_submitted_by_assistant": false,
-    "instructions": "LG125주225,500원·서진633주39,400원 기존익절매도 유지·중복입력 없음. 손절207,000/33,400원 실제관측 또는9/30 15:10 도달시 매도가능잔량 확인→매도미체결 있으면 취소완료·취소중체결 대사→실제잔량시장가. 다음9/29 13:00,오늘15:00 보유·미체결 대사. 신규매수계획 없음.",
+    "instructions": "LG125주225,500원·서진633주39,400원 기존익절매도 유지·중복입력 없음. 손절207,000/33,400원 실제관측 또는9/30 15:10 도달시 매도가능잔량 확인→매도미체결 있으면 취소완료·취소중체결 대사→실제잔량시장가. 다음9/29 13:30,오늘15:00 보유·미체결 대사. 신규매수계획 없음.",
     "known_held_quantity_scope": "9/29-0001에서 확인한 LG125주·서진633주 합계. 실제 매도가능수량은 청산 시 재확인.",
     "actual_order_state_reconfirmed_this_review": false,
     "actual_order_state_reference": "account-report-20260929-0001",
@@ -891,30 +891,30 @@
     "prior_order_inventory_uncertainty_resolved_by_report": "account-report-20260929-0001"
   },
   "latest_market_review": {
-    "review_id": "review-20260929-1230",
-    "recorded_at": "2026-09-29T12:37:56+09:00",
-    "clock_verified_at": "2026-09-29T12:31:12+09:00",
-    "heartbeat_received_at": "2026-09-29T12:30:57.953+09:00",
-    "nominal_slot_at": "2026-09-29T12:30:00+09:00",
-    "effective_review_window_at": "2026-09-29T12:30:00+09:00",
+    "review_id": "review-20260929-1300",
+    "recorded_at": "2026-09-29T13:06:48+09:00",
+    "clock_verified_at": "2026-09-29T13:00:43+09:00",
+    "heartbeat_received_at": "2026-09-29T13:00:28.129+09:00",
+    "nominal_slot_at": "2026-09-29T13:00:00+09:00",
+    "effective_review_window_at": "2026-09-29T13:00:00+09:00",
     "session": "KRX_REGULAR",
-    "session_gate": "9/29 12:31 KRX 정규장 표시·실제 가격과 모의계좌 기존 허용 세션 대조.",
+    "session_gate": "9/29 실제13:00 시각·13:01 공개KRX 정규장 표시와 모의계좌 기존 허용 세션 대조.",
     "market_analysis_performed": true,
     "decision": "HOLD_EXISTING_POSITIONS_NEW_CANDIDATES_NOT_SELECTED_AFTER_RESTRICTION_RECHECK",
     "plan_reference_source": "active_plan_references",
     "quotes": [
       {
         "code": "066570",
-        "price_krw": 213000,
+        "price_krw": 212500,
         "market": "KRX",
-        "observed_at": "2026-09-29T12:31:00+09:00",
+        "observed_at": "2026-09-29T13:01:00+09:00",
         "source": "https://stock.naver.com/domestic/stock/066570/notice"
       },
       {
         "code": "178320",
-        "price_krw": 36400,
+        "price_krw": 36200,
         "market": "KRX",
-        "observed_at": "2026-09-29T12:31:00+09:00",
+        "observed_at": "2026-09-29T13:01:00+09:00",
         "source": "https://stock.naver.com/domestic/stock/178320/notice"
       }
     ],
@@ -922,7 +922,7 @@
     "trigger_evaluation_scope": "각 실제 관측 가격은 기존 손절/익절 사이이며9/30 15:10 미도래. 회차 사이 경로·자동 감시·체결을 추정하지 않음.",
     "restriction_check": {
       "status": "PUBLIC_LIST_RECHECK_COMPLETED_NO_TARGET_MATCH",
-      "checked_at": "2026-09-29T12:37:56+09:00",
+      "checked_at": "2026-09-29T13:06:48+09:00",
       "source": "KIND 공개 화면 전체시장 목록",
       "sources": [
         "https://kind.krx.co.kr/investwarn/investattentwarnrisky.do?method=investattentwarnriskyMain",
@@ -947,71 +947,78 @@
       "candidate_codes": [
         "066570",
         "178320",
-        "009830",
-        "403870",
-        "028300"
+        "042660"
       ],
       "candidate_matches": [],
       "app_restrictions_directly_queried": false,
       "separate_liquidation_trading_list_verified": false,
-      "note": "이번 회차에 주의47·경고21·위험1·관리180/2페이지·정지119/2페이지를 다시 대조. HLB테라퓨틱스 주의 지정은 별도종목이며 HLB와 혼동하지 않음. 별도정리매매 목록·앱 주문가능 여부는 미확인."
+      "note": "이번 회차에 주의47·경고21·위험1·관리180/2페이지·정지119/2페이지를 다시 대조하여 세 종목 없음. 별도정리매매 목록·앱 주문가능 여부까지 검증한 뜻은 아님."
     },
-    "disclosure_review": "LG·서진·한화의 공시목록 최신 핵심 항목은12시 검토와 동일. HLB의 주식선물 가격제한 확대는 현물 거래정지로 해석하지 않음. 새 보유가설 무효 공시 미확인.",
+    "disclosure_review": "보유LG·서진의 최신 공시목록 핵심항목은 이전회차와 동일. 뉴스목록도 기존LG 대신증권전망·DCWA공개 및 서진SK전망을 바꿀 새 촉매 미확인. 한화오션9/28 수주·자사주취득 공시는 본문 대조.",
     "catalyst_review": {
       "source": "https://n.news.naver.com/article/037/0000038900",
       "published_at": "2026-09-29T11:49:00+09:00",
       "classification": "broker_forecast_reported_by_media_not_official_results",
       "finding": "대신증권의 LG 3분기 영업이익9419억원·전년비36.7% 증가 추정과 B2B 전망 보도는 보유근거 보강. 확정실적·신규수주로 격상하지 않으며 장기목표27만원을 기존 익절에 적용하지 않음. 서진 뉴스목록은 기존9/28 AI인프라 실적전망 근거, 신규 확정계약 미확인.",
-      "rechecked_at": "2026-09-29T12:37:56+09:00",
-      "current_review_note": "LG 새 뉴스목록은 기존 대신증권 전망·DCWA제품공개를 재사용하며 LG이노텍 뉴스를 LG전자 신규계약으로 혼동하지 않음. 서진도 기존SK전망 외 새 확정촉매를 목록에서 확인하지 못함."
+      "rechecked_at": "2026-09-29T13:06:48+09:00",
+      "current_review_note": "LG·서진의 공시/뉴스목록에서 앞선 전망을 변경할 새 사실 미확인. 기존전망을 확정수주·실적으로 격상하지 않고 유지."
     },
     "candidate_comparisons": [
       {
-        "code": "028300",
-        "name": "HLB",
+        "code": "042660",
+        "name": "한화오션",
         "status": "BLOCKED",
         "quote": {
-          "price_krw": 40900,
-          "displayed_change_pct": 3.02,
+          "price_krw": 78450,
+          "displayed_change_pct": -1.94,
           "market": "KRX",
-          "observed_at": "2026-09-29T12:32:00+09:00",
-          "source": "https://stock.naver.com/domestic/stock/028300/news"
+          "observed_at": "2026-09-29T13:02:00+09:00",
+          "source": "https://stock.naver.com/domestic/stock/042660/notice"
         },
-        "session_high_reference_krw": 47700,
-        "session_high_source": "https://stock.naver.com/market/stock/kr",
-        "catalyst_source": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-lirafugratinib-previously-treated-unresectable-locally-advanced-or-metastatic",
-        "approval_date": "2026-09-23",
-        "catalyst_classification": "verified_official_completed_approval_not_future_event",
-        "secondary_source": "https://n.news.naver.com/article/421/0009197391",
-        "reason": "FDA가 엘레바 리라푸그라티닙 승인을9/23에 발표한 사실 확인. 전일 급등과 오늘 고가47,700 대비 약14.3% 되밀림을 함께 반영. 고가 재도달을 자동 목표로 삼을 근거와 현재 보유를 대체할 비용후 우위 부족. 계좌만 부족한 상태가 아니므로 실행가격표 미발행.",
-        "quantity": null,
-        "order_plan_issued": false
-      },
-      {
-        "code": "009830",
-        "name": "한화솔루션",
-        "status": "BLOCKED",
-        "quote": {
-          "price_krw": 32150,
-          "displayed_change_pct": -3.6,
-          "market": "KRX",
-          "observed_at": "2026-09-29T12:35:00+09:00",
-          "source": "https://stock.naver.com/domestic/stock/009830/notice"
+        "verified_contract": {
+          "source": "https://stock.naver.com/domestic/stock/042660/notice/141404290",
+          "disclosed_on": "2026-09-28",
+          "contract_date": "2026-09-23",
+          "description": "아프리카 지역 선주 LNGC 2척",
+          "amount_krw": 680000000000,
+          "end_date": "2029-11-02"
         },
-        "prior_analysis_reference": "review-20260929-1200",
-        "reason": "12:03 32,050원 대비100원 상승했으나 기존 정책·모듈가격 근거 외 새 단기촉매 미확인, 공시목록도 동일. 이 소폭 반등만으로 기존보유 대비 교체우위·실행가격표가 성립하지 않음.",
+        "treasury_share_acquisition": {
+          "source": "https://stock.naver.com/domestic/stock/042660/notice/141396243",
+          "planned_quantity": 421907,
+          "planned_amount_krw": 33583797200,
+          "start_date": "2026-09-29",
+          "end_date": "2026-12-28",
+          "purpose": "임직원 주식보상",
+          "cancellation_or_guaranteed_price_support": false,
+          "actual_execution_verified": false
+        },
+        "price_data_quality": {
+          "source": "https://stock.naver.com/domestic/stock/042660/price",
+          "live_reference_krw": 80000,
+          "daily_table_previous_close_20260928_krw": 80500,
+          "disclosed_20260923_close_krw": 79600,
+          "daily_table_20260923_close_krw": 80700,
+          "difference_cause_verified": false,
+          "integrated_session_open_krw": 81400,
+          "integrated_session_high_krw": 81500,
+          "integrated_session_low_krw": 78000,
+          "integrated_session_market": "KRX_PLUS_NXT",
+          "current_day_daily_row_is_not_final_close": true
+        },
+        "reason": "확정수주 확인, 자사주취득은 임직원보상용으로 소각·오늘 전량집행을 의미하지 않음. 실제KRX78,450원은 통합시가81,400/고가81,500보다 낮고 기존보유보다 나은 단기 교체우위 미확립. 실시간기준80,000과전일일별종가80,500, 공시9/23종가79,600과일별80,700 차이미해명으로 가격계획BLOCKED. 계좌만 부족한PRICE_ONLY가 아님.",
         "quantity": null,
         "order_plan_issued": false
       }
     ],
-    "allocation_review": "12시 회차의 배분·수상권 기여 부족 검토를 승계. 한화와 독립 약품승인 촉매 HLB를 추가/교체 대안으로 비교했으나 구체적 단기목표·비용후 교체우위 미확립. 동일시장 위험은 남으므로 HLB를 완전한 독립 위험예산으로 취급하지 않음. 오늘 총자산·새 체결보고 없음, 현재 비중·수량을 재산정하거나 과거 기준자산을 초기화하지 않음.",
+    "allocation_review": "12시 배분·수상권기여 부족 검토를 승계하고 이번에는 확정수주가 있는 조선 후보까지 확대. 한화오션의 임직원보상용 매수·장기수주와 현재 약세를 비교했고 가격자료 불일치가 추가 확인되어 후보별BLOCKED. 현금 전체의 영구관망 결정이 아니며 현재총자산·새 체결보고 없이 수량/계좌기여를 재산정하지 않음.",
     "latest_account_report": "account-report-20260929-0002",
     "holdings_and_orders_report": "account-report-20260929-0001",
     "new_account_report_received": false,
     "orders_submitted_by_assistant": false,
     "fills_inferred_from_prices": false,
     "missed_slots_replayed": false,
-    "next_nominal_review_at": "2026-09-29T13:00:00+09:00",
+    "next_nominal_review_at": "2026-09-29T13:30:00+09:00",
     "journal_path": "data/days/2026-09-29.md",
     "quote_time_precision": "source_displayed_minute",
     "allocation_reference": "review-20260929-1200"
@@ -2857,6 +2864,12 @@
       "recorded_at": "2026-09-29T12:07:27+09:00",
       "source": "data/days/2026-09-29.md",
       "superseded_by": "review-20260929-1230"
+    },
+    {
+      "review_id": "review-20260929-1230",
+      "recorded_at": "2026-09-29T12:37:56+09:00",
+      "source": "data/days/2026-09-29.md",
+      "superseded_by": "review-20260929-1300"
     }
   ],
   "resolved_planning_issues": [
@@ -4839,16 +4852,14 @@
     "note": "현금표시값차이와비용전매매손익차이81,931원을실제수수료·세금으로확정하지않음. LG미체결예약반영방식도미확인."
   },
   "latest_candidate_universe_review": {
-    "review_id": "review-20260929-1230",
-    "recorded_at": "2026-09-29T12:37:56+09:00",
+    "review_id": "review-20260929-1300",
+    "recorded_at": "2026-09-29T13:06:48+09:00",
     "source": "data/days/2026-09-29.md",
     "decision": "HOLD_EXISTING_POSITIONS_NEW_CANDIDATES_NOT_SELECTED_AFTER_RESTRICTION_RECHECK",
     "candidate_codes": [
       "066570",
       "178320",
-      "009830",
-      "403870",
-      "028300"
+      "042660"
     ]
   },
   "risk_anchor_review": {
