@@ -703,7 +703,7 @@
     "source": "data/days/2026-09-29.md"
   },
   "last_received_report": "account-report-20260929-0003",
-  "updated_at": "2026-09-29T13:52:29+09:00",
+  "updated_at": "2026-09-29T13:56:02+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -4516,6 +4516,13 @@
       "text": "그냥 스트레스 제한을 없애자. 일단 수익률을 끌어올려서 하이리스크 하이리턴으로 10위권 진입이 먼저 같아.",
       "numeric_amendment": "same_event_stress_loss_cap_removed_10_percent_to_none",
       "other_limits_and_anchor_unchanged": true,
+      "source": "data/days/2026-09-29.md"
+    },
+    {
+      "directive_id": "policy-20260929-action-first-reporting",
+      "reported_on": "2026-09-29",
+      "recorded_at": "2026-09-29T13:56:02+09:00",
+      "summary": "매매 근거 조사 시간은 유지하되 판단 완료부터 응답까지의 지연을 줄이도록 기록 최소화·후처리 단축 요청.",
       "source": "data/days/2026-09-29.md"
     }
   ],

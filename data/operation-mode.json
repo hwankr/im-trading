@@ -552,5 +552,14 @@
       "verification": "native_update_success_and_persisted_toml_policy_report_plan_target_schedule_checks",
       "new_schedule_execution_verified": false
     }
-  ]
+  ],
+  "reporting_workflow_reference": {
+    "policy_id": "policy-20260929-action-first-reporting",
+    "recorded_at": "2026-09-29T13:56:02+09:00",
+    "source": "docs/record-publication.md",
+    "automation_id": "30",
+    "automation_prompt_update_verified": true,
+    "verified_at": "2026-09-29T13:56:20+09:00",
+    "verification": "native_update_success_and_persisted_prompt_schedule_target_comparison"
+  }
 }

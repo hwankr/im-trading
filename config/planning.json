@@ -427,7 +427,8 @@
     "publish_after_each_completed_review": true,
     "force_push": false,
     "do_not_include_unrelated_changes": true,
-    "guide": "docs/record-publication.md"
+    "guide": "docs/record-publication.md",
+    "delivery_before_publication": true
   },
   "existing_position_management": {
     "authorized_on": "2026-09-16",
@@ -440,5 +441,26 @@
     "version_changes_required": true,
     "lower_existing_stop_to_avoid_loss": false,
     "erase_triggered_exit": false
+  },
+  "reporting_workflow": {
+    "policy_id": "policy-20260929-action-first-reporting",
+    "authorized_on": "2026-09-29",
+    "research_quality_preserved": true,
+    "action_update_before_recordkeeping_and_git": true,
+    "action_update_channel": "brief_progress_message_then_self_contained_final",
+    "essential_execution_fields_must_not_be_omitted": true,
+    "no_change_journal_line_range": [
+      2,
+      3
+    ],
+    "unchanged_review_storage": "journal_once_plus_latest_review_references",
+    "account_changes_only_for_new_reports_plans_orders_or_triggered_exits": true,
+    "post_decision_research_only_for_material_new_information_price_validity_or_calculation_error": true,
+    "reuse_observed_sources_and_timestamps": true,
+    "publication_check_and_diff_batches_per_unchanged_revision": 1,
+    "commit_push_and_remote_verification_batched": true,
+    "avoid_repeated_sync_retries_delaying_response": true,
+    "failed_sync_preserved_for_next_review_reconciliation": true,
+    "guide": "docs/record-publication.md"
   }
 }
