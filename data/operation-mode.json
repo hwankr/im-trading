@@ -53,16 +53,16 @@
   "first_execution_evidence": "Read-only native automations.last_run_at=1789520509195; first 10:00-slot review and public observations appended to private daily record. No account fill inferred.",
   "next_run_verified_at_kst": null,
   "last_completed_review": {
-    "review_id": "review-20260929-1330",
-    "recorded_at_kst": "2026-09-29T13:42:02+09:00",
-    "decision": "HOLD_EXISTING_POSITIONS_NEW_CANDIDATES_NOT_SELECTED_AFTER_RESTRICTION_RECHECK",
+    "review_id": "review-20260929-1400",
+    "recorded_at_kst": "2026-09-29T14:14:20+09:00",
+    "decision": "ADD_LG_77_AT_212000_UNDER_VERSION_2",
     "latest_account_report": "account-report-20260929-0003",
     "source": "data/days/2026-09-29.md",
     "market_analysis_performed": true,
-    "nominal_slot_at_kst": "2026-09-29T13:30:00+09:00",
-    "actual_clock_verified_at_kst": "2026-09-29T13:30:41+09:00",
-    "heartbeat_received_at_kst": "2026-09-29T13:30:28.469+09:00",
-    "new_account_report_received": true,
+    "nominal_slot_at_kst": "2026-09-29T14:00:00+09:00",
+    "actual_clock_verified_at_kst": "2026-09-29T14:00:54+09:00",
+    "heartbeat_received_at_kst": "2026-09-29T14:00:29.890+09:00",
+    "new_account_report_received": false,
     "missed_slots_replayed": false
   },
   "record_visibility": "public_paper_trading_records_user_authorized_20260916",
@@ -388,6 +388,12 @@
       "recorded_at_kst": "2026-09-29T13:06:48+09:00",
       "source": "data/days/2026-09-29.md",
       "superseded_by": "review-20260929-1330"
+    },
+    {
+      "review_id": "review-20260929-1330",
+      "recorded_at_kst": "2026-09-29T13:42:02+09:00",
+      "source": "data/days/2026-09-29.md",
+      "superseded_by": "review-20260929-1400"
     }
   ],
   "new_thread_first_execution": {
@@ -536,7 +542,7 @@
     "verified_at": "2026-09-29T13:53:00+09:00",
     "verification": "native_update_success_and_persisted_toml_prompt_schedule_target_status_comparison"
   },
-  "next_nominal_slot_kst": "2026-09-29T14:00:00+09:00",
+  "next_nominal_slot_kst": "2026-09-29T14:30:00+09:00",
   "single_writer_handoff_prepared_at": "2026-09-29T11:53:49+09:00",
   "single_writer_handoff_status": "ACCEPTED_SINGLE_WRITER",
   "risk_policy_update_history": [
