@@ -4652,6 +4652,18 @@
       "existing_plan_amended": false,
       "continuous_monitoring_or_automatic_orders_authorized": false,
       "source": "data/days/2026-09-30.md"
+    },
+    {
+      "directive_id": "clarification-20260930-thesis-invalidation-not-small-pullback",
+      "reported_on": "2026-09-30",
+      "recorded_at": "2026-09-30T09:14:24+09:00",
+      "kind": "user_strategy_preference_clarification",
+      "clarifies": "preference-20260930-catalyst-aligned-entry-holding-exit",
+      "summary": "빠른 이탈은 매수근거가 맞지 않을 때를 뜻하며, 소폭하락마다 반복손절하여 계좌를 소모하는 운용을 원하지 않음.",
+      "application": "신규계획 발행시 관측변동성·촉매·추세·가격구조의 무효조건에 근거해 손절선과 수량을 함께 결정. 가격하락의 크기만으로 임의 조기손절하지 않으며 명시한 손절·기한은 관측시 집행.",
+      "existing_stop_lowered_or_deadline_extended": false,
+      "new_numeric_policy_change": false,
+      "source": "data/days/2026-09-30.md"
     }
   ],
   "prize_gap_calculation_history": [
