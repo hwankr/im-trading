@@ -436,26 +436,12 @@
     "evidence": "automation30 heartbeat received and review executed in this thread; push notification not independently verified"
   },
   "last_heartbeat_gate": {
-    "gate_id": "heartbeat-gate-20260928-1509",
-    "automation_id": "30",
-    "heartbeat_received_at": "2026-09-28T15:08:47.180+09:00",
-    "clock_verified_at": "2026-09-28T15:09:08+09:00",
-    "recorded_at": "2026-09-28T15:10:02+09:00",
+    "gate_id": "heartbeat-gate-20260930-1517",
+    "recorded_at": "2026-09-30T15:18:16+09:00",
     "decision": "SKIPPED_DUPLICATE_EFFECTIVE_REVIEW_WINDOW",
-    "reason": "지연14:27 호출을 실제15:00에 이미 처리했고15:06:43에 review-20260928-1500 및 계좌보고0013 기록 완료. 현재15:09 호출은 동일15시 회차이므로 회차당 한 번 원칙에 따라 추가 시장 분석 없음.",
-    "effective_review_window_at": "2026-09-28T15:00:00+09:00",
-    "completed_review_reference": "review-20260928-1500",
-    "market_analysis_performed": false,
-    "quotes_disclosures_restrictions_or_catalysts_queried": false,
-    "holiday_calendar_reverified": false,
-    "new_order_instruction_issued": false,
-    "orders_submitted_by_assistant": false,
-    "missed_slots_replayed": false,
-    "new_account_report_received": false,
-    "last_actual_account_report": "account-report-20260928-0013",
-    "automation_modified": false,
-    "next_nominal_slot_at": "2026-09-28T15:30:00+09:00",
-    "journal_path": "data/days/2026-09-28.md"
+    "reference": "data/account.json#last_heartbeat_gate",
+    "completed_review_reference": "review-20260930-1443-delayed",
+    "next_nominal_slot_at": "2026-09-30T15:30:00+09:00"
   },
   "prior_thread_first_execution_evidence": [
     {

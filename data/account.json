@@ -822,7 +822,7 @@
     "source": "data/days/2026-09-30.md"
   },
   "last_received_report": "account-report-20260930-0008",
-  "updated_at": "2026-09-30T15:14:35+09:00",
+  "updated_at": "2026-09-30T15:18:16+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -4428,26 +4428,22 @@
     "official_competition_results_updated": true
   },
   "last_heartbeat_gate": {
-    "gate_id": "heartbeat-gate-20260928-1509",
+    "gate_id": "heartbeat-gate-20260930-1517",
     "automation_id": "30",
-    "heartbeat_received_at": "2026-09-28T15:08:47.180+09:00",
-    "clock_verified_at": "2026-09-28T15:09:08+09:00",
-    "recorded_at": "2026-09-28T15:10:02+09:00",
+    "heartbeat_received_at": "2026-09-30T15:16:31.247+09:00",
+    "clock_verified_at": "2026-09-30T15:17:36+09:00",
+    "recorded_at": "2026-09-30T15:18:16+09:00",
     "decision": "SKIPPED_DUPLICATE_EFFECTIVE_REVIEW_WINDOW",
-    "reason": "지연14:27 호출을 실제15:00에 이미 처리했고15:06:43에 review-20260928-1500 및 계좌보고0013 기록 완료. 현재15:09 호출은 동일15시 회차이므로 회차당 한 번 원칙에 따라 추가 시장 분석 없음.",
-    "effective_review_window_at": "2026-09-28T15:00:00+09:00",
-    "completed_review_reference": "review-20260928-1500",
+    "completed_review_reference": "review-20260930-1443-delayed",
+    "latest_account_report": "account-report-20260930-0008",
     "market_analysis_performed": false,
-    "quotes_disclosures_restrictions_or_catalysts_queried": false,
-    "holiday_calendar_reverified": false,
-    "new_order_instruction_issued": false,
-    "orders_submitted_by_assistant": false,
-    "missed_slots_replayed": false,
     "new_account_report_received": false,
-    "last_actual_account_report": "account-report-20260928-0013",
-    "automation_modified": false,
-    "next_nominal_slot_at": "2026-09-28T15:30:00+09:00",
-    "journal_path": "data/days/2026-09-28.md"
+    "missed_slots_replayed": false,
+    "existing_exit_and_cancellation_actions_pending": true,
+    "action_reference": "execution_follow_up",
+    "next_nominal_slot_at": "2026-09-30T15:30:00+09:00",
+    "journal_path": "data/days/2026-09-30.md",
+    "reason": "직전지연회차에서15:11시간청산판단·15:14기록과행동안내완료. 이후새사용자보고없어동일15시점검을반복하지않음. 기존LG청산·HLB취소의무유지,완료로간주하지않음."
   },
   "portfolio_state_history": [
     {
@@ -4891,6 +4887,12 @@
       "recorded_at": "2026-09-25T19:55:37+09:00",
       "decision": "SKIPPED_OUTSIDE_AUTHORIZED_REGULAR_SESSION",
       "journal_path": "data/days/2026-09-25.md"
+    },
+    {
+      "gate_id": "heartbeat-gate-20260928-1509",
+      "recorded_at": "2026-09-28T15:10:02+09:00",
+      "decision": "SKIPPED_DUPLICATE_EFFECTIVE_REVIEW_WINDOW",
+      "journal_path": "data/days/2026-09-28.md"
     }
   ],
   "latest_handoff": {
