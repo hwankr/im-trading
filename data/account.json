@@ -760,7 +760,7 @@
     "source": "data/days/2026-09-30.md"
   },
   "last_received_report": "account-report-20260930-0006",
-  "updated_at": "2026-09-30T10:41:53+09:00",
+  "updated_at": "2026-09-30T11:22:03+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -786,15 +786,12 @@
     "risk_anchor_reset": false
   },
   "latest_plan_reference": {
-    "plan_id": "plan-20260928-lg-01",
-    "version": 2,
-    "status": "HOLD",
-    "path": "data/days/2026-09-29.md",
+    "plan_id": "plan-20260930-hlb-01",
+    "version": 1,
+    "status": "READY_EXECUTION_UNREPORTED",
+    "path": "data/days/2026-09-30.md",
     "plan_is_not_order_or_fill": true,
-    "execution_report": "account-report-20260929-0004",
-    "additional_execution_unconfirmed": false,
-    "additional_take_profit_order_unconfirmed": false,
-    "exit_order_report": "account-report-20260929-0005"
+    "execution_report": null
   },
   "monitoring_authorization": {
     "authorized_on": "2026-09-16",
@@ -874,24 +871,29 @@
       "additional_execution_unconfirmed": false,
       "additional_take_profit_order_unconfirmed": false,
       "exit_order_report": "account-report-20260929-0005"
+    },
+    {
+      "plan_id": "plan-20260930-hlb-01",
+      "version": 1,
+      "status": "READY_EXECUTION_UNREPORTED",
+      "path": "data/days/2026-09-30.md",
+      "plan_is_not_order_or_fill": true,
+      "execution_report": null
     }
   ],
   "execution_follow_up": {
-    "checked_at": "2026-09-30T10:41:53+09:00",
-    "source": "scheduled_review_existing_user_reports",
+    "checked_at": "2026-09-30T11:22:03+09:00",
+    "source": "scheduled_review_new_plan_existing_user_reports",
     "latest_account_report": "account-report-20260930-0006",
     "latest_cash_report": "account-report-20260930-0005",
     "latest_holdings_report": "account-report-20260930-0006",
     "plan_reference": {
-      "plan_id": "plan-20260928-lg-01",
-      "version": 2,
-      "status": "HOLD",
-      "path": "data/days/2026-09-29.md",
+      "plan_id": "plan-20260930-hlb-01",
+      "version": 1,
+      "status": "READY_EXECUTION_UNREPORTED",
+      "path": "data/days/2026-09-30.md",
       "plan_is_not_order_or_fill": true,
-      "execution_report": "account-report-20260929-0004",
-      "additional_execution_unconfirmed": false,
-      "additional_take_profit_order_unconfirmed": false,
-      "exit_order_report": "account-report-20260929-0005"
+      "execution_report": null
     },
     "plan_references": [
       {
@@ -904,27 +906,36 @@
         "additional_execution_unconfirmed": false,
         "additional_take_profit_order_unconfirmed": false,
         "exit_order_report": "account-report-20260929-0005"
+      },
+      {
+        "plan_id": "plan-20260930-hlb-01",
+        "version": 1,
+        "status": "READY_EXECUTION_UNREPORTED",
+        "path": "data/days/2026-09-30.md",
+        "plan_is_not_order_or_fill": true,
+        "execution_report": null
       }
     ],
     "known_held_quantity": 202,
     "remaining_buy_order_quantity": 0,
-    "remaining_buy_order_quantity_note": "0005사용자매수미체결없음확인. 취소할매수주문없음.",
-    "order_submission_and_fill_report_pending": false,
+    "remaining_buy_order_quantity_note": "0은마지막확인된실제매수미체결수량. 신규HLB623주계획의접수/체결미보고,접수로추정하지않음. 위험산정에서는계획623주전량반영.",
+    "order_submission_and_fill_report_pending": true,
     "pending_details": [
       "LG_124_order_to_125_fill_lineage",
       "official_recognized_security_count_trading_days_turnover_formula",
-      "actual_trade_costs_and_settlement_component_difference_101000_krw"
+      "actual_trade_costs_and_settlement_component_difference_101000_krw",
+      "HLB_plan_20260930_01_submission_fill_remaining_and_post_order_cash_report"
     ],
     "execution_reconfirmation_status": "SEOJIN_EXIT_POST_SALE_CASH_EQUITY_AND_LG_HOLDING_RECONCILED",
     "exit_obligation_status": "LG_NO_NEW_EXIT_TRIGGER_SEOJIN_CLOSED",
-    "last_price_review_reference": "review-20260930-1030",
-    "new_entry_status": "HLB_CANDIDATE_BLOCKED_NO_BUY_ORDER_AUTHORIZED",
-    "next_position_review_at": "2026-09-30T11:00:00+09:00",
-    "next_guidance_slot": "2026-09-30T11:00:00+09:00",
+    "last_price_review_reference": "review-20260930-1100-delayed",
+    "new_entry_status": "HLB_READY_623_AT_40500_SUBMISSION_REPORT_PENDING",
+    "next_position_review_at": "2026-09-30T11:30:00+09:00",
+    "next_guidance_slot": "2026-09-30T11:30:00+09:00",
     "mandatory_reconciliation_at": "2026-09-29T15:00:00+09:00",
     "exit_deadline": "2026-09-30T15:10:00+09:00",
     "orders_submitted_by_assistant": false,
-    "instructions": "LG202주225,500원기존익절유지·손절207,000원 manual_on_observation·9/30 15:10실제잔량청산. 0006가능수량0주표시로추가매도중복입력없음; 발동시기존매도미체결확인→취소완료·취소중체결대사→실제가능잔량시장가. HLB623주는계산검토일뿐BLOCKED·실제매수입력0주. 제한/최신공시/가격재검증후별도READY계획발행전입력금지. 서진전량익절종료유지.",
+    "instructions": "HLB신규v1계획623주40,500원1회지정가·9/30 11:22~14:30전입력,15:00미체결취소/대사. 실제체결분47,500익절·37,600손절manual_on_observation·10/2 15:10최종청산. LG202주225,500기존익절·207,000손절·9/30 15:10청산유지;매도가능수량0주원출처유지,발동시취소완료/중간체결대사후실제잔량만시장가. 두보유/주문상태는보고전추정하지않음.",
     "known_held_quantity_scope": "LG202주/가능수량0은0006화면, 서진0은0004전량매도보고.",
     "actual_order_state_reconfirmed_this_review": false,
     "actual_order_state_reference": "account-report-20260930-0004",
@@ -936,8 +947,8 @@
     "prior_order_inventory_uncertainty_resolved_by_report": "account-report-20260929-0001",
     "policy_change_reference": "policy-20260929-stress-cap-removal",
     "policy_change_recorded_at": "2026-09-29T13:52:29+09:00",
-    "planned_additional_buy_quantity": 0,
-    "execution_report_requested_this_review": false,
+    "planned_additional_buy_quantity": 623,
+    "execution_report_requested_this_review": true,
     "first_review_account_reconciliation_pending": false,
     "take_profit_order_report_pending": false,
     "confirmed_additional_fill_quantity": 77,
@@ -949,25 +960,25 @@
     "latest_completed_exit_report": "account-report-20260930-0004"
   },
   "latest_market_review": {
-    "review_id": "review-20260930-1030",
-    "recorded_at": "2026-09-30T10:41:53+09:00",
-    "clock_verified_at": "2026-09-30T10:32:14+09:00",
-    "heartbeat_received_at": "2026-09-30T10:31:58.567+09:00",
-    "nominal_slot_at": "2026-09-30T10:30:00+09:00",
+    "review_id": "review-20260930-1100-delayed",
+    "recorded_at": "2026-09-30T11:22:03+09:00",
+    "clock_verified_at": "2026-09-30T11:17:21+09:00",
+    "heartbeat_received_at": "2026-09-30T11:17:11.785+09:00",
+    "nominal_slot_at": "2026-09-30T11:00:00+09:00",
+    "delayed_call_processed_once": true,
     "session": "KRX_REGULAR",
-    "decision": "HOLD_LG_HLB_CANDIDATE_BLOCKED_VERIFICATION_INCOMPLETE",
+    "decision": "BUY_HLB_623_FIXED_LIMIT_READY_HOLD_LG",
     "journal_path": "data/days/2026-09-30.md",
     "latest_account_report": "account-report-20260930-0006",
     "latest_holdings_report": "account-report-20260930-0006",
     "latest_order_report": "account-report-20260930-0004",
     "new_exit_trigger_observed": false,
-    "next_nominal_review_at": "2026-09-30T11:00:00+09:00",
+    "next_nominal_review_at": "2026-09-30T11:30:00+09:00",
     "fills_inferred_from_prices": false,
-    "new_buy_quantity_authorized": 0,
-    "blocked_candidate_reference": "candidate-20260930-hlb-1030",
-    "blocked_candidate_is_not_executable_plan": true,
-    "restriction_verification_status": "PARTIAL_BROWSER_TIMEOUT_FALLBACK_NO_ROWS",
-    "last_fully_completed_restrictions_review": "review-20260930-1000"
+    "new_buy_quantity_authorized": 623,
+    "new_plan_reference": "plan-20260930-hlb-01 v1",
+    "restriction_verification_status": "ALL_SIX_PUBLIC_LISTS_CHECKED_NO_CANDIDATE_MATCH",
+    "app_order_acceptance_verified": false
   },
   "prior_portfolio_screen_summaries": [
     {
@@ -1943,192 +1954,72 @@
     }
   ],
   "current_entry_plan": {
-    "plan_id": "plan-20260928-seojin-01",
-    "version": 2,
-    "status": "CLOSED_CONFIRMED",
-    "code": "178320",
-    "name": "서진시스템",
-    "generated_at": "2026-09-28T10:44:08+09:00",
-    "information_as_of": "2026-09-28T10:44:08+09:00",
-    "policy_version": "1.8",
-    "entry_limit_krw": 35500,
-    "take_profit_limit_krw": 39400,
-    "stop_trigger_krw": 33400,
-    "total_quantity": 633,
-    "quantity_is_total_not_additional": true,
-    "notional_krw": 22471500,
-    "planning_capital_basis_krw": 95149466,
-    "account_report": "account-report-20260928-0008",
-    "valid_from": "2026-09-28T10:44:08+09:00",
-    "entry_deadline": "2026-09-28T14:30:00+09:00",
-    "entry_deadline_exclusive": true,
-    "cancel_unfilled_at": "2026-09-28T15:00:00+09:00",
-    "entry_submission_window": {
-      "start": "2026-09-28T10:44:08+09:00",
-      "end_exclusive": "2026-09-28T14:30:00+09:00",
-      "maximum_submissions": 0,
-      "purpose": "existing_order_quantity_reduction_only_no_additional_buy",
-      "maximum_new_submissions": 0
-    },
-    "first_review_at": "2026-09-28T10:44:08+09:00",
-    "next_review_at": "2026-09-28T11:00:00+09:00",
-    "mandatory_first_day_reconciliation_at": "2026-09-28T15:00:00+09:00",
-    "mandatory_daily_reconciliations": [
-      "2026-09-28T15:00:00+09:00",
-      "2026-09-29T15:00:00+09:00",
-      "2026-09-30T15:00:00+09:00"
-    ],
-    "manual_window": {
-      "start_kst": "15:00",
-      "end_kst": "15:15",
-      "on_dates": [
-        "2026-09-28",
-        "2026-09-29",
-        "2026-09-30"
-      ],
-      "authorization": "existing_user_authorization_reused"
-    },
-    "exit_deadline": "2026-09-30T15:10:00+09:00",
-    "exit_evaluation_mode": "manual_on_observation",
-    "evaluation_effective_from": "2026-09-28T10:18:35+09:00",
-    "monitoring_risk_acknowledged": true,
+    "plan_id": "plan-20260930-hlb-01",
+    "version": 1,
+    "status": "READY",
+    "recorded_at": "2026-09-30T11:22:03+09:00",
+    "published_for_entry_at": "2026-09-30T11:22:00+09:00",
+    "code": "028300",
+    "name": "HLB",
+    "market": "KRX_KOSDAQ",
+    "side": "buy",
     "order_type": "limit",
-    "market": "KRX_regular_paper_account",
-    "actual_order_submitted": true,
-    "actual_fill_quantity": 633,
-    "execution_status": "TAKE_PROFIT_FULLY_FILLED_USER_CONFIRMED",
-    "orders_submitted_by_assistant": false,
+    "entry_limit_price_krw": 40500,
+    "take_profit_price_krw": 47500,
+    "stop_loss_price_krw": 37600,
+    "quantity": 623,
+    "total_planned_quantity": 623,
+    "notional_krw": 25231500,
+    "entry_start_at": "2026-09-30T11:22:00+09:00",
+    "entry_end_before": "2026-09-30T14:30:00+09:00",
+    "unfilled_buy_cancel_at": "2026-09-30T15:00:00+09:00",
+    "first_review_at": "2026-09-30T11:30:00+09:00",
+    "next_review_at": "2026-09-30T11:30:00+09:00",
+    "mandatory_first_day_reconciliation_at": "2026-09-30T15:00:00+09:00",
+    "exit_deadline": "2026-10-02T15:10:00+09:00",
+    "exit_evaluation_mode": "manual_on_observation",
+    "source": "data/days/2026-09-30.md",
+    "review_reference": "review-20260930-1100-delayed",
+    "capital_source_report": "account-report-20260930-0006",
+    "cash_source_report": "account-report-20260930-0005",
+    "prior_blocked_candidate": "candidate-20260930-hlb-1030",
+    "replacement_relationship": "NEW_PLAN_AFTER_VERIFICATION_COMPLETED_NO_EXISTING_HLB_ORDER_TO_REPLACE",
+    "order_submission_status": "NOT_REPORTED",
+    "actual_filled_quantity": null,
+    "actual_remaining_order_quantity": null,
     "plan_is_not_order_or_fill": true,
-    "journal_path": "data/days/2026-09-28.md",
-    "entry_execution": "기존35,500원637주미체결중4주부분취소→취소완료·취소중추가체결대사. 누적체결+남은매수미체결을총633주이하로맞춤. 추가633주주문없음. 부분취소불가시면기존잔량취소완료·체결대사후재보고,임의재주문없음.가격추격없음.",
-    "exit_execution": "체결확인후실제매도가능잔량39,400원익절지정가. 실제관측33,400원이하또는9/30 15:10이면잔량확인→매수미체결있으면취소완료·추가체결대사→매도미체결있을때만취소완료·취소중체결대사→남은실제잔량시장가→결과보고. 손절→시간→익절순,보장체결가아님.",
-    "daily_execution": "9/28 15:00매수미체결취소완료·추가체결·보유첫날필수대사,9/29·30도15:00점검/처리15:00~15:15. 익절주문만료시중복없음확인후실제잔량같은가격재입력. 첫날점검누락시대사전새진입보류.취소·대사후새매수없음.",
-    "thesis": "9/28SK증권AI인프라공급/ESS·반도체하반기수익성회복전망의새촉매와KRX10:07 36,650원(+14.00%)상대강세. 증권사전망보도이며확정실적/계약아님. 2027EPS기반장기목표70,000원을대회익절가로쓰지않음.",
-    "price_rationale": "35,500원은9/10저가35,500·9/16저가35,100주변기존가격대재시험. 39,400원은8/31고가재접근,33,400원은오늘시가33,550/저가33,500아래로상승출발가설훼손판단. 현재호가미검증,20분지연호가로즉시체결단정없음.",
-    "holding_horizon_reason": "9/28~30최대3거래일뉴스후속반등. AI위험을LG와합산하며Micron10/1 05:30KST실적콜전9/30 15:10청산.",
-    "disclosure_risks": "9/22담보정정은채권자일부변경,누적담보7,161,279주·채무725억원. 9월CB발행/추가상장위험포함. 담보실행발생/채무불이행단정없음. 오늘주식선물가격제한확대는현물경고/거래정지와구분.",
-    "quote": {
-      "code": "178320",
-      "price_krw": 36650,
-      "observed_at": "2026-09-28T10:32:00+09:00",
-      "source": "https://stock.naver.com/domestic/stock/178320/notice",
-      "price_type": "public_KRX_regular_session_last",
-      "bid_ask_verified": false
-    },
-    "price_data_quality": "Naver9/23일봉32,050원과KIND32,150원등최근종가차이미해명. 현재KRX가격/시각과과거고저구간을분리. KIND당일35,200원은20분지연·원시각미표시라현재가격/당일종가로사용하지않음.",
-    "eligibility": {
-      "market": "KRX_KOSDAQ",
-      "instrument_type": "common_stock",
-      "published_listed_shares": 63723489,
-      "price_above_1000": true,
-      "limit_tick_krw": 50,
-      "restricted_list_match": false,
-      "restriction_check_times": {
-        "caution_warning_risk": "2026-09-28 09:57~09:59 KST",
-        "admin_halt": "2026-09-28 10:04~10:08 KST"
-      },
-      "restricted_lists": {
-        "caution_rows": 19,
-        "warning_rows": 23,
-        "risk_rows": 0,
-        "admin_rows": 135,
-        "admin_pages": 2,
-        "halt_rows": 85,
-        "halt_pages": 1
-      },
-      "all_pages_checked": true,
-      "app_acceptance_directly_verified": false,
-      "latest_restriction_review_reference": "review-20260928-1030"
-    },
+    "execution": "9/30입력창에40,500원한번지정가. 접수/체결/미체결·현금보고후실제체결분만47,500원익절매도, 중복없음. 손절/기한/가설무효시매수잔량취소완료·추가체결대사→기존매도미체결취소완료·취소중체결대사→실제매도가능잔량시장가. 당일15:00매수잔량취소·필수대사후신규매수없음. 10/1·10/2 09:00실제잔량/당일매도주문대사후필요잔량만같은익절가로입력. 일별15:00점검,10/2 15:10최종잔량청산. 자동주문/이월가정없음.",
+    "entry_invalid_if": "입력직전현재가37,600원이하또는47,500원이상, 새거래제한, 승인취소/중대한공급중단등가설무효, 중복주문. 접수후확인시미체결취소우선;가격도달을체결로추정하지않음.",
     "risk": {
-      "same_event_group": "AI_capex_semiconductors_cooling_and_broad_market",
-      "stress_decline_fraction": 0.22,
-      "stress_basis": "9/8고가38,350→9/22저가30,750낙폭19.82%,8/31종가39,000→9/2종가33,400의3거래일14.36%하락참조. 3거래일22%충격은지연·갭·담보/희석위험포함판단시나리오,통계분위/최대손실아님.",
-      "buy_fee_assumption": 0.0001,
-      "sell_fee_tax_assumption": 0.0021,
-      "execution_buffer_krw": 100000,
-      "pre_announcement_cap_applies": true,
-      "pending_buy_counts_in_full": true,
-      "LG_stress_decline_fraction": 0.16,
-      "limiting_constraint": "same_event_aggregate_stress_10pct",
-      "planned_stop_loss_krw": 1475945.7700000014,
-      "stress_loss_krw": 5082785.467000003,
-      "same_event_aggregate_stress_krw": 9512647.467,
-      "stress_budget_krw": 9514946.6,
-      "next_share_aggregate_stress_krw": 9520519.166000001,
-      "risk_anchor_unchanged_krw": 99252549,
-      "capital_is_confirmed_total_equity": true,
-      "LG_actual_held_quantity": 125,
-      "LG_actual_report": "account-report-20260928-0008",
-      "quantity_caps_after_LG_holding": {
-        "cash": 1652,
-        "total": 1658,
-        "single": 1206,
-        "official": 1408,
-        "event_initial": 1072,
-        "event_aggregate": 1122,
-        "trade_stop": 829,
-        "aggregate_stop": 1667,
-        "event_stress": 633
+      "planning_equity_krw": 97962917,
+      "quantity_limits": {
+        "cash": 1102,
+        "total_exposure": 1109,
+        "single_security": 1088,
+        "official_concentration": 1234,
+        "trade_stop": 623,
+        "aggregate_stop": 1103,
+        "same_market_event_if_combined_with_LG": 625
       },
-      "actual_637_pending_aggregate_stress_krw": 9544134.263,
-      "capital_currentness": "0007최종확인총자산유지,0008에서새총자산미보고;위험감액용이며신규자금추가배분없음"
+      "binding_limit": "planned_stop_loss_2_percent",
+      "planned_loss_with_cost_buffer_krw": 1958415.23,
+      "aggregate_planned_loss_with_LG_krw": 3463335.3108,
+      "aggregate_planned_loss_percent": 3.5353533938,
+      "planned_exposure_percent": 25.7561746554,
+      "total_exposure_with_LG_percent": 69.8830762665,
+      "cash_after_buy_and_buffer_krw": 29198893.85,
+      "stress_is_not_sizing_gate": true,
+      "detail_reference": "data/days/2026-09-30.md / plan-20260930-hlb-01 v1"
     },
     "metrics": {
-      "gross_target_pct": 10.985915492957755,
-      "gross_stop_pct": 5.915492957746482,
-      "gross_reward_risk": 1.8571428571428572,
-      "exposure_pct": 23.61705319502266,
-      "net_target_after_assumed_cost_and_buffer_krw": 2314078.4299999992,
-      "target_account_after_cost_buffer_pct": 2.4320456301877713,
-      "values_are_scenarios_not_expected_or_realized_returns": true
+      "target_return_percent_before_cost": 17.2839506173,
+      "stop_distance_percent_before_cost": 7.1604938272,
+      "reward_risk_before_cost": 2.4137931034,
+      "target_contribution_after_assumed_cost_buffer_krw": 4196332.6,
+      "target_contribution_percent": 4.2835929436,
+      "scenario_not_forecast": true
     },
-    "sources": [
-      "https://stock.naver.com/domestic/stock/178320/price",
-      "https://stock.naver.com/domestic/stock/178320/info/company",
-      "https://stock.naver.com/domestic/stock/178320/notice/137532426",
-      "https://v.daum.net/v/20260928083338293",
-      "https://m.coinlab.edaily.co.kr/News/Read?mediaCodeNo=257&newsId=02135286645584712",
-      "https://kind.krx.co.kr/common/stockprices.do?isurCd=17832&method=searchStockPricesMain",
-      "https://kind.krx.co.kr/investwarn/investattentwarnrisky.do?method=investattentwarnriskyMain",
-      "https://kind.krx.co.kr/investwarn/adminissue.do?method=searchAdminIssueList",
-      "https://kind.krx.co.kr/investwarn/tradinghaltissue.do?method=searchTradingHaltIssueMain"
-    ],
-    "post_issue_price_validation": {
-      "code": "178320",
-      "price_krw": 36200,
-      "observed_at": "2026-09-28T10:19:00+09:00",
-      "source": "https://stock.naver.com/domestic/stock/178320/notice",
-      "price_type": "public_KRX_regular_session_last",
-      "bid_ask_verified": false,
-      "decision": "BETWEEN_STOP_AND_TARGET_ORIGINAL_ENTRY_LIMIT_UNCHANGED_NO_FILL_INFERRED"
-    },
-    "capital_source_report": "account-report-20260928-0007",
-    "actual_order_remaining_quantity": 0,
-    "actual_execution_report": "account-report-20260928-0011",
-    "revision_reason": "LG실제125주체결보고로기존가정124주대비1주증가. 가격·손절·기한그대로,합산스트레스10%준수위해서진총633주로4주감액.",
-    "replaces_version": 1,
-    "revision_execution": {
-      "action": "PARTIAL_CANCEL_BUY",
-      "requested_cancel_quantity": 4,
-      "target_total_quantity": 633,
-      "known_actual_pending_quantity": 637,
-      "actual_cancel_requested": true,
-      "actual_cancel_completed": true,
-      "actual_cancelled_quantity": 4,
-      "if_filled_quantity_above_target": "매수미체결전부취소·대사후실제잔량보고,초과체결을취소완료로처리하지않음",
-      "same_prices_exit_mode_and_deadline": true,
-      "cancellation_report": "account-report-20260928-0010",
-      "last_confirmed_pending_quantity": 633
-    },
-    "actual_average_fill_price_krw": 35500,
-    "actual_take_profit_order_report": "account-report-20260928-0012",
-    "actual_remaining_held_quantity": 0,
-    "actual_sell_quantity": 633,
-    "actual_average_sell_price_krw": 39400,
-    "closure_report": "account-report-20260930-0004",
-    "closure_recorded_at": "2026-09-30T10:05:19+09:00",
-    "same_plan_reentry_allowed": false
+    "rationale": "담관암FDA승인후재평가/전일급등되돌림회복가설. 40,500원은4만원대되돌림진입상한,37,600원은당일저가37,800하회무효선,47,500원은9/29확인고가47,700아래. 43,200원추격은손익비0.77로미선택. 최장3거래일후10/3~5휴장전청산. Q4공급예정은10/8이전실적/출시확정이아님."
   },
   "market_review_history": [
     {
@@ -4085,6 +3976,15 @@
       "superseded_at": "2026-09-28T10:44:08+09:00",
       "source": "data/days/2026-09-28.md",
       "prior_state_commit": "e6282e438243f7a3e7b85a3aebf9f63f0788bec3"
+    },
+    {
+      "plan_id": "plan-20260928-seojin-01",
+      "version": 2,
+      "status": "CLOSED_CONFIRMED",
+      "closure_report": "account-report-20260930-0004",
+      "source": "data/days/2026-09-28.md",
+      "prior_state_commit": "eeb0394c7e85fa1cf8429a2dc4efcac5d450e3ed",
+      "archived_current_entry_reference_at": "2026-09-30T11:22:03+09:00"
     }
   ],
   "resolved_account_issues": [
@@ -5037,22 +4937,12 @@
     }
   ],
   "current_portfolio_plan": {
-    "recorded_at": "2026-09-29T14:14:20+09:00",
-    "review_id": "review-20260929-1400",
-    "status": "LG_HOLD_SEOJIN_CLOSED_TAKE_PROFIT",
-    "planning_capital_basis_krw": 95810418,
-    "capital_source_report": "account-report-20260929-0003",
+    "recorded_at": "2026-09-30T11:22:03+09:00",
+    "review_id": "review-20260930-1100-delayed",
+    "status": "LG_HOLD_HLB_READY_SEOJIN_CLOSED",
+    "planning_capital_basis_krw": 97962917,
+    "capital_source_report": "account-report-20260930-0006",
     "plan_references": [
-      {
-        "plan_id": "plan-20260928-seojin-01",
-        "version": 2,
-        "status": "CLOSED_CONFIRMED",
-        "path": "data/days/2026-09-28.md",
-        "plan_is_not_order_or_fill": true,
-        "execution_report": "account-report-20260928-0011",
-        "exit_order_report": "account-report-20260928-0012",
-        "closure_report": "account-report-20260930-0004"
-      },
       {
         "plan_id": "plan-20260928-lg-01",
         "version": 2,
@@ -5063,6 +4953,14 @@
         "additional_execution_unconfirmed": false,
         "additional_take_profit_order_unconfirmed": false,
         "exit_order_report": "account-report-20260929-0005"
+      },
+      {
+        "plan_id": "plan-20260930-hlb-01",
+        "version": 1,
+        "status": "READY_EXECUTION_UNREPORTED",
+        "path": "data/days/2026-09-30.md",
+        "plan_is_not_order_or_fill": true,
+        "execution_report": null
       }
     ],
     "actual_holdings_reference": "portfolio",
@@ -5070,14 +4968,17 @@
     "LG_last_reported_held_quantity": 202,
     "LG_additional_buy_quantity": 0,
     "Seojin_last_reported_held_quantity": 0,
-    "risk_reference": "additional_entry_plans[0].risk",
-    "metrics_reference": "additional_entry_plans[0].metrics",
-    "source": "data/days/2026-09-29.md",
-    "entry_window_closed": true,
+    "risk_reference": "current_entry_plan.risk",
+    "metrics_reference": "current_entry_plan.metrics",
+    "source": "data/days/2026-09-30.md",
+    "entry_window_closed": false,
     "LG_actual_execution_report": "account-report-20260929-0004",
     "LG_additional_filled_quantity": 77,
     "LG_take_profit_report": "account-report-20260929-0005",
-    "latest_reconciliation_report": "account-report-20260930-0004"
+    "latest_reconciliation_report": "account-report-20260930-0004",
+    "entry_window_scope": "plan-20260930-hlb-01",
+    "HLB_planned_buy_quantity": 623,
+    "HLB_order_submission_report_pending": true
   },
   "corporate_action_review": {
     "reviewed_at": "2026-09-28T09:41:23+09:00",
@@ -5154,6 +5055,14 @@
       "total_notional_krw": 49221500,
       "superseded_by": "plan-20260928-lg-01 v2",
       "original_plan_and_report_history_preserved": true
+    },
+    {
+      "review_id": "review-20260929-1400",
+      "status": "LG_HOLD_SEOJIN_CLOSED_TAKE_PROFIT",
+      "source": "data/days/2026-09-29.md",
+      "prior_state_commit": "eeb0394c7e85fa1cf8429a2dc4efcac5d450e3ed",
+      "replaced_by_review": "review-20260930-1100-delayed",
+      "recorded_at": "2026-09-30T11:22:03+09:00"
     }
   ],
   "risk_capacity_review": {
