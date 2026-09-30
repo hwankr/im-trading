@@ -761,7 +761,7 @@
     "source": "data/days/2026-09-30.md"
   },
   "last_received_report": "account-report-20260930-0003",
-  "updated_at": "2026-09-30T09:39:19+09:00",
+  "updated_at": "2026-09-30T10:03:30+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -887,7 +887,7 @@
     }
   ],
   "execution_follow_up": {
-    "checked_at": "2026-09-30T09:39:19+09:00",
+    "checked_at": "2026-09-30T10:03:30+09:00",
     "source": "scheduled_review_and_user_report",
     "latest_account_report": "account-report-20260930-0003",
     "latest_cash_report": "account-report-20260930-0001",
@@ -928,21 +928,22 @@
     "known_held_quantity": 835,
     "remaining_buy_order_quantity": 0,
     "remaining_buy_order_quantity_note": "0005사용자매수미체결없음확인. 취소할매수주문없음.",
-    "order_submission_and_fill_report_pending": false,
+    "order_submission_and_fill_report_pending": true,
     "pending_details": [
       "LG_124_order_to_125_fill_lineage",
-      "official_recognized_security_count_trading_days_turnover_formula"
+      "official_recognized_security_count_trading_days_turnover_formula",
+      "seojin_take_profit_filled_quantity_average_price_remaining_holdings_sell_orders_cash_equity"
     ],
-    "execution_reconfirmation_status": "TODAY_HOLDINGS_SELLABLE_CASH_EQUITY_AND_EXISTING_SELL_ORDERS_RECONCILED",
-    "exit_obligation_status": "NO_NEW_EXIT_TRIGGER_OBSERVED",
-    "last_price_review_reference": "review-20260930-0930",
-    "new_entry_status": "NO_NEW_ENTRY_REPLACEMENT_NOT_SELECTED",
-    "next_position_review_at": "2026-09-30T10:00:00+09:00",
-    "next_guidance_slot": "2026-09-30T10:00:00+09:00",
+    "execution_reconfirmation_status": "TODAY_REPORTS_RETAINED_SEOJIN_TAKE_PROFIT_FILL_RECONCILIATION_PENDING",
+    "exit_obligation_status": "TAKE_PROFIT_PRICE_REACHED_EXECUTION_RECONCILIATION_PENDING",
+    "last_price_review_reference": "review-20260930-1000",
+    "new_entry_status": "NO_NEW_PLAN_SEOJIN_SALE_PROCEEDS_NOT_ASSUMED",
+    "next_position_review_at": "2026-09-30T10:30:00+09:00",
+    "next_guidance_slot": "2026-09-30T10:30:00+09:00",
     "mandatory_reconciliation_at": "2026-09-29T15:00:00+09:00",
     "exit_deadline": "2026-09-30T15:10:00+09:00",
     "orders_submitted_by_assistant": false,
-    "instructions": "기존익절LG225,500원202주/서진39,400원633주 유지·중복입력금지. 손절207,000/33,400원 manual_on_observation 및9/30 15:10잔량청산. 매도미체결 존재시취소완료·취소중체결대사→실제잔량시장가.",
+    "instructions": "서진10:01 KRX40,100원으로익절39,400원도달: 오늘0002확인된633주매도주문의체결수량/평균가/보유잔량/매도미체결/현금/총자산대사우선. 체결추정·중복매도·동일계획재진입금지, 미체결은기존39,400원유지. LG202주225,500원익절유지. 기존손절207,000/33,400원 manual_on_observation 및9/30 15:10실제잔량청산; 매도미체결있으면취소완료·취소중체결대사후실제잔량시장가.",
     "known_held_quantity_scope": "9/30-0001 LG202·서진633 전량매도가능 확인.",
     "actual_order_state_reconfirmed_this_review": false,
     "actual_order_state_reference": "account-report-20260930-0002",
@@ -955,29 +956,42 @@
     "policy_change_reference": "policy-20260929-stress-cap-removal",
     "policy_change_recorded_at": "2026-09-29T13:52:29+09:00",
     "planned_additional_buy_quantity": 0,
-    "execution_report_requested_this_review": false,
+    "execution_report_requested_this_review": true,
     "first_review_account_reconciliation_pending": false,
     "take_profit_order_report_pending": false,
     "confirmed_additional_fill_quantity": 77,
     "latest_session_summary_reference": "review-20260929-1530",
     "closing_account_report_pending": true,
-    "closing_no_fill_change_report": "account-report-20260929-0006"
+    "closing_no_fill_change_report": "account-report-20260929-0006",
+    "take_profit_fill_report_pending": true
   },
   "latest_market_review": {
-    "review_id": "review-20260930-0930",
-    "recorded_at": "2026-09-30T09:39:19+09:00",
-    "clock_verified_at": "2026-09-30T09:32:10+09:00",
-    "heartbeat_received_at": "2026-09-30T09:31:57.751+09:00",
-    "nominal_slot_at": "2026-09-30T09:30:00+09:00",
+    "review_id": "review-20260930-1000",
+    "recorded_at": "2026-09-30T10:03:30+09:00",
+    "clock_verified_at": "2026-09-30T10:00:41+09:00",
+    "heartbeat_received_at": "2026-09-30T10:00:28.112+09:00",
+    "nominal_slot_at": "2026-09-30T10:00:00+09:00",
     "session": "KRX_REGULAR",
-    "decision": "HOLD_EXISTING_TAKE_PROFIT_NO_NEW_ENTRY",
+    "decision": "CONFIRM_SEOJIN_TAKE_PROFIT_FILL_HOLD_LG_NO_NEW_ENTRY",
     "journal_path": "data/days/2026-09-30.md",
     "latest_account_report": "account-report-20260930-0003",
     "latest_holdings_report": "account-report-20260930-0001",
     "latest_order_report": "account-report-20260930-0002",
-    "new_exit_trigger_observed": false,
-    "next_nominal_review_at": "2026-09-30T10:00:00+09:00",
-    "fills_inferred_from_prices": false
+    "new_exit_trigger_observed": true,
+    "next_nominal_review_at": "2026-09-30T10:30:00+09:00",
+    "fills_inferred_from_prices": false,
+    "new_stop_or_time_exit_trigger_observed": false,
+    "take_profit_price_observation": {
+      "symbol": "178320",
+      "observed_at": "2026-09-30T10:01:00+09:00",
+      "market": "KRX",
+      "price_krw": 40100,
+      "take_profit_price_krw": 39400,
+      "last_reported_pending_sell_quantity": 633,
+      "order_report": "account-report-20260930-0002",
+      "execution_status": "AWAITING_USER_REPORT",
+      "source_url": "https://stock.naver.com/domestic/stock/178320/news"
+    }
   },
   "prior_portfolio_screen_summaries": [
     {
