@@ -789,7 +789,7 @@
     "source": "data/days/2026-09-30.md"
   },
   "last_received_report": "account-report-20260930-0007",
-  "updated_at": "2026-09-30T11:27:42+09:00",
+  "updated_at": "2026-09-30T11:34:58+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -907,8 +907,8 @@
     }
   ],
   "execution_follow_up": {
-    "checked_at": "2026-09-30T11:27:42+09:00",
-    "source": "user_reported_order_submission",
+    "checked_at": "2026-09-30T11:34:58+09:00",
+    "source": "scheduled_review_existing_submitted_order",
     "latest_account_report": "account-report-20260930-0007",
     "latest_cash_report": "account-report-20260930-0005",
     "latest_holdings_report": "account-report-20260930-0006",
@@ -955,14 +955,14 @@
     ],
     "execution_reconfirmation_status": "HLB_SUBMISSION_CONFIRMED_FILL_AND_POST_ORDER_CASH_PENDING",
     "exit_obligation_status": "LG_NO_NEW_EXIT_TRIGGER_SEOJIN_CLOSED",
-    "last_price_review_reference": "review-20260930-1100-delayed",
+    "last_price_review_reference": "review-20260930-1130",
     "new_entry_status": "HLB_623_AT_40500_SUBMITTED_NO_DUPLICATE_ENTRY",
-    "next_position_review_at": "2026-09-30T11:30:00+09:00",
-    "next_guidance_slot": "2026-09-30T11:30:00+09:00",
+    "next_position_review_at": "2026-09-30T12:00:00+09:00",
+    "next_guidance_slot": "2026-09-30T12:00:00+09:00",
     "mandatory_reconciliation_at": "2026-09-29T15:00:00+09:00",
     "exit_deadline": "2026-09-30T15:10:00+09:00",
     "orders_submitted_by_assistant": false,
-    "instructions": "HLB623주40,500원접수확인,동일주문추가입력/가격상향없음. 실제체결/미체결잔량·주문후현금보고대기. 9/30 11:30점검·15:00매수잔량취소완료/취소중체결대사,실제체결분47,500익절·37,600손절·10/2 15:10최종청산. LG기존v2·9/30 15:10청산유지.",
+    "instructions": "HLB623주40,500원접수주문유지·추가입력/상향없음. 실제체결/미체결잔량·주문후현금은0007에서미보고. 다음9/30 12:00점검·15:00매수잔량취소완료/취소중체결대사,실제체결분47,500익절·37,600손절·10/2 15:10최종청산. LG202주225,500익절·207,000손절·9/30 15:10청산유지.",
     "known_held_quantity_scope": "LG202주/가능수량0은0006화면, 서진0은0004전량매도보고.",
     "actual_order_state_reconfirmed_this_review": false,
     "actual_order_state_reference": "account-report-20260930-0007",
@@ -976,7 +976,7 @@
     "policy_change_recorded_at": "2026-09-29T13:52:29+09:00",
     "planned_additional_buy_quantity": 623,
     "execution_report_requested_this_review": true,
-    "first_review_account_reconciliation_pending": false,
+    "first_review_account_reconciliation_pending": true,
     "take_profit_order_report_pending": false,
     "confirmed_additional_fill_quantity": 77,
     "latest_session_summary_reference": "review-20260929-1530",
@@ -984,28 +984,28 @@
     "closing_no_fill_change_report": "account-report-20260929-0006",
     "take_profit_fill_report_pending": false,
     "post_sale_account_report_pending": false,
-    "latest_completed_exit_report": "account-report-20260930-0004"
+    "latest_completed_exit_report": "account-report-20260930-0004",
+    "first_review_market_check_reference": "review-20260930-1130"
   },
   "latest_market_review": {
-    "review_id": "review-20260930-1100-delayed",
-    "recorded_at": "2026-09-30T11:22:03+09:00",
-    "clock_verified_at": "2026-09-30T11:17:21+09:00",
-    "heartbeat_received_at": "2026-09-30T11:17:11.785+09:00",
-    "nominal_slot_at": "2026-09-30T11:00:00+09:00",
-    "delayed_call_processed_once": true,
+    "review_id": "review-20260930-1130",
+    "recorded_at": "2026-09-30T11:34:58+09:00",
+    "clock_verified_at": "2026-09-30T11:31:06+09:00",
+    "heartbeat_received_at": "2026-09-30T11:30:36.700+09:00",
+    "nominal_slot_at": "2026-09-30T11:30:00+09:00",
     "session": "KRX_REGULAR",
-    "decision": "BUY_HLB_623_FIXED_LIMIT_READY_HOLD_LG",
+    "decision": "HOLD_LG_AND_SUBMITTED_HLB_FIXED_LIMIT_NO_NEW_ORDER",
     "journal_path": "data/days/2026-09-30.md",
-    "latest_account_report": "account-report-20260930-0006",
+    "latest_account_report": "account-report-20260930-0007",
     "latest_holdings_report": "account-report-20260930-0006",
-    "latest_order_report": "account-report-20260930-0004",
+    "latest_order_report": "account-report-20260930-0007",
     "new_exit_trigger_observed": false,
-    "next_nominal_review_at": "2026-09-30T11:30:00+09:00",
+    "next_nominal_review_at": "2026-09-30T12:00:00+09:00",
     "fills_inferred_from_prices": false,
-    "new_buy_quantity_authorized": 623,
-    "new_plan_reference": "plan-20260930-hlb-01 v1",
+    "new_buy_quantity_authorized": 0,
+    "existing_HLB_submission_quantity": 623,
     "restriction_verification_status": "ALL_SIX_PUBLIC_LISTS_CHECKED_NO_CANDIDATE_MATCH",
-    "app_order_acceptance_verified": false
+    "account_reconciliation_pending": true
   },
   "prior_portfolio_screen_summaries": [
     {
@@ -2001,7 +2001,7 @@
     "entry_end_before": "2026-09-30T14:30:00+09:00",
     "unfilled_buy_cancel_at": "2026-09-30T15:00:00+09:00",
     "first_review_at": "2026-09-30T11:30:00+09:00",
-    "next_review_at": "2026-09-30T11:30:00+09:00",
+    "next_review_at": "2026-09-30T12:00:00+09:00",
     "mandatory_first_day_reconciliation_at": "2026-09-30T15:00:00+09:00",
     "exit_deadline": "2026-10-02T15:10:00+09:00",
     "exit_evaluation_mode": "manual_on_observation",
@@ -2051,7 +2051,13 @@
     "submission_recorded_at": "2026-09-30T11:27:42+09:00",
     "actual_order_quantity": 623,
     "actual_limit_price_krw": 40500,
-    "actual_order_submitted": true
+    "actual_order_submitted": true,
+    "first_review_market_check": {
+      "review_id": "review-20260930-1130",
+      "recorded_at": "2026-09-30T11:34:58+09:00",
+      "account_reconciliation_status": "FILL_REMAINING_AND_POST_ORDER_CASH_REPORT_PENDING",
+      "mandatory_1500_reconciliation_unchanged": true
+    }
   },
   "market_review_history": [
     {
