@@ -4639,6 +4639,19 @@
       "new_numeric_policy_change": false,
       "priority": "compare_broader_candidates_capital_replacement_and_allowed_concentration_for_final_top10",
       "source": "data/days/2026-09-30.md"
+    },
+    {
+      "directive_id": "preference-20260930-catalyst-aligned-entry-holding-exit",
+      "reported_on": "2026-09-30",
+      "recorded_at": "2026-09-30T09:13:40+09:00",
+      "kind": "user_strategy_preference_not_order",
+      "summary": "사용자는 개인의견으로 기회가 있으면 빠르게 진입하고 상승여력이 크면 길게 보유하며 가설이 맞지 않으면 빠르게 나오는 운용을 선호한다고 설명.",
+      "application": "새 계획의 가격·수량·거래제한 검증을 마치면 즉시 행동 전달. 촉매 지속기간에 맞춰 보유기한/목표를 처음부터 설계하고, 명확한 무효근거가 관측되면 조기청산/교체를 검토.",
+      "existing_policy_reference": "config/planning.json holding_policy; docs/tournament-strategy.md sections 5-6",
+      "new_numeric_policy_change": false,
+      "existing_plan_amended": false,
+      "continuous_monitoring_or_automatic_orders_authorized": false,
+      "source": "data/days/2026-09-30.md"
     }
   ],
   "prize_gap_calculation_history": [
