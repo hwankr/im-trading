@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "status": "NEEDS_RECONCILIATION",
+  "status": "RECONCILED",
   "account_alias": "paper-main",
   "paper_competition_account_confirmed": true,
   "privacy": "public_paper_trading_records_user_authorized_20260916",
@@ -14,9 +14,9 @@
     "platform_label": "예수금",
     "balance_krw": 45923468,
     "orderable_krw": 54532917,
-    "settlement_deposit_krw": 57639924,
-    "settlement_deposit_source_report": "account-report-20260916-0003",
-    "field_mapping_note": "0005 화면 예수금45,923,468원·주문가능현금54,532,917원·재매매가능24,872,858원 직접확인. 정산예수금은 원출처유지. 최대주문가능160,714,065원을현금/총자산으로쓰지않음. 휴대전화10:06이며앱갱신시각/초/화면날짜미표시.",
+    "settlement_deposit_krw": 54532917,
+    "settlement_deposit_source_report": "account-report-20260930-0006",
+    "field_mapping_note": "예수금45,923,468원·주문가능현금54,532,917원·재매매가능24,872,858원은0005 10:06화면. 정산예수금54,532,917원은0006 10:10화면. 각원출처구분, 최대주문가능액을현금/총자산으로쓰지않음.",
     "last_confirmed_cash_availability_report": {
       "source_report": "account-report-20260930-0005",
       "source_type": "direct_app_or_screenshot",
@@ -49,14 +49,14 @@
       "amount_krw": 29645091
     },
     "settlement_deposit_report": {
-      "source_report": "account-report-20260916-0003",
+      "source_report": "account-report-20260930-0006",
       "source_type": "direct_app_or_screenshot",
-      "reported_on": "2026-09-16",
-      "recorded_at": "2026-09-16T09:08:27.7907026+09:00",
+      "reported_on": "2026-09-30",
+      "recorded_at": "2026-09-30T10:11:22+09:00",
       "observed_at": null,
-      "screen_clock_text": "09:05",
+      "screen_clock_text": "10:10",
       "platform_label": "정산예수금",
-      "amount_krw": 57639924
+      "amount_krw": 54532917
     },
     "deposit_report": {
       "source_report": "account-report-20260930-0005",
@@ -87,11 +87,12 @@
     },
     "latest_order_impact": {
       "source_report": "account-report-20260930-0004",
-      "state": "SEOJIN_FULLY_SOLD_POST_SALE_CASH_CONFIRMED_EQUITY_PENDING",
+      "state": "SEOJIN_FULLY_SOLD_POST_SALE_CASH_AND_EQUITY_RECONCILED",
       "current_orderable_after_fill_krw": 54532917,
       "cash_not_recalculated_from_trade": true,
       "prior_cash_report": "account-report-20260930-0001",
-      "resolved_cash_report": "account-report-20260930-0005"
+      "resolved_cash_report": "account-report-20260930-0005",
+      "resolved_equity_report": "account-report-20260930-0006"
     },
     "order_impact_history": [
       {
@@ -146,55 +147,73 @@
   "portfolio": {
     "observed_at": null,
     "reported_on": "2026-09-30",
-    "source_type": "user_reported_official_app",
-    "source_report": "account-report-20260930-0001",
+    "source_type": "direct_app_or_screenshot",
+    "source_report": "account-report-20260930-0006",
     "holdings": [
       {
         "code": "066570",
         "name": "LG전자",
         "quantity": 202,
-        "sellable_quantity": 202,
+        "sellable_quantity": 0,
         "average_price_krw": 213004,
         "plan_id": "plan-20260928-lg-01",
         "plan_version": 2,
-        "source_report": "account-report-20260929-0004",
-        "source_type": "user_reported_official_app",
-        "reported_on": "2026-09-29",
-        "recorded_at": "2026-09-29T14:39:31+09:00",
+        "source_report": "account-report-20260930-0006",
+        "source_type": "direct_app_or_screenshot",
+        "reported_on": "2026-09-30",
+        "recorded_at": "2026-09-30T10:11:22+09:00",
         "observed_at": null,
         "quantity_report": {
-          "source_report": "account-report-20260930-0001",
-          "source_type": "user_reported_official_app",
+          "source_report": "account-report-20260930-0006",
+          "source_type": "direct_app_or_screenshot",
           "reported_on": "2026-09-30",
-          "recorded_at": "2026-09-30T09:06:21+09:00",
+          "recorded_at": "2026-09-30T10:11:22+09:00",
           "observed_at": null,
+          "screen_clock_text": "10:10",
           "quantity": 202
         },
-        "average_price_source_report": "account-report-20260929-0004",
+        "average_price_source_report": "account-report-20260930-0006",
         "sellable_quantity_report": {
-          "source_report": "account-report-20260930-0001",
-          "source_type": "user_reported_official_app",
+          "source_report": "account-report-20260930-0006",
+          "source_type": "direct_app_or_screenshot",
           "reported_on": "2026-09-30",
-          "recorded_at": "2026-09-30T09:06:21+09:00",
+          "recorded_at": "2026-09-30T10:11:22+09:00",
           "observed_at": null,
-          "quantity": 202
+          "screen_clock_text": "10:10",
+          "quantity": 0,
+          "platform_label": "가능수량",
+          "scope_note": "화면표시그대로기록. 기존익절매도잔량은0002원출처, 가능수량0의원인을새주문/체결로추정하지않음."
+        },
+        "screen_clock_text": "10:10",
+        "displayed_price_report": {
+          "source_report": "account-report-20260930-0006",
+          "source_type": "direct_app_or_screenshot",
+          "reported_on": "2026-09-30",
+          "recorded_at": "2026-09-30T10:11:22+09:00",
+          "observed_at": null,
+          "screen_clock_text": "10:10",
+          "current_price_krw": 215500,
+          "displayed_evaluation_pnl_krw": 504250,
+          "displayed_evaluation_return_percent": 1.17,
+          "market_label": "KRX",
+          "automatic_price_path_monitoring": false
         }
       }
     ],
-    "total_equity_krw": 96161441,
+    "total_equity_krw": 97962917,
     "official_return_percent": -3.84,
     "derived_equity_from_return_krw": null,
-    "recorded_at": "2026-09-30T09:06:21+09:00",
-    "total_purchase_amount_krw": null,
-    "total_market_value_krw": null,
-    "displayed_evaluation_pnl_krw": null,
-    "displayed_evaluation_return_percent": null,
-    "settlement_amount_krw": null,
+    "recorded_at": "2026-09-30T10:11:22+09:00",
+    "total_purchase_amount_krw": 43026750,
+    "total_market_value_krw": 43531000,
+    "displayed_evaluation_pnl_krw": 504250,
+    "displayed_evaluation_return_percent": 1.17,
+    "settlement_amount_krw": 97962917,
     "settlement_amount_platform_label": "정산금액",
-    "fee_checkbox_checked_in_screenshot": null,
+    "fee_checkbox_checked_in_screenshot": true,
     "actual_commission_and_tax_krw": null,
-    "field_mapping_note": "0011서진633주체결을이미발행한계획수량과중복가산하지않음. 원주문637중취소4+체결633대사. 새평가액/공식손익없음.",
-    "screen_clock_text": null,
+    "field_mapping_note": "사용자가총자산으로지목한정산금액97,962,917원을그대로사용. 총평가43,531,000+정산예수금54,532,917=98,063,917과의차이101,000원은원인미확인, 비용으로단정/총자산역산없음. 평가손익504,250원/1.17%는보유평가화면값이며대회공식수익률이아님.",
+    "screen_clock_text": "10:10",
     "official_return_report": {
       "source_report": "account-report-20260930-0003",
       "source_type": "user_reported_official_app",
@@ -204,17 +223,20 @@
       "return_percent": -3.84,
       "scope_note": "공식 앱 수익률 사용자보고. 총자산/현금은0001 원출처 유지, 수익률로 역산하지 않음."
     },
-    "position_aggregate_basis": "서진633주전량매도0004로잔량0; LG202주·평균213,004원은 기존0001/9월29일0004 원출처 유지.",
-    "currentness_note": "서진전량익절0004·매도후주문가능현금54,532,917원0005확인. LG보유/주문은0001/0002 원출처. 총자산96,161,441원은0001이며매도후총자산미보고, 현금화면으로역산없음.",
+    "position_aggregate_basis": "0006화면LG202주·매입가213,004원·가능수량0주확인, 서진전량매도0004 유지.",
+    "currentness_note": "10:10휴대전화표시화면으로LG보유/가능수량·정산금액·정산예수금확인. 주문가능현금은0005 10:06화면원출처, LG225,500원202주익절접수는0002원출처. 미체결화면직접조회아님.",
     "total_equity_report": {
-      "source_report": "account-report-20260930-0001",
-      "source_type": "user_reported_official_app",
+      "source_report": "account-report-20260930-0006",
+      "source_type": "direct_app_or_screenshot",
       "reported_on": "2026-09-30",
-      "recorded_at": "2026-09-30T09:06:21+09:00",
+      "recorded_at": "2026-09-30T10:11:22+09:00",
       "observed_at": null,
-      "amount_krw": 96161441,
-      "platform_label": "전체 자산",
-      "confirmation_method": "user_report_not_direct_app_access"
+      "screen_clock_text": "10:10",
+      "amount_krw": 97962917,
+      "platform_label": "정산금액",
+      "confirmation_method": "user_identified_total_equity_field_in_screenshot",
+      "user_field_mapping": "이게 총 자산이야",
+      "not_derived_from_return_or_components": true
     },
     "latest_position_change_report": "account-report-20260930-0004"
   },
@@ -702,7 +724,7 @@
     "confirmation_status": "planning_basis_reconciled_official_total_equity_unconfirmed",
     "note": "이번 신규 계획의 최초 운용 기준을 고정 기록한다. 공식 총자산 확인 시 출처를 대사하되 손실을 이유로 기준점을 낮추거나 초기화하지 않는다."
   },
-  "last_reconciled_report": "account-report-20260930-0005",
+  "last_reconciled_report": "account-report-20260930-0006",
   "unresolved": [
     "과거 인버스·두산퓨얼셀의 전량 매도 완료는 확인됐으나 종목별 체결가·정확한 시각·주문번호·실제 비용은 미확인.",
     "이전09:19 주문가능현금과 이후 현금 차이67,796원의 원인·공식 총자산 필드 매핑은 미확인. 최신 공식수익률은 과거 팝업과 별도 실제 보고로 확인.",
@@ -725,20 +747,20 @@
     "handoff_recorded_at": "2026-09-30T08:39:12+09:00"
   },
   "latest_report": {
-    "report_id": "account-report-20260930-0005",
+    "report_id": "account-report-20260930-0006",
     "source_type": "direct_app_or_screenshot",
     "reported_on": "2026-09-30",
-    "recorded_at": "2026-09-30T10:09:29+09:00",
+    "recorded_at": "2026-09-30T10:11:22+09:00",
     "observed_at": null,
-    "screen_clock_text": "10:06",
+    "screen_clock_text": "10:10",
     "observation_time_precision": "phone_clock_minutes_only_app_refresh_time_unknown",
-    "report_kind": "post_sale_cash_screenshot",
-    "user_text": "이런 상태야.",
-    "reconciliation_status": "CASH_RECONCILED_TOTAL_EQUITY_PENDING",
+    "report_kind": "holdings_and_user_identified_total_equity_screenshot",
+    "user_text": "이게 총 자산이야",
+    "reconciliation_status": "RECONCILED_REPORTED_FIELDS",
     "source": "data/days/2026-09-30.md"
   },
-  "last_received_report": "account-report-20260930-0005",
-  "updated_at": "2026-09-30T10:09:29+09:00",
+  "last_received_report": "account-report-20260930-0006",
+  "updated_at": "2026-09-30T10:11:22+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -750,17 +772,18 @@
     "as_of_report": "account-report-0005"
   },
   "planning_capital_basis": {
-    "amount_krw": 96161441,
-    "source_report": "account-report-20260930-0001",
-    "source_type": "user_reported_official_app",
+    "source_report": "account-report-20260930-0006",
+    "source_type": "direct_app_or_screenshot",
     "reported_on": "2026-09-30",
-    "recorded_at": "2026-09-30T09:06:21+09:00",
+    "recorded_at": "2026-09-30T10:11:22+09:00",
     "observed_at": null,
+    "screen_clock_text": "10:10",
+    "amount_krw": 97962917,
+    "platform_label": "정산금액",
     "official_total_equity_confirmed": true,
-    "confirmation_method": "user_report",
+    "confirmation_method": "screenshot_value_and_user_total_equity_identification",
     "margin_multiplier_used": false,
-    "risk_anchor_reset": false,
-    "currentness_note": "0001 매도전실제총자산. 0005현금화면에매도후총자산미표시; 새수량산정전갱신필요."
+    "risk_anchor_reset": false
   },
   "latest_plan_reference": {
     "plan_id": "plan-20260928-lg-01",
@@ -791,27 +814,29 @@
     "transfer_record": "data/operation-mode.json"
   },
   "latest_holdings_report": {
-    "report_id": "account-report-20260930-0004",
+    "report_id": "account-report-20260930-0006",
     "source": "data/days/2026-09-30.md",
-    "recorded_at": "2026-09-30T10:05:19+09:00",
+    "recorded_at": "2026-09-30T10:11:22+09:00",
     "reported_on": "2026-09-30",
     "observed_at": null,
-    "source_type": "user_reported_official_app",
-    "all_account_positions_reconfirmed": false,
+    "screen_clock_text": "10:10",
+    "source_type": "direct_app_or_screenshot",
+    "all_account_positions_reconfirmed": true,
     "reported_holdings": [
       {
-        "code": "178320",
-        "quantity": 0,
+        "code": "066570",
+        "quantity": 202,
         "sellable_quantity": 0,
-        "basis": "633주전량매도보고대사"
+        "average_price_krw": 213004
       }
     ]
   },
   "last_reconciliation_scope": [
-    "post_sale_orderable_cash",
-    "deposit",
-    "displayed_cash_fields",
-    "post_sale_total_equity_not_visible"
+    "post_sale_total_equity",
+    "LG_holding_and_available_quantity",
+    "settlement_deposit",
+    "displayed_evaluation_values",
+    "official_results_retained_from_0003"
   ],
   "publication_authorization": {
     "authorized_on": "2026-09-16",
@@ -852,11 +877,11 @@
     }
   ],
   "execution_follow_up": {
-    "checked_at": "2026-09-30T10:09:29+09:00",
-    "source": "user_screenshot_cash_reconciliation_no_market_reanalysis",
-    "latest_account_report": "account-report-20260930-0005",
+    "checked_at": "2026-09-30T10:11:22+09:00",
+    "source": "user_screenshot_holdings_equity_reconciliation_no_market_reanalysis",
+    "latest_account_report": "account-report-20260930-0006",
     "latest_cash_report": "account-report-20260930-0005",
-    "latest_holdings_report": "account-report-20260930-0004",
+    "latest_holdings_report": "account-report-20260930-0006",
     "plan_reference": {
       "plan_id": "plan-20260928-lg-01",
       "version": 2,
@@ -888,19 +913,19 @@
     "pending_details": [
       "LG_124_order_to_125_fill_lineage",
       "official_recognized_security_count_trading_days_turnover_formula",
-      "post_seojin_sale_total_equity_and_actual_costs"
+      "actual_trade_costs_and_settlement_component_difference_101000_krw"
     ],
-    "execution_reconfirmation_status": "SEOJIN_FULL_EXIT_AND_POST_SALE_CASH_RECONCILED_EQUITY_PENDING",
+    "execution_reconfirmation_status": "SEOJIN_EXIT_POST_SALE_CASH_EQUITY_AND_LG_HOLDING_RECONCILED",
     "exit_obligation_status": "SEOJIN_TAKE_PROFIT_COMPLETED_LG_PLAN_REMAINS",
     "last_price_review_reference": "review-20260930-1000",
-    "new_entry_status": "NO_NEW_PLAN_POST_SALE_EQUITY_REQUESTED",
+    "new_entry_status": "NO_NEW_PLAN_ACCOUNT_FIELDS_RECONCILED",
     "next_position_review_at": "2026-09-30T10:30:00+09:00",
     "next_guidance_slot": "2026-09-30T10:30:00+09:00",
     "mandatory_reconciliation_at": "2026-09-29T15:00:00+09:00",
     "exit_deadline": "2026-09-30T15:10:00+09:00",
     "orders_submitted_by_assistant": false,
-    "instructions": "서진633주39,400원전량익절완료·보유/해당매도주문잔량0, 동일계획재진입없음. LG202주225,500원기존익절유지; 손절207,000원 manual_on_observation·9/30 15:10잔량청산. 발동시실제매도가능잔량확인→매도미체결있으면취소완료·취소중체결대사→실제잔량시장가. 매도후주문가능현금54,532,917원은0005확인; 총자산실제보고대기.",
-    "known_held_quantity_scope": "서진0주는0004전량매도대사, LG202주는0001 보유원출처 유지.",
+    "instructions": "서진633주39,400원전량익절완료·잔량0. LG202주225,500원기존익절유지; 손절207,000원 manual_on_observation·9/30 15:10잔량청산. 0006화면가능수량0이므로추가매도중복입력없음. 청산발동시기존매도미체결확인→취소완료·취소중체결대사→실제매도가능잔량시장가. 현금54,532,917원0005·총자산97,962,917원0006 대사완료.",
+    "known_held_quantity_scope": "LG202주/가능수량0은0006화면, 서진0은0004전량매도보고.",
     "actual_order_state_reconfirmed_this_review": false,
     "actual_order_state_reference": "account-report-20260930-0004",
     "actual_position_and_no_sell_fill_reconfirmed": false,
@@ -920,7 +945,7 @@
     "closing_account_report_pending": true,
     "closing_no_fill_change_report": "account-report-20260929-0006",
     "take_profit_fill_report_pending": false,
-    "post_sale_account_report_pending": true,
+    "post_sale_account_report_pending": false,
     "latest_completed_exit_report": "account-report-20260930-0004"
   },
   "latest_market_review": {
@@ -1755,24 +1780,26 @@
     }
   ],
   "latest_cash_and_investment_report": {
-    "report_id": "account-report-20260930-0005",
-    "report_kind": "post_seojin_sale_cash_screenshot",
+    "report_id": "account-report-20260930-0006",
+    "report_kind": "holdings_settlement_equity_screenshot",
     "reported_on": "2026-09-30",
-    "recorded_at": "2026-09-30T10:09:29+09:00",
+    "recorded_at": "2026-09-30T10:11:22+09:00",
     "observed_at": null,
-    "screen_clock_text": "10:06",
+    "screen_clock_text": "10:10",
     "source_type": "direct_app_or_screenshot",
     "screens_read": 1,
     "paper_account_badge_visible": true,
-    "reconciliation_status": "CASH_RECONCILED_TOTAL_EQUITY_NOT_VISIBLE",
+    "reconciliation_status": "RECONCILED_REPORTED_FIELDS",
     "reconciliation_scope": [
-      "deposit",
-      "orderable_cash",
-      "displayed_cash_fields"
+      "LG_holding",
+      "available_quantity",
+      "user_identified_total_equity",
+      "settlement_deposit",
+      "displayed_evaluation_values"
     ],
     "new_trade_or_fill_reported": false,
-    "observation_time_note": "휴대전화10:06만표시, 날짜/초/앱갱신시각미표시. 총자산/보유/체결/미체결화면아님. 개인정보와원본첨부공개제외.",
-    "prior_account_report": "account-report-20260930-0004"
+    "observation_time_note": "휴대전화10:10, 화면날짜/초/앱갱신시각미표시. 미체결목록화면아님. 평가손익은대회공식성적과구분. 원본첨부/개인정보공개제외.",
+    "prior_account_report": "account-report-20260930-0005"
   },
   "planning_capital_basis_history": [
     {
@@ -1840,6 +1867,12 @@
       "amount_krw": 95810418,
       "source_report": "account-report-20260929-0003",
       "superseded_by_report": "account-report-20260930-0001",
+      "source": "data/days/2026-09-30.md"
+    },
+    {
+      "source_report": "account-report-20260930-0001",
+      "amount_krw": 96161441,
+      "superseded_by": "account-report-20260930-0006",
       "source": "data/days/2026-09-30.md"
     }
   ],
@@ -3502,6 +3535,13 @@
       "recorded_at": "2026-09-30T10:09:29+09:00",
       "source": "data/days/2026-09-30.md",
       "changes": "휴대전화10:06현금화면: 주문가능54,532,917원·예수금45,923,468원·재매매가능24,872,858원. 총자산미표시·개인정보/원본첨부제외."
+    },
+    {
+      "report_id": "account-report-20260930-0006",
+      "previous_report": "account-report-20260930-0005",
+      "recorded_at": "2026-09-30T10:11:22+09:00",
+      "source": "data/days/2026-09-30.md",
+      "changes": "휴대전화10:10화면: 사용자총자산지목정산금액97,962,917원·정산예수금54,532,917원·LG202주/평균213,004원/가능수량0. 현금/총자산대사완료, 공식성적원출처유지."
     }
   ],
   "entry_plan_history": [
@@ -4497,6 +4537,12 @@
       ],
       "superseded_by_report": "account-report-20260928-0011",
       "source": "data/days/2026-09-28.md"
+    },
+    {
+      "source_report": "account-report-20260930-0001",
+      "total_equity_krw": 96161441,
+      "superseded_by": "account-report-20260930-0006",
+      "source": "data/days/2026-09-30.md"
     }
   ],
   "holdings_report_history": [
@@ -5086,11 +5132,11 @@
     "decision": "HOLD_NO_NEW_ENTRY_HPSP_REPLACEMENT_NOT_SELECTED"
   },
   "risk_anchor_review": {
-    "checked_at": "2026-09-30T09:06:21+09:00",
-    "equity_source_report": "account-report-20260930-0001",
+    "checked_at": "2026-09-30T10:11:22+09:00",
+    "equity_source_report": "account-report-20260930-0006",
     "unchanged_anchor_krw": 99252549,
-    "confirmed_equity_krw": 96161441,
-    "derived_decline_fraction": 0.031143865131363024,
+    "confirmed_equity_krw": 97962917,
+    "derived_decline_fraction": 0.012993439594181103,
     "pause_threshold_fraction": 0.1,
     "threshold_observed": false,
     "anchor_reset": false
