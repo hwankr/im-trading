@@ -755,7 +755,7 @@
     "scope": "HLB_full_fill_Nextin_zero_fill_reporting_convention"
   },
   "last_received_report": "account-report-20261001-0003",
-  "updated_at": "2026-10-01T12:19:58+09:00",
+  "updated_at": "2026-10-01T12:33:43+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -961,12 +961,12 @@
     }
   },
   "latest_market_review": {
-    "review_id": "review-20261001-1200",
-    "recorded_at": "2026-10-01T12:19:58+09:00",
+    "review_id": "review-20261001-1230",
+    "recorded_at": "2026-10-01T12:33:43+09:00",
     "journal_path": "data/days/2026-10-01.md",
-    "decision": "HOLD_HLB_CANCEL_NEXTIN_PREPARE_LS_PRICE_ONLY",
+    "decision": "HOLD_HLB_KEEP_NEXTIN_CANCEL_REQUIRED_LS_PRICE_ONLY",
     "latest_account_report": "account-report-20261001-0003",
-    "next_nominal_review_at": "2026-10-01T12:30:00+09:00",
+    "next_nominal_review_at": "2026-10-01T13:00:00+09:00",
     "new_account_report_received": false,
     "fills_inferred_from_prices": false,
     "trigger": "authorized_half_hour_heartbeat",
@@ -2911,6 +2911,12 @@
       "recorded_at": "2026-10-01T11:37:26+09:00",
       "journal_path": "data/days/2026-10-01.md",
       "decision": "HOLD_HLB_KEEP_NEXTIN_PENDING_AFTER_ALTERNATIVE_COMPARISON"
+    },
+    {
+      "review_id": "review-20261001-1200",
+      "recorded_at": "2026-10-01T12:19:58+09:00",
+      "journal_path": "data/days/2026-10-01.md",
+      "decision": "HOLD_HLB_CANCEL_NEXTIN_PREPARE_LS_PRICE_ONLY"
     }
   ],
   "resolved_planning_issues": [
