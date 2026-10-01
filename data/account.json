@@ -755,7 +755,7 @@
     "scope": "HLB_full_fill_Nextin_zero_fill_reporting_convention"
   },
   "last_received_report": "account-report-20261001-0003",
-  "updated_at": "2026-10-01T09:50:17+09:00",
+  "updated_at": "2026-10-01T10:01:08+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -791,9 +791,9 @@
     "execution_report": "account-report-20261001-0003"
   },
   "monitoring_authorization": {
-    "authorized_on": "2026-09-16",
+    "authorized_on": "2026-10-01",
     "source": "explicit_user_message",
-    "user_request": "9시, 9시30분 이렇게 30분 마다 어떻게 할지 안내해줘. 예약 등록해서.",
+    "user_request": "그리고 10시부터 30분 단위로 조사 예약 걸어줘.",
     "review_cadence_minutes": 30,
     "timezone": "Asia/Seoul",
     "report_each_trading_slot": true,
@@ -802,10 +802,21 @@
     "operation_record": "data/operation-mode.json",
     "automation_id": "30",
     "registration_status": "ACTIVE",
-    "registration_verified_at": "2026-09-29T11:53:49+09:00",
-    "target_thread_id": "01a0eb14-192a-7c01-928e-ac319a1b8e42",
-    "transferred_on": "2026-09-29",
-    "transfer_record": "data/operation-mode.json"
+    "registration_verified_at": "2026-10-01T10:01:08+09:00",
+    "target_thread_id": "01a0f4e3-38e2-7f13-9578-c0678f82da15",
+    "transferred_on": "2026-10-01",
+    "transfer_record": "data/operation-mode.json",
+    "review_dates": [
+      "2026-10-01",
+      "2026-10-02",
+      "2026-10-07",
+      "2026-10-08"
+    ],
+    "nominal_hours_kst": "10:00~15:30",
+    "first_expected_slot_kst": "2026-10-01T10:30:00+09:00",
+    "actual_next_run_at_kst": "2026-10-01T10:31:12+09:00",
+    "execution_verified": false,
+    "registration_action": "create_after_existing_id_not_found"
   },
   "latest_holdings_report": "account-report-20261001-0003",
   "last_reconciliation_scope": "REPORTED_FILL_SCOPE_ONLY_CASH_AND_ORDER_DETAILS_UNREPORTED",
@@ -4892,6 +4903,12 @@
       "registration_verified_at": "2026-09-28T08:31:06+09:00",
       "superseded_by_transfer_on": "2026-09-29",
       "source": "data/operation-mode.json"
+    },
+    {
+      "recorded_at": "2026-10-01T10:01:08+09:00",
+      "previous_target_thread_id": "01a0eb14-192a-7c01-928e-ac319a1b8e42",
+      "previous_registration_verified_at": "2026-09-29T11:53:49+09:00",
+      "change": "2026-10-01 사용자 요청으로10:00 시작·지정4일·현재대화에 예약 신규 등록. 이전id30은 native not_found."
     }
   ],
   "trade_cash_reconciliation": {

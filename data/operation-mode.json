@@ -1,11 +1,11 @@
 {
   "schema_version": "2.0",
   "mode": "user_authorized_half_hour_guidance",
-  "user_override_recorded_at": "2026-09-16T09:08:27.7907026+09:00",
-  "instruction": "2026-09-16 사용자가 09:00, 09:30처럼 30분마다 판단·안내하는 예약을 명시적으로 요청했다. 이 요청은 기존 지침의 예약/반복분석 금지에 대한 이 작업의 예외다.",
+  "user_override_recorded_at": "2026-10-01T10:01:08+09:00",
+  "instruction": "2026-10-01 사용자 요청: 10시부터 30분 단위로 조사 예약. 매매 가능일 10/1·2·7·8만 실행, 10/6 제외.",
   "timezone": "Asia/Seoul",
   "review_interval_minutes": 30,
-  "nominal_slots_kst": "평일 09:00,09:30,...,15:00,15:30",
+  "nominal_slots_kst": "지정 거래일 10:00,10:30,11:00,11:30,12:00,12:30,13:00,13:30,14:00,14:30,15:00,15:30",
   "trading_days_only": true,
   "last_slot_purpose": "15:30은 정규장 종료 요약·계좌 대사 안내, 신규 주문 금지",
   "end_date_in_project": "2026-10-08",
@@ -14,18 +14,18 @@
   "current_automation_state": "ACTIVE",
   "automation_id": "30",
   "target_workspace": ".",
-  "source_thread": "01a0ef88-1397-79c2-84d7-1deb6466b467",
+  "source_thread": "01a0f4e3-38e2-7f13-9578-c0678f82da15",
   "automatic_orders": false,
   "brokerage_api_or_app_control": false,
   "multi_agent": false,
   "existing_price_or_exit_mode_changed": false,
-  "note": "2026-09-30 사용자 요청으로 기존 예약30을 새 채팅으로 이전. 이전 채팅은 이 인계 기록의 저장·게시 시도 후 계좌·일지 작성을 종료하며 새 채팅이 단일 작성자로 장전 준비와 매회 안내를 이어간다. 중복 예약 없음.",
+  "note": "2026-10-01 기존 예약30은 앱에서 not found로 확인되어 현재 대화에 새 heartbeat를 등록했다(반환 ID30). 10:00 회차는 소급 실행하지 않으며 첫 명목 회차는10:30, 앱 저장 예정10:31:12. 지정 네 날짜10:00~15:30, 10/8 마지막 회차 이후 반복 없음. 이전 실행 증거는 역사 기록이며 이번 예약 실행·알림 도착은 아직 미확인.",
   "automation_name": "모의투자 30분 행동 안내",
   "automation_kind": "heartbeat",
-  "target_thread_id": "01a0ef88-1397-79c2-84d7-1deb6466b467",
-  "registration_verified_at": "2026-09-30T08:39:12+09:00",
-  "registration_evidence": "Native automation30 update succeeded; persisted TOML confirmed new target, ACTIVE, unchanged schedule/end and LG202/v2 handoff. Future runs and notification delivery not verified.",
-  "first_expected_slot_kst": "2026-09-30T09:00:00+09:00",
+  "target_thread_id": "01a0f4e3-38e2-7f13-9578-c0678f82da15",
+  "registration_verified_at": "2026-10-01T10:01:08+09:00",
+  "registration_evidence": "native automation_update update(id30) returned not found; create heartbeat returned id30 ACTIVE; read-only sqlite row verified rule, target, status, prompt, notification policy and next_run_at.",
+  "first_expected_slot_kst": "2026-10-01T10:30:00+09:00",
   "expires_at_kst": "2026-10-08T15:30:00+09:00",
   "first_execution_verified": true,
   "host_timezone_verified": "Korea Standard Time (UTC+09:00)",
@@ -47,11 +47,11 @@
     "exact_slot_execution_guaranteed": false,
     "note": "The app stored the next run 91 seconds after the nominal 10:00 slot. The reason for this additional offset has not been verified. No database write or manual scheduler-file edit was performed."
   },
-  "next_run_at_kst": null,
+  "next_run_at_kst": "2026-10-01T10:31:12+09:00",
   "first_actual_started_at_kst": "2026-09-16T10:01:49.195000+09:00",
   "first_execution_verified_at_kst": "2026-09-16T10:07:44.804133+09:00",
   "first_execution_evidence": "Read-only native automations.last_run_at=1789520509195; first 10:00-slot review and public observations appended to private daily record. No account fill inferred.",
-  "next_run_verified_at_kst": null,
+  "next_run_verified_at_kst": "2026-10-01T10:01:08+09:00",
   "last_completed_review": {
     "review_id": "review-20260930-1443-delayed",
     "recorded_at": "2026-09-30T15:14:35+09:00",
@@ -161,10 +161,33 @@
       "notification_policy": null,
       "execution_verified": false,
       "note": "기존 거래일09:00~15:30 30분 간격·2026-10-08 15:30 종료 유지. 새 채팅 장전조사 시작 확인; 정시 예약실행·알림도착은 미확인. GitHub fetch 연결 실패로 원격 최신성은 미확인."
+    },
+    {
+      "authorized_on": "2026-10-01",
+      "verified_at": "2026-10-01T10:01:08+09:00",
+      "previous_target_thread_id": "01a0ef88-1397-79c2-84d7-1deb6466b467",
+      "target_thread_id": "01a0f4e3-38e2-7f13-9578-c0678f82da15",
+      "existing_automation_reused": false,
+      "automation_id": "30",
+      "prior_update_result": "not_found",
+      "native_create_verified": true,
+      "persisted_toml_verified": false,
+      "read_only_scheduler_state_verified": true,
+      "nominal_first_slot_kst": "2026-10-01T10:30:00+09:00",
+      "actual_next_run_at_kst": "2026-10-01T10:31:12+09:00",
+      "notification_policy": null,
+      "execution_verified": false,
+      "review_dates": [
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-07",
+        "2026-10-08"
+      ],
+      "note": "UTC1~6시00/30분은 KST10:00~15:30. 수·목·금과10/8 종료 규칙으로 승인된4일에만 반복."
     }
   ],
-  "single_writer_thread_id": "01a0ef88-1397-79c2-84d7-1deb6466b467",
-  "new_thread_first_execution_verified": true,
+  "single_writer_thread_id": "01a0f4e3-38e2-7f13-9578-c0678f82da15",
+  "new_thread_first_execution_verified": false,
   "completed_review_history": [
     {
       "review_id": "review-20260916-1230",
@@ -549,7 +572,7 @@
     "verified_at": "2026-09-29T13:53:00+09:00",
     "verification": "native_update_success_and_persisted_toml_prompt_schedule_target_status_comparison"
   },
-  "next_nominal_slot_kst": "2026-09-30T15:30:00+09:00",
+  "next_nominal_slot_kst": "2026-10-01T10:30:00+09:00",
   "single_writer_handoff_prepared_at": "2026-09-30T08:39:12+09:00",
   "single_writer_handoff_status": "ACCEPTED_SINGLE_WRITER",
   "risk_policy_update_history": [
@@ -598,5 +621,15 @@
     "source_report": "account-report-20260930-0008",
     "path": "data/account.json",
     "field": "account_report_request_policy"
-  }
+  },
+  "authorized_review_dates": [
+    "2026-10-01",
+    "2026-10-02",
+    "2026-10-07",
+    "2026-10-08"
+  ],
+  "excluded_personal_schedule_dates": [
+    "2026-10-06"
+  ],
+  "current_registration_execution_verified": false
 }
