@@ -78,7 +78,8 @@
     "intraday_repeated_quote_or_screenshot_requests_default": false,
     "existing_position_alone_blocks_new_names": false,
     "high_cash_or_no_entry_requires_specific_current_rationale": true,
-    "review_existing_holdings_against_new_opportunity_cost": true
+    "review_existing_holdings_against_new_opportunity_cost": true,
+    "review_pending_orders_against_new_opportunity_cost": true
   },
   "confirmed_execution": {
     "confirmed_on": "2026-09-11",
@@ -256,7 +257,8 @@
     "cancel_confirm_and_reconcile_fill_race_at_review": true,
     "no_new_entry_after_validity_end": true,
     "assume_overnight_order_carry": false,
-    "next_day_reuse_requires_fresh_explicitly_dated_plan": true
+    "next_day_reuse_requires_fresh_explicitly_dated_plan": true,
+    "opportunity_cost_cancellation_allowed": true
   },
   "exit": {
     "take_profit_prices_per_security": 1,
@@ -305,7 +307,15 @@
       "automatic_orders": false,
       "explicit_plan_and_deadline_required": true,
       "retroactive_application": false
-    }
+    },
+    "early_discretionary_exit_allowed": true,
+    "early_discretionary_exit_requires_explicit_new_version": true,
+    "early_discretionary_exit_reasons": [
+      "thesis_weakening",
+      "remaining_upside_insufficient",
+      "superior_after_cost_opportunity"
+    ],
+    "opportunity_cost_policy_reference": "directive-20261001-flexible-cancel-early-exit; data/account.json user_directive_history; AGENTS.md 2026-10-01"
   },
   "account_missing_policy": "publish_price_only_with_unknown_quantity_if_price_evidence_sufficient",
   "ready_requires_execution_mode_window_and_risk_review": true,
