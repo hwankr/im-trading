@@ -85,8 +85,8 @@
       "credit_maximum_orderable_krw": 0
     },
     "latest_order_impact": {
-      "source_report": "account-report-20261001-0005",
-      "state": "NEXTIN_CANCELLED_FINAL_ZERO_FILL_CURRENT_CASH_REPORTED_LS_READY_NOT_EXECUTION_CONFIRMED",
+      "source_report": "account-report-20261001-0006",
+      "state": "HLB_ONLY_HELD_LS_ZERO_FILL_NO_BUY_ORDER_RECONCILED",
       "cancellation_source_report": "account-report-20261001-0004",
       "cancellation_completed": true,
       "Nextin_final_filled_quantity": 0,
@@ -95,7 +95,11 @@
       "risk_reserved_nextin_planned_quantity": 0,
       "LS_planned_quantity": 216,
       "LS_submission_reported": false,
-      "note": "HLB매입/넥취소뒤실제사용자현금보고. LS미체결/보유를계획으로만들거나현금을미리차감하지않음."
+      "note": "0006현재HLB만보유·LS0/매수미체결없음. 이번새현금/총자산미보고여서원값과0005시각보존·LS미집행금액을추정가산하지않음.",
+      "LS_final_filled_quantity": 0,
+      "LS_current_remaining_buy_quantity": 0,
+      "LS_risk_reserved_quantity": 0,
+      "cash_amount_source_report": "account-report-20261001-0005"
     },
     "order_impact_history": [
       {
@@ -174,10 +178,10 @@
         "average_price_krw": 39241,
         "plan_id": "plan-20261001-hlb-01",
         "plan_version": 1,
-        "source_report": "account-report-20261001-0003",
+        "source_report": "account-report-20261001-0006",
         "source_type": "user_reported_official_app",
         "reported_on": "2026-10-01",
-        "recorded_at": "2026-10-01T09:50:17+09:00",
+        "recorded_at": "2026-10-01T14:39:58+09:00",
         "observed_at": null
       }
     ],
@@ -203,8 +207,8 @@
       "observed_at": null,
       "return_percent": -2.53
     },
-    "position_aggregate_basis": "HLB932주평균39,241원은0003승계;넥최종체결0·취소잔량0및현금/총자산은0004/0005. HLB가능수량/익절접수·실제비용미보고.",
-    "currentness_note": "HLB932주평균39,241원은0003원보고승계·새매도/익절접수확인아님. 넥취소0004/최종체결0·현금·총자산0005로대사. 현금+13:27HLB시가평가와총자산차이37,125원은관측시각/필드차이원인미확인으로남김.",
+    "position_aggregate_basis": "0006: HLB932주평균39,241원만보유·LS0주·매수미체결없음. 매도접수932·체결0·잔량932는0007,주문가격·HLB매도가능수량·실제비용미보고.",
+    "currentness_note": "현재보유는0006에서HLB932/평균39,241원만재확인. 매도접수932·체결0·잔량932는0007에서확인,47,500원접수는미확인. 현금/총자산/공식성적등미보고필드는각원출처/시각보존.",
     "total_equity_report": {
       "source_report": "account-report-20261001-0005",
       "source_type": "user_reported_official_app",
@@ -216,24 +220,49 @@
       "confirmation_method": "explicit_user_reported_app_total_equity",
       "not_derived_from_return_or_components": true
     },
-    "latest_position_change_report": "account-report-20261001-0003"
+    "latest_position_change_report": "account-report-20261001-0006"
   },
   "orders": {
     "observed_at": null,
     "reported_on": "2026-10-01",
-    "recorded_at": "2026-10-01T09:40:38+09:00",
+    "recorded_at": "2026-10-01T14:42:59+09:00",
     "source_type": "user_reported_official_app",
-    "source_report": "account-report-20261001-0001",
-    "open_orders": [],
-    "confirmation_text": "아무런 보유 종목 및 주문들 없고 순수하게 매수 가능 현금 97427781원 있어",
+    "source_report": "account-report-20261001-0007",
+    "open_orders": [
+      {
+        "order_id": null,
+        "code": "028300",
+        "name": "HLB",
+        "side": "sell",
+        "order_type": null,
+        "order_quantity": 932,
+        "cumulative_filled_quantity": 0,
+        "remaining_quantity": 932,
+        "limit_price_krw": null,
+        "planned_take_profit_price_krw": 47500,
+        "status": "SELL_932_UNFILLED_USER_CONFIRMED_PRICE_UNREPORTED",
+        "submission_confirmed": true,
+        "plan_id": "plan-20261001-hlb-01",
+        "plan_version": 1,
+        "source_report": "account-report-20261001-0007",
+        "source_type": "user_reported_official_app",
+        "reported_on": "2026-10-01",
+        "recorded_at": "2026-10-01T14:42:59+09:00",
+        "observed_at": null,
+        "confirmation_scope": "user_confirms_full_932_held_shares_sell_submitted_zero_filled_932_remaining_price_not_reported"
+      }
+    ],
+    "confirmation_text": "HLB전량다접수되어있고하나도체결안되었어.",
     "last_confirmed_report": {
-      "source_report": "account-report-20261001-0001",
+      "source_report": "account-report-20261001-0007",
       "source_type": "user_reported_official_app",
       "reported_on": "2026-10-01",
-      "recorded_at": "2026-10-01T09:40:38+09:00",
+      "recorded_at": "2026-10-01T14:42:59+09:00",
       "observed_at": null,
-      "scope": "all_current_holdings_and_open_orders_empty",
-      "all_open_orders_confirmed": true
+      "scope": "HLB_sell_full_quantity_and_zero_fill_only_price_unreported",
+      "all_open_orders_confirmed": false,
+      "all_open_buy_orders_confirmed_none": true,
+      "buy_order_scope_source_report": "account-report-20261001-0006"
     },
     "cancelled_orders": [
       {
@@ -564,7 +593,7 @@
         "observed_at": null
       }
     ],
-    "currentness_note": "넥매수취소완료0004·최종체결0/매수잔량0은0005로대사. HLB매수932주·잔량0은0003승계,HLB익절매도접수미보고. LS216주는READY계획이며실제접수/체결확인아님; 전체미체결목록직접확인아님.",
+    "currentness_note": "0007HLB매도전량932접수·체결0·잔량932확인,실제주문가격미보고. 모든매수미체결없음·LS0은0006원보고승계. 기존익절47,500을실제주문가격으로확정하지않음.",
     "Samsung_sell_order_status": {
       "source_report": "account-report-20260928-0005",
       "source_type": "user_reported_official_app",
@@ -626,7 +655,7 @@
       "submission_source_report": "account-report-20260928-0012",
       "average_fill_price_krw": 39400
     },
-    "latest_execution_report": "account-report-20261001-0005",
+    "latest_execution_report": "account-report-20261001-0007",
     "latest_no_fill_change_report": {
       "report_id": "account-report-20260930-0008",
       "since_report": "account-report-20260930-0007",
@@ -636,7 +665,7 @@
       "order_cancellations_or_expiry_reconfirmed": false,
       "orders_unchanged_reported": true
     },
-    "latest_order_change_report": "account-report-20261001-0005"
+    "latest_order_change_report": "account-report-20261001-0007"
   },
   "award_progress": {
     "observed_at": null,
@@ -736,7 +765,7 @@
     "confirmation_status": "planning_basis_reconciled_official_total_equity_unconfirmed",
     "note": "이번 신규 계획의 최초 운용 기준을 고정 기록한다. 공식 총자산 확인 시 출처를 대사하되 손실을 이유로 기준점을 낮추거나 초기화하지 않는다."
   },
-  "last_reconciled_report": "account-report-20261001-0005",
+  "last_reconciled_report": "account-report-20261001-0007",
   "unresolved": [
     "과거 인버스·두산퓨얼셀의 전량 매도 완료는 확인됐으나 종목별 체결가·정확한 시각·주문번호·실제 비용은 미확인.",
     "이전09:19 주문가능현금과 이후 현금 차이67,796원의 원인·공식 총자산 필드 매핑은 미확인. 최신 공식수익률은 과거 팝업과 별도 실제 보고로 확인.",
@@ -759,16 +788,16 @@
     "handoff_recorded_at": "2026-09-30T08:39:12+09:00"
   },
   "latest_report": {
-    "report_id": "account-report-20261001-0005",
+    "report_id": "account-report-20261001-0007",
     "source_type": "user_reported_official_app",
     "reported_on": "2026-10-01",
-    "recorded_at": "2026-10-01T13:32:27+09:00",
+    "recorded_at": "2026-10-01T14:42:59+09:00",
     "observed_at": null,
     "source": "data/days/2026-10-01.md",
-    "scope": "Nextin_final_zero_fill_post_cancel_cash_and_equity"
+    "scope": "HLB_sell_all_932_submitted_zero_filled_932_remaining_order_price_unreported"
   },
-  "last_received_report": "account-report-20261001-0005",
-  "updated_at": "2026-10-01T14:34:45+09:00",
+  "last_received_report": "account-report-20261001-0007",
+  "updated_at": "2026-10-01T14:42:59+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -797,16 +826,13 @@
     "note": "0005앱총자산명시보고를새LS수량수정본에사용. 공식수익률/순위는0002승계·오늘수익률로새역산보고하지않음."
   },
   "latest_plan_reference": {
-    "plan_id": "plan-20261001-ls-electric-01",
-    "version": 2,
-    "status": "ENTRY_WINDOW_CLOSED_EXECUTION_REPORT_PENDING",
+    "plan_id": "plan-20261001-hlb-01",
+    "version": 1,
+    "status": "HELD_SELL_932_UNFILLED_PRICE_UNREPORTED",
     "path": "data/days/2026-10-01.md",
     "plan_is_not_order_or_fill": true,
-    "entry_execution_allowed": false,
-    "generated_at": "2026-10-01T13:29:48+09:00",
-    "quantity": 216,
-    "account_source_report": "account-report-20261001-0005",
-    "entry_window_closed_at": "2026-10-01T14:30:00+09:00"
+    "execution_report": "account-report-20261001-0003",
+    "latest_reconciliation_report": "account-report-20261001-0007"
   },
   "monitoring_authorization": {
     "authorized_on": "2026-10-01",
@@ -836,8 +862,8 @@
     "execution_verified": false,
     "registration_action": "create_after_existing_id_not_found"
   },
-  "latest_holdings_report": "account-report-20261001-0003",
-  "last_reconciliation_scope": "NEXTIN_CANCEL_AND_FINAL_ZERO_FILL_CURRENT_ORDERABLE_CASH_AND_EQUITY_RECONCILED_HLB_TAKE_PROFIT_ORDER_UNREPORTED",
+  "latest_holdings_report": "account-report-20261001-0006",
+  "last_reconciliation_scope": "HLB_SELL_932_SUBMITTED_ZERO_FILL_932_REMAINING_PRICE_UNREPORTED_PRIOR_BUY_ORDER_SCOPE_0006",
   "publication_authorization": {
     "authorized_on": "2026-09-16",
     "recorded_at": "2026-09-16T12:43:30.583010+09:00",
@@ -867,85 +893,63 @@
     {
       "plan_id": "plan-20261001-hlb-01",
       "version": 1,
-      "status": "FILLED_HELD_TAKE_PROFIT_SUBMISSION_PENDING",
+      "status": "HELD_SELL_932_UNFILLED_PRICE_UNREPORTED",
       "path": "data/days/2026-10-01.md",
       "plan_is_not_order_or_fill": true,
-      "execution_report": "account-report-20261001-0003"
-    },
-    {
-      "plan_id": "plan-20261001-ls-electric-01",
-      "version": 2,
-      "status": "ENTRY_WINDOW_CLOSED_EXECUTION_REPORT_PENDING",
-      "path": "data/days/2026-10-01.md",
-      "plan_is_not_order_or_fill": true,
-      "entry_execution_allowed": false,
-      "generated_at": "2026-10-01T13:29:48+09:00",
-      "quantity": 216,
-      "account_source_report": "account-report-20261001-0005",
-      "entry_window_closed_at": "2026-10-01T14:30:00+09:00"
+      "execution_report": "account-report-20261001-0003",
+      "latest_reconciliation_report": "account-report-20261001-0007"
     }
   ],
   "execution_follow_up": {
-    "checked_at": "2026-10-01T13:32:27+09:00",
-    "source": "user_cancel_completion_final_zero_fill_cash_equity_report",
-    "latest_account_report": "account-report-20261001-0005",
+    "checked_at": "2026-10-01T14:42:59+09:00",
+    "source": "user_HLB_all_sell_submitted_zero_fill_report",
+    "latest_account_report": "account-report-20261001-0007",
     "latest_cash_report": "account-report-20261001-0005",
-    "latest_holdings_report": "account-report-20261001-0003",
+    "latest_holdings_report": "account-report-20261001-0006",
     "plan_reference": {
       "plan_id": "plan-20261001-hlb-01",
       "version": 1,
-      "status": "FILLED_HELD_TAKE_PROFIT_SUBMISSION_PENDING",
+      "status": "HELD_SELL_932_UNFILLED_PRICE_UNREPORTED",
       "path": "data/days/2026-10-01.md",
       "plan_is_not_order_or_fill": true,
-      "execution_report": "account-report-20261001-0003"
+      "execution_report": "account-report-20261001-0003",
+      "latest_reconciliation_report": "account-report-20261001-0007"
     },
     "plan_references": [
       {
         "plan_id": "plan-20261001-hlb-01",
         "version": 1,
-        "status": "FILLED_HELD_TAKE_PROFIT_SUBMISSION_PENDING",
+        "status": "HELD_SELL_932_UNFILLED_PRICE_UNREPORTED",
         "path": "data/days/2026-10-01.md",
         "plan_is_not_order_or_fill": true,
-        "execution_report": "account-report-20261001-0003"
-      },
-      {
-        "plan_id": "plan-20261001-ls-electric-01",
-        "version": 2,
-        "status": "ENTRY_WINDOW_CLOSED_EXECUTION_REPORT_PENDING",
-        "path": "data/days/2026-10-01.md",
-        "plan_is_not_order_or_fill": true,
-        "entry_execution_allowed": false,
-        "generated_at": "2026-10-01T13:29:48+09:00",
-        "quantity": 216,
-        "account_source_report": "account-report-20261001-0005",
-        "entry_window_closed_at": "2026-10-01T14:30:00+09:00"
+        "execution_report": "account-report-20261001-0003",
+        "latest_reconciliation_report": "account-report-20261001-0007"
       }
     ],
     "known_held_quantity": 932,
-    "remaining_buy_order_quantity": null,
-    "remaining_buy_order_quantity_note": "LS접수/누적체결/실제잔량미보고;원계획총216은대사전전량잠재체결위험예약이며실제잔량아님. 넥취소완료·최종0은0004/0005승계. 14:30입력종료는접수잔량취소완료가아님.",
+    "remaining_buy_order_quantity": 0,
+    "remaining_buy_order_quantity_note": "매수잔량0·LS최종0/216위험예약해제는0006승계. 0007HLB매도접수932·체결0·잔량932확인,가격만미보고.",
     "order_submission_and_fill_report_pending": true,
     "pending_details": [
-      "HLB_take_profit_submission_unconfirmed",
       "official_security_count_trading_days_turnover_formula",
-      "LS_v2_submission_and_fill_unreported",
-      "actual_fees_unreported"
+      "actual_fees_unreported",
+      "HLB_sell_order_price_unreported"
     ],
-    "execution_reconfirmation_status": "NEXTIN_CANCEL_ZERO_FILL_CASH_EQUITY_RECONCILED_HLB_TAKE_PROFIT_SUBMISSION_UNREPORTED",
+    "execution_reconfirmation_status": "HLB_SELL_932_SUBMITTED_ZERO_FILL_932_REMAINING_PRICE_PENDING_BUY_SCOPE_0006",
     "exit_obligation_status": "HLB_ORIGINAL_MANUAL_ON_OBSERVATION_EXIT_PLAN_ACTIVE",
     "last_price_review_reference": "review-20261001-ls-ready",
-    "new_entry_status": "ENTRY_WINDOW_CLOSED_EXECUTION_REPORT_PENDING",
+    "new_entry_status": "INPUT_WINDOW_CLOSED_NO_PENDING_BUYS_USER_CONFIRMED",
     "next_position_review_at": "2026-10-01T15:00:00+09:00",
     "next_guidance_slot": "2026-10-01T15:00:00+09:00",
     "mandatory_reconciliation_at": "2026-10-01T15:00:00+09:00",
     "exit_deadline": "2026-10-02T15:10:00+09:00",
     "orders_submitted_by_assistant": false,
-    "instructions": "오늘14:30부터신규매수입력/상향정정없음. LS매수주문있으면15:00실제미체결잔량취소완료·취소중체결대사;실제체결분만218,000익절/198,500손절·10/2 15:10청산. HLB932주47,500익절/37,600손절·같은최종기한유지. 새취소/체결보고전실제수량·현금추정없음.",
-    "known_held_quantity_scope": "HLB932_from_0003_Nextin_final_zero_from_0005",
-    "actual_order_state_reconfirmed_this_review": false,
-    "actual_order_state_reference": "account-report-20261001-0005",
-    "actual_position_and_no_sell_fill_reconfirmed": false,
-    "mandatory_reconciliation_status": "CURRENT_FLAT_ACCOUNT_CONFIRMED_NEW_PLAN_FIRST_DAY_REVIEW_PENDING",
+    "instructions": "0006현재모든매수미체결없음·LS0주·신규매수종료유지. 0007HLB전량932주매도접수·체결0·잔량932,실제가격미보고·새매도중복없음. 기존계획47,500익절/37,600손절·10/2 15:10청산유지,손절/기한이면기존매도취소완료·취소중체결대사후실제매도가능잔량시장가. 15:00보유/매도주문점검·15:30마감준비.",
+    "known_held_quantity_scope": "0006_HLB932_only_LS0_and_no_buy_orders",
+    "actual_order_state_reconfirmed_this_review": true,
+    "actual_order_state_reference": "account-report-20261001-0007",
+    "actual_position_and_no_sell_fill_reconfirmed": true,
+    "mandatory_reconciliation_status": "HLB_HELD_BUY_ORDERS_EMPTY_15_00_POSITION_AND_SELL_ORDER_REVIEW_PENDING",
     "mandatory_reconciliation_report": "account-report-20261001-0001",
     "mandatory_reconciliation_recorded_at": "2026-10-01T09:40:38+09:00",
     "next_mandatory_reconciliation_at": "2026-10-01T15:00:00+09:00",
@@ -953,8 +957,8 @@
     "policy_change_reference": "policy-20260929-stress-cap-removal",
     "policy_change_recorded_at": "2026-09-29T13:52:29+09:00",
     "planned_additional_buy_quantity": null,
-    "execution_report_requested_this_review": false,
-    "first_review_account_reconciliation_pending": true,
+    "execution_report_requested_this_review": true,
+    "first_review_account_reconciliation_pending": false,
     "take_profit_order_report_pending": true,
     "confirmed_additional_fill_quantity": null,
     "latest_session_summary_reference": "review-20260929-1530",
@@ -964,7 +968,7 @@
     "post_sale_account_report_pending": false,
     "latest_completed_exit_report": "account-report-20260930-0004",
     "first_review_market_check_reference": "review-20261001-1400",
-    "current_day_reconciliation_status": "LS_INPUT_CLOSED_EXECUTION_REPORT_PENDING_15_00_FINAL_CANCEL_REQUIRED",
+    "current_day_reconciliation_status": "HLB_ONLY_HOLDING_SELL_932_UNFILLED_PRICE_PENDING_NO_BUY_ORDERS_0006_15_00_CHECK",
     "latest_instruction_reference": "review-20261001-ls-ready",
     "instruction_recorded_at": "2026-10-01T13:32:27+09:00",
     "replacement_reconciliation_required": {
@@ -976,8 +980,10 @@
       "source_report": "account-report-20261001-0005",
       "cancellation_source_report": "account-report-20261001-0004"
     },
-    "actual_order_state_reconfirmed_scope": "NEXTIN_CANCELLATION_AND_FINAL_ZERO_FILL_ONLY",
-    "execution_report_request_reference": "review-20261001-1400"
+    "actual_order_state_reconfirmed_scope": "HLB_SELL_932_SUBMITTED_ZERO_FILL_932_REMAINING_PRICE_UNREPORTED",
+    "execution_report_request_reference": "account-report-20261001-0006",
+    "remaining_sell_order_quantity": 932,
+    "remaining_sell_order_quantity_source_report": "account-report-20261001-0007"
   },
   "latest_market_review": {
     "review_id": "review-20261001-1430",
@@ -1460,6 +1466,17 @@
       "current_order_remaining_quantity": 0,
       "source": "data/days/2026-10-01.md",
       "original_prices_quantities_and_deadlines_preserved_in_source": true
+    },
+    {
+      "plan_id": "plan-20261001-ls-electric-01",
+      "version": 2,
+      "status": "ENTRY_EXPIRED_UNFILLED_NO_BUY_ORDER_USER_CONFIRMED",
+      "source_report": "account-report-20261001-0006",
+      "current_position_quantity": 0,
+      "current_order_remaining_quantity": 0,
+      "source": "data/days/2026-10-01.md",
+      "original_prices_quantities_and_deadlines_preserved_in_source": true,
+      "cancel_execution_inferred": false
     }
   ],
   "app_investment_summary": {
@@ -2042,12 +2059,20 @@
       "path": "data/days/2026-10-01.md",
       "superseded_by_version": 2,
       "recorded_at": "2026-10-01T13:32:27+09:00"
+    },
+    {
+      "plan_id": "plan-20261001-ls-electric-01",
+      "version": 2,
+      "status": "ENTRY_WINDOW_CLOSED_EXECUTION_REPORT_PENDING",
+      "closed_by_report": "account-report-20261001-0006",
+      "recorded_at": "2026-10-01T14:39:58+09:00",
+      "source": "data/days/2026-10-01.md"
     }
   ],
   "current_entry_plan": {
     "plan_id": "plan-20261001-hlb-01",
     "version": 1,
-    "status": "FILLED_HELD_TAKE_PROFIT_SUBMISSION_PENDING",
+    "status": "HELD_SELL_932_UNFILLED_PRICE_UNREPORTED",
     "generated_at": "2026-10-01T09:40:38+09:00",
     "information_as_of": "2026-10-01T09:39:18+09:00",
     "code": "028300",
@@ -2133,7 +2158,14 @@
     "execution_report": "account-report-20261001-0003",
     "actual_fill_at": null,
     "take_profit_order_submitted": null,
-    "latest_reconciliation_report": "account-report-20261001-0003"
+    "latest_reconciliation_report": "account-report-20261001-0007",
+    "actual_sell_order_submitted": true,
+    "actual_sell_order_source_report": "account-report-20261001-0007",
+    "actual_sell_order_price_krw": null,
+    "actual_sell_order_remaining_quantity": 932,
+    "current_holdings_source_report": "account-report-20261001-0006",
+    "actual_sell_order_quantity": 932,
+    "actual_sell_order_cumulative_filled_quantity": 0
   },
   "market_review_history": [
     {
@@ -3261,6 +3293,22 @@
       "cancel_report": "account-report-20261001-0004",
       "final_fill_report": "account-report-20261001-0005",
       "source": "data/days/2026-10-01.md"
+    },
+    {
+      "source_report": "account-report-20261001-0006",
+      "recorded_at": "2026-10-01T14:39:58+09:00",
+      "code": "028300",
+      "side": "sell",
+      "changes": "매도주문존재확인·가격/주문수량/잔량미보고. 전체매수미체결0확인.",
+      "source": "data/days/2026-10-01.md"
+    },
+    {
+      "source_report": "account-report-20261001-0007",
+      "recorded_at": "2026-10-01T14:42:59+09:00",
+      "code": "028300",
+      "side": "sell",
+      "changes": "매도접수932·체결0·잔량932명시확인,가격미보고유지. 매수상태는0006승계.",
+      "source": "data/days/2026-10-01.md"
     }
   ],
   "latest_entry_rationale_review": {
@@ -3692,6 +3740,22 @@
       "observed_at": null,
       "source": "data/days/2026-10-01.md",
       "changes": "주문가능현금60,855,381원·총자산98,125,906원·넥스틴최종체결0주(취소중체결포함)사용자보고. HLB새매도체결/익절접수/공식수익률·순위보고아님."
+    },
+    {
+      "report_id": "account-report-20261001-0006",
+      "previous_report": "account-report-20261001-0005",
+      "recorded_at": "2026-10-01T14:39:58+09:00",
+      "observed_at": null,
+      "source": "data/days/2026-10-01.md",
+      "changes": "LS최종체결0주·현재모든매수미체결없음. HLB평균39,241원932주만보유·매도주문중사용자보고. 매도주문가격/잔량·정확앱시각·새현금/총자산미보고."
+    },
+    {
+      "report_id": "account-report-20261001-0007",
+      "previous_report": "account-report-20261001-0006",
+      "recorded_at": "2026-10-01T14:42:59+09:00",
+      "observed_at": null,
+      "source": "data/days/2026-10-01.md",
+      "changes": "HLB전량932주매도접수·체결0·미체결932주확인. 실제매도주문가격·정확앱시각미보고. 다른계좌필드는0006/각원보고승계."
     }
   ],
   "entry_plan_history": [
@@ -4840,6 +4904,13 @@
         }
       },
       "fill_at_unknown": true
+    },
+    {
+      "report_id": "account-report-20261001-0003",
+      "superseded_by_report": "account-report-20261001-0006",
+      "quantity_change": 0,
+      "average_price_change_krw": 0,
+      "source": "data/days/2026-10-01.md"
     }
   ],
   "award_progress_history": [
@@ -5433,7 +5504,7 @@
       "plan_id": "plan-20261001-ls-electric-01",
       "version": 2,
       "replaces_version": 1,
-      "status": "ENTRY_WINDOW_CLOSED_EXECUTION_REPORT_PENDING",
+      "status": "ENTRY_EXPIRED_UNFILLED_NO_BUY_ORDER_USER_CONFIRMED",
       "generated_at": "2026-10-01T13:29:48+09:00",
       "recorded_at": "2026-10-01T13:32:27+09:00",
       "information_as_of": "2026-10-01T13:27:00+09:00",
@@ -5465,8 +5536,8 @@
       "plan_is_not_order_or_fill": true,
       "actual_order_submitted": null,
       "order_submission_confirmed": false,
-      "actual_filled_quantity": null,
-      "actual_remaining_order_quantity": null,
+      "actual_filled_quantity": 0,
+      "actual_remaining_order_quantity": 0,
       "orders_submitted_by_assistant": false,
       "capital_source_report": "account-report-20261001-0005",
       "cash_source_report": "account-report-20261001-0005",
@@ -5523,22 +5594,27 @@
         "path": "data/days/2026-10-01.md"
       },
       "eligibility_review_reused": "review-20261001-1200_full_KIND_KRX_restrictions_recorded_12:19:58_display_12:12:29_app_orderability_not_directly_verified",
-      "first_review_status": "MARKET_CHECKED_EXECUTION_RECONCILIATION_PENDING",
+      "first_review_status": "ZERO_FILL_NO_BUY_ORDER_USER_RECONCILED",
       "first_review_market_reference": "review-20261001-1400",
       "first_review_market_observed_at": "2026-10-01T14:04:00+09:00",
       "first_review_execution_report_requested": true,
       "entry_window_closed_at": "2026-10-01T14:30:00+09:00",
       "entry_window_closure_reference": "review-20261001-1430",
       "previously_submitted_order_not_cancelled_by_input_window_expiry": true,
-      "planned_quantity_scope": "original_v2_total_plan_not_actual_current_fill_or_pending_quantity",
-      "risk_reserved_quantity_until_execution_reconciled": 216
+      "planned_quantity_scope": "original_v2_total216_historical_current_fill_and_pending_zero",
+      "risk_reserved_quantity_until_execution_reconciled": 0,
+      "latest_reconciliation_report": "account-report-20261001-0006",
+      "latest_zero_fill_report": "account-report-20261001-0006",
+      "reconciled_at": "2026-10-01T14:39:58+09:00",
+      "actual_order_submission_history_unreported": true,
+      "execution_status_note": "LS매수0주·현재매수미체결전체없음사용자확인. 과거접수/취소여부는추정하지않음·새취소실행기록없음. 기존입력창종료유지·216주위험예약해제."
     }
   ],
   "current_portfolio_plan": {
     "plan_id": "portfolio-20261001-01",
     "version": 3,
     "replaces_version": 2,
-    "status": "HLB_HELD_LS_ENTRY_CLOSED_EXECUTION_REPORT_PENDING",
+    "status": "HLB_ONLY_ACTUAL_LS_UNFILLED_ENTRY_ENDED",
     "generated_at": "2026-10-01T13:29:48+09:00",
     "recorded_at": "2026-10-01T13:32:27+09:00",
     "source": "data/days/2026-10-01.md",
@@ -5593,7 +5669,17 @@
     "order_submission_or_fill_inferred": false,
     "detail_reference": "data/days/2026-10-01.md",
     "LS_entry_window_closed_at": "2026-10-01T14:30:00+09:00",
-    "entry_window_closure_reference": "review-20261001-1430"
+    "entry_window_closure_reference": "review-20261001-1430",
+    "actual_active_positions": [
+      {
+        "plan_id": "plan-20261001-hlb-01",
+        "version": 1
+      }
+    ],
+    "actual_execution_source_report": "account-report-20261001-0006",
+    "planned_positions_scope": "original_v3_planned_positions_historical_LS_not_executed",
+    "risk_metrics_scope": "ORIGINAL_V3_WITH_LS_POTENTIAL_FILL_HISTORICAL_NOT_CURRENT_LS_RISK_RELEASED_0006",
+    "target_scenario_scope": "UNEXECUTED_LS_INCLUSIVE_V3_ILLUSTRATION_NOT_CURRENT_PORTFOLIO_TARGET_CONTRIBUTION"
   },
   "corporate_action_review": {
     "reviewed_at": "2026-09-28T09:41:23+09:00",
