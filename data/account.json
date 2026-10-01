@@ -797,7 +797,7 @@
     "scope": "HLB_sell_all_932_submitted_zero_filled_932_remaining_order_price_unreported"
   },
   "last_received_report": "account-report-20261001-0007",
-  "updated_at": "2026-10-01T15:05:11+09:00",
+  "updated_at": "2026-10-01T15:34:06+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -937,10 +937,10 @@
     ],
     "execution_reconfirmation_status": "HLB_SELL_932_SUBMITTED_ZERO_FILL_932_REMAINING_PRICE_PENDING_BUY_SCOPE_0006",
     "exit_obligation_status": "HLB_ORIGINAL_MANUAL_ON_OBSERVATION_EXIT_PLAN_ACTIVE",
-    "last_price_review_reference": "review-20261001-1500",
+    "last_price_review_reference": "review-20261001-1530",
     "new_entry_status": "INPUT_WINDOW_CLOSED_NO_PENDING_BUYS_USER_CONFIRMED",
-    "next_position_review_at": "2026-10-01T15:30:00+09:00",
-    "next_guidance_slot": "2026-10-01T15:30:00+09:00",
+    "next_position_review_at": "2026-10-02T09:00:00+09:00",
+    "next_guidance_slot": "2026-10-02T10:00:00+09:00",
     "mandatory_reconciliation_at": "2026-10-01T15:00:00+09:00",
     "exit_deadline": "2026-10-02T15:10:00+09:00",
     "orders_submitted_by_assistant": false,
@@ -952,7 +952,7 @@
     "mandatory_reconciliation_status": "15_00_MARKET_CHECK_COMPLETED_USER_ORDER_STATE_0007_REUSED_NO_FRESH_APP_OBSERVATION",
     "mandatory_reconciliation_report": "account-report-20261001-0007",
     "mandatory_reconciliation_recorded_at": "2026-10-01T14:42:59+09:00",
-    "next_mandatory_reconciliation_at": "2026-10-01T15:30:00+09:00",
+    "next_mandatory_reconciliation_at": "2026-10-02T09:00:00+09:00",
     "prior_order_inventory_uncertainty_resolved_by_report": "account-report-20260929-0001",
     "policy_change_reference": "policy-20260929-stress-cap-removal",
     "policy_change_recorded_at": "2026-09-29T13:52:29+09:00",
@@ -968,7 +968,7 @@
     "post_sale_account_report_pending": false,
     "latest_completed_exit_report": "account-report-20260930-0004",
     "first_review_market_check_reference": "review-20261001-1400",
-    "current_day_reconciliation_status": "NO_BUY_ORDER_TO_CANCEL_HLB_SELL_932_UNFILLED_FROM_0007_ADDITIONAL_SELL_FILL_CHECK_REQUESTED",
+    "current_day_reconciliation_status": "MARKET_CLOSED_0006_HOLDINGS_0007_SELL_ORDER_REUSED_FINAL_APP_STATE_UNREPORTED",
     "latest_instruction_reference": "review-20261001-ls-ready",
     "instruction_recorded_at": "2026-10-01T13:32:27+09:00",
     "replacement_reconciliation_required": {
@@ -984,20 +984,23 @@
     "execution_report_request_reference": "account-report-20261001-0006",
     "remaining_sell_order_quantity": 932,
     "remaining_sell_order_quantity_source_report": "account-report-20261001-0007",
-    "mandatory_market_review_reference": "review-20261001-1500"
+    "mandatory_market_review_reference": "review-20261001-1500",
+    "closing_market_review_reference": "review-20261001-1530",
+    "next_day_order_review_reference": "plan-20261001-hlb-01_v1_original_10_02_09_00_15_00_15_10"
   },
   "latest_market_review": {
-    "review_id": "review-20261001-1500",
-    "recorded_at": "2026-10-01T15:05:11+09:00",
+    "review_id": "review-20261001-1530",
+    "recorded_at": "2026-10-01T15:34:06+09:00",
     "journal_path": "data/days/2026-10-01.md",
-    "decision": "HOLD_HLB_EXISTING_SELL_ORDER_NO_BUY_ORDER_TO_CANCEL_NO_NEW_ENTRY",
+    "decision": "SESSION_CLOSED_HLB_EXIT_PLAN_UNCHANGED_PREPARE_10_02_ORDER_REVIEW",
     "latest_account_report": "account-report-20261001-0007",
     "latest_holdings_report": "account-report-20261001-0006",
-    "next_nominal_review_at": "2026-10-01T15:30:00+09:00",
+    "next_nominal_review_at": "2026-10-02T10:00:00+09:00",
+    "next_manual_account_check_at": "2026-10-02T09:00:00+09:00",
     "new_account_report_received": false,
     "fills_inferred_from_prices": false,
-    "actual_15_00_app_state_reconfirmed": false,
-    "trigger": "authorized_half_hour_heartbeat",
+    "actual_closing_app_state_reconfirmed": false,
+    "trigger": "authorized_half_hour_heartbeat_session_close",
     "policy_reference": "directive-20261001-flexible-cancel-early-exit"
   },
   "prior_portfolio_screen_summaries": [
@@ -3027,6 +3030,12 @@
       "recorded_at": "2026-10-01T14:34:45+09:00",
       "source": "data/days/2026-10-01.md",
       "superseded_by": "review-20261001-1500"
+    },
+    {
+      "review_id": "review-20261001-1500",
+      "recorded_at": "2026-10-01T15:05:11+09:00",
+      "source": "data/days/2026-10-01.md",
+      "superseded_by": "review-20261001-1530"
     }
   ],
   "resolved_planning_issues": [
