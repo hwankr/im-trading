@@ -768,7 +768,7 @@
     "scope": "Nextin_final_zero_fill_post_cancel_cash_and_equity"
   },
   "last_received_report": "account-report-20261001-0005",
-  "updated_at": "2026-10-01T13:37:34+09:00",
+  "updated_at": "2026-10-01T14:06:19+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -950,7 +950,7 @@
     "policy_change_reference": "policy-20260929-stress-cap-removal",
     "policy_change_recorded_at": "2026-09-29T13:52:29+09:00",
     "planned_additional_buy_quantity": null,
-    "execution_report_requested_this_review": false,
+    "execution_report_requested_this_review": true,
     "first_review_account_reconciliation_pending": true,
     "take_profit_order_report_pending": true,
     "confirmed_additional_fill_quantity": null,
@@ -960,7 +960,7 @@
     "take_profit_fill_report_pending": false,
     "post_sale_account_report_pending": false,
     "latest_completed_exit_report": "account-report-20260930-0004",
-    "first_review_market_check_reference": "review-20260930-1130",
+    "first_review_market_check_reference": "review-20261001-1400",
     "current_day_reconciliation_status": "NEXTIN_CANCELLED_ZERO_FILL_LS_READY_FIRST_FILL_AND_15_00_REVIEW_REQUIRED",
     "latest_instruction_reference": "review-20261001-ls-ready",
     "instruction_recorded_at": "2026-10-01T13:32:27+09:00",
@@ -973,15 +973,16 @@
       "source_report": "account-report-20261001-0005",
       "cancellation_source_report": "account-report-20261001-0004"
     },
-    "actual_order_state_reconfirmed_scope": "NEXTIN_CANCELLATION_AND_FINAL_ZERO_FILL_ONLY"
+    "actual_order_state_reconfirmed_scope": "NEXTIN_CANCELLATION_AND_FINAL_ZERO_FILL_ONLY",
+    "execution_report_request_reference": "review-20261001-1400"
   },
   "latest_market_review": {
-    "review_id": "review-20261001-1330",
-    "recorded_at": "2026-10-01T13:37:34+09:00",
+    "review_id": "review-20261001-1400",
+    "recorded_at": "2026-10-01T14:06:19+09:00",
     "journal_path": "data/days/2026-10-01.md",
-    "decision": "HOLD_HLB_KEEP_LS_READY_216_NO_PRICE_CHASE",
+    "decision": "HOLD_HLB_KEEP_LS_READY_216_FIRST_REVIEW_EXECUTION_REPORT_PENDING",
     "latest_account_report": "account-report-20261001-0005",
-    "next_nominal_review_at": "2026-10-01T14:00:00+09:00",
+    "next_nominal_review_at": "2026-10-01T14:30:00+09:00",
     "new_account_report_received": false,
     "fills_inferred_from_prices": false,
     "trigger": "authorized_half_hour_heartbeat",
@@ -2970,6 +2971,12 @@
       "recorded_at": "2026-10-01T13:32:27+09:00",
       "journal_path": "data/days/2026-10-01.md",
       "decision": "RECONCILE_NEXTIN_CANCELLED_ZERO_FILL_AND_ISSUE_LS_READY_216"
+    },
+    {
+      "review_id": "review-20261001-1330",
+      "recorded_at": "2026-10-01T13:37:34+09:00",
+      "journal_path": "data/days/2026-10-01.md",
+      "decision": "HOLD_HLB_KEEP_LS_READY_216_NO_PRICE_CHASE"
     }
   ],
   "resolved_planning_issues": [
@@ -5506,7 +5513,11 @@
         "version": 1,
         "path": "data/days/2026-10-01.md"
       },
-      "eligibility_review_reused": "review-20261001-1200_full_KIND_KRX_restrictions_recorded_12:19:58_display_12:12:29_app_orderability_not_directly_verified"
+      "eligibility_review_reused": "review-20261001-1200_full_KIND_KRX_restrictions_recorded_12:19:58_display_12:12:29_app_orderability_not_directly_verified",
+      "first_review_status": "MARKET_CHECKED_EXECUTION_RECONCILIATION_PENDING",
+      "first_review_market_reference": "review-20261001-1400",
+      "first_review_market_observed_at": "2026-10-01T14:04:00+09:00",
+      "first_review_execution_report_requested": true
     }
   ],
   "current_portfolio_plan": {
