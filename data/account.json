@@ -940,7 +940,7 @@
     "scope": "RF_take_profit_sell_not_submitted_only"
   },
   "last_received_report": "account-report-20261002-0009",
-  "updated_at": "2026-10-02T12:36:04+09:00",
+  "updated_at": "2026-10-02T12:46:39+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -1119,32 +1119,52 @@
     "actual_RF_take_profit_source_report": "account-report-20261002-0009",
     "latest_completed_exit_report": "account-report-20261002-0008",
     "latest_instruction_reference": "review-20261002-rf-funded-amendment",
-    "instruction_recorded_at": "2026-10-02T12:36:04+09:00"
+    "instruction_recorded_at": "2026-10-02T12:36:04+09:00",
+    "last_price_review_reference": "review-20261002-1245"
   },
   "latest_market_review": {
-    "review_id": "review-20261002-rf-funded-amendment",
-    "recorded_at": "2026-10-02T12:36:04+09:00",
-    "information_as_of": "2026-10-02T12:34:59+09:00",
-    "origin": "explicit_portfolio_replan_execution_follow_up",
-    "quote": {
-      "code": "327260",
-      "name": "RF머트리얼즈",
-      "price_krw": 53200,
-      "observed_at": "2026-10-02T12:34:59+09:00",
-      "retrieved_window_kst": "2026-10-02 12:35:11~12",
-      "source": "https://m.stock.naver.com/domestic/stock/327260/total",
-      "price_type": "KRX_current_quote",
-      "open": 52300,
-      "high": 57500,
-      "low": 51900,
-      "volume": 1684478,
-      "turnover_krw": 92658523000,
-      "delay_seconds": 0
-    },
-    "decision": "HLB932 전량매도와 RF308 평균53,213원 매수·현금37,766,113원 확인. RF추가628주53,400원상한지정가READY(전량체결시총936주), LS215 기존관리유지. RF현재308주 익절매도 미등록은0009에서확인. 추가주문/체결은아직미보고.",
+    "review_id": "review-20261002-1245",
+    "recorded_at": "2026-10-02T12:46:39+09:00",
+    "heartbeat_received_at": "2026-10-02T12:45:03.306+09:00",
+    "origin": "authorized_heartbeat_30_actual_1245_trigger",
+    "quotes": [
+      {
+        "code": "327260",
+        "name": "RF머트리얼즈",
+        "price_krw": 52800,
+        "observed_at": "2026-10-02T12:45:21+09:00",
+        "retrieved_at": "2026-10-02T12:46:12+09:00",
+        "source": "https://m.stock.naver.com/domestic/stock/327260/total",
+        "price_type": "KRX_current_quote",
+        "delay_seconds": 0,
+        "trade_status": "TRADING/tradable"
+      },
+      {
+        "code": "010120",
+        "name": "LS ELECTRIC",
+        "price_krw": 208000,
+        "observed_at": "2026-10-02T12:45:19+09:00",
+        "source": "https://m.stock.naver.com/domestic/stock/010120/total",
+        "price_type": "KRX_current_quote",
+        "nxt_separate_price_krw": 208500,
+        "nxt_observed_at": "2026-10-02T12:45:05+09:00"
+      }
+    ],
+    "decision": "RF_v3_ADDITIONAL628_LIMIT53400_AND_LS_v2_HOLD_NO_NEW_ORDER_OR_VERSION",
     "source": "data/days/2026-10-02.md",
+    "account_reports_reused": [
+      "account-report-20261002-0008",
+      "account-report-20261002-0009"
+    ],
+    "LS_account_reports_reused": [
+      "account-report-20261002-0004",
+      "account-report-20261002-0005"
+    ],
+    "actual_account_state_refreshed": false,
+    "stop_or_time_exit_triggered_at_observation": false,
+    "price_path_between_reviews_verified": false,
     "next_review_at": "2026-10-02T13:00:00+09:00",
-    "prior_full_candidate_review": "review-20261002-policy-replan"
+    "full_plan_reference": "portfolio-20261002-01_v3"
   },
   "prior_portfolio_screen_summaries": [
     {
@@ -2384,7 +2404,7 @@
       "future_HLB_sale_proceeds_reused": false,
       "actual_HLB_sale_and_cash_confirmed": true
     },
-    "latest_market_review_reference": "review-20261002-rf-funded-amendment",
+    "latest_market_review_reference": "review-20261002-1245",
     "cash_source_report": "account-report-20261002-0008",
     "replaces_version": 2,
     "policy_reference": "policy-20261002-prize-objective-flexibility",
@@ -3351,6 +3371,11 @@
     {
       "review_id": "review-20261002-policy-replan",
       "recorded_at": "2026-10-02T12:30:01+09:00",
+      "source": "data/days/2026-10-02.md"
+    },
+    {
+      "review_id": "review-20261002-rf-funded-amendment",
+      "recorded_at": "2026-10-02T12:36:04+09:00",
       "source": "data/days/2026-10-02.md"
     }
   ],
@@ -6393,7 +6418,7 @@
       "actual_sell_order_price_source_report": "account-report-20261002-0004",
       "first_review_market_reference": "review-20261002-1000",
       "first_review_market_completed_at": "2026-10-02T10:06:16+09:00",
-      "latest_market_review_reference": "review-20261002-policy-replan",
+      "latest_market_review_reference": "review-20261002-1245",
       "replaces_version": 1,
       "policy_reference": "policy-20261002-prize-objective-flexibility",
       "amendment_effective_from": "2026-10-02T12:30:01+09:00",
@@ -6650,14 +6675,11 @@
     "same_event_stress_loss_budget_enforced": false
   },
   "latest_session_summary": {
-    "review_id": "review-20261002-rf-funded-amendment",
-    "recorded_at": "2026-10-02T12:36:04+09:00",
+    "review_id": "review-20261002-1245",
+    "recorded_at": "2026-10-02T12:46:39+09:00",
+    "decision": "RF_v3_ADDITIONAL628_LIMIT53400_AND_LS_v2_HOLD_NO_NEW_ORDER_OR_VERSION",
     "source": "data/days/2026-10-02.md",
     "portfolio_plan_version": 3,
-    "latest_reports": [
-      "account-report-20261002-0008",
-      "account-report-20261002-0009"
-    ],
     "next_review_at": "2026-10-02T13:00:00+09:00"
   },
   "account_report_request_policy": {
