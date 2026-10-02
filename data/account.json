@@ -882,7 +882,7 @@
     "scope": "orderable_cash_only_equity_holdings_orders_not_reconfirmed"
   },
   "last_received_report": "account-report-20261002-0007",
-  "updated_at": "2026-10-02T12:12:21+09:00",
+  "updated_at": "2026-10-02T12:18:15+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -1022,8 +1022,7 @@
     "pending_details": [
       "actual_sellable_quantities_at_exit",
       "app_observation_time_unreported",
-      "actual_costs_unreported",
-      "current_total_equity_if_new_sizing_needed"
+      "actual_costs_unreported"
     ],
     "execution_reconfirmation_status": "TWO_SELL_PRICES_FULL_QUANTITIES_ZERO_FILLS_FULL_REMAINING_RECONCILED",
     "exit_obligation_status": "HLB_AND_LS_ORIGINAL_MANUAL_ON_OBSERVATION_EXIT_PLANS_ACTIVE",
@@ -1044,8 +1043,8 @@
     "mandatory_reconciliation_recorded_at": "2026-10-01T14:42:59+09:00",
     "next_mandatory_reconciliation_at": "2026-10-02T15:00:00+09:00",
     "prior_order_inventory_uncertainty_resolved_by_report": "account-report-20260929-0001",
-    "policy_change_reference": "policy-20261002-operating-cap-removal",
-    "policy_change_recorded_at": "2026-10-02T12:12:21+09:00",
+    "policy_change_reference": "policy-20261002-prize-objective-flexibility",
+    "policy_change_recorded_at": "2026-10-02T12:18:15+09:00",
     "planned_additional_buy_quantity": 0,
     "execution_report_requested_this_review": false,
     "first_review_account_reconciliation_pending": false,
@@ -1093,7 +1092,8 @@
       "account-report-20261002-0006"
     ],
     "latest_market_review_note": "12:00 검토: 두 보유·매도 원보고 재사용, 새 청산조건 미관측. RF PRICE_ONLY v1 유지·11:30에 요청한 새 잔고 답변 대기, 같은 질문 재요청 없음.",
-    "new_sizing_account_report_pending": true
+    "new_sizing_account_report_pending": false,
+    "new_sizing_policy_note": "현금0007·보유/미체결0005·가격0006/0004 원출처 재사용. 총자산미보고 단독 수량차단 해제. RF PRICE_ONLY v1은 그대로며 최신가격/공식제한/실행가능성 검토 후 별도 READY 수정본 필요; 새 주문/체결 확인이나 수량 승인 아님."
   },
   "latest_market_review": {
     "review_id": "review-20261002-1200",
@@ -5390,6 +5390,19 @@
       "automatic_order_execution_authorized": false,
       "policy_path": "config/planning.json",
       "journal_path": "data/days/2026-10-02.md"
+    },
+    {
+      "directive_id": "policy-20261002-prize-objective-flexibility",
+      "reported_on": "2026-10-02",
+      "recorded_at": "2026-10-02T12:18:15+09:00",
+      "kind": "explicit_user_delegated_policy_cleanup_and_terminal_objective_reaffirmation",
+      "source": "direct_user_message",
+      "text": "네가 판단하기에 기타 쓸모 없는 억지 제한 같은 거 다 정리해줘.\n이제 매매일이 며칠 남지 않았는데 10% 가량 수익을 내야 하는 상황이야.\n떨어지지 않는 것 보다 올라가는 게 더 중요하다는 말이지.\n다시 말하지만 10등안에 들지 못하면 11등이나 200등이나 똑같아.",
+      "application": "최종10위 달성에 근거 없는 임의 수치제한을 폐지. 최대보유3·발표전40%·동일이벤트70%·기준자산10%하락 신규진입중지·후보3개 제한을 없앰. 기간/손익비/고정10만원 버퍼는 자동탈락기준 아님. 공식규칙·실제현금/미체결/비용·대사는 유지. 기존 계획 가격·수량·기한·발동청산은 자동변경 없음. 새수량은 최신자료로 새버전 발행.",
+      "existing_plan_amended": false,
+      "automatic_order_execution_authorized": false,
+      "policy_path": "config/planning.json",
+      "journal_path": "data/days/2026-10-02.md"
     }
   ],
   "prize_gap_calculation_history": [
@@ -6299,24 +6312,31 @@
     "superseded_by_risk_assessment": "plan-20260928-lg-01 v2 / additional_entry_plans[0].risk"
   },
   "current_risk_policy_reference": {
-    "policy_id": "policy-20261002-operating-cap-removal",
-    "recorded_at": "2026-10-02T12:12:21+09:00",
+    "policy_id": "policy-20261002-prize-objective-flexibility",
+    "recorded_at": "2026-10-02T12:18:15+09:00",
     "source": "config/planning.json",
     "removed_limit_keys": [
       "maximum_total_initial_exposure_fraction",
       "minimum_cash_reserve_fraction_for_new_entries",
       "maximum_single_security_exposure_fraction",
       "planned_stop_loss_budget_per_trade_fraction",
-      "aggregate_planned_stop_loss_budget_fraction"
+      "aggregate_planned_stop_loss_budget_fraction",
+      "maximum_simultaneous_positions",
+      "initial_pre_event_position_fraction_cap",
+      "same_event_aggregate_exposure_fraction_cap",
+      "new_entry_pause.drawdown_fraction_from_profile_start_equity",
+      "max_new_candidates"
     ],
     "removed_operating_caps_enforced": false,
-    "same_event_stress_loss_budget_fraction": null,
-    "same_event_stress_loss_budget_enforced": false,
+    "drawdown_entry_pause_enforced": false,
     "stress_scenario_reporting_required": true,
     "planned_stop_scenario_reporting_required": true,
-    "applies_to": "new_plans_or_explicitly_versioned_size_amendments_only",
+    "equity_missing_alone_blocks_cash_funded_quantity": false,
+    "applies_to": "current_candidate_evaluation_new_plans_or_explicitly_versioned_amendments_existing_orders_unchanged",
     "historical_capacity_is_not_current_removed_cap_constraint": true,
-    "existing_plan_prices_quantities_and_deadlines_unchanged": true
+    "existing_plan_prices_quantities_and_deadlines_unchanged": true,
+    "same_event_stress_loss_budget_fraction": null,
+    "same_event_stress_loss_budget_enforced": false
   },
   "latest_session_summary": {
     "review_id": "review-20261002-1200",
@@ -6331,7 +6351,10 @@
     "avoid_repeated_cash_equity_requests_without_material_need": true,
     "retain_last_reported_values_and_timestamps": true,
     "no_fill_change_is_not_current_equity_confirmation": true,
-    "request_when": "새수량/자금사용계산에필요하거나체결·취소·주문변경후대사가필요할때만;이미보고한값은재사용."
+    "request_when": "새수량/자금사용계산에필요하거나체결·취소·주문변경후대사가필요할때만;이미보고한값은재사용.",
+    "current_policy_reference": "policy-20261002-prize-objective-flexibility",
+    "equity_missing_alone_blocks_cash_funded_quantity": false,
+    "current_request_basis": "실제현금·보유·미체결·공식한도 적용이나 체결/취소 후 자금대사에 필요한 새 사실만 확인. 총자산은 순위기여/손익대사에 필요할 때 요청하며 폐지한 비율/진입중지를 이유로 반복 요구하지 않음."
   },
   "user_execution_calendar": {
     "source_report": "account-report-20261001-0002",
@@ -6389,6 +6412,13 @@
       "recorded_at": "2026-09-29T13:52:29+09:00",
       "source": "config/planning.json",
       "superseded_by": "policy-20261002-operating-cap-removal"
+    },
+    {
+      "policy_id": "policy-20261002-operating-cap-removal",
+      "recorded_at": "2026-10-02T12:12:21+09:00",
+      "source": "config/planning.json",
+      "superseded_by": "policy-20261002-prize-objective-flexibility",
+      "original_journal": "data/days/2026-10-02.md"
     }
   ]
 }

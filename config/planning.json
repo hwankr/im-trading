@@ -13,7 +13,7 @@
   "analysis_runs_per_request": 1,
   "continuous_monitoring": false,
   "scheduled_reanalysis": true,
-  "max_new_candidates": 3,
+  "max_new_candidates": null,
   "output_order": [
     "triggered_existing_exit_if_any",
     "fixed_price_table_and_execution_mode",
@@ -22,8 +22,8 @@
     "sources_and_timestamps"
   ],
   "competition_objective": {
-    "updated_on": "2026-09-23",
-    "source": "explicit_user_request_for_more_aggressive_prize_focused_paper_trading",
+    "updated_on": "2026-10-02",
+    "source": "explicit_user_final_top_10_priority_and_delegated_constraint_cleanup",
     "primary": "pursue_final_top_10_prize_eligibility_and_rank_retention",
     "target_final_rank_at_most": 10,
     "target_is_user_mandate_not_verified_prize_schedule": true,
@@ -45,7 +45,18 @@
       "remaining_capital_and_future_opportunities_differ_before_deadline": true,
       "insufficient_portfolio_contribution_requires": "compare_candidates_size_horizon_and_capital_replacement_then_state_remaining_shortfall",
       "numeric_win_probabilities_require_evidence": true,
-      "existing_numeric_limits_and_triggered_exits_unchanged": true
+      "existing_plan_prices_quantities_deadlines_and_triggered_exits_unchanged": true,
+      "latest_reaffirmation": {
+        "policy_id": "policy-20261002-prize-objective-flexibility",
+        "recorded_at": "2026-10-02T12:18:15+09:00",
+        "outside_final_top_10_rank_examples": [
+          11,
+          200
+        ],
+        "equivalence_scope": "terminal_top_10_objective_failure_only_not_same_predeadline_opportunity_set",
+        "downside_avoidance_is_not_success": true,
+        "maximize_variance_without_evidence_is_not_objective": true
+      }
     },
     "turnover_is_eligibility_constraint_not_primary_objective": true,
     "interim_top_10_is_not_goal_completion": true,
@@ -60,7 +71,14 @@
       "outside_prize_band": "catch_up_with_evidence_based_concentrated_positions",
       "inside_prize_band": "reassess_buffer_time_remaining_and_opportunity_before_explicit_exposure_change",
       "automatic_full_cash_on_first_top_10_entry": false
-    }
+    },
+    "decision_criteria": [
+      "credible_catalyst_within_remaining_executable_period",
+      "price_reflection_and_after_cost_remaining_upside",
+      "portfolio_contribution_relative_to_latest_dated_cutoff_gap",
+      "entry_fill_feasibility_and_exit_execution",
+      "holding_vs_replacement_opportunity_cost_and_qualification"
+    ]
   },
   "interaction": {
     "objective": "pursue_prize_rank_with_low_monitoring_and_executable_entry_windows",
@@ -103,11 +121,8 @@
     "is_automated_schedule": false
   },
   "holding_policy": {
-    "prefer_multiday_setups": true,
-    "preferred_trading_days": {
-      "min": 1,
-      "max": 3
-    },
+    "prefer_multiday_setups": false,
+    "preferred_trading_days": null,
     "preferred_range_is_mandatory": false,
     "longer_holding_allowed_with_catalyst_and_deadline": true,
     "entry_window_is_not_holding_period": true,
@@ -118,7 +133,8 @@
     "widen_stop_without_resizing": false,
     "extend_existing_holding_deadline_for_convenience": false,
     "opportunity_cost_replacement_requires_explicit_new_version": true,
-    "replacement_need_not_wait_for_breakeven": true
+    "replacement_need_not_wait_for_breakeven": true,
+    "holding_horizon_basis": "catalyst_realization_contest_deadline_and_actual_execution_calendar_without_fixed_day_preference"
   },
   "prediction_policy": {
     "pre_event_entries_allowed": true,
@@ -141,9 +157,9 @@
     "scope": "competition_operating_limits_not_competition_rules_or_guaranteed_loss_caps",
     "profile": "prize_focused_catch_up",
     "updated_on": "2026-10-02",
-    "change_basis": "explicit_user_removal_of_five_linked_operating_caps",
-    "applies_to": "new_plans_or_explicitly_versioned_size_amendments_only",
-    "capital_basis": "latest_confirmed_equity_for_remaining_event_caps_contribution_and_anchor_review_actual_cash_for_funding",
+    "change_basis": "explicit_user_delegation_to_remove_arbitrary_constraints_and_prioritize_final_top_10",
+    "applies_to": "current_candidate_evaluation_new_plans_or_explicitly_versioned_amendments_existing_orders_unchanged",
+    "capital_basis": "actual_confirmed_orderable_cash_and_official_initial_capital_limit_for_sizing_equity_for_dated_contribution_reporting",
     "maximum_total_initial_exposure_fraction": null,
     "opportunity_backed_total_exposure_review_range": null,
     "minimum_cash_reserve_fraction_for_new_entries": null,
@@ -152,9 +168,9 @@
     "satellite_position_review_range": null,
     "maximum_single_security_exposure_fraction": null,
     "official_initial_capital_concentration_limit_applies_separately": true,
-    "maximum_simultaneous_positions": 3,
-    "initial_pre_event_position_fraction_cap": 0.4,
-    "same_event_aggregate_exposure_fraction_cap": 0.7,
+    "maximum_simultaneous_positions": null,
+    "initial_pre_event_position_fraction_cap": null,
+    "same_event_aggregate_exposure_fraction_cap": null,
     "event_limits_are_inside_total_exposure_cap": false,
     "planned_stop_loss_budget_per_trade_fraction": null,
     "aggregate_planned_stop_loss_budget_fraction": null,
@@ -170,15 +186,18 @@
     "material_limit_increase_requires_explicit_new_plan": true,
     "include_passive_pending_order_and_earlier_intraday_fill_risk": true,
     "new_entry_pause": {
-      "drawdown_fraction_from_profile_start_equity": 0.1,
+      "drawdown_fraction_from_profile_start_equity": null,
       "anchor_source": "confirmed_equity_recorded_when_profile_is_first_applied",
       "anchor_must_not_be_reset_after_losses": true,
       "observation": "at_actual_user_account_review_not_continuous_monitoring",
-      "action": "pause_new_entries_reassess_then_require_explicit_new_plan_existing_exits_remain_in_force",
+      "action": "report_actual_drawdown_and_reassess_opportunities_without_automatic_entry_pause",
       "is_permanent_competition_exit": false,
       "previously_triggered_exit_or_pause_is_not_retroactively_erased": true,
       "is_guaranteed_loss_cap": false,
-      "automatic_reset": false
+      "automatic_reset": false,
+      "enforced": false,
+      "historical_pause_does_not_create_current_numeric_gate": true,
+      "current_policy_reference": "policy-20261002-prize-objective-flexibility"
     },
     "stress_budget_amendment": {
       "policy_id": "policy-20260929-stress-cap-removal",
@@ -211,12 +230,12 @@
         "applies_to": "new_plans_or_explicitly_versioned_amendments_only"
       }
     ],
-    "current_policy_id": "policy-20261002-operating-cap-removal",
-    "size_to_smallest_active_cash_official_event_limit": true,
+    "current_policy_id": "policy-20261002-prize-objective-flexibility",
+    "size_to_smallest_active_cash_official_event_limit": false,
     "planned_stop_scenario_reporting_required": true,
     "removed_operating_caps_enforced": false,
     "removed_cap_null_means": "no_operating_cap_not_missing_data_or_zero_risk",
-    "event_limits_apply_independently_within_actual_cash_and_official_rules": true,
+    "event_limits_apply_independently_within_actual_cash_and_official_rules": false,
     "operating_cap_removal": {
       "policy_id": "policy-20261002-operating-cap-removal",
       "authorized_on": "2026-10-02",
@@ -256,7 +275,60 @@
       "applies_to": "new_plans_or_explicitly_versioned_size_amendments_only",
       "note": "폐지한 비율은 신규·명시적 수량 수정 계획의 상한/진입차단 조건으로 재사용하지 않음. 공식원금50%·실제현금과비용여유·최대3종목·발표전40%·동일이벤트70%·기준자산 실제10%감소 재평가 유지. 계획손절액/스트레스/계좌기여는 참고 계산. 기존가격·수량·발동청산·기한·위험기준자산 유지.",
       "existing_plan_prices_quantities_and_deadlines_unchanged": true,
-      "risk_anchor_reset": false
+      "risk_anchor_reset": false,
+      "superseded_by": "policy-20261002-prize-objective-flexibility",
+      "historical_not_current_constraints": true
+    },
+    "size_to_actual_cash_and_official_remaining_limit": true,
+    "fixed_execution_buffer_krw": null,
+    "execution_buffer_basis": "documented_instrument_costs_order_size_and_execution_uncertainty_not_universal_fixed_amount",
+    "minimum_reward_risk_ratio_entry_gate": null,
+    "reward_risk_ratio_is_informational_not_standalone_selection_rule": true,
+    "correlated_exposure_reporting_required": true,
+    "equity_missing_alone_blocks_cash_funded_quantity": false,
+    "remaining_arbitrary_constraint_removal": {
+      "policy_id": "policy-20261002-prize-objective-flexibility",
+      "recorded_at": "2026-10-02T12:18:15+09:00",
+      "user_text": "네가 판단하기에 기타 쓸모 없는 억지 제한 같은 거 다 정리해줘.\n이제 매매일이 며칠 남지 않았는데 10% 가량 수익을 내야 하는 상황이야.\n떨어지지 않는 것 보다 올라가는 게 더 중요하다는 말이지.\n다시 말하지만 10등안에 들지 못하면 11등이나 200등이나 똑같아.",
+      "removed_limit_keys": [
+        "maximum_simultaneous_positions",
+        "initial_pre_event_position_fraction_cap",
+        "same_event_aggregate_exposure_fraction_cap",
+        "new_entry_pause.drawdown_fraction_from_profile_start_equity",
+        "max_new_candidates"
+      ],
+      "previous_values": {
+        "maximum_simultaneous_positions": 3,
+        "initial_pre_event_position_fraction_cap": 0.4,
+        "same_event_aggregate_exposure_fraction_cap": 0.7,
+        "new_entry_pause": {
+          "drawdown_fraction_from_profile_start_equity": 0.1,
+          "anchor_source": "confirmed_equity_recorded_when_profile_is_first_applied",
+          "anchor_must_not_be_reset_after_losses": true,
+          "observation": "at_actual_user_account_review_not_continuous_monitoring",
+          "action": "pause_new_entries_reassess_then_require_explicit_new_plan_existing_exits_remain_in_force",
+          "is_permanent_competition_exit": false,
+          "previously_triggered_exit_or_pause_is_not_retroactively_erased": true,
+          "is_guaranteed_loss_cap": false,
+          "automatic_reset": false
+        },
+        "max_new_candidates": 3,
+        "holding_policy_preference": {
+          "prefer_multiday_setups": true,
+          "preferred_trading_days": {
+            "min": 1,
+            "max": 3
+          }
+        },
+        "exit_split_policy": {
+          "split_exits": false,
+          "take_profit_prices_per_security": 1
+        }
+      },
+      "application": "최종10위 달성에 근거 없는 임의 수치제한을 폐지. 최대보유3·발표전40%·동일이벤트70%·기준자산10%하락 신규진입중지·후보3개 제한을 없앰. 기간/손익비/고정10만원 버퍼는 자동탈락기준 아님. 공식규칙·실제현금/미체결/비용·대사는 유지. 기존 계획 가격·수량·기한·발동청산은 자동변경 없음. 새수량은 최신자료로 새버전 발행.",
+      "risk_anchor_reset": false,
+      "existing_plans_and_triggered_exits_unchanged": true,
+      "official_rules_unchanged": true
     }
   },
   "entry": {
@@ -293,14 +365,17 @@
     "no_new_entry_after_validity_end": true,
     "assume_overnight_order_carry": false,
     "next_day_reuse_requires_fresh_explicitly_dated_plan": true,
-    "opportunity_cost_cancellation_allowed": true
+    "opportunity_cost_cancellation_allowed": true,
+    "default_window_may_be_amended_with_explicit_executable_plan": true,
+    "existing_plan_cutoffs_and_final_daily_reconciliation_remain_binding": true,
+    "post_reconciliation_new_plan_requires_new_execution_window_and_fresh_cash": true
   },
   "exit": {
-    "take_profit_prices_per_security": 1,
+    "take_profit_prices_per_security": null,
     "stop_trigger_prices_per_security": 1,
     "quantity_basis": "actual_remaining_sellable_quantity",
     "time_exit_deadline_required": true,
-    "split_exits": false,
+    "split_exits": true,
     "trailing_stop": false,
     "assume_automatic_stop_or_oco": false,
     "evaluation_mode_required": true,
@@ -350,7 +425,10 @@
       "remaining_upside_insufficient",
       "superior_after_cost_opportunity"
     ],
-    "opportunity_cost_policy_reference": "directive-20261001-flexible-cancel-early-exit; data/account.json user_directive_history; AGENTS.md 2026-10-01"
+    "opportunity_cost_policy_reference": "directive-20261001-flexible-cancel-early-exit; data/account.json user_directive_history; AGENTS.md 2026-10-01",
+    "default_take_profit_prices_per_security": 1,
+    "split_exit_conditions": "new_explicit_plan_with_fixed_price_quantity_per_tranche_total_quantity_partial_fill_and_cancel_conflict_reconciliation",
+    "trailing_stop_unverified_not_assumed": true
   },
   "account_missing_policy": "publish_price_only_with_unknown_quantity_if_price_evidence_sufficient",
   "ready_requires_execution_mode_window_and_risk_review": true,
@@ -367,7 +445,7 @@
     "HOLD",
     "BLOCKED"
   ],
-  "price_validation": "0 < stop_trigger_krw < entry_limit_krw < take_profit_limit_krw",
+  "price_validation": "0 < stop_trigger_krw < entry_limit_krw < each_take_profit_limit_krw",
   "price_validation_scope": "new_long_entries_only",
   "metrics_basis": "planned_entry_before_costs_not_realized_pnl_not_a_loss_cap",
   "required_timing_fields": [
