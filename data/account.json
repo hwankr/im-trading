@@ -16,7 +16,7 @@
     "orderable_krw": 37766113,
     "settlement_deposit_krw": 54532917,
     "settlement_deposit_source_report": "account-report-20260930-0006",
-    "field_mapping_note": "주문가능현금은10/2-0008의37,766,113원. 예수금·정산예수금·총자산은 각각 원출처 유지.",
+    "field_mapping_note": "주문가능현금37,766,113원은0008의추가RF628매수전스냅샷. 0010후현재현금미보고로재사용불가; 예수금·정산예수금·총자산은원출처유지.",
     "last_confirmed_cash_availability_report": {
       "source_report": "account-report-20261002-0008",
       "source_type": "user_reported_official_app",
@@ -84,16 +84,18 @@
       "credit_maximum_orderable_krw": 0
     },
     "latest_order_impact": {
-      "source_report": "account-report-20261002-0008",
+      "source_report": "account-report-20261002-0010",
       "source_type": "user_reported_official_app",
       "reported_on": "2026-10-02",
-      "recorded_at": "2026-10-02T12:36:04+09:00",
+      "recorded_at": "2026-10-02T12:49:40+09:00",
       "observed_at": null,
-      "state": "HLB_FULLY_SOLD_RF308_FILLED_CASH_SNAPSHOT",
-      "current_post_buy_orderable_krw": 37766113,
-      "RF_actual_buy_notional_krw": 16389604,
+      "state": "RF_ADDITIONAL628_FILLED_POST_BUY_CASH_UNREPORTED",
+      "last_confirmed_cash_report": "account-report-20261002-0008",
+      "last_confirmed_cash_before_additional_buy_krw": 37766113,
+      "current_post_buy_orderable_krw": null,
+      "prior_cash_snapshot_reusable_for_new_buy": false,
       "actual_costs_krw": null,
-      "note": "실제보고 현금을 직접반영; HLB매도가 역산·수수료추정확정·매매대금중복반영 없음."
+      "note": "0008현금은추가628매수전값으로보존. 개별체결가·실제비용미보고로추정차감하지않음."
     },
     "order_impact_history": [
       {
@@ -159,10 +161,16 @@
         "state": "LS_BUY_215_FILLED_POST_BUY_CASH_REPORTED_EQUITY_NOT_RECONFIRMED",
         "superseded_by_report": "account-report-20261002-0008",
         "source": "data/days/2026-10-02.md"
+      },
+      {
+        "source_report": "account-report-20261002-0008",
+        "state": "HLB_FULLY_SOLD_RF308_FILLED_CASH_SNAPSHOT",
+        "superseded_by_report": "account-report-20261002-0010",
+        "source": "data/days/2026-10-02.md"
       }
     ],
     "latest_cash_update_report": "account-report-20261002-0008",
-    "orderable_currentness": "USER_REPORTED_POST_HLB_EXIT_RF308_BUY_CASH_EXACT_TIME_UNREPORTED"
+    "orderable_currentness": "STALE_PRE_ADDITIONAL_RF628_BUY_POST_BUY_CASH_UNREPORTED"
   },
   "portfolio": {
     "observed_at": null,
@@ -196,23 +204,23 @@
         }
       },
       {
-        "source_report": "account-report-20261002-0008",
+        "source_report": "account-report-20261002-0010",
         "source_type": "user_reported_official_app",
         "reported_on": "2026-10-02",
-        "recorded_at": "2026-10-02T12:36:04+09:00",
+        "recorded_at": "2026-10-02T12:49:40+09:00",
         "observed_at": null,
         "code": "327260",
         "name": "RF머트리얼즈",
-        "quantity": 308,
+        "quantity": 936,
         "sellable_quantity": null,
-        "average_price_krw": 53213,
+        "average_price_krw": 53013,
         "actual_costs_krw": null,
         "plan_id": "plan-20261002-rf-materials-01",
-        "plan_version": 2,
+        "plan_version": 3,
         "management_plan_version": 3,
-        "quantity_basis": "user_reported_initial_308_fill",
-        "take_profit_order_submitted": false,
-        "take_profit_order_source_report": "account-report-20261002-0009"
+        "quantity_basis": "reported_total936_after_initial308_additional_increment628",
+        "take_profit_order_submitted": true,
+        "take_profit_order_source_report": "account-report-20261002-0011"
       }
     ],
     "total_equity_krw": 98685106,
@@ -238,8 +246,8 @@
       "platform_label": "대회수익률",
       "return_percent": -1.31
     },
-    "position_aggregate_basis": "HLB전량매도·RF308평균53,213원은0008; LS215는0004/0005 원출처 유지.",
-    "currentness_note": "0008은HLB/RF와현금만 새보고. LS·총자산·성적은각원출처, RF익절미등록은0009.",
+    "position_aggregate_basis": "RF총936주평균53,013원은0010; LS215주0004/0005 유지; HLB잔량0은0008.",
+    "currentness_note": "RF936주매수완료와전량매도등록만새보고. 매도체결/잔량·현금·총자산·성적은새보고없음.",
     "total_equity_report": {
       "source_report": "account-report-20261002-0001",
       "source_type": "user_reported_official_app",
@@ -249,7 +257,7 @@
       "platform_label": "총자산",
       "amount_krw": 98685106
     },
-    "latest_position_change_report": "account-report-20261002-0008"
+    "latest_position_change_report": "account-report-20261002-0010"
   },
   "orders": {
     "observed_at": null,
@@ -280,6 +288,30 @@
         "observed_at": null,
         "quantity_basis": "all_previously_confirmed_holdings_registered_full_and_all_unfilled",
         "limit_price_source_report": "account-report-20261002-0004"
+      },
+      {
+        "source_report": "account-report-20261002-0011",
+        "source_type": "user_reported_official_app",
+        "reported_on": "2026-10-02",
+        "recorded_at": "2026-10-02T12:49:40+09:00",
+        "observed_at": null,
+        "order_id": null,
+        "code": "327260",
+        "name": "RF머트리얼즈",
+        "side": "sell",
+        "order_type": "limit",
+        "order_quantity": 936,
+        "cumulative_filled_quantity": null,
+        "remaining_quantity": null,
+        "limit_price_krw": 57500,
+        "submission_confirmed": true,
+        "status": "SUBMITTED_FULL_QUANTITY_FILL_AND_REMAINING_UNREPORTED",
+        "plan_id": "plan-20261002-rf-materials-01",
+        "plan_version": 3,
+        "order_quantity_source_report": "account-report-20261002-0010",
+        "direction_confirmation_report": "account-report-20261002-0011",
+        "quantity_basis": "user_total936_full_sell_registration",
+        "actual_costs_krw": null
       }
     ],
     "confirmation_text": "전부 전량 매도 등록 했고 전부 미체결이야.",
@@ -297,7 +329,9 @@
       "historical_snapshot_not_current_all_orders": true,
       "subsequent_partial_updates": [
         "account-report-20261002-0008",
-        "account-report-20261002-0009"
+        "account-report-20261002-0009",
+        "account-report-20261002-0010",
+        "account-report-20261002-0011"
       ]
     },
     "cancelled_orders": [
@@ -379,7 +413,7 @@
         "final_fill_source_report": "account-report-20261001-0005"
       }
     ],
-    "note": "기존체결·취소이력보존. HLB전량매도·RF초기308체결은0008, RF익절미등록은0009. 실제추가628주 주문/체결은미보고이며 LS주문은0005 원보고승계.",
+    "note": "기존체결·취소이력보존. RF308+추가628=총936, 총936을추가체결수량으로가산하지않음. 매도936등록확인은전량미체결확인이아님.",
     "filled_orders": [
       {
         "order_id": null,
@@ -703,9 +737,38 @@
         "row_represents": "reported_308_share_buy_fill_order_details_unreported",
         "plan_id": "plan-20261002-rf-materials-01",
         "plan_version": 2
+      },
+      {
+        "source_report": "account-report-20261002-0010",
+        "source_type": "user_reported_official_app",
+        "reported_on": "2026-10-02",
+        "recorded_at": "2026-10-02T12:49:40+09:00",
+        "observed_at": null,
+        "order_id": null,
+        "code": "327260",
+        "name": "RF머트리얼즈",
+        "side": "buy",
+        "order_type": null,
+        "planned_order_type": "limit",
+        "order_quantity": null,
+        "planned_order_quantity": 628,
+        "cumulative_filled_quantity": 628,
+        "remaining_quantity": null,
+        "remaining_planned_entry_quantity": 0,
+        "limit_price_krw": null,
+        "planned_limit_price_krw": 53400,
+        "average_fill_price_krw": null,
+        "total_holding_quantity_after_fill": 936,
+        "total_holding_average_price_krw": 53013,
+        "actual_costs_krw": null,
+        "filled_at": null,
+        "status": "ADDITIONAL_PLANNED628_FILL_CONFIRMED_FROM_TOTAL936",
+        "row_represents": "increment628_between_confirmed_initial308_and_total936_not_additional936",
+        "plan_id": "plan-20261002-rf-materials-01",
+        "plan_version": 3
       }
     ],
-    "currentness_note": "HLB잔량0·RF308매수체결은0008, RF익절매도미등록은0009. LS주문은0005원보고승계. 추가628주는계획이며실제주문/체결미보고.",
+    "currentness_note": "RF총936주매수완료0010·57,500원전량매도등록0011. 매도체결/미체결잔량은미보고. LS주문0005 원출처유지. RF추가매수계획완료로중복입력없음.",
     "Samsung_sell_order_status": {
       "source_report": "account-report-20260928-0005",
       "source_type": "user_reported_official_app",
@@ -767,7 +830,7 @@
       "submission_source_report": "account-report-20260928-0012",
       "average_fill_price_krw": 39400
     },
-    "latest_execution_report": "account-report-20261002-0008",
+    "latest_execution_report": "account-report-20261002-0010",
     "latest_no_fill_change_report": {
       "report_id": "account-report-20261002-0005",
       "since_report": "account-report-20261002-0004",
@@ -783,10 +846,12 @@
       "historical_snapshot_not_current_all_orders": true,
       "subsequent_partial_updates": [
         "account-report-20261002-0008",
-        "account-report-20261002-0009"
+        "account-report-20261002-0009",
+        "account-report-20261002-0010",
+        "account-report-20261002-0011"
       ]
     },
-    "latest_order_change_report": "account-report-20261002-0009",
+    "latest_order_change_report": "account-report-20261002-0011",
     "latest_price_confirmation_report": {
       "source_report": "account-report-20261002-0006",
       "source_type": "user_reported_official_app",
@@ -795,15 +860,17 @@
       "observed_at": null
     },
     "RF_take_profit_order_status": {
-      "source_report": "account-report-20261002-0009",
+      "source_report": "account-report-20261002-0011",
       "source_type": "user_reported_official_app",
       "reported_on": "2026-10-02",
-      "recorded_at": "2026-10-02T12:36:04+09:00",
+      "recorded_at": "2026-10-02T12:49:40+09:00",
       "observed_at": null,
-      "submission_confirmed": false,
-      "known_order_quantity": 0,
-      "planned_price_krw": 57500,
-      "planned_existing_holding_quantity": 308
+      "submission_confirmed": true,
+      "known_order_quantity": 936,
+      "limit_price_krw": 57500,
+      "cumulative_filled_quantity": null,
+      "remaining_quantity": null,
+      "direction_typo_resolved": true
     },
     "HLB_sell_order_status": {
       "source_report": "account-report-20261002-0008",
@@ -908,7 +975,7 @@
     "confirmation_status": "planning_basis_reconciled_official_total_equity_unconfirmed",
     "note": "이번 신규 계획의 최초 운용 기준을 고정 기록한다. 공식 총자산 확인 시 출처를 대사하되 손실을 이유로 기준점을 낮추거나 초기화하지 않는다."
   },
-  "last_reconciled_report": "account-report-20261002-0009",
+  "last_reconciled_report": "account-report-20261002-0011",
   "unresolved": [
     "과거 인버스·두산퓨얼셀의 전량 매도 완료는 확인됐으나 종목별 체결가·정확한 시각·주문번호·실제 비용은 미확인.",
     "이전09:19 주문가능현금과 이후 현금 차이67,796원의 원인·공식 총자산 필드 매핑은 미확인. 최신 공식수익률은 과거 팝업과 별도 실제 보고로 확인.",
@@ -931,16 +998,16 @@
     "handoff_recorded_at": "2026-09-30T08:39:12+09:00"
   },
   "latest_report": {
-    "report_id": "account-report-20261002-0009",
+    "report_id": "account-report-20261002-0011",
     "source_type": "user_reported_official_app",
     "reported_on": "2026-10-02",
-    "recorded_at": "2026-10-02T12:36:04+09:00",
+    "recorded_at": "2026-10-02T12:49:40+09:00",
     "observed_at": null,
     "source": "data/days/2026-10-02.md",
-    "scope": "RF_take_profit_sell_not_submitted_only"
+    "scope": "RF57500_full936_order_confirmed_sell_typo_resolved_fills_unreported"
   },
-  "last_received_report": "account-report-20261002-0009",
-  "updated_at": "2026-10-02T12:46:39+09:00",
+  "last_received_report": "account-report-20261002-0011",
+  "updated_at": "2026-10-02T12:49:40+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -966,7 +1033,7 @@
   "latest_plan_reference": {
     "plan_id": "plan-20261002-rf-materials-01",
     "version": 3,
-    "status": "HELD_308_ADDITIONAL_628_READY",
+    "status": "HELD_936_TAKE_PROFIT_SUBMITTED_FILLS_UNREPORTED",
     "path": "data/days/2026-10-02.md",
     "plan_is_not_order_or_fill": true
   },
@@ -998,8 +1065,8 @@
     "execution_verified": false,
     "registration_action": "transfer_existing_heartbeat_to_user_requested_october_2_chat"
   },
-  "latest_holdings_report": "account-report-20261002-0008",
-  "last_reconciliation_scope": "0008_HLB_exit_RF_initial_fill_cash_and_0009_RF_no_TP_order_LS_and_equity_not_refreshed",
+  "latest_holdings_report": "account-report-20261002-0010",
+  "last_reconciliation_scope": "RF_total936_buy_fill_and_full936_sell_registration_only_cash_LS_equity_and_sell_remaining_not_refreshed",
   "publication_authorization": {
     "authorized_on": "2026-09-16",
     "recorded_at": "2026-09-16T12:43:30.583010+09:00",
@@ -1036,21 +1103,21 @@
     {
       "plan_id": "plan-20261002-rf-materials-01",
       "version": 3,
-      "status": "HELD_308_ADDITIONAL_628_READY",
+      "status": "HELD_936_TAKE_PROFIT_SUBMITTED_FILLS_UNREPORTED",
       "path": "data/days/2026-10-02.md",
       "plan_is_not_order_or_fill": true
     }
   ],
   "execution_follow_up": {
-    "checked_at": "2026-10-02T12:36:04+09:00",
-    "source": "user_execution_report_and_authorized_funded_RF_amendment",
-    "latest_account_report": "account-report-20261002-0009",
+    "checked_at": "2026-10-02T12:49:40+09:00",
+    "source": "RF_full_buy_and_sell_registration_reports",
+    "latest_account_report": "account-report-20261002-0011",
     "latest_cash_report": "account-report-20261002-0008",
-    "latest_holdings_report": "account-report-20261002-0008",
+    "latest_holdings_report": "account-report-20261002-0010",
     "plan_reference": {
       "plan_id": "plan-20261002-rf-materials-01",
       "version": 3,
-      "status": "HELD_308_ADDITIONAL_628_READY",
+      "status": "HELD_936_TAKE_PROFIT_SUBMITTED_FILLS_UNREPORTED",
       "path": "data/days/2026-10-02.md",
       "plan_is_not_order_or_fill": true
     },
@@ -1065,7 +1132,7 @@
       {
         "plan_id": "plan-20261002-rf-materials-01",
         "version": 3,
-        "status": "HELD_308_ADDITIONAL_628_READY",
+        "status": "HELD_936_TAKE_PROFIT_SUBMITTED_FILLS_UNREPORTED",
         "path": "data/days/2026-10-02.md",
         "plan_is_not_order_or_fill": true
       }
@@ -1078,9 +1145,9 @@
       },
       {
         "code": "327260",
-        "quantity": 308,
-        "average_price_krw": 53213,
-        "source_report": "account-report-20261002-0008"
+        "quantity": 936,
+        "average_price_krw": 53013,
+        "source_report": "account-report-20261002-0010"
       }
     ],
     "closed_positions": [
@@ -1091,36 +1158,42 @@
       }
     ],
     "remaining_prior_RF_planned_buy_quantity": 0,
-    "planned_additional_buy_quantity": 628,
-    "additional_buy_order_submitted": null,
-    "additional_buy_filled_quantity": null,
+    "planned_additional_buy_quantity": 0,
+    "additional_buy_order_submitted": true,
+    "additional_buy_filled_quantity": 628,
     "additional_buy_remaining_quantity": null,
-    "order_submission_and_fill_report_pending": true,
+    "order_submission_and_fill_report_pending": false,
     "pending_details": [
-      "RF_additional628_actual_submission_fills_and_remaining",
-      "RF_TP_actual_submitted_quantity_after_user_action"
+      "RF_sell_cumulative_fill_and_remaining_at_next_reconciliation",
+      "post_additional_buy_cash_before_any_new_sizing"
     ],
-    "execution_reconfirmation_status": "HLB_CLOSED_RF308_FILLED_NO_TP_CASH_RECONCILED_LS_OLD_REPORT",
+    "execution_reconfirmation_status": "RF_TOTAL936_BUY_COMPLETE_SELL936_AT57500_SUBMITTED_LS_OLD_REPORT",
     "exit_obligation_status": "HLB_EXIT_COMPLETED_RF_AND_LS_STOPS_AND_TODAY_15_10_CONTINUE",
-    "new_entry_status": "RF_ADDITIONAL628_READY_TOTAL936_IF_FILLED",
+    "new_entry_status": "RF_v3_COMPLETED_NO_ADDITIONAL_BUY",
     "next_position_review_at": "2026-10-02T13:00:00+09:00",
     "next_guidance_slot": "2026-10-02T13:00:00+09:00",
     "mandatory_reconciliation_at": "2026-10-02T15:00:00+09:00",
     "exit_deadline": "2026-10-02T15:10:00+09:00",
     "orders_submitted_by_assistant": false,
-    "instructions": "기존 보유308주는57,500원 익절 지정가를 등록하고, 추가628주만53,400원 상한 지정가로 발행후오늘14:30전까지 한 번 입력. 추가분은 실제 체결된 수량만57,500원에 별도 매도 등록하며 미체결을 보유로 합산하지 않음. 입력전 가격<=51,900 또는>=57,500, 거래제한·가설무효·중복주문이면 입력하지 않음. 기존308주의 수동손절 평가 시작을 초기화하지 않고 추가분은 최초체결부터 manual_on_observation. 다음13:00 또는 체결보고에서 첫점검,15:00 실제 매수미체결 취소완료·취소중체결대사. 손절51,900이하 실제관측·가설무효·오늘15:10에는 매수미체결 취소대사→기존매도 취소완료·취소중체결대사→실제 매도가능잔량 시장가 청산. 손절→시간청산→익절. 최종취소/대사후 추가매수없음.",
+    "instructions": "RF총936주매수계획완료로추가매수없음. 57,500원936주익절매도이미등록, 중복매도없음; 실제매도체결·잔량은다음대사시확인. 51,900이하실제관측/무효또는오늘15:10에는실제매수미체결이있으면취소대사→기존매도취소완료·취소중체결대사→실제매도가능잔량시장가. manual_on_observation·13:00다음점검·15:00필수대사·15:10최종청산유지.",
     "LS_execution_reference": "plan-20261002-ls-electric-01_v2",
     "post_sale_account_report_pending": false,
     "new_sizing_account_report_pending": false,
     "replacement_reconciliation_required": false,
     "original_HLB_order_cancel_fill_split_unreported": true,
-    "take_profit_order_report_pending": true,
-    "actual_RF_take_profit_submitted": false,
-    "actual_RF_take_profit_source_report": "account-report-20261002-0009",
+    "take_profit_order_report_pending": false,
+    "actual_RF_take_profit_submitted": true,
+    "actual_RF_take_profit_source_report": "account-report-20261002-0011",
     "latest_completed_exit_report": "account-report-20261002-0008",
     "latest_instruction_reference": "review-20261002-rf-funded-amendment",
     "instruction_recorded_at": "2026-10-02T12:36:04+09:00",
-    "last_price_review_reference": "review-20261002-1245"
+    "last_price_review_reference": "review-20261002-1245",
+    "original_additional_buy_plan_quantity": 628,
+    "remaining_additional_planned_entry_quantity": 0,
+    "take_profit_fill_report_pending": true,
+    "post_additional_buy_cash_report_pending": true,
+    "current_cash_reusable_for_new_order": false,
+    "last_execution_report": "account-report-20261002-0011"
   },
   "latest_market_review": {
     "review_id": "review-20261002-1245",
@@ -2347,7 +2420,7 @@
   "current_entry_plan": {
     "plan_id": "plan-20261002-rf-materials-01",
     "version": 3,
-    "status": "HELD_308_ADDITIONAL_628_READY",
+    "status": "HELD_936_TAKE_PROFIT_SUBMITTED_FILLS_UNREPORTED",
     "generated_at": "2026-10-02T12:36:04+09:00",
     "information_as_of": "2026-10-02T12:34:59+09:00",
     "code": "327260",
@@ -2363,7 +2436,7 @@
     "total_planned_quantity": 936,
     "notional_krw": 49982400,
     "account_contribution_percent": null,
-    "entry_execution_allowed": true,
+    "entry_execution_allowed": false,
     "orders_submitted_by_assistant": false,
     "plan_is_not_order_or_fill": true,
     "source": "data/days/2026-10-02.md",
@@ -2381,7 +2454,7 @@
     "replacement_relationship": "v3_replaces_v2_initial308_entry_completed_with_additional628_only_total936_if_filled_same_exit_prices_and_deadline",
     "quantity_missing_reason": null,
     "reason": "9/28확정수주와오늘광통신비교종목강세,KRX고57500재시험·저51900이탈무효선. 현53400에서고점까지7.678%로HLB의17%회복대기보다실행기간에맞는가격구조라는정성판단이며확률우위수치화하지않음. 공식제한11:38~11:41 KIND 전목록확인재사용,현재Npay tradable·관리false·NXT미지원 보완. 휴장/10/6부재넘김새확정촉매없어오늘15:10청산.",
-    "execution": "기존 보유308주는57,500원 익절 지정가를 등록하고, 추가628주만53,400원 상한 지정가로 발행후오늘14:30전까지 한 번 입력. 추가분은 실제 체결된 수량만57,500원에 별도 매도 등록하며 미체결을 보유로 합산하지 않음. 입력전 가격<=51,900 또는>=57,500, 거래제한·가설무효·중복주문이면 입력하지 않음. 기존308주의 수동손절 평가 시작을 초기화하지 않고 추가분은 최초체결부터 manual_on_observation. 다음13:00 또는 체결보고에서 첫점검,15:00 실제 매수미체결 취소완료·취소중체결대사. 손절51,900이하 실제관측·가설무효·오늘15:10에는 매수미체결 취소대사→기존매도 취소완료·취소중체결대사→실제 매도가능잔량 시장가 청산. 손절→시간청산→익절. 최종취소/대사후 추가매수없음.",
+    "execution": "RF총936주매수계획완료로추가매수없음. 57,500원936주익절매도이미등록, 중복매도없음; 실제매도체결·잔량은다음대사시확인. 51,900이하실제관측/무효또는오늘15:10에는실제매수미체결이있으면취소대사→기존매도취소완료·취소중체결대사→실제매도가능잔량시장가. manual_on_observation·13:00다음점검·15:00필수대사·15:10최종청산유지.",
     "risk": {
       "cash_source_report": "account-report-20261002-0008",
       "confirmed_orderable_cash_krw": 37766113,
@@ -2402,7 +2475,10 @@
       "stress_is_informational_not_cap": true,
       "fixed_100000_buffer_applied": false,
       "future_HLB_sale_proceeds_reused": false,
-      "actual_HLB_sale_and_cash_confirmed": true
+      "actual_HLB_sale_and_cash_confirmed": true,
+      "pending_buy_cash_reservation_krw": 0,
+      "pending_buy_cash_reservation_scope": "RF_v3_planned_entry_completed_not_confirmation_of_all_other_orders",
+      "planned_cash_reservation_is_historical": true
     },
     "latest_market_review_reference": "review-20261002-1245",
     "cash_source_report": "account-report-20261002-0008",
@@ -2417,13 +2493,16 @@
       "RF_TP_not_submitted": "account-report-20261002-0009",
       "LS_holdings_orders": "account-report-20261002-0005",
       "official_rank": "account-report-20261002-0003",
-      "last_app_equity": "account-report-20261002-0001"
+      "last_app_equity": "account-report-20261002-0001",
+      "total_RF_fill": "account-report-20261002-0010",
+      "RF_sell_registration": "account-report-20261002-0011",
+      "post_additional_buy_cash": null
     },
     "quantity_is_total_not_additional": true,
     "actual_order_submitted": true,
-    "actual_filled_quantity": 308,
+    "actual_filled_quantity": 936,
     "actual_remaining_order_quantity": null,
-    "actual_order_state": "initial308_filled_additional628_submission_unreported",
+    "actual_order_state": "total936_buy_fill_confirmed_sell936_submitted_fill_remaining_unreported",
     "entry_submission_window": {
       "start": "2026-10-02T12:36:04+09:00",
       "end_exclusive": "2026-10-02T14:30:00+09:00",
@@ -2439,7 +2518,8 @@
       "contribution_to_old_reported_equity_percent": null,
       "contribution_equity_source": "account-report-20261002-0001_pre_LS_purchase_not_current_equity",
       "scenario_not_forecast": true,
-      "conditional_average_if_additional_at_cap_krw": 53338.46581196581
+      "conditional_average_if_additional_at_cap_krw": 53338.46581196581,
+      "conditional_average_is_historical_scenario_superseded_by_actual_report": "account-report-20261002-0010"
     },
     "assumed_cost_rates": {
       "buy": 0.0001,
@@ -2479,30 +2559,40 @@
       "price_tick_krw": 100
     },
     "scale_up_candidate": {
-      "status": "RESOLVED_BY_V3_ADDITIONAL628_READY",
-      "total_if_filled": 936,
-      "additional_quantity": 628,
-      "is_current_order_permission": true,
-      "requires_actual_fill_before_sell_quantity_increase": true,
-      "basis_reports": [
-        "account-report-20261002-0008",
-        "account-report-20261002-0009"
-      ]
+      "status": "FULFILLED_TOTAL936_REPORTED",
+      "total_quantity": 936,
+      "additional_filled_quantity": 628,
+      "is_current_order_permission": false,
+      "completed_report": "account-report-20261002-0010"
     },
     "existing_held_quantity": 308,
     "existing_average_price_krw": 53213,
     "additional_buy_quantity": 628,
-    "current_order_quantity": 628,
-    "planned_additional_buy_quantity": 628,
+    "current_order_quantity": 0,
+    "planned_additional_buy_quantity": 0,
     "additional_buy_notional_krw": 33535200,
     "remaining_prior_planned_entry_quantity": 0,
-    "actual_additional_order_submitted": null,
-    "actual_additional_filled_quantity": null,
+    "actual_additional_order_submitted": true,
+    "actual_additional_filled_quantity": 628,
     "actual_additional_remaining_order_quantity": null,
-    "actual_average_fill_price_krw": 53213,
-    "actual_take_profit_order_submitted": false,
-    "actual_take_profit_order_source_report": "account-report-20261002-0009",
-    "latest_reconciliation_report": "account-report-20261002-0009"
+    "actual_average_fill_price_krw": 53013,
+    "actual_take_profit_order_submitted": true,
+    "actual_take_profit_order_source_report": "account-report-20261002-0011",
+    "latest_reconciliation_report": "account-report-20261002-0011",
+    "entry_permission_completed_by_report": "account-report-20261002-0010",
+    "actual_current_holding_quantity": 936,
+    "remaining_total_planned_entry_quantity": 0,
+    "remaining_additional_planned_entry_quantity": 0,
+    "actual_sell_order_quantity": 936,
+    "actual_sell_order_price_krw": 57500,
+    "actual_sell_order_cumulative_filled_quantity": null,
+    "actual_sell_order_remaining_quantity": null,
+    "existing_held_quantity_field_scope": "308_at_v3_issue_historical_basis_current_actual936_in_actual_current_holding_quantity",
+    "actual_fill_at": null,
+    "execution_original_plan_reference": "RF_v3_original_execution_table_in_daily_journal_12_36",
+    "original_additional_order_quantity": 628,
+    "original_additional_buy_plan_quantity": 628,
+    "additional_buy_quantity_field_scope": "628_in_original_v3_plan_completed_by_report0010_not_remaining_order_permission"
   },
   "market_review_history": [
     {
@@ -3719,6 +3809,15 @@
       "original_order_final_filled_quantity": null,
       "reason": "position_closed_original_order_disposition_not_reported",
       "source": "data/days/2026-10-02.md"
+    },
+    {
+      "code": "327260",
+      "prior_report": "account-report-20261002-0009",
+      "prior_take_profit_submitted": false,
+      "submitted_true_source_report": "account-report-20261002-0011",
+      "original_0010_text": "전량 57500 매수 걸어뒀어",
+      "direction_correction": "매도 주문 맞음 — 매수는 오타",
+      "source": "data/days/2026-10-02.md"
     }
   ],
   "latest_entry_rationale_review": {
@@ -4262,6 +4361,38 @@
       "changes": {
         "RF_take_profit_order_submitted": false
       }
+    },
+    {
+      "report_id": "account-report-20261002-0010",
+      "source_type": "user_reported_official_app",
+      "reported_on": "2026-10-02",
+      "recorded_at": "2026-10-02T12:49:40+09:00",
+      "observed_at": null,
+      "source": "data/days/2026-10-02.md",
+      "scope": "RF_total936_buy_filled_average53013_and_full57500_order_direction_ambiguous",
+      "changes": {
+        "RF_quantity_before": 308,
+        "RF_quantity_after": 936,
+        "RF_incremental_buy_fill": 628,
+        "RF_average_price_krw": 53013
+      },
+      "direction_ambiguity_resolved_by_report": "account-report-20261002-0011",
+      "post_buy_cash_unreported": true
+    },
+    {
+      "report_id": "account-report-20261002-0011",
+      "source_type": "user_reported_official_app",
+      "reported_on": "2026-10-02",
+      "recorded_at": "2026-10-02T12:49:40+09:00",
+      "observed_at": null,
+      "source": "data/days/2026-10-02.md",
+      "scope": "RF57500_full936_order_confirmed_sell_typo_resolved_fills_unreported",
+      "changes": {
+        "RF_registered_order_side": "sell",
+        "RF_registered_order_quantity": 936,
+        "RF_registered_order_limit_price_krw": 57500
+      },
+      "corrects_report": "account-report-20261002-0010"
     }
   ],
   "entry_plan_history": [
@@ -5407,6 +5538,17 @@
         "RF_quantity_after": 308
       },
       "source": "data/days/2026-10-02.md"
+    },
+    {
+      "source_report": "account-report-20261002-0010",
+      "changes": {
+        "RF_quantity_before": 308,
+        "RF_quantity_after": 936,
+        "RF_incremental_buy_fill": 628,
+        "RF_average_price_before": 53213,
+        "RF_average_price_after": 53013
+      },
+      "source": "data/days/2026-10-02.md"
     }
   ],
   "holdings_report_history": [
@@ -5529,6 +5671,16 @@
         "RF_quantity": 308,
         "RF_average_price_krw": 53213,
         "orderable_krw": 37766113
+      },
+      "source": "data/days/2026-10-02.md"
+    },
+    {
+      "report_id": "account-report-20261002-0010",
+      "changes": {
+        "RF_quantity_before": 308,
+        "RF_quantity_after": 936,
+        "RF_incremental_buy_fill": 628,
+        "RF_average_price_krw": 53013
       },
       "source": "data/days/2026-10-02.md"
     }
@@ -6438,7 +6590,7 @@
     "plan_id": "portfolio-20261002-01",
     "version": 3,
     "replaces_version": 2,
-    "status": "HLB_CLOSED_RF308_HELD_ADD628_READY_LS215_HOLD",
+    "status": "HLB_CLOSED_RF936_HELD_TAKE_PROFIT_SUBMITTED_LS215_HOLD",
     "generated_at": "2026-10-02T12:36:04+09:00",
     "source": "data/days/2026-10-02.md",
     "policy_reference": "policy-20261002-prize-objective-flexibility",
@@ -6453,17 +6605,17 @@
       {
         "plan_id": "plan-20261002-rf-materials-01",
         "version": 3,
-        "status": "HELD_308_ADDITIONAL_628_READY",
+        "status": "HELD_936_TAKE_PROFIT_SUBMITTED_FILLS_UNREPORTED",
         "path": "data/days/2026-10-02.md",
         "plan_is_not_order_or_fill": true
       }
     ],
     "actual_holdings_and_orders_remain_original_reports": false,
-    "actual_holdings_source_report": "account-report-20261002-0008",
+    "actual_holdings_source_report": "account-report-20261002-0010",
     "cash_source_report": "account-report-20261002-0008",
     "new_sell_or_buy_fills_confirmed": true,
-    "decision": "HLB932 전량매도와 RF308 평균53,213원 매수·현금37,766,113원 확인. RF추가628주53,400원상한지정가READY(전량체결시총936주), LS215 기존관리유지. RF현재308주 익절매도 미등록은0009에서확인. 추가주문/체결은아직미보고.",
-    "conditional_full_allocation_reference": "RF_v3_additional628_READY_total936_only_if_filled",
+    "decision": "RF총936주평균53,013원매수완료·57,500원전량매도등록. 추가매수허가종료. LS215·두보유원손절/오늘15:10기한유지.",
+    "conditional_full_allocation_reference": "RF_v3_TOTAL936_ACTUALLY_FILLED_0010_NO_FURTHER_BUY",
     "scenario": {
       "actual_post_execution_cash_source_report": "account-report-20261002-0008",
       "RF_existing_quantity": 308,
@@ -6476,14 +6628,17 @@
       "remaining_shortfall_krw": 5873889.519999996,
       "further_return_needed_if_scenario_realized_percent": 5.609882262909549,
       "cash_based_scenario_not_current_app_equity_or_return_prediction": true,
-      "no_existing_paper_gains_double_counted": true
+      "no_existing_paper_gains_double_counted": true,
+      "historical_pre_actual_additional_fill_scenario": true,
+      "not_current_after_execution_report": "account-report-20261002-0010"
     },
     "actual_sources_by_position": {
       "HLB": "account-report-20261002-0008",
-      "RF": "account-report-20261002-0008",
-      "RF_sell_state": "account-report-20261002-0009",
+      "RF": "account-report-20261002-0010",
+      "RF_sell_state": "account-report-20261002-0011",
       "LS": "account-report-20261002-0005"
-    }
+    },
+    "last_execution_reconciliation_report": "account-report-20261002-0011"
   },
   "corporate_action_review": {
     "reviewed_at": "2026-09-28T09:41:23+09:00",
@@ -6675,11 +6830,15 @@
     "same_event_stress_loss_budget_enforced": false
   },
   "latest_session_summary": {
-    "review_id": "review-20261002-1245",
-    "recorded_at": "2026-10-02T12:46:39+09:00",
-    "decision": "RF_v3_ADDITIONAL628_LIMIT53400_AND_LS_v2_HOLD_NO_NEW_ORDER_OR_VERSION",
+    "review_id": "reconciliation-20261002-rf-full",
+    "recorded_at": "2026-10-02T12:49:40+09:00",
     "source": "data/days/2026-10-02.md",
     "portfolio_plan_version": 3,
+    "latest_reports": [
+      "account-report-20261002-0010",
+      "account-report-20261002-0011"
+    ],
+    "market_review_reference": "review-20261002-1245",
     "next_review_at": "2026-10-02T13:00:00+09:00"
   },
   "account_report_request_policy": {

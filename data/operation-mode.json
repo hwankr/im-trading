@@ -711,16 +711,16 @@
     "schedule_target_status_and_notification_policy_preserved": true
   },
   "execution_reconciliation_prompt_update": {
-    "verified_at": "2026-10-01T14:43:18+09:00",
+    "verified_at": "2026-10-02T12:53:16+09:00",
     "reports": [
-      "account-report-20261001-0006",
-      "account-report-20261001-0007"
+      "account-report-20261002-0010",
+      "account-report-20261002-0011"
     ],
     "native_update_verified": true,
     "persisted_full_prompt_verified": true,
     "schedule_target_status_and_notification_policy_preserved": true,
-    "scope": "LS_zero_fill_no_buy_orders_HLB_sell_932_submitted_zero_filled_932_remaining_price_unreported",
-    "journal_path": "data/days/2026-10-01.md"
+    "scope": "RF936_actual_buy_complete_sell936_at57500_submitted_no_duplicate_buy_or_sell_post_buy_cash_unreported",
+    "journal_path": "data/days/2026-10-02.md"
   },
   "single_writer_handoff_history": [
     {
