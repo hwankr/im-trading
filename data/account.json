@@ -979,7 +979,7 @@
     "scope": "LS_full215_exit_all_holdings_and_buy_sell_open_orders_none_orderable_cash97468563"
   },
   "last_received_report": "account-report-20261002-0013",
-  "updated_at": "2026-10-02T15:17:48+09:00",
+  "updated_at": "2026-10-02T15:35:02+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -1106,11 +1106,11 @@
     "exit_obligation_status": "ALL_RF_LS_TRIGGERED_EXITS_COMPLETED",
     "new_entry_status": "ALL_TODAY_PLANS_CLOSED_NO_NEW_ENTRY",
     "next_position_review_at": null,
-    "next_guidance_slot": "2026-10-02T15:30:00+09:00",
+    "next_guidance_slot": "2026-10-07T10:00:00+09:00",
     "mandatory_reconciliation_at": "2026-10-02T15:00:00+09:00",
     "exit_deadline": "2026-10-02T15:10:00+09:00",
     "orders_submitted_by_assistant": false,
-    "instructions": "0013에서LS215주전량매도·보유0·매수미체결0·매도미체결0·주문가능현금97,468,563원확인. RF/HLB도청산완료. 추가매도/취소없음,오늘신규매수없음. 다음15:30은마감기록과10/7준비만. 실제매도가·비용·공식총자산/성적은미보고이며현금으로대체하지않음.",
+    "instructions": "0013에서보유0·매수미체결0·매도미체결0·주문가능현금97,468,563원확인,이번회차새앱관측아님. RF/HLB/LS청산완료·추가매도/취소없음. 오늘신규매수없음. 다음예약2026-10-07 10:00 KST,그날시세/공시/공식제한/실제자금으로별도새계획검토. 10/3~5휴장·10/6개인일정에는조사/매매안내없음.",
     "LS_execution_reference": "plan-20261002-ls-electric-01_v2",
     "post_sale_account_report_pending": false,
     "new_sizing_account_report_pending": false,
@@ -1120,9 +1120,9 @@
     "actual_RF_take_profit_submitted": true,
     "actual_RF_take_profit_source_report": "account-report-20261002-0011",
     "latest_completed_exit_report": "account-report-20261002-0013",
-    "latest_instruction_reference": "review-20261002-1500",
-    "instruction_recorded_at": "2026-10-02T15:17:48+09:00",
-    "last_price_review_reference": "review-20261002-1500",
+    "latest_instruction_reference": "review-20261002-1530",
+    "instruction_recorded_at": "2026-10-02T15:35:02+09:00",
+    "last_price_review_reference": "review-20261002-1530",
     "original_additional_buy_plan_quantity": 628,
     "remaining_additional_planned_entry_quantity": 0,
     "take_profit_fill_report_pending": false,
@@ -1138,59 +1138,53 @@
     "pending_details_block_further_today_actions": false
   },
   "latest_market_review": {
-    "review_id": "review-20261002-1500",
-    "recorded_at": "2026-10-02T15:10:51+09:00",
-    "heartbeat_received_at": "2026-10-02T15:01:35.480+09:00",
-    "nominal_slot": "2026-10-02T15:00:00+09:00",
+    "review_id": "review-20261002-1530",
+    "recorded_at": "2026-10-02T15:35:02+09:00",
+    "heartbeat_received_at": "2026-10-02T15:31:01.315+09:00",
+    "nominal_slot": "2026-10-02T15:30:00+09:00",
     "quotes": [
       {
         "code": "327260",
         "name": "RF머트리얼즈",
-        "price_krw": 51600,
-        "observed_at": "2026-10-02T15:03:22+09:00",
-        "retrieved_at": "2026-10-02T15:03:52+09:00",
+        "price_krw": 52500,
+        "observed_at": "2026-10-02T15:32:20+09:00",
+        "retrieved_at": "2026-10-02T15:32:21+09:00",
         "source": "https://m.stock.naver.com/domestic/stock/327260/total",
-        "price_type": "KRX_current_quote",
-        "delay_seconds": 0
+        "price_type": "KRX_display_after_regular_close_not_verified_final_close",
+        "delay_seconds": 0,
+        "provider_market_status": "OPEN",
+        "provider_market_status_detail": "break",
+        "is_confirmed_final_close": false
       },
       {
         "code": "010120",
         "name": "LS ELECTRIC",
-        "price_krw": 209000,
-        "observed_at": "2026-10-02T15:03:19+09:00",
-        "retrieved_at": "2026-10-02T15:03:52+09:00",
+        "price_krw": 209500,
+        "observed_at": "2026-10-02T15:32:18+09:00",
+        "retrieved_at": "2026-10-02T15:32:21+09:00",
         "source": "https://m.stock.naver.com/domestic/stock/010120/total",
-        "price_type": "KRX_current_quote",
-        "delay_seconds": 0
+        "price_type": "KRX_display_after_regular_close_not_verified_final_close",
+        "delay_seconds": 0,
+        "provider_market_status": "OPEN",
+        "provider_market_status_detail": "break",
+        "is_confirmed_final_close": false
       }
     ],
-    "decision": "RF_STOP_AND_LS_TIME_EXITS_COMPLETED_ALL_FLAT_CASH97468563_NO_NEW_ENTRY",
+    "decision": "END_OF_DAY_FLAT_NO_ORDERS_NEXT_REVIEW_OCT7_1000",
     "source": "data/days/2026-10-02.md",
     "account_reports_reused": [
-      "account-report-20261002-0010",
-      "account-report-20261002-0011"
+      "account-report-20261002-0013"
     ],
-    "LS_account_reports_reused": [
-      "account-report-20261002-0004"
-    ],
-    "actual_account_state_refreshed": true,
-    "stop_or_time_exit_triggered_at_observation": true,
-    "RF_observed_price_above_stop_krw": -300,
-    "price_path_between_reviews_verified": false,
-    "next_review_at": "2026-10-02T15:30:00+09:00",
-    "full_plan_reference": "portfolio-20261002-01_v3",
-    "new_account_report": "account-report-20261002-0012",
-    "RF_stop_trigger_reference": "exit-trigger-20261002-rf-150322",
-    "RF_exit_resolved_by_report": "account-report-20261002-0012",
-    "LS_time_exit_triggered_at_price_observation": false,
-    "LS_time_exit_reference": "exit-trigger-20261002-ls-time1510",
-    "LS_time_exit_verified_at": "2026-10-02T15:10:51+09:00",
-    "new_account_reports": [
+    "actual_account_state_refreshed": false,
+    "new_exit_trigger": false,
+    "previous_triggered_exits_completed": true,
+    "completed_exit_reports": [
       "account-report-20261002-0012",
       "account-report-20261002-0013"
     ],
-    "latest_account_report": "account-report-20261002-0013",
-    "LS_exit_resolved_by_report": "account-report-20261002-0013"
+    "price_path_between_reviews_verified": false,
+    "next_review_at": "2026-10-07T10:00:00+09:00",
+    "full_plan_reference": "portfolio-20261002-01_v3_closed"
   },
   "prior_portfolio_screen_summaries": [
     {
@@ -3572,6 +3566,11 @@
     {
       "review_id": "review-20261002-1430",
       "recorded_at": "2026-10-02T14:35:11+09:00",
+      "source": "data/days/2026-10-02.md"
+    },
+    {
+      "review_id": "review-20261002-1500",
+      "recorded_at": "2026-10-02T15:10:51+09:00",
       "source": "data/days/2026-10-02.md"
     }
   ],
@@ -7050,15 +7049,13 @@
     "same_event_stress_loss_budget_enforced": false
   },
   "latest_session_summary": {
-    "review_id": "review-20261002-1500",
-    "recorded_at": "2026-10-02T15:10:51+09:00",
-    "decision": "RF_STOP_AND_LS_TIME_EXITS_COMPLETED_ALL_FLAT_CASH97468563_NO_NEW_ENTRY",
+    "review_id": "review-20261002-1530",
+    "recorded_at": "2026-10-02T15:35:02+09:00",
+    "decision": "END_OF_DAY_FLAT_NO_ORDERS_NEXT_REVIEW_OCT7_1000",
     "source": "data/days/2026-10-02.md",
-    "portfolio_plan_version": 3,
-    "next_review_at": "2026-10-02T15:30:00+09:00",
     "account_report": "account-report-20261002-0013",
-    "LS_time_exit_reference": "exit-trigger-20261002-ls-time1510",
-    "latest_reconciliation_at": "2026-10-02T15:15:23+09:00"
+    "next_review_at": "2026-10-07T10:00:00+09:00",
+    "actual_account_state_refreshed": false
   },
   "account_report_request_policy": {
     "source_report": "account-report-20260930-0008",
@@ -7135,5 +7132,19 @@
       "superseded_by": "policy-20261002-prize-objective-flexibility",
       "original_journal": "data/days/2026-10-02.md"
     }
-  ]
+  ],
+  "next_session_preparation": {
+    "review_reference": "review-20261002-1530",
+    "source": "data/days/2026-10-02.md",
+    "next_authorized_review_at": "2026-10-07T10:00:00+09:00",
+    "research_priority_codes": [
+      "214430",
+      "010140",
+      "082920"
+    ],
+    "is_entry_plan": false,
+    "prices_and_quantities_for_next_session_not_set": true,
+    "account_cash_report": "account-report-20261002-0013",
+    "new_session_information_review_required": true
+  }
 }
