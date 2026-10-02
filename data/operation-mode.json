@@ -53,8 +53,8 @@
   "first_execution_evidence": "Read-only native automations.last_run_at=1789520509195; first 10:00-slot review and public observations appended to private daily record. No account fill inferred.",
   "next_run_verified_at_kst": "2026-10-02T08:48:06+09:00",
   "last_completed_review": {
-    "review_id": "review-20261002-1000",
-    "recorded_at": "2026-10-02T10:06:16+09:00",
+    "review_id": "review-20261002-1030",
+    "recorded_at": "2026-10-02T10:37:52+09:00",
     "journal_path": "data/days/2026-10-02.md",
     "decision": "HOLD_HLB_LS_EXISTING_TAKE_PROFIT_ORDERS_NO_NEW_OR_REPLACEMENT_ORDER",
     "trigger": "authorized_heartbeat_30"
@@ -588,7 +588,7 @@
     "verified_at": "2026-09-29T13:53:00+09:00",
     "verification": "native_update_success_and_persisted_toml_prompt_schedule_target_status_comparison"
   },
-  "next_nominal_slot_kst": "2026-10-02T10:30:00+09:00",
+  "next_nominal_slot_kst": "2026-10-02T11:00:00+09:00",
   "single_writer_handoff_prepared_at": "2026-10-02T08:48:06+09:00",
   "single_writer_handoff_status": "ACCEPTED_SINGLE_WRITER",
   "risk_policy_update_history": [
