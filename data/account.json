@@ -13,22 +13,31 @@
     "recorded_at": "2026-09-30T10:09:29+09:00",
     "platform_label": "예수금",
     "balance_krw": 45923468,
-    "orderable_krw": 60892506,
+    "orderable_krw": 16490567,
     "settlement_deposit_krw": 54532917,
     "settlement_deposit_source_report": "account-report-20260930-0006",
-    "field_mapping_note": "최신현금금액은매수전10/2-0001 60,892,506원.0004LS매수확인후새현금미보고로현재잔고확정아님;예수금/정산예수금각원출처보존.",
+    "field_mapping_note": "주문가능현금은10/2-0007의16,490,567원으로 갱신. 예수금·정산예수금·총자산은 각각 원출처 유지; 현금차이를 체결·수수료·세금으로 확정하지 않음.",
     "last_confirmed_cash_availability_report": {
-      "source_report": "account-report-20261002-0001",
+      "source_report": "account-report-20261002-0007",
       "source_type": "user_reported_official_app",
       "reported_on": "2026-10-02",
-      "recorded_at": "2026-10-02T08:55:44+09:00",
+      "recorded_at": "2026-10-02T12:07:04+09:00",
       "observed_at": null,
       "platform_label": "주문가능현금",
-      "amount_krw": 60892506,
-      "orderable_krw": 60892506
+      "amount_krw": 16490567,
+      "orderable_krw": 16490567
     },
     "orderable_platform_label": "주문가능현금",
     "orderable_report": {
+      "source_report": "account-report-20261002-0007",
+      "source_type": "user_reported_official_app",
+      "reported_on": "2026-10-02",
+      "recorded_at": "2026-10-02T12:07:04+09:00",
+      "observed_at": null,
+      "platform_label": "주문가능현금",
+      "amount_krw": 16490567
+    },
+    "previous_orderable_report": {
       "source_report": "account-report-20261002-0001",
       "source_type": "user_reported_official_app",
       "reported_on": "2026-10-02",
@@ -36,15 +45,6 @@
       "observed_at": null,
       "platform_label": "주문가능현금",
       "amount_krw": 60892506
-    },
-    "previous_orderable_report": {
-      "source_report": "account-report-20261001-0005",
-      "source_type": "user_reported_official_app",
-      "reported_on": "2026-10-01",
-      "recorded_at": "2026-10-01T13:32:27+09:00",
-      "observed_at": null,
-      "platform_label": "주문가능현금",
-      "amount_krw": 60855381
     },
     "settlement_deposit_report": {
       "source_report": "account-report-20260930-0006",
@@ -85,12 +85,12 @@
     },
     "latest_order_impact": {
       "source_report": "account-report-20261002-0004",
-      "state": "LS_BUY_215_FILLED_POST_BUY_CASH_UNREPORTED",
+      "state": "LS_BUY_215_FILLED_POST_BUY_CASH_REPORTED_EQUITY_NOT_RECONFIRMED",
       "LS_actual_buy_notional_krw": 44397500,
       "LS_actual_costs_krw": null,
-      "cash_amount_source_report": "account-report-20261002-0001",
-      "current_post_buy_orderable_krw": null,
-      "note": "이전현금60,892,506원과총자산98,685,106원은매수전보고로원시각유지. 비용/갱신앱현금미보고여서추정차감/정산/새총자산확정없음."
+      "cash_amount_source_report": "account-report-20261002-0007",
+      "current_post_buy_orderable_krw": 16490567,
+      "note": "LS매수후 주문가능현금16,490,567원을0007에서 새 보고. 총자산·매도주문/보유변동·실제비용은 이번에 보고되지 않아 원출처 유지."
     },
     "order_impact_history": [
       {
@@ -152,8 +152,8 @@
         "source": "data/days/2026-10-01.md"
       }
     ],
-    "latest_cash_update_report": "account-report-20261002-0001",
-    "orderable_currentness": "PRE_LS_BUY_REPORT_CURRENT_POST_BUY_CASH_UNREPORTED"
+    "latest_cash_update_report": "account-report-20261002-0007",
+    "orderable_currentness": "USER_REPORTED_POST_LS_BUY_CASH_0007_EXACT_OBSERVATION_TIME_UNREPORTED"
   },
   "portfolio": {
     "observed_at": null,
@@ -850,7 +850,7 @@
     "confirmation_status": "planning_basis_reconciled_official_total_equity_unconfirmed",
     "note": "이번 신규 계획의 최초 운용 기준을 고정 기록한다. 공식 총자산 확인 시 출처를 대사하되 손실을 이유로 기준점을 낮추거나 초기화하지 않는다."
   },
-  "last_reconciled_report": "account-report-20261002-0006",
+  "last_reconciled_report": "account-report-20261002-0007",
   "unresolved": [
     "과거 인버스·두산퓨얼셀의 전량 매도 완료는 확인됐으나 종목별 체결가·정확한 시각·주문번호·실제 비용은 미확인.",
     "이전09:19 주문가능현금과 이후 현금 차이67,796원의 원인·공식 총자산 필드 매핑은 미확인. 최신 공식수익률은 과거 팝업과 별도 실제 보고로 확인.",
@@ -873,16 +873,16 @@
     "handoff_recorded_at": "2026-09-30T08:39:12+09:00"
   },
   "latest_report": {
-    "report_id": "account-report-20261002-0006",
+    "report_id": "account-report-20261002-0007",
     "source_type": "user_reported_official_app",
     "reported_on": "2026-10-02",
-    "recorded_at": "2026-10-02T09:09:46+09:00",
+    "recorded_at": "2026-10-02T12:07:04+09:00",
     "observed_at": null,
     "source": "data/days/2026-10-02.md",
-    "scope": "HLB_actual_sell_price_confirmation_combined_with_two_sell_quantities_zero_fills_full_remaining_0005_only_cash_equity_not_reconfirmed"
+    "scope": "orderable_cash_only_equity_holdings_orders_not_reconfirmed"
   },
-  "last_received_report": "account-report-20261002-0006",
-  "updated_at": "2026-10-02T11:05:34+09:00",
+  "last_received_report": "account-report-20261002-0007",
+  "updated_at": "2026-10-02T12:07:04+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -942,7 +942,7 @@
     "registration_action": "transfer_existing_heartbeat_to_user_requested_october_2_chat"
   },
   "latest_holdings_report": "account-report-20261002-0005",
-  "last_reconciliation_scope": "HLB_actual_sell_price_confirmation_combined_with_two_sell_quantities_zero_fills_full_remaining_0005_only_cash_equity_not_reconfirmed",
+  "last_reconciliation_scope": "orderable_cash_only_equity_holdings_orders_not_reconfirmed",
   "publication_authorization": {
     "authorized_on": "2026-09-16",
     "recorded_at": "2026-09-16T12:43:30.583010+09:00",
@@ -988,8 +988,8 @@
   "execution_follow_up": {
     "checked_at": "2026-10-02T09:09:46+09:00",
     "source": "user_HLB_47500_sell_price_confirmation_combined_with_0005_inventory",
-    "latest_account_report": "account-report-20261002-0006",
-    "latest_cash_report": "account-report-20261002-0001",
+    "latest_account_report": "account-report-20261002-0007",
+    "latest_cash_report": "account-report-20261002-0007",
     "latest_holdings_report": "account-report-20261002-0005",
     "plan_reference": {
       "plan_id": "plan-20261001-hlb-01",
@@ -1021,8 +1021,9 @@
     "order_submission_and_fill_report_pending": false,
     "pending_details": [
       "actual_sellable_quantities_at_exit",
-      "actual_costs_and_post_buy_cash_if_new_sizing_needed",
-      "app_observation_time_unreported"
+      "app_observation_time_unreported",
+      "actual_costs_unreported",
+      "current_total_equity_if_new_sizing_needed"
     ],
     "execution_reconfirmation_status": "TWO_SELL_PRICES_FULL_QUANTITIES_ZERO_FILLS_FULL_REMAINING_RECONCILED",
     "exit_obligation_status": "HLB_AND_LS_ORIGINAL_MANUAL_ON_OBSERVATION_EXIT_PLANS_ACTIVE",
@@ -3995,6 +3996,21 @@
       },
       "quantity_fill_remaining_report": "account-report-20261002-0005",
       "cash_equity_not_reconfirmed": true
+    },
+    {
+      "report_id": "account-report-20261002-0007",
+      "source_type": "user_reported_official_app",
+      "reported_on": "2026-10-02",
+      "recorded_at": "2026-10-02T12:07:04+09:00",
+      "observed_at": null,
+      "source": "data/days/2026-10-02.md",
+      "scope": "orderable_cash_only_equity_holdings_orders_not_reconfirmed",
+      "changes": {
+        "orderable_krw_before": 60892506,
+        "orderable_krw_after": 16490567
+      },
+      "prior_cash_report": "account-report-20261002-0001",
+      "equity_holdings_orders_not_reconfirmed": true
     }
   ],
   "entry_plan_history": [
@@ -4911,6 +4927,12 @@
         "total_equity_krw_before": 98125906,
         "total_equity_krw_after": 98685106
       }
+    },
+    {
+      "source_report": "account-report-20261002-0007",
+      "recorded_at": "2026-10-02T12:07:04+09:00",
+      "prior_report": "account-report-20261002-0001",
+      "source": "data/days/2026-10-02.md"
     }
   ],
   "latest_official_results_availability_report": {
@@ -6070,7 +6092,7 @@
       "exit_evaluation_mode": "manual_on_observation",
       "evaluation_mode_applies_from": "first_actual_fill_after_READY_revision",
       "replacement_relationship": "candidate_only_HLB_and_LS_v1_remain_active_no_LS_exit_instruction",
-      "quantity_missing_reason": "post_LS_buy_cash_and_equity_and_current_order_changes_requested_not_reported",
+      "quantity_missing_reason": "current_total_equity_and_order_changes_not_reported_cash_updated_0007",
       "reason": "9/28 확정 계약132.496억원(매출20.68%)과 당일고가57,500 재시험 가설. 51,900은 당일저가 이탈의 단기 가격 무효선이며 계약 무효 가격이 아님. 고가회복 확률은 미산정.",
       "execution": "수량 확정 READY 수정본 전에는 입력하지 않음. 확정 후 KRX 53,400원 상한 지정가 한 번, 실제 체결분만57,500원 익절매도. 손절51,900원 이하 실제관측 또는15:10에 매수미체결취소·대사→기존매도취소·대사→실제매도가능잔량시장가. LS 교체는 별도v2 확정·취소중체결대사·실제매도·현금확인 후 RF 수량재계산.",
       "risk": {
@@ -6078,7 +6100,8 @@
         "quantity_reservation": null,
         "detail_reference": "data/days/2026-10-02.md"
       },
-      "latest_market_review_reference": "review-20261002-1200"
+      "latest_market_review_reference": "review-20261002-1200",
+      "cash_source_report": "account-report-20261002-0007"
     }
   ],
   "current_portfolio_plan": {
