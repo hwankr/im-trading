@@ -882,7 +882,7 @@
     "scope": "orderable_cash_only_equity_holdings_orders_not_reconfirmed"
   },
   "last_received_report": "account-report-20261002-0007",
-  "updated_at": "2026-10-02T12:07:04+09:00",
+  "updated_at": "2026-10-02T12:12:21+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -1044,8 +1044,8 @@
     "mandatory_reconciliation_recorded_at": "2026-10-01T14:42:59+09:00",
     "next_mandatory_reconciliation_at": "2026-10-02T15:00:00+09:00",
     "prior_order_inventory_uncertainty_resolved_by_report": "account-report-20260929-0001",
-    "policy_change_reference": "policy-20260929-stress-cap-removal",
-    "policy_change_recorded_at": "2026-09-29T13:52:29+09:00",
+    "policy_change_reference": "policy-20261002-operating-cap-removal",
+    "policy_change_recorded_at": "2026-10-02T12:12:21+09:00",
     "planned_additional_buy_quantity": 0,
     "execution_report_requested_this_review": false,
     "first_review_account_reconciliation_pending": false,
@@ -5375,6 +5375,21 @@
       "automatic_order_execution_authorized": false,
       "policy_path": "config/planning.json",
       "journal_path": "data/days/2026-10-01.md"
+    },
+    {
+      "directive_id": "policy-20261002-operating-cap-removal",
+      "reported_on": "2026-10-02",
+      "recorded_at": "2026-10-02T12:12:21+09:00",
+      "kind": "explicit_user_operating_policy_change",
+      "source": "direct_user_message",
+      "text": "그럼 이 제한들 그냥 없애버리자.",
+      "scope": "직전 설명의 단일45%·현금10%·거래계획손절2%와 연결된 전체90%·합산계획손절5% 폐지",
+      "application": "폐지한 비율은 신규·명시적 수량 수정 계획의 상한/진입차단 조건으로 재사용하지 않음. 공식원금50%·실제현금과비용여유·최대3종목·발표전40%·동일이벤트70%·기준자산 실제10%감소 재평가 유지. 계획손절액/스트레스/계좌기여는 참고 계산. 기존가격·수량·발동청산·기한·위험기준자산 유지.",
+      "new_numeric_policy_change": true,
+      "existing_plan_amended": false,
+      "automatic_order_execution_authorized": false,
+      "policy_path": "config/planning.json",
+      "journal_path": "data/days/2026-10-02.md"
     }
   ],
   "prize_gap_calculation_history": [
@@ -6284,14 +6299,23 @@
     "superseded_by_risk_assessment": "plan-20260928-lg-01 v2 / additional_entry_plans[0].risk"
   },
   "current_risk_policy_reference": {
-    "policy_id": "policy-20260929-stress-cap-removal",
-    "recorded_at": "2026-09-29T13:52:29+09:00",
+    "policy_id": "policy-20261002-operating-cap-removal",
+    "recorded_at": "2026-10-02T12:12:21+09:00",
     "source": "config/planning.json",
+    "removed_limit_keys": [
+      "maximum_total_initial_exposure_fraction",
+      "minimum_cash_reserve_fraction_for_new_entries",
+      "maximum_single_security_exposure_fraction",
+      "planned_stop_loss_budget_per_trade_fraction",
+      "aggregate_planned_stop_loss_budget_fraction"
+    ],
+    "removed_operating_caps_enforced": false,
     "same_event_stress_loss_budget_fraction": null,
     "same_event_stress_loss_budget_enforced": false,
     "stress_scenario_reporting_required": true,
+    "planned_stop_scenario_reporting_required": true,
     "applies_to": "new_plans_or_explicitly_versioned_size_amendments_only",
-    "historical_stress_capacity_is_not_current_entry_constraint": true,
+    "historical_capacity_is_not_current_removed_cap_constraint": true,
     "existing_plan_prices_quantities_and_deadlines_unchanged": true
   },
   "latest_session_summary": {
@@ -6357,6 +6381,14 @@
       "old_entry_plan_reuse_prohibited": true,
       "operation_record": "data/operation-mode.json",
       "source_writer_stops_after_this_handoff_commit": true
+    }
+  ],
+  "risk_policy_reference_history": [
+    {
+      "policy_id": "policy-20260929-stress-cap-removal",
+      "recorded_at": "2026-09-29T13:52:29+09:00",
+      "source": "config/planning.json",
+      "superseded_by": "policy-20261002-operating-cap-removal"
     }
   ]
 }

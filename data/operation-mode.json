@@ -603,6 +603,18 @@
       "verified_at": "2026-09-28T08:58:31+09:00",
       "verification": "native_update_success_and_persisted_toml_policy_report_plan_target_schedule_checks",
       "new_schedule_execution_verified": false
+    },
+    {
+      "policy_id": "policy-20261002-operating-cap-removal",
+      "authorized_on": "2026-10-02",
+      "recorded_at": "2026-10-02T12:12:21+09:00",
+      "source": "config/planning.json",
+      "automation_prompt_update_verified": true,
+      "automation_id": "30",
+      "verified_at": "2026-10-02T12:12:21+09:00",
+      "verification": "native_tool_success_and_persisted_prompt_target_schedule_status_comparison",
+      "new_schedule_execution_verified": false,
+      "existing_plans_automatically_amended": false
     }
   ],
   "reporting_workflow_reference": {
@@ -732,5 +744,10 @@
     "additional_schedule_created": false,
     "recorded_at": "2026-10-02T08:48:06+09:00",
     "initial_turn_started_at": "2026-10-02T08:46:52+09:00"
+  },
+  "current_risk_policy_reference": {
+    "policy_id": "policy-20261002-operating-cap-removal",
+    "source": "config/planning.json",
+    "recorded_at": "2026-10-02T12:12:21+09:00"
   }
 }

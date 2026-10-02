@@ -140,36 +140,24 @@
   "risk_policy": {
     "scope": "competition_operating_limits_not_competition_rules_or_guaranteed_loss_caps",
     "profile": "prize_focused_catch_up",
-    "updated_on": "2026-09-29",
-    "change_basis": "explicit_user_directive_to_remove_same_event_stress_loss_cap",
+    "updated_on": "2026-10-02",
+    "change_basis": "explicit_user_removal_of_five_linked_operating_caps",
     "applies_to": "new_plans_or_explicitly_versioned_size_amendments_only",
-    "capital_basis": "latest_confirmed_account_equity_not_margin_order_limit",
-    "maximum_total_initial_exposure_fraction": 0.9,
-    "opportunity_backed_total_exposure_review_range": {
-      "min": 0.7,
-      "max": 0.9,
-      "mandatory": false
-    },
-    "minimum_cash_reserve_fraction_for_new_entries": 0.1,
-    "reference_position_fraction_not_required_allocation": 0.35,
-    "core_position_review_range": {
-      "min": 0.35,
-      "max": 0.45,
-      "mandatory": false
-    },
-    "satellite_position_review_range": {
-      "min": 0.2,
-      "max": 0.3,
-      "mandatory": false
-    },
-    "maximum_single_security_exposure_fraction": 0.45,
+    "capital_basis": "latest_confirmed_equity_for_remaining_event_caps_contribution_and_anchor_review_actual_cash_for_funding",
+    "maximum_total_initial_exposure_fraction": null,
+    "opportunity_backed_total_exposure_review_range": null,
+    "minimum_cash_reserve_fraction_for_new_entries": null,
+    "reference_position_fraction_not_required_allocation": null,
+    "core_position_review_range": null,
+    "satellite_position_review_range": null,
+    "maximum_single_security_exposure_fraction": null,
     "official_initial_capital_concentration_limit_applies_separately": true,
     "maximum_simultaneous_positions": 3,
     "initial_pre_event_position_fraction_cap": 0.4,
     "same_event_aggregate_exposure_fraction_cap": 0.7,
-    "event_limits_are_inside_total_exposure_cap": true,
-    "planned_stop_loss_budget_per_trade_fraction": 0.02,
-    "aggregate_planned_stop_loss_budget_fraction": 0.05,
+    "event_limits_are_inside_total_exposure_cap": false,
+    "planned_stop_loss_budget_per_trade_fraction": null,
+    "aggregate_planned_stop_loss_budget_fraction": null,
     "same_event_stress_loss_budget_fraction": null,
     "fees_and_execution_buffer_required": true,
     "stress_move_requires_evidence_not_arbitrary_tightening": true,
@@ -209,7 +197,7 @@
     "same_event_stress_loss_budget_enforced": false,
     "stress_scenario_reporting_required": true,
     "stress_scenario_is_not_sizing_or_entry_gate": true,
-    "size_to_smallest_cash_exposure_and_planned_stop_limit": true,
+    "size_to_smallest_cash_exposure_and_planned_stop_limit": false,
     "actual_loss_can_exceed_planned_stop_budget_and_stress_scenario": true,
     "stress_budget_amendment_history": [
       {
@@ -222,7 +210,54 @@
         "anchor_reset": false,
         "applies_to": "new_plans_or_explicitly_versioned_amendments_only"
       }
-    ]
+    ],
+    "current_policy_id": "policy-20261002-operating-cap-removal",
+    "size_to_smallest_active_cash_official_event_limit": true,
+    "planned_stop_scenario_reporting_required": true,
+    "removed_operating_caps_enforced": false,
+    "removed_cap_null_means": "no_operating_cap_not_missing_data_or_zero_risk",
+    "event_limits_apply_independently_within_actual_cash_and_official_rules": true,
+    "operating_cap_removal": {
+      "policy_id": "policy-20261002-operating-cap-removal",
+      "authorized_on": "2026-10-02",
+      "recorded_at": "2026-10-02T12:12:21+09:00",
+      "user_text": "그럼 이 제한들 그냥 없애버리자.",
+      "scope": "직전 설명의 단일45%·현금10%·거래계획손절2%와 연결된 전체90%·합산계획손절5% 폐지",
+      "removed_limit_keys": [
+        "maximum_total_initial_exposure_fraction",
+        "minimum_cash_reserve_fraction_for_new_entries",
+        "maximum_single_security_exposure_fraction",
+        "planned_stop_loss_budget_per_trade_fraction",
+        "aggregate_planned_stop_loss_budget_fraction"
+      ],
+      "previous_values": {
+        "maximum_total_initial_exposure_fraction": 0.9,
+        "minimum_cash_reserve_fraction_for_new_entries": 0.1,
+        "maximum_single_security_exposure_fraction": 0.45,
+        "planned_stop_loss_budget_per_trade_fraction": 0.02,
+        "aggregate_planned_stop_loss_budget_fraction": 0.05,
+        "opportunity_backed_total_exposure_review_range": {
+          "min": 0.7,
+          "max": 0.9,
+          "mandatory": false
+        },
+        "reference_position_fraction_not_required_allocation": 0.35,
+        "core_position_review_range": {
+          "min": 0.35,
+          "max": 0.45,
+          "mandatory": false
+        },
+        "satellite_position_review_range": {
+          "min": 0.2,
+          "max": 0.3,
+          "mandatory": false
+        }
+      },
+      "applies_to": "new_plans_or_explicitly_versioned_size_amendments_only",
+      "note": "폐지한 비율은 신규·명시적 수량 수정 계획의 상한/진입차단 조건으로 재사용하지 않음. 공식원금50%·실제현금과비용여유·최대3종목·발표전40%·동일이벤트70%·기준자산 실제10%감소 재평가 유지. 계획손절액/스트레스/계좌기여는 참고 계산. 기존가격·수량·발동청산·기한·위험기준자산 유지.",
+      "existing_plan_prices_quantities_and_deadlines_unchanged": true,
+      "risk_anchor_reset": false
+    }
   },
   "entry": {
     "order_type": "limit",
