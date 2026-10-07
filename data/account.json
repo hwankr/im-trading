@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "status": "RECONCILED",
+  "status": "NEEDS_RECONCILIATION",
   "account_alias": "paper-main",
   "paper_competition_account_confirmed": true,
   "privacy": "public_paper_trading_records_user_authorized_20260916",
@@ -16,7 +16,7 @@
     "orderable_krw": 97468563,
     "settlement_deposit_krw": 54532917,
     "settlement_deposit_source_report": "account-report-20260930-0006",
-    "field_mapping_note": "10/7 10:35 주문가능현금97,468,563원 새 확인. 총자산·예수금·정산예수금과 별도이며 해당 필드의 과거 출처 유지.",
+    "field_mapping_note": "주문가능현금97,468,563원은10/7 10:35 매수전 관측. 0003 매수/미체결 후 현재현금은 미보고; 실제 현금 필드 추정 차감 없음. 총자산·예수금·정산예수금의 과거 출처 유지.",
     "last_confirmed_cash_availability_report": {
       "source_type": "user_reported_official_app",
       "reported_on": "2026-10-07",
@@ -88,14 +88,17 @@
     "latest_order_impact": {
       "source_type": "user_reported_official_app",
       "reported_on": "2026-10-07",
-      "recorded_at": "2026-10-07T10:44:07+09:00",
-      "observed_at": "2026-10-07T10:35:00+09:00",
-      "source_report": "account-report-20261007-0001",
-      "state": "NEW_DAY_FLAT_NO_OPEN_ORDERS_CASH_CONFIRMED",
-      "current_orderable_krw": 97468563,
+      "recorded_at": "2026-10-07T11:06:04+09:00",
+      "observed_at": null,
+      "source": "data/days/2026-10-07.md",
+      "source_report": "account-report-20261007-0003",
+      "state": "GENIANS_FULL_PLAN_BOUGHT_SAMG_ALL_UNFILLED_POST_ORDER_CASH_UNREPORTED",
+      "current_orderable_krw": null,
       "cash_source_report": "account-report-20261007-0001",
+      "pre_order_cash_observed_at": "2026-10-07T10:35:00+09:00",
+      "previous_cash_snapshot_reusable_for_new_orders": false,
       "new_entry_authorized": false,
-      "note": "자금 산정 자료 확인 완료. 당일 별도 READY 계획 발행 전 신규 주문 지시 없음."
+      "note": "97,468,563원은10:35 매수전 마지막 실제 현금. 체결대금/가정비용 추정 차감하지 않으며 미체결 취소·체결·현금 대사 전 중복 자금사용 없음."
     },
     "order_impact_history": [
       {
@@ -173,17 +176,44 @@
         "state": "ALL_POSITIONS_EXITED_ALL_OPEN_ORDERS_NONE_POST_SALE_CASH_CONFIRMED",
         "superseded_by_report": "account-report-20261007-0001",
         "source": "data/days/2026-10-02.md"
+      },
+      {
+        "source_report": "account-report-20261007-0001",
+        "state": "NEW_DAY_FLAT_NO_OPEN_ORDERS_CASH_CONFIRMED",
+        "superseded_by_report": "account-report-20261007-0003",
+        "source": "data/days/2026-10-07.md"
       }
     ],
     "latest_cash_update_report": "account-report-20261007-0001",
-    "orderable_currentness": "CONFIRMED_20261007_1035_FLAT_NO_OPEN_ORDERS"
+    "orderable_currentness": "PRE_ORDER_20261007_1035_SNAPSHOT_POST_BUY_CASH_UNREPORTED"
   },
   "portfolio": {
     "observed_at": null,
     "reported_on": "2026-09-30",
     "source_type": "direct_app_or_screenshot",
     "source_report": "account-report-20260930-0006",
-    "holdings": [],
+    "holdings": [
+      {
+        "code": "263860",
+        "name": "지니언스",
+        "quantity": 2070,
+        "sellable_quantity": null,
+        "average_price_krw": 24118,
+        "status": "HELD_USER_CONFIRMED",
+        "plan_id": "plan-20261007-genians-01",
+        "plan_version": 1,
+        "source_report": "account-report-20261007-0003",
+        "source_type": "user_reported_official_app",
+        "reported_on": "2026-10-07",
+        "recorded_at": "2026-10-07T11:06:04+09:00",
+        "observed_at": null,
+        "actual_costs_krw": null,
+        "filled_at": null,
+        "registered_take_profit_order_quantity": 2070,
+        "take_profit_order_source_report": "account-report-20261007-0004",
+        "sellable_quantity_note": "전량 익절매도 등록2070주 보고; 주문 예약 후 별도 매도가능수량 화면값은 미보고."
+      }
+    ],
     "total_equity_krw": 98685106,
     "official_return_percent": -2.33,
     "derived_equity_from_return_krw": 97670000,
@@ -207,8 +237,8 @@
       "platform_label": "대회수익률",
       "return_percent": -2.33
     },
-    "position_aggregate_basis": "10/7 10:35 사용자 보유 없음 확인. 10/2 세 종목 청산 이력 보존.",
-    "currentness_note": "보유·미체결·현금은10/7 10:35 재확인; 공식성적은0002. 총자산98,685,106원은10/2 과거 보고이며 새 확인 아님.",
+    "position_aggregate_basis": "0003의 지니언스2070주 평균24118원 보유; SAMG체결0 보고. 전체 기타보유 재확인 없음.",
+    "currentness_note": "지니언스 보유는10/7 0003, 익절등록은0004; 정확한 앱/체결시각 미보고. 10:35 현금은 매수전 과거 관측, 갱신 현금·총자산 미보고. 성적0002와 총자산10/2 원출처 유지.",
     "total_equity_report": {
       "source_report": "account-report-20261002-0001",
       "source_type": "user_reported_official_app",
@@ -218,26 +248,82 @@
       "platform_label": "총자산",
       "amount_krw": 98685106
     },
-    "latest_position_change_report": "account-report-20261002-0013",
-    "latest_holdings_confirmation_report": "account-report-20261007-0001",
-    "derived_equity_from_return_note": "원금1억원×(1-2.33%)의 참고 역산. 공식 총자산이나 주문가능현금으로 대체하지 않음."
+    "latest_position_change_report": "account-report-20261007-0003",
+    "latest_holdings_confirmation_report": "account-report-20261007-0003",
+    "derived_equity_from_return_note": "원금1억원×(1-2.33%)의 참고 역산. 공식 총자산이나 주문가능현금으로 대체하지 않음.",
+    "all_holdings_confirmed": false
   },
   "orders": {
-    "observed_at": "2026-10-07T10:35:00+09:00",
+    "observed_at": null,
     "reported_on": "2026-10-07",
-    "recorded_at": "2026-10-07T10:44:07+09:00",
+    "recorded_at": "2026-10-07T11:06:04+09:00",
     "source_type": "user_reported_official_app",
-    "source_report": "account-report-20261007-0001",
-    "open_orders": [],
-    "confirmation_text": "그대로 10시 35분 (보유·매수/매도 미체결 없음 확인)",
+    "source_report": "account-report-20261007-0004",
+    "open_orders": [
+      {
+        "order_id": null,
+        "code": "419530",
+        "name": "SAMG엔터",
+        "side": "buy",
+        "order_type": null,
+        "planned_order_type": "limit",
+        "order_quantity": null,
+        "planned_order_quantity": 2332,
+        "cumulative_filled_quantity": 0,
+        "remaining_quantity": null,
+        "limit_price_krw": null,
+        "planned_limit_price_krw": 20350,
+        "status": "ALL_UNFILLED_USER_CONFIRMED_ORDER_DETAILS_UNREPORTED",
+        "risk_reserved_quantity_until_reconciled": 2332,
+        "quantity_basis": "실제 체결0·전량미체결은0003;2332주는 연결 원계획 총수량이며 실제 주문수량 새 확인 아님.",
+        "plan_id": "plan-20261007-samg-01",
+        "plan_version": 1,
+        "source_report": "account-report-20261007-0003",
+        "source_type": "user_reported_official_app",
+        "reported_on": "2026-10-07",
+        "recorded_at": "2026-10-07T11:06:04+09:00",
+        "observed_at": null,
+        "source": "data/days/2026-10-07.md",
+        "submitted_at": null
+      },
+      {
+        "order_id": null,
+        "code": "263860",
+        "name": "지니언스",
+        "side": "sell",
+        "order_type": "limit",
+        "order_quantity": 2070,
+        "cumulative_filled_quantity": null,
+        "remaining_quantity": null,
+        "limit_price_krw": 26450,
+        "status": "FULL_POSITION_TAKE_PROFIT_REGISTERED_FILL_STATE_UNREPORTED",
+        "risk_reserved_sell_quantity_until_reconciled": 2070,
+        "quantity_basis": "0003의 실제 보유2070주와0004 전량 익절매도 등록 보고 연결; 추가 매도 중복 금지.",
+        "plan_id": "plan-20261007-genians-01",
+        "plan_version": 1,
+        "source_report": "account-report-20261007-0004",
+        "source_type": "user_reported_official_app",
+        "reported_on": "2026-10-07",
+        "recorded_at": "2026-10-07T11:06:04+09:00",
+        "observed_at": null,
+        "source": "data/days/2026-10-07.md",
+        "submitted_at": null
+      }
+    ],
+    "confirmation_text": "0003 지니언스2070주 매수·SAMG전량미체결, 0004 지니언스26450원 전량 매도주문 등록",
     "last_confirmed_report": {
       "source_type": "user_reported_official_app",
       "reported_on": "2026-10-07",
-      "recorded_at": "2026-10-07T10:44:07+09:00",
-      "observed_at": "2026-10-07T10:35:00+09:00",
-      "source_report": "account-report-20261007-0001",
-      "scope": "all_buy_and_sell_open_orders_none",
-      "all_open_orders_confirmed": true
+      "recorded_at": "2026-10-07T11:06:04+09:00",
+      "observed_at": null,
+      "source": "data/days/2026-10-07.md",
+      "source_report": "account-report-20261007-0004",
+      "scope": "reported_GENIANS_take_profit_registration_and_SAMG_unfilled_buy_only",
+      "all_open_orders_confirmed": false,
+      "related_source_reports": [
+        "account-report-20261007-0003",
+        "account-report-20261007-0004"
+      ]
     },
     "cancelled_orders": [
       {
@@ -721,9 +807,38 @@
         "row_represents": "aggregate_position_exit_not_single_order",
         "plan_id": "plan-20261002-ls-electric-01",
         "plan_version": 2
+      },
+      {
+        "order_id": null,
+        "code": "263860",
+        "name": "지니언스",
+        "side": "buy",
+        "order_type": null,
+        "planned_order_type": "limit",
+        "order_quantity": null,
+        "planned_order_quantity": 2070,
+        "cumulative_filled_quantity": 2070,
+        "remaining_quantity": null,
+        "remaining_planned_entry_quantity": 0,
+        "limit_price_krw": null,
+        "planned_limit_price_krw": 24150,
+        "average_fill_price_krw": 24118,
+        "status": "PLANNED_TOTAL_FILL_CONFIRMED_FROM_HOLDING_REPORT",
+        "plan_id": "plan-20261007-genians-01",
+        "plan_version": 1,
+        "source_report": "account-report-20261007-0003",
+        "source_type": "user_reported_official_app",
+        "reported_on": "2026-10-07",
+        "recorded_at": "2026-10-07T11:06:04+09:00",
+        "observed_at": null,
+        "source": "data/days/2026-10-07.md",
+        "submitted_at": null,
+        "filled_at": null,
+        "actual_costs_krw": null,
+        "reconciliation_note": "계획총2070주와실제보유2070주일치. 정확한원주문수량/미체결명세는미보고;같은계획추가매수없음."
       }
     ],
-    "currentness_note": "10/7 10:35 현재 모든 미체결 없음 새 확인. 과거 개별 주문 취소/체결 분할 미확인은 보존.",
+    "currentness_note": "10/7 0003의 SAMG 전량미체결과0004의 지니언스 전량 익절매도 등록을 반영. 10:35 모든 미체결 없음은 주문 전 과거 확인이며 현재 상태로 승계하지 않음. 전체 주문명세와 정확한 앱 시각은 미보고.",
     "Samsung_sell_order_status": {
       "source_report": "account-report-20260928-0005",
       "source_type": "user_reported_official_app",
@@ -859,7 +974,8 @@
       "original_order_cancel_completed": null,
       "original_order_fill_split": null,
       "no_duplicate_sell": true
-    }
+    },
+    "latest_full_scope_confirmation_report": "account-report-20261007-0001"
   },
   "award_progress": {
     "observed_at": null,
@@ -954,7 +1070,7 @@
     "confirmation_status": "planning_basis_reconciled_official_total_equity_unconfirmed",
     "note": "이번 신규 계획의 최초 운용 기준을 고정 기록한다. 공식 총자산 확인 시 출처를 대사하되 손실을 이유로 기준점을 낮추거나 초기화하지 않는다."
   },
-  "last_reconciled_report": "account-report-20261007-0002",
+  "last_reconciled_report": "account-report-20261007-0004",
   "unresolved": [
     "과거 인버스·두산퓨얼셀의 전량 매도 완료는 확인됐으나 종목별 체결가·정확한 시각·주문번호·실제 비용은 미확인.",
     "이전09:19 주문가능현금과 이후 현금 차이67,796원의 원인·공식 총자산 필드 매핑은 미확인. 최신 공식수익률은 과거 팝업과 별도 실제 보고로 확인.",
@@ -977,16 +1093,16 @@
     "handoff_recorded_at": "2026-09-30T08:39:12+09:00"
   },
   "latest_report": {
-    "report_id": "account-report-20261007-0002",
     "source_type": "user_reported_official_app",
     "reported_on": "2026-10-07",
-    "recorded_at": "2026-10-07T10:44:07+09:00",
+    "recorded_at": "2026-10-07T11:06:04+09:00",
     "observed_at": null,
     "source": "data/days/2026-10-07.md",
-    "scope": "official_rank_return_and_top10_cutoff"
+    "report_id": "account-report-20261007-0004",
+    "scope": "GENIANS_FULL_POSITION_TAKE_PROFIT_SELL_ORDER_REGISTERED26450"
   },
-  "last_received_report": "account-report-20261007-0002",
-  "updated_at": "2026-10-07T11:01:57+09:00",
+  "last_received_report": "account-report-20261007-0004",
+  "updated_at": "2026-10-07T11:06:04+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -1012,7 +1128,7 @@
   "latest_plan_reference": {
     "plan_id": "portfolio-20261007-01",
     "version": 1,
-    "status": "READY_NEW_PLANS_NOT_EXECUTION_CONFIRMED",
+    "status": "GENIANS2070_HELD_TAKE_PROFIT_REGISTERED_SAMG_ZERO_FILL_ALL_UNFILLED",
     "path": "data/days/2026-10-07.md"
   },
   "monitoring_authorization": {
@@ -1043,8 +1159,8 @@
     "execution_verified": false,
     "registration_action": "transfer_existing_heartbeat_to_user_requested_october_7_chat"
   },
-  "latest_holdings_report": "account-report-20261007-0001",
-  "last_reconciliation_scope": "10/7 10:35 holdings/orders/cash and current official performance; equity and turnover source times unchanged",
+  "latest_holdings_report": "account-report-20261007-0003",
+  "last_reconciliation_scope": "사용자 보고 범위: 지니언스2070주 평균24118원 매수와26450원 전량 익절매도 등록, SAMG체결0·전량미체결. 정확한 주문명세·현금·전체잔고 스냅샷은 미대사.",
   "publication_authorization": {
     "authorized_on": "2026-09-16",
     "recorded_at": "2026-09-16T12:43:30.583010+09:00",
@@ -1074,23 +1190,23 @@
     {
       "plan_id": "plan-20261007-genians-01",
       "version": 1,
-      "status": "READY",
+      "status": "HELD_TAKE_PROFIT_REGISTERED",
       "path": "data/days/2026-10-07.md",
       "plan_is_not_order_or_fill": true
     },
     {
       "plan_id": "plan-20261007-samg-01",
       "version": 1,
-      "status": "READY",
+      "status": "OPEN_BUY_ALL_UNFILLED",
       "path": "data/days/2026-10-07.md",
       "plan_is_not_order_or_fill": true
     }
   ],
   "execution_follow_up": {
-    "recorded_at": "2026-10-07T10:47:28+09:00",
+    "recorded_at": "2026-10-07T11:06:04+09:00",
     "portfolio_plan_id": "portfolio-20261007-01",
     "version": 1,
-    "state": "NEW_PLANS_PUBLISHED_AWAIT_USER_EXECUTION_REPORT",
+    "state": "GENIANS2070_HELD_TAKE_PROFIT_REGISTERED_SAMG_ZERO_FILL_ALL_UNFILLED",
     "source": "data/days/2026-10-07.md",
     "next_review_at": "2026-10-07T11:30:00+09:00",
     "required_report_when_changed": [
@@ -1101,7 +1217,14 @@
       "actual_orderable_cash"
     ],
     "mandatory_cancel_and_race_reconciliation_at": "2026-10-07T15:00:00+09:00",
-    "first_market_review_reference": "review-20261007-1100"
+    "first_market_review_reference": "review-20261007-1100",
+    "latest_execution_report": "account-report-20261007-0004",
+    "execution_report_references": [
+      "account-report-20261007-0003",
+      "account-report-20261007-0004"
+    ],
+    "post_order_cash_reported": false,
+    "exact_app_observation_at": null
   },
   "latest_market_review": {
     "review_id": "review-20261007-1100",
@@ -4595,6 +4718,38 @@
         "official_return_percent": -2.33,
         "official_cutoff_return_percent": 13.52
       }
+    },
+    {
+      "source_type": "user_reported_official_app",
+      "reported_on": "2026-10-07",
+      "recorded_at": "2026-10-07T11:06:04+09:00",
+      "observed_at": null,
+      "source": "data/days/2026-10-07.md",
+      "report_id": "account-report-20261007-0003",
+      "scope": "GENIANS_2070_HELD_AVERAGE24118_SAMG_ZERO_FILL_ALL_BUY_UNFILLED",
+      "user_text": "지니언스 2070주 24118원에 매수 된 상태야.\nSAMG엔터는 전량 미체결 상태고",
+      "changes": {
+        "GENIANS_held_quantity": 2070,
+        "GENIANS_average_buy_price_krw": 24118,
+        "SAMG_cumulative_buy_filled_quantity": 0,
+        "SAMG_order_state": "ALL_UNFILLED"
+      },
+      "observation_note": "앱 확인/매수 체결 시각 미보고. SAMG 실제 주문수량·가격과 갱신 현금은 미보고; 원계획과 구분."
+    },
+    {
+      "source_type": "user_reported_official_app",
+      "reported_on": "2026-10-07",
+      "recorded_at": "2026-10-07T11:06:04+09:00",
+      "observed_at": null,
+      "source": "data/days/2026-10-07.md",
+      "report_id": "account-report-20261007-0004",
+      "scope": "GENIANS_FULL_POSITION_TAKE_PROFIT_SELL_ORDER_REGISTERED26450",
+      "user_text": "추가로 지니언스는 26450에 전량 매도 주문도 걸어둔 상태야",
+      "changes": {
+        "GENIANS_take_profit_sell_order_quantity": 2070,
+        "GENIANS_take_profit_limit_price_krw": 26450
+      },
+      "observation_note": "직전 보유2070주와 연결한 전량 매도 주문 등록 보고. 정확한 접수/앱 시각·주문번호·익절 체결 여부는 별도 미보고."
     }
   ],
   "entry_plan_history": [
@@ -6861,7 +7016,7 @@
   "current_portfolio_plan": {
     "plan_id": "portfolio-20261007-01",
     "version": 1,
-    "status": "READY_NEW_PLANS_NOT_EXECUTION_CONFIRMED",
+    "status": "GENIANS2070_HELD_TAKE_PROFIT_REGISTERED_SAMG_ZERO_FILL_ALL_UNFILLED",
     "generated_at": "2026-10-07T10:45:58+09:00",
     "source": "data/days/2026-10-07.md",
     "policy_reference": "policy-20261002-prize-objective-flexibility",
@@ -6872,13 +7027,17 @@
         "plan_id": "plan-20261007-genians-01",
         "version": 1,
         "code": "263860",
-        "planned_total_quantity": 2070
+        "planned_total_quantity": 2070,
+        "actual_filled_quantity": 2070,
+        "actual_average_fill_price_krw": 24118,
+        "take_profit_order_source_report": "account-report-20261007-0004"
       },
       {
         "plan_id": "plan-20261007-samg-01",
         "version": 1,
         "code": "419530",
-        "planned_total_quantity": 2332
+        "planned_total_quantity": 2332,
+        "actual_filled_quantity": 0
       }
     ],
     "order_submission_sequence": [
@@ -6897,7 +7056,12 @@
     "scenario_not_forecast": true,
     "actual_equity_fraction": null,
     "actual_orders_and_fills_confirmed": false,
-    "detail_reference": "data/days/2026-10-07.md"
+    "detail_reference": "data/days/2026-10-07.md",
+    "latest_execution_report": "account-report-20261007-0004",
+    "execution_report_references": [
+      "account-report-20261007-0003",
+      "account-report-20261007-0004"
+    ]
   },
   "corporate_action_review": {
     "reviewed_at": "2026-09-28T09:41:23+09:00",
@@ -7089,13 +7253,18 @@
     "same_event_stress_loss_budget_enforced": false
   },
   "latest_session_summary": {
-    "review_id": "review-20261007-1100",
-    "recorded_at": "2026-10-07T11:01:57+09:00",
-    "decision": "KEEP_PORTFOLIO_V1_NO_CHASE_NO_SUPERIOR_REPLACEMENT",
+    "report_id": "account-report-20261007-0004",
+    "related_report": "account-report-20261007-0003",
+    "recorded_at": "2026-10-07T11:06:04+09:00",
+    "decision": "GENIANS2070_HELD_TAKE_PROFIT_REGISTERED_SAMG_ZERO_FILL_ALL_UNFILLED",
     "source": "data/days/2026-10-07.md",
-    "account_report": "account-report-20261007-0002",
-    "cash_and_holdings_report": "account-report-20261007-0001",
-    "actual_account_state_refreshed": false,
+    "plan_id": "portfolio-20261007-01",
+    "plan_version": 1,
+    "latest_market_review_reference": "review-20261007-1100",
+    "market_reanalysis_performed": false,
+    "actual_account_state_refreshed": true,
+    "actual_account_refresh_scope": "reported_buy_fill_and_take_profit_registration_only",
+    "post_order_cash_reported": false,
     "next_review_at": "2026-10-07T11:30:00+09:00"
   },
   "account_report_request_policy": {
@@ -7193,7 +7362,7 @@
     {
       "plan_id": "plan-20261007-genians-01",
       "version": 1,
-      "status": "READY",
+      "status": "HELD_TAKE_PROFIT_REGISTERED",
       "generated_at": "2026-10-07T10:45:58+09:00",
       "information_as_of": "2026-10-07T10:45:50+09:00",
       "code": "263860",
@@ -7229,9 +7398,9 @@
       "source": "data/days/2026-10-07.md",
       "detail_reference": "data/days/2026-10-07.md",
       "policy_reference": "policy-20261002-prize-objective-flexibility",
-      "entry_execution_allowed": true,
-      "order_submission_confirmed": false,
-      "actual_filled_quantity": null,
+      "entry_execution_allowed": false,
+      "order_submission_confirmed": true,
+      "actual_filled_quantity": 2070,
       "orders_submitted_by_assistant": false,
       "plan_is_not_order_or_fill": true,
       "execution": {
@@ -7266,12 +7435,18 @@
       },
       "latest_market_review_reference": "review-20261007-1100",
       "first_review_market_completed_at": "2026-10-07T11:01:57+09:00",
-      "first_review_execution_reconciliation_status": "UNREPORTED_USER_ORDER_AND_FILL_STATE"
+      "first_review_execution_reconciliation_status": "BUY_FILL_AND_TAKE_PROFIT_REGISTRATION_REPORTED_EXACT_TIME_UNREPORTED",
+      "latest_execution_report": "account-report-20261007-0003",
+      "actual_average_fill_price_krw": 24118,
+      "remaining_planned_entry_quantity": 0,
+      "take_profit_order_submission_confirmed": true,
+      "take_profit_order_quantity": 2070,
+      "take_profit_order_source_report": "account-report-20261007-0004"
     },
     {
       "plan_id": "plan-20261007-samg-01",
       "version": 1,
-      "status": "READY",
+      "status": "OPEN_BUY_ALL_UNFILLED",
       "generated_at": "2026-10-07T10:45:58+09:00",
       "information_as_of": "2026-10-07T10:45:50+09:00",
       "code": "419530",
@@ -7307,9 +7482,9 @@
       "source": "data/days/2026-10-07.md",
       "detail_reference": "data/days/2026-10-07.md",
       "policy_reference": "policy-20261002-prize-objective-flexibility",
-      "entry_execution_allowed": true,
-      "order_submission_confirmed": false,
-      "actual_filled_quantity": null,
+      "entry_execution_allowed": false,
+      "order_submission_confirmed": true,
+      "actual_filled_quantity": 0,
       "orders_submitted_by_assistant": false,
       "plan_is_not_order_or_fill": true,
       "execution": {
@@ -7344,7 +7519,9 @@
       },
       "latest_market_review_reference": "review-20261007-1100",
       "first_review_market_completed_at": "2026-10-07T11:01:57+09:00",
-      "first_review_execution_reconciliation_status": "UNREPORTED_USER_ORDER_AND_FILL_STATE"
+      "first_review_execution_reconciliation_status": "ZERO_FILL_ALL_BUY_UNFILLED_REPORTED_EXACT_ORDER_DETAILS_UNREPORTED",
+      "latest_execution_report": "account-report-20261007-0003",
+      "actual_remaining_buy_quantity": null
     }
   ]
 }
