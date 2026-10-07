@@ -14,18 +14,18 @@
   "current_automation_state": "ACTIVE",
   "automation_id": "30",
   "target_workspace": ".",
-  "source_thread": "01a0f9dd-1962-7980-b472-c34ba02d5103",
+  "source_thread": "01a11403-4d89-75e1-b3a3-0c3f1aee31c6",
   "automatic_orders": false,
   "brokerage_api_or_app_control": false,
-  "multi_agent": false,
+  "multi_agent": true,
   "existing_price_or_exit_mode_changed": false,
-  "note": "10/2새채팅으로예약대상/프롬프트이전및실제저장값검증완료. 이전채팅실행이력은보존하며새대상첫예약실행은아직미확인. 지정4일10:00~15:30반복·10/6제외·10/8마지막회차까지,정확정시실행/알림도착보장아님.",
+  "note": "10/7 사용자 요청으로 기존30분예약을새채팅에이전. 저장프롬프트·대상·일정·ACTIVE확인,새대상예약첫실행과알림도착은아직미확인. 새채팅의즉시읽기전용조사는실행중.",
   "automation_name": "모의투자 30분 행동 안내",
   "automation_kind": "heartbeat",
-  "target_thread_id": "01a0f9dd-1962-7980-b472-c34ba02d5103",
-  "registration_verified_at": "2026-10-02T08:48:06+09:00",
-  "registration_evidence": "native heartbeat update succeeded; read-only persisted full prompt, target, rule, ACTIVE status, notification policy and next_run verified",
-  "first_expected_slot_kst": "2026-10-02T10:00:00+09:00",
+  "target_thread_id": "01a11403-4d89-75e1-b3a3-0c3f1aee31c6",
+  "registration_verified_at": "2026-10-07T10:42:16+09:00",
+  "registration_evidence": "native update success; persisted full prompt, target, same rule and ACTIVE status matched; future execution not yet observed",
+  "first_expected_slot_kst": "2026-10-07T11:00:00+09:00",
   "expires_at_kst": "2026-10-08T15:30:00+09:00",
   "first_execution_verified": true,
   "host_timezone_verified": "Korea Standard Time (UTC+09:00)",
@@ -47,18 +47,19 @@
     "exact_slot_execution_guaranteed": false,
     "note": "The app stored the next run 91 seconds after the nominal 10:00 slot. The reason for this additional offset has not been verified. No database write or manual scheduler-file edit was performed."
   },
-  "next_run_at_kst": "2026-10-02T10:00:54+09:00",
+  "next_run_at_kst": null,
   "first_actual_started_at_kst": "2026-09-16T10:01:49.195000+09:00",
   "first_execution_verified_at_kst": "2026-09-16T10:07:44.804133+09:00",
   "first_execution_evidence": "Read-only native automations.last_run_at=1789520509195; first 10:00-slot review and public observations appended to private daily record. No account fill inferred.",
-  "next_run_verified_at_kst": "2026-10-02T08:48:06+09:00",
+  "next_run_verified_at_kst": null,
   "last_completed_review": {
-    "review_id": "review-20261002-1530",
-    "recorded_at": "2026-10-02T15:35:02+09:00",
-    "source": "data/days/2026-10-02.md",
-    "origin": "authorized_heartbeat_30",
-    "heartbeat_received_at": "2026-10-02T15:31:01.315+09:00",
-    "nominal_slot_kst": "2026-10-02T15:30:00+09:00"
+    "review_id": "review-20261007-1030-handoff",
+    "recorded_at": "2026-10-07T10:44:07+09:00",
+    "source": "data/days/2026-10-07.md",
+    "origin": "authorized_heartbeat_30_and_explicit_new_chat_request",
+    "heartbeat_received_at": "2026-10-07T10:35:09.526+09:00",
+    "nominal_slot_kst": "2026-10-07T10:30:00+09:00",
+    "scope": "reconciliation_and_research_handoff_new_plan_pending_in_destination"
   },
   "record_visibility": "public_paper_trading_records_user_authorized_20260916",
   "publication_policy": "docs/record-publication.md",
@@ -201,9 +202,18 @@
       "premarket_initial_request_dispatched": true,
       "source_writer_stops_after_handoff_commit": true,
       "previous_first_expected_slot_kst": "2026-10-01T10:30:00+09:00"
+    },
+    {
+      "transferred_at": "2026-10-07T10:44:07+09:00",
+      "from_thread_id": "01a0f9dd-1962-7980-b472-c34ba02d5103",
+      "to_thread_id": "01a11403-4d89-75e1-b3a3-0c3f1aee31c6",
+      "automation_id": "30",
+      "schedule_preserved": true,
+      "prompt_and_target_persisted_verified_at": "2026-10-07T10:42:16+09:00",
+      "source": "data/days/2026-10-07.md"
     }
   ],
-  "single_writer_thread_id": "01a0f9dd-1962-7980-b472-c34ba02d5103",
+  "single_writer_thread_id": "01a11403-4d89-75e1-b3a3-0c3f1aee31c6",
   "new_thread_first_execution_verified": false,
   "completed_review_history": [
     {
@@ -483,6 +493,10 @@
       "review_id": "review-20261002-1500",
       "recorded_at": "2026-10-02T15:10:51+09:00",
       "source": "data/days/2026-10-02.md"
+    },
+    {
+      "review_id": "review-20261002-1530",
+      "source": "data/days/2026-10-02.md"
     }
   ],
   "new_thread_first_execution": {
@@ -583,17 +597,16 @@
     }
   ],
   "current_user_requested_analysis": {
-    "requested_on": "2026-09-28",
-    "kind": "large_cap_only_strategy_question_and_candidate_expansion",
-    "state": "COMPLETED",
+    "requested_on": "2026-10-07",
+    "kind": "two_day_upside_and_new_chat_30minute_schedule",
+    "state": "NEW_CHAT_RESEARCH_IN_PROGRESS",
     "scheduled_slot": false,
-    "completed_at": "2026-09-28T10:00:50+09:00",
-    "review_id": "review-20260928-universe-expansion",
-    "journal_path": "data/days/2026-09-28.md"
+    "destination_thread_id": "01a11403-4d89-75e1-b3a3-0c3f1aee31c6",
+    "source": "data/days/2026-10-07.md"
   },
-  "single_writer_handoff_accepted_at": "2026-10-02T08:55:44+09:00",
-  "single_writer_handoff_publication_commit": "bad3b3166fa6373ca5f60969bf180037dc05a821",
-  "single_writer_handoff_base_commit": "b86cc13516af7e8ca9532a8cc6546befac7e9617",
+  "single_writer_handoff_accepted_at": null,
+  "single_writer_handoff_publication_commit": null,
+  "single_writer_handoff_base_commit": "d0f121d7deb7aed3cbf142a06a627365e0b5fef7",
   "risk_policy_update": {
     "policy_id": "policy-20260929-stress-cap-removal",
     "authorized_on": "2026-09-29",
@@ -609,9 +622,9 @@
     "verified_at": "2026-09-29T13:53:00+09:00",
     "verification": "native_update_success_and_persisted_toml_prompt_schedule_target_status_comparison"
   },
-  "next_nominal_slot_kst": "2026-10-07T10:00:00+09:00",
-  "single_writer_handoff_prepared_at": "2026-10-02T08:48:06+09:00",
-  "single_writer_handoff_status": "ACCEPTED_SINGLE_WRITER",
+  "next_nominal_slot_kst": "2026-10-07T11:00:00+09:00",
+  "single_writer_handoff_prepared_at": "2026-10-07T10:44:07+09:00",
+  "single_writer_handoff_status": "PREPARED_RELEASE_AFTER_SYNCED_COMMIT_AND_EXPLICIT_HANDOFF",
   "risk_policy_update_history": [
     {
       "authorized_on": "2026-09-28",
@@ -689,19 +702,13 @@
   "excluded_personal_schedule_dates": [
     "2026-10-06"
   ],
-  "current_registration_execution_verified": true,
+  "current_registration_execution_verified": false,
   "current_registration_first_execution": {
     "automation_id": "30",
-    "target_thread_id": "01a0f9dd-1962-7980-b472-c34ba02d5103",
-    "execution_verified": true,
-    "nominal_first_slot_kst": "2026-10-02T10:00:00+09:00",
-    "notification_delivery_verified": false,
-    "heartbeat_received_at_kst": "2026-10-02T10:01:15.108+09:00",
-    "clock_verified_at_kst": "2026-10-02T10:02:34+09:00",
-    "completed_at_kst": "2026-10-02T10:06:16+09:00",
-    "review_id": "review-20261002-1000",
-    "journal_path": "data/days/2026-10-02.md",
-    "evidence": "이채팅에서automation30 heartbeat10:01:15.108KST실제수신,시각검증·당회자료조사/보유및대안검토·공개기록수행. 사용자푸시도착/앱주문실행확인아님."
+    "target_thread_id": "01a11403-4d89-75e1-b3a3-0c3f1aee31c6",
+    "execution_verified": false,
+    "nominal_first_slot_kst": "2026-10-07T11:00:00+09:00",
+    "notification_delivery_verified": false
   },
   "opportunity_cost_policy_update": {
     "directive_id": "directive-20261001-flexible-cancel-early-exit",
@@ -751,6 +758,14 @@
       "single_writer_handoff_publication_commit": "5685117a5ec1b6a77b51652d3506a53a27f5fee5",
       "single_writer_handoff_base_commit": "61271897b633957be72e6b6c7e595b1c41129ffd",
       "single_writer_handoff_status": "ACCEPTED_SINGLE_WRITER"
+    },
+    {
+      "single_writer_thread_id": "01a0f9dd-1962-7980-b472-c34ba02d5103",
+      "single_writer_handoff_prepared_at": "2026-10-02T08:48:06+09:00",
+      "single_writer_handoff_accepted_at": "2026-10-02T08:55:44+09:00",
+      "single_writer_handoff_publication_commit": "bad3b3166fa6373ca5f60969bf180037dc05a821",
+      "single_writer_handoff_base_commit": "b86cc13516af7e8ca9532a8cc6546befac7e9617",
+      "single_writer_handoff_status": "ACCEPTED_SINGLE_WRITER"
     }
   ],
   "current_registration_first_execution_history": [
@@ -762,6 +777,19 @@
       "evidence": "received heartbeat30; read-only native automations.last_run_at matched; actual review completed",
       "review_id": "review-20261001-1030",
       "journal_path": "data/days/2026-10-01.md"
+    },
+    {
+      "automation_id": "30",
+      "target_thread_id": "01a0f9dd-1962-7980-b472-c34ba02d5103",
+      "execution_verified": true,
+      "nominal_first_slot_kst": "2026-10-02T10:00:00+09:00",
+      "notification_delivery_verified": false,
+      "heartbeat_received_at_kst": "2026-10-02T10:01:15.108+09:00",
+      "clock_verified_at_kst": "2026-10-02T10:02:34+09:00",
+      "completed_at_kst": "2026-10-02T10:06:16+09:00",
+      "review_id": "review-20261002-1000",
+      "journal_path": "data/days/2026-10-02.md",
+      "evidence": "이채팅에서automation30 heartbeat10:01:15.108KST실제수신,시각검증·당회자료조사/보유및대안검토·공개기록수행. 사용자푸시도착/앱주문실행확인아님."
     }
   ],
   "single_writer_release_effective_when": "handoff_commit_after_base_is_clean_and_synced_to_origin_main",
@@ -790,5 +818,14 @@
     "schedule_status_target_unchanged": true,
     "actual_orders_or_future_schedule_execution_verified": false,
     "persisted_full_prompt_verified_at": "2026-10-02T12:43:59+09:00"
+  },
+  "new_thread_dispatch": {
+    "requested_on": "2026-10-07",
+    "target_thread_id": "01a11403-4d89-75e1-b3a3-0c3f1aee31c6",
+    "thread_running_verified": true,
+    "research_completed": false,
+    "single_writer_release_pending_publication": true,
+    "additional_schedule_created": false,
+    "recorded_at": "2026-10-07T10:44:07+09:00"
   }
 }
