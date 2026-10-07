@@ -284,7 +284,13 @@
         "recorded_at": "2026-10-07T11:06:04+09:00",
         "observed_at": null,
         "source": "data/days/2026-10-07.md",
-        "submitted_at": null
+        "submitted_at": null,
+        "cancellation_instruction_reference": {
+          "plan_id": "plan-20261007-samg-01",
+          "version": 2,
+          "issued_at": "2026-10-07T14:05:13+09:00",
+          "cancel_completion_confirmed": false
+        }
       },
       {
         "order_id": null,
@@ -1102,7 +1108,7 @@
     "scope": "GENIANS_FULL_POSITION_TAKE_PROFIT_SELL_ORDER_REGISTERED26450"
   },
   "last_received_report": "account-report-20261007-0004",
-  "updated_at": "2026-10-07T13:31:37+09:00",
+  "updated_at": "2026-10-07T14:05:13+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -1127,8 +1133,8 @@
   },
   "latest_plan_reference": {
     "plan_id": "portfolio-20261007-01",
-    "version": 1,
-    "status": "GENIANS2070_HELD_TAKE_PROFIT_REGISTERED_SAMG_ZERO_FILL_ALL_UNFILLED",
+    "version": 2,
+    "status": "GENIANS_HELD_SAMG_CANCEL_REQUIRED_KCTECH_PRICE_ONLY",
     "path": "data/days/2026-10-07.md"
   },
   "monitoring_authorization": {
@@ -1196,8 +1202,8 @@
     },
     {
       "plan_id": "plan-20261007-samg-01",
-      "version": 1,
-      "status": "OPEN_BUY_ALL_UNFILLED",
+      "version": 2,
+      "status": "CANCEL_REQUIRED_NEW_ENTRY_DISABLED",
       "path": "data/days/2026-10-07.md",
       "plan_is_not_order_or_fill": true
     }
@@ -1205,10 +1211,10 @@
   "execution_follow_up": {
     "recorded_at": "2026-10-07T11:06:04+09:00",
     "portfolio_plan_id": "portfolio-20261007-01",
-    "version": 1,
-    "state": "GENIANS2070_HELD_TAKE_PROFIT_REGISTERED_SAMG_ZERO_FILL_ALL_UNFILLED",
+    "version": 2,
+    "state": "GENIANS_HELD_SAMG_CANCEL_REQUIRED_KCTECH_PRICE_ONLY",
     "source": "data/days/2026-10-07.md",
-    "next_review_at": "2026-10-07T14:00:00+09:00",
+    "next_review_at": "2026-10-07T14:30:00+09:00",
     "required_report_when_changed": [
       "order_submission",
       "cumulative_buy_fills_and_average_price",
@@ -1225,19 +1231,21 @@
     ],
     "post_order_cash_reported": false,
     "exact_app_observation_at": null,
-    "latest_market_review_reference": "review-20261007-1330"
+    "latest_market_review_reference": "review-20261007-1400",
+    "cancellation_instruction_reference": "plan-20261007-samg-01 v2",
+    "replacement_sizing_requires_new_actual_cash_reconciliation": true
   },
   "latest_market_review": {
-    "review_id": "review-20261007-1330",
-    "recorded_at": "2026-10-07T13:31:37+09:00",
-    "nominal_slot": "2026-10-07T13:30:00+09:00",
-    "heartbeat_received_at": "2026-10-07T13:30:14.575+09:00",
-    "clock_verified_at": "2026-10-07T13:30:34+09:00",
-    "information_as_of": "2026-10-07T13:30:58+09:00",
+    "review_id": "review-20261007-1400",
+    "recorded_at": "2026-10-07T14:05:13+09:00",
+    "nominal_slot": "2026-10-07T14:00:00+09:00",
+    "heartbeat_received_at": "2026-10-07T14:00:15.069+09:00",
+    "clock_verified_at": "2026-10-07T14:01:03+09:00",
+    "information_as_of": "2026-10-07T14:01:03+09:00",
     "source": "data/days/2026-10-07.md",
-    "decision": "KEEP_V1_GENIANS_OBSERVED_PRICE_ABOVE_STOP_SAMG_NEAR_ORIGINAL_TARGET_NO_CHASE_NO_SUPERIOR_REPLACEMENT",
+    "decision": "PORTFOLIO_V2_SAMG_CANCEL_REQUIRED_GENIANS_HOLD_KCTECH_PRICE_ONLY_PENDING_RECONCILIATION",
     "portfolio_plan_id": "portfolio-20261007-01",
-    "version": 1,
+    "version": 2,
     "account_reports_reused": [
       "account-report-20261007-0002",
       "account-report-20261007-0003",
@@ -1247,13 +1255,13 @@
     "new_exit_trigger": false,
     "price_path_between_reviews_verified": false,
     "new_order_or_fill_report_received": false,
-    "next_review_at": "2026-10-07T14:00:00+09:00",
+    "next_review_at": "2026-10-07T14:30:00+09:00",
     "quotes": [
       {
         "code": "263860",
-        "price_krw": 23700,
-        "observed_at": "2026-10-07T13:30:58.889333+09:00",
-        "fetched_at": "2026-10-07T13:30:58.968836+09:00",
+        "price_krw": 23250,
+        "observed_at": "2026-10-07T14:01:03.302678+09:00",
+        "fetched_at": "2026-10-07T14:01:03.301220+09:00",
         "source": "https://polling.finance.naver.com/api/realtime/domestic/stock/263860",
         "price_type": "pure_KRX_polling_primary_fields_excluding_NXT_integrated",
         "provider_delay_seconds": 0,
@@ -1262,44 +1270,59 @@
       },
       {
         "code": "419530",
-        "price_krw": 23150,
-        "observed_at": "2026-10-07T13:30:58.884674+09:00",
-        "fetched_at": "2026-10-07T13:30:58.968836+09:00",
+        "price_krw": 23200,
+        "observed_at": "2026-10-07T14:01:03.299834+09:00",
+        "fetched_at": "2026-10-07T14:01:03.301220+09:00",
         "source": "https://polling.finance.naver.com/api/realtime/domestic/stock/419530",
         "price_type": "pure_KRX_polling_primary_fields_excluding_NXT_integrated",
         "provider_delay_seconds": 0,
-        "day_high_krw": 23250,
+        "day_high_krw": 23300,
         "day_low_krw": 18090
       }
     ],
-    "GENIANS_observed_distance_to_stop_krw": 550,
-    "SAMG_required_pullback_to_original_limit_percent": 12.095032397408211,
-    "target_contribution_review_reference": "review-20261007-1130",
-    "prior_candidate_evidence_review_reference": "review-20261007-1200",
+    "GENIANS_observed_distance_to_stop_krw": 100,
+    "GENIANS_day_low_touch_review_reference": "review-20261007-1300",
+    "SAMG_required_pullback_to_original_limit_percent": 12.284482758620685,
+    "SAMG_remaining_upside_to_original_target_at_observed_price_percent": 1.0775862068965525,
+    "replacement_candidate_reference": "plan-20261007-kctech-01 v1 PRICE_ONLY",
     "replacement_comparison": {
-      "JNTC_price_krw": 25850,
-      "JNTC_observed_at": "2026-10-07T13:30:31.678947+09:00",
+      "JNTC_price_krw": 25700,
+      "JNTC_observed_at": "2026-10-07T14:00:52.300863+09:00",
       "JNTC_price_source": "https://polling.finance.naver.com/api/realtime/domestic/stock/204270",
       "JNTC_day_high_krw": 27600,
-      "KC_price_krw": 127500,
-      "KC_observed_at": "2026-10-07T13:30:31.710029+09:00",
+      "KC_price_krw": 128000,
+      "KC_observed_at": "2026-10-07T14:00:52.339920+09:00",
       "KC_price_source": "https://polling.finance.naver.com/api/realtime/domestic/stock/281820",
-      "KC_day_high_krw": 128700,
-      "decision": "NO_NEW_SUPERIOR_AFTER_COST_OPPORTUNITY_WITH_VERIFIED_PRICE_TARGET_BASIS"
+      "KC_day_high_krw": 134100,
+      "prior_small_KC_upside_objection_superseded": true,
+      "decision": "KCTECH_PRICE_LEADERSHIP_PREFERRED_TO_SAMG_DEEP_LIMIT_WAIT_REQUIRES_CASH_RECONCILIATION"
+    },
+    "target_contribution_review": {
+      "source_performance_report": "account-report-20261007-0002",
+      "genians_actual_entry_target_scenario_reference": "review-20261007-1130",
+      "actual_KC_quantity_unassigned": true,
+      "actual_funded_portfolio_contribution_pp": null,
+      "formal_cap_maximum_not_recommended_quantity": 390,
+      "formal_cap_target_contribution_pp": 2.1863439,
+      "formal_cap_plus_G_target_scenario_contribution_pp": 6.893613324,
+      "remaining_gap_even_at_formal_cap_scenario_pp": 8.956386676,
+      "scenario_not_forecast": true,
+      "original_v1_full_target_scenarios_retained_in_journal": true
     },
     "event_review": {
       "event": "NURI_5TH_LAUNCH",
       "confirmed_scheduled_at": "2026-10-07T12:25:00+09:00",
       "official_source": "https://www.kasa.go.kr/prog/plcyBrf/brief/kor/sub01_01_04/view.do?plcyBrfNo=514",
-      "official_latest_list_checked_source": "https://www.kasa.go.kr/kor/index.do",
-      "latest_list_check_completed_by": "2026-10-07T13:31:37+09:00",
-      "actual_launch_and_success_confirmed": false,
+      "official_latest_list_checked_source": "https://www.kasa.go.kr/prog/plcyBrf/brief/kor/sub01_01_04/list.do",
+      "latest_list_check_completed_by": "2026-10-07T14:02:51+09:00",
       "current_official_latest_release": "launch_time_confirmation",
-      "success_based_entry_authorized": false,
-      "note": "조회한 공식 목록은 예정시각 확정이 최신; 5차 발사·5기 목표궤도 투입 성공은 미확인이며 실패를 뜻하지 않음."
-    },
-    "GENIANS_day_low_touch_review_reference": "review-20261007-1300",
-    "SAMG_remaining_upside_to_original_target_at_observed_price_percent": 1.2958963282937441
+      "media_reported_launch_and_15_satellite_separation": true,
+      "media_source": "https://mobile.newsis.com/view/NISX20261007_0003816789",
+      "media_published_at": "2026-10-07T12:42:59+09:00",
+      "media_updated_at": "2026-10-07T12:46:09+09:00",
+      "official_final_success_confirmed": false,
+      "success_based_entry_authorized": false
+    }
   },
   "prior_portfolio_screen_summaries": [
     {
@@ -2589,6 +2612,14 @@
       "version": 1,
       "source": "data/days/2026-10-07.md",
       "prior_portfolio_plan": "portfolio-20261002-01 v3 closed"
+    },
+    {
+      "recorded_at": "2026-10-07T14:05:13+09:00",
+      "event": "SAMG_CANCEL_INSTRUCTION_KCTECH_PRICE_ONLY_REPLACEMENT",
+      "portfolio_plan_id": "portfolio-20261007-01",
+      "version": 2,
+      "source": "data/days/2026-10-07.md",
+      "actual_cancellation_or_new_buy_confirmed": false
     }
   ],
   "current_entry_plan": {
@@ -5417,6 +5448,16 @@
       "replaced_or_closed_at": "2026-10-02T12:36:04+09:00",
       "reason": "actual_0008_0009_and_funded_RF_scale_up",
       "source": "data/days/2026-10-02.md"
+    },
+    {
+      "plan_id": "plan-20261007-samg-01",
+      "version": 1,
+      "status": "OPEN_BUY_ALL_UNFILLED",
+      "generated_at": "2026-10-07T10:45:58+09:00",
+      "replaced_or_closed_at": "2026-10-07T14:05:13+09:00",
+      "superseded_by_version": 2,
+      "reason": "KCTECH_price_leadership_preferred_to_deep_SAMG_limit_wait",
+      "source": "data/days/2026-10-07.md"
     }
   ],
   "resolved_account_issues": [
@@ -7052,8 +7093,8 @@
   ],
   "current_portfolio_plan": {
     "plan_id": "portfolio-20261007-01",
-    "version": 1,
-    "status": "GENIANS2070_HELD_TAKE_PROFIT_REGISTERED_SAMG_ZERO_FILL_ALL_UNFILLED",
+    "version": 2,
+    "status": "GENIANS_HELD_SAMG_CANCEL_REQUIRED_KCTECH_PRICE_ONLY",
     "generated_at": "2026-10-07T10:45:58+09:00",
     "source": "data/days/2026-10-07.md",
     "policy_reference": "policy-20261002-prize-objective-flexibility",
@@ -7071,25 +7112,15 @@
       },
       {
         "plan_id": "plan-20261007-samg-01",
-        "version": 1,
+        "version": 2,
         "code": "419530",
         "planned_total_quantity": 2332,
         "actual_filled_quantity": 0
       }
     ],
-    "order_submission_sequence": [
-      "263860",
-      "419530"
-    ],
+    "order_submission_sequence": [],
     "assumed_buy_commission_fraction": 0.0001,
     "assumed_sell_total_cost_fraction": 0.0021,
-    "total_buy_cost_after_assumed_commission_krw": 97456444.67,
-    "residual_confirmed_cash_scenario_krw": 12118.329999998212,
-    "after_assumed_cost_all_targets_gain_krw": 11750637.840000004,
-    "all_targets_initial_capital_contribution_percentage_points": 11.750637840000003,
-    "remaining_gap_after_both_targets_percentage_points": 4.0993621599999965,
-    "planned_stop_loss_after_assumed_cost_krw": 5770689.940000003,
-    "stress_loss_after_assumed_cost_krw": 11795571.063999996,
     "scenario_not_forecast": true,
     "actual_equity_fraction": null,
     "actual_orders_and_fills_confirmed": false,
@@ -7098,6 +7129,16 @@
     "execution_report_references": [
       "account-report-20261007-0003",
       "account-report-20261007-0004"
+    ],
+    "version_issued_at": "2026-10-07T14:05:13+09:00",
+    "supersedes_version": 1,
+    "replacement_candidate_reference": "plan-20261007-kctech-01 v1 PRICE_ONLY",
+    "funded_portfolio_target_contribution_percentage_points": null,
+    "superseded_scenario_reference": "data/days/2026-10-07.md portfolio v1 and review-20261007-1130",
+    "next_action_sequence": [
+      "SAMG_cancel_actual_remaining",
+      "reconcile_cancel_race_fills_and_current_cash",
+      "new_KCTECH_READY_version_required"
     ]
   },
   "corporate_action_review": {
@@ -7223,6 +7264,15 @@
       "generated_at": "2026-10-02T12:30:01+09:00",
       "superseded_by_version": 3,
       "source": "data/days/2026-10-02.md"
+    },
+    {
+      "plan_id": "portfolio-20261007-01",
+      "version": 1,
+      "status": "GENIANS2070_HELD_TAKE_PROFIT_REGISTERED_SAMG_ZERO_FILL_ALL_UNFILLED",
+      "generated_at": "2026-10-07T10:45:58+09:00",
+      "superseded_at": "2026-10-07T14:05:13+09:00",
+      "superseded_by_version": 2,
+      "source": "data/days/2026-10-07.md"
     }
   ],
   "risk_capacity_review": {
@@ -7290,14 +7340,15 @@
     "same_event_stress_loss_budget_enforced": false
   },
   "latest_session_summary": {
-    "review_id": "review-20261007-1330",
-    "recorded_at": "2026-10-07T13:31:37+09:00",
-    "decision": "KEEP_V1_GENIANS_OBSERVED_PRICE_ABOVE_STOP_SAMG_NEAR_ORIGINAL_TARGET_NO_CHASE_NO_SUPERIOR_REPLACEMENT",
+    "review_id": "review-20261007-1400",
+    "recorded_at": "2026-10-07T14:05:13+09:00",
+    "decision": "PORTFOLIO_V2_SAMG_CANCEL_REQUIRED_GENIANS_HOLD_KCTECH_PRICE_ONLY_PENDING_RECONCILIATION",
     "source": "data/days/2026-10-07.md",
     "account_report": "account-report-20261007-0004",
     "buy_fill_and_pending_report": "account-report-20261007-0003",
     "actual_account_state_refreshed": false,
-    "next_review_at": "2026-10-07T14:00:00+09:00"
+    "next_review_at": "2026-10-07T14:30:00+09:00",
+    "portfolio_version": 2
   },
   "account_report_request_policy": {
     "source_report": "account-report-20260930-0008",
@@ -7415,7 +7466,7 @@
       },
       "unfilled_buy_cancel_at": "2026-10-07T15:00:00+09:00",
       "first_review_at": "2026-10-07T11:00:00+09:00",
-      "next_review_at": "2026-10-07T14:00:00+09:00",
+      "next_review_at": "2026-10-07T14:30:00+09:00",
       "mandatory_first_day_reconciliation_at": "2026-10-07T15:00:00+09:00",
       "exit_deadline": "2026-10-08T15:10:00+09:00",
       "exit_evaluation_mode": "manual_on_observation",
@@ -7465,7 +7516,7 @@
         "price_type": "pure_KRX_polling_datas_primary_fields_excluding_NXT_and_integrated",
         "price_krw": 24150
       },
-      "latest_market_review_reference": "review-20261007-1330",
+      "latest_market_review_reference": "review-20261007-1400",
       "first_review_market_completed_at": "2026-10-07T11:01:57+09:00",
       "first_review_execution_reconciliation_status": "BUY_FILL_AND_TAKE_PROFIT_REGISTRATION_REPORTED_EXACT_TIME_UNREPORTED",
       "latest_execution_report": "account-report-20261007-0003",
@@ -7477,8 +7528,8 @@
     },
     {
       "plan_id": "plan-20261007-samg-01",
-      "version": 1,
-      "status": "OPEN_BUY_ALL_UNFILLED",
+      "version": 2,
+      "status": "CANCEL_REQUIRED_NEW_ENTRY_DISABLED",
       "generated_at": "2026-10-07T10:45:58+09:00",
       "information_as_of": "2026-10-07T10:45:50+09:00",
       "code": "419530",
@@ -7499,7 +7550,7 @@
       },
       "unfilled_buy_cancel_at": "2026-10-07T15:00:00+09:00",
       "first_review_at": "2026-10-07T11:00:00+09:00",
-      "next_review_at": "2026-10-07T14:00:00+09:00",
+      "next_review_at": "2026-10-07T14:30:00+09:00",
       "mandatory_first_day_reconciliation_at": "2026-10-07T15:00:00+09:00",
       "exit_deadline": "2026-10-08T15:10:00+09:00",
       "exit_evaluation_mode": "manual_on_observation",
@@ -7549,11 +7600,108 @@
         "price_type": "pure_KRX_polling_datas_primary_fields_excluding_NXT_and_integrated",
         "price_krw": 21300
       },
-      "latest_market_review_reference": "review-20261007-1330",
+      "latest_market_review_reference": "review-20261007-1400",
       "first_review_market_completed_at": "2026-10-07T11:01:57+09:00",
       "first_review_execution_reconciliation_status": "ZERO_FILL_ALL_BUY_UNFILLED_REPORTED_EXACT_ORDER_DETAILS_UNREPORTED",
       "latest_execution_report": "account-report-20261007-0003",
-      "actual_remaining_buy_quantity": null
+      "actual_remaining_buy_quantity": null,
+      "version_issued_at": "2026-10-07T14:05:13+09:00",
+      "supersedes_version": 1,
+      "amendment_reason": "prefer_KCTECH_price_leadership_to_SAMG_deep_limit_wait_with_one_hour_to_cancel",
+      "cancellation_instruction": {
+        "issued_at": "2026-10-07T14:05:13+09:00",
+        "scope": "actual_remaining_buy_quantity_all",
+        "quantity_basis": "actual_app_remaining_not_original_total_plan",
+        "planned_total_quantity_reference": 2332,
+        "actual_remaining_quantity": null,
+        "cancel_completion_confirmed": false,
+        "race_fills_reconciled": false,
+        "funds_reusable": false
+      },
+      "metrics_basis": "v1_historical_full_quantity_scenario_not_current_buy_authorization"
     }
-  ]
+  ],
+  "replacement_candidate_price_table": {
+    "plan_id": "plan-20261007-kctech-01",
+    "version": 1,
+    "status": "PRICE_ONLY",
+    "generated_at": "2026-10-07T14:05:13+09:00",
+    "information_as_of": "2026-10-07T14:00:52.339920+09:00",
+    "code": "281820",
+    "name": "케이씨텍",
+    "market": "KRX_KOSPI",
+    "side": "buy",
+    "order_type": "limit",
+    "entry_limit_price_krw": 128000,
+    "take_profit_price_krw": 133900,
+    "stop_loss_price_krw": 124700,
+    "quantity": null,
+    "total_planned_quantity": null,
+    "notional_krw": null,
+    "entry_execution_allowed": false,
+    "reason_quantity_unassigned": "actual_SAMG_cancel_completion_race_fills_and_current_orderable_cash_required",
+    "price_source": {
+      "source": "https://polling.finance.naver.com/api/realtime/domestic/stock/281820",
+      "observed_at": "2026-10-07T14:00:52.339920+09:00",
+      "price_krw": 128000,
+      "day_high_krw": 134100,
+      "day_low_krw": 108400,
+      "price_type": "pure_KRX_polling_primary_fields_excluding_NXT_integrated"
+    },
+    "price_structure_source": "https://api.finance.naver.com/siseJson.naver?symbol=281820&requestType=1&startTime=20260701&endTime=20261007&timeframe=day",
+    "price_basis": {
+      "prior_high_date": "2026-07-01",
+      "prior_high_krw": 124800,
+      "observed_day_high_krw": 134100,
+      "take_profit_basis": "200_krw_before_observed_day_high",
+      "stop_basis": "100_krw_below_prior_high_breakout_failure"
+    },
+    "restriction_check": {
+      "checked_from": "2026-10-07T14:03:42+09:00",
+      "checked_to": "2026-10-07T14:03:50+09:00",
+      "attention_count": 49,
+      "warning_count": 21,
+      "risk_count": 0,
+      "administrative_count": 183,
+      "halt_count": 116,
+      "liquidation_count": 6,
+      "matching_restricted_security": false,
+      "scope": "all_markets_all_rows_current_official_lists"
+    },
+    "possible_entry_window": {
+      "start": null,
+      "start_basis": "new_READY_version_publication_after_actual_reconciliation",
+      "end_exclusive": "2026-10-07T14:30:00+09:00"
+    },
+    "tentative_first_review_at": "2026-10-07T14:30:00+09:00",
+    "next_review_at": "2026-10-07T14:30:00+09:00",
+    "unfilled_buy_cancel_at": "2026-10-07T15:00:00+09:00",
+    "exit_deadline": "2026-10-08T15:10:00+09:00",
+    "exit_evaluation_mode": "manual_on_observation",
+    "evaluation_mode_applies_from": "first_actual_fill_of_future_READY_version",
+    "execution_sequence": [
+      "SAMG_actual_remaining_buy_cancel",
+      "cancel_completion_and_race_fill_reconciliation",
+      "confirm_actual_holdings_open_orders_and_orderable_cash",
+      "issue_new_READY_version_with_total_quantity",
+      "one_limit_input_before_dated_deadline"
+    ],
+    "assumed_buy_commission_fraction": 0.0001,
+    "assumed_sell_total_cost_fraction": 0.0021,
+    "metrics": {
+      "target_percent": 4.609375,
+      "stop_width_percent": 2.578125,
+      "reward_risk_ratio": 1.7878787878787878,
+      "after_assumed_cost_target_gain_per_share_krw": 5606.01,
+      "planned_stop_loss_per_share_krw": 3574.67,
+      "stress_reference_price_krw": 108000,
+      "stress_reference_basis": "2026-10-06_high_retest_after_failed_breakout",
+      "stress_loss_per_share_krw": 20239.6,
+      "probability": null,
+      "scenario_not_forecast": true
+    },
+    "source": "data/days/2026-10-07.md",
+    "is_order_or_fill": false,
+    "orders_submitted_by_assistant": false
+  }
 }
