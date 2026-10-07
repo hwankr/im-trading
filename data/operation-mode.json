@@ -214,7 +214,7 @@
     }
   ],
   "single_writer_thread_id": "01a11403-4d89-75e1-b3a3-0c3f1aee31c6",
-  "new_thread_first_execution_verified": false,
+  "new_thread_first_execution_verified": true,
   "completed_review_history": [
     {
       "review_id": "review-20260916-1230",
@@ -500,14 +500,17 @@
     }
   ],
   "new_thread_first_execution": {
-    "target_thread_id": "01a0ef88-1397-79c2-84d7-1deb6466b467",
+    "automation_id": "30",
+    "target_thread_id": "01a11403-4d89-75e1-b3a3-0c3f1aee31c6",
     "execution_verified": true,
-    "nominal_first_slot_kst": "2026-09-30T09:00:00+09:00",
-    "heartbeat_received_at": "2026-09-30T09:01:57.474+09:00",
-    "clock_verified_at": "2026-09-30T09:02:33+09:00",
-    "review_id": "review-20260930-0900",
+    "nominal_first_slot_kst": "2026-10-07T11:00:00+09:00",
+    "heartbeat_received_at_kst": "2026-10-07T11:00:10.036+09:00",
+    "clock_verified_at_kst": "2026-10-07T11:00:29+09:00",
+    "completed_at_kst": "2026-10-07T11:01:57+09:00",
+    "review_id": "review-20261007-1100",
+    "journal_path": "data/days/2026-10-07.md",
     "notification_delivery_verified": false,
-    "evidence": "automation30 heartbeat received and review executed in this thread; push notification not independently verified"
+    "evidence": "Heartbeat30 received in this chat; actual clock and KRX prices queried; this market review and public record completed. User app execution and push delivery remain unverified."
   },
   "last_heartbeat_gate": {
     "gate_id": "heartbeat-gate-20260930-1517",
@@ -622,7 +625,7 @@
     "verified_at": "2026-09-29T13:53:00+09:00",
     "verification": "native_update_success_and_persisted_toml_prompt_schedule_target_status_comparison"
   },
-  "next_nominal_slot_kst": "2026-10-07T11:00:00+09:00",
+  "next_nominal_slot_kst": "2026-10-07T11:30:00+09:00",
   "single_writer_handoff_prepared_at": "2026-10-07T10:44:07+09:00",
   "single_writer_handoff_status": "ACCEPTED_SINGLE_WRITER",
   "risk_policy_update_history": [
@@ -686,6 +689,16 @@
       "journal_path": "data/days/2026-09-29.md",
       "first_market_review_id": "review-20260929-1200",
       "first_market_review_recorded_at_kst": "2026-09-29T12:07:27+09:00"
+    },
+    {
+      "target_thread_id": "01a0ef88-1397-79c2-84d7-1deb6466b467",
+      "execution_verified": true,
+      "nominal_first_slot_kst": "2026-09-30T09:00:00+09:00",
+      "heartbeat_received_at": "2026-09-30T09:01:57.474+09:00",
+      "clock_verified_at": "2026-09-30T09:02:33+09:00",
+      "review_id": "review-20260930-0900",
+      "notification_delivery_verified": false,
+      "evidence": "automation30 heartbeat received and review executed in this thread; push notification not independently verified"
     }
   ],
   "account_report_request_policy_reference": {
@@ -702,13 +715,19 @@
   "excluded_personal_schedule_dates": [
     "2026-10-06"
   ],
-  "current_registration_execution_verified": false,
+  "current_registration_execution_verified": true,
   "current_registration_first_execution": {
     "automation_id": "30",
     "target_thread_id": "01a11403-4d89-75e1-b3a3-0c3f1aee31c6",
-    "execution_verified": false,
+    "execution_verified": true,
     "nominal_first_slot_kst": "2026-10-07T11:00:00+09:00",
-    "notification_delivery_verified": false
+    "heartbeat_received_at_kst": "2026-10-07T11:00:10.036+09:00",
+    "clock_verified_at_kst": "2026-10-07T11:00:29+09:00",
+    "completed_at_kst": "2026-10-07T11:01:57+09:00",
+    "review_id": "review-20261007-1100",
+    "journal_path": "data/days/2026-10-07.md",
+    "notification_delivery_verified": false,
+    "evidence": "Heartbeat30 received in this chat; actual clock and KRX prices queried; this market review and public record completed. User app execution and push delivery remain unverified."
   },
   "opportunity_cost_policy_update": {
     "directive_id": "directive-20261001-flexible-cancel-early-exit",
@@ -829,8 +848,8 @@
     "recorded_at": "2026-10-07T10:44:07+09:00",
     "destination_writer_accepted_at": "2026-10-07T10:47:28+09:00"
   },
-  "latest_review_id": "review-20261007-1045-new-plans",
-  "latest_review_recorded_at": "2026-10-07T10:47:28+09:00",
+  "latest_review_id": "review-20261007-1100",
+  "latest_review_recorded_at": "2026-10-07T11:01:57+09:00",
   "new_plan_prompt_update": {
     "automation_id": "30",
     "portfolio_plan_id": "portfolio-20261007-01",

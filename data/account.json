@@ -986,7 +986,7 @@
     "scope": "official_rank_return_and_top10_cutoff"
   },
   "last_received_report": "account-report-20261007-0002",
-  "updated_at": "2026-10-07T10:47:28+09:00",
+  "updated_at": "2026-10-07T11:01:57+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -1092,7 +1092,7 @@
     "version": 1,
     "state": "NEW_PLANS_PUBLISHED_AWAIT_USER_EXECUTION_REPORT",
     "source": "data/days/2026-10-07.md",
-    "next_review_at": "2026-10-07T11:00:00+09:00",
+    "next_review_at": "2026-10-07T11:30:00+09:00",
     "required_report_when_changed": [
       "order_submission",
       "cumulative_buy_fills_and_average_price",
@@ -1100,14 +1100,17 @@
       "take_profit_sell_fills_and_remaining",
       "actual_orderable_cash"
     ],
-    "mandatory_cancel_and_race_reconciliation_at": "2026-10-07T15:00:00+09:00"
+    "mandatory_cancel_and_race_reconciliation_at": "2026-10-07T15:00:00+09:00",
+    "first_market_review_reference": "review-20261007-1100"
   },
   "latest_market_review": {
-    "review_id": "review-20261007-1045-new-plans",
-    "recorded_at": "2026-10-07T10:47:28+09:00",
-    "information_as_of": "2026-10-07T10:45:50+09:00",
+    "review_id": "review-20261007-1100",
+    "recorded_at": "2026-10-07T11:01:57+09:00",
+    "nominal_slot": "2026-10-07T11:00:00+09:00",
+    "heartbeat_received_at": "2026-10-07T11:00:10.036+09:00",
+    "information_as_of": "2026-10-07T11:00:31+09:00",
     "source": "data/days/2026-10-07.md",
-    "decision": "READY_GENIANS_AND_SAMG_FIXED_LIMITS",
+    "decision": "KEEP_PORTFOLIO_V1_NO_CHASE_NO_SUPERIOR_REPLACEMENT",
     "portfolio_plan_id": "portfolio-20261007-01",
     "version": 1,
     "account_reports_reused": [
@@ -1117,7 +1120,26 @@
     "actual_account_state_refreshed": false,
     "new_exit_trigger": false,
     "price_path_between_reviews_verified": false,
-    "next_review_at": "2026-10-07T11:00:00+09:00"
+    "new_order_or_fill_report_received": false,
+    "first_scheduled_market_review_completed": true,
+    "actual_order_and_fill_reconciliation_completed": false,
+    "next_review_at": "2026-10-07T11:30:00+09:00",
+    "quotes": [
+      {
+        "code": "263860",
+        "price_krw": 24200,
+        "observed_at": "2026-10-07T11:00:31.386889+09:00",
+        "source": "https://polling.finance.naver.com/api/realtime/domestic/stock/263860",
+        "price_type": "pure_KRX_polling_primary_fields"
+      },
+      {
+        "code": "419530",
+        "price_krw": 21300,
+        "observed_at": "2026-10-07T11:00:31.386901+09:00",
+        "source": "https://polling.finance.naver.com/api/realtime/domestic/stock/419530",
+        "price_type": "pure_KRX_polling_primary_fields"
+      }
+    ]
   },
   "prior_portfolio_screen_summaries": [
     {
@@ -7067,14 +7089,14 @@
     "same_event_stress_loss_budget_enforced": false
   },
   "latest_session_summary": {
-    "review_id": "review-20261007-1045-new-plans",
-    "recorded_at": "2026-10-07T10:47:28+09:00",
-    "decision": "TWO_NEW_READY_PLANS_NO_ORDERS_OR_FILLS_REPORTED",
+    "review_id": "review-20261007-1100",
+    "recorded_at": "2026-10-07T11:01:57+09:00",
+    "decision": "KEEP_PORTFOLIO_V1_NO_CHASE_NO_SUPERIOR_REPLACEMENT",
     "source": "data/days/2026-10-07.md",
     "account_report": "account-report-20261007-0002",
     "cash_and_holdings_report": "account-report-20261007-0001",
     "actual_account_state_refreshed": false,
-    "next_review_at": "2026-10-07T11:00:00+09:00"
+    "next_review_at": "2026-10-07T11:30:00+09:00"
   },
   "account_report_request_policy": {
     "source_report": "account-report-20260930-0008",
@@ -7192,7 +7214,7 @@
       },
       "unfilled_buy_cancel_at": "2026-10-07T15:00:00+09:00",
       "first_review_at": "2026-10-07T11:00:00+09:00",
-      "next_review_at": "2026-10-07T11:00:00+09:00",
+      "next_review_at": "2026-10-07T11:30:00+09:00",
       "mandatory_first_day_reconciliation_at": "2026-10-07T15:00:00+09:00",
       "exit_deadline": "2026-10-08T15:10:00+09:00",
       "exit_evaluation_mode": "manual_on_observation",
@@ -7241,7 +7263,10 @@
         "observed_at": "2026-10-07T10:45:50+09:00",
         "price_type": "pure_KRX_polling_datas_primary_fields_excluding_NXT_and_integrated",
         "price_krw": 24150
-      }
+      },
+      "latest_market_review_reference": "review-20261007-1100",
+      "first_review_market_completed_at": "2026-10-07T11:01:57+09:00",
+      "first_review_execution_reconciliation_status": "UNREPORTED_USER_ORDER_AND_FILL_STATE"
     },
     {
       "plan_id": "plan-20261007-samg-01",
@@ -7267,7 +7292,7 @@
       },
       "unfilled_buy_cancel_at": "2026-10-07T15:00:00+09:00",
       "first_review_at": "2026-10-07T11:00:00+09:00",
-      "next_review_at": "2026-10-07T11:00:00+09:00",
+      "next_review_at": "2026-10-07T11:30:00+09:00",
       "mandatory_first_day_reconciliation_at": "2026-10-07T15:00:00+09:00",
       "exit_deadline": "2026-10-08T15:10:00+09:00",
       "exit_evaluation_mode": "manual_on_observation",
@@ -7316,7 +7341,10 @@
         "observed_at": "2026-10-07T10:45:50+09:00",
         "price_type": "pure_KRX_polling_datas_primary_fields_excluding_NXT_and_integrated",
         "price_krw": 21300
-      }
+      },
+      "latest_market_review_reference": "review-20261007-1100",
+      "first_review_market_completed_at": "2026-10-07T11:01:57+09:00",
+      "first_review_execution_reconciliation_status": "UNREPORTED_USER_ORDER_AND_FILL_STATE"
     }
   ]
 }
