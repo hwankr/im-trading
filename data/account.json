@@ -211,7 +211,9 @@
         "filled_at": null,
         "registered_take_profit_order_quantity": 2070,
         "take_profit_order_source_report": "account-report-20261007-0004",
-        "sellable_quantity_note": "전량 익절매도 등록2070주 보고; 주문 예약 후 별도 매도가능수량 화면값은 미보고."
+        "sellable_quantity_note": "전량 익절매도 등록2070주 보고; 주문 예약 후 별도 매도가능수량 화면값은 미보고.",
+        "management_status": "EXIT_REQUIRED_STOP_OBSERVED",
+        "exit_trigger_reference": "exit-trigger-20261007-genians-01"
       }
     ],
     "total_equity_krw": 98685106,
@@ -313,7 +315,12 @@
         "recorded_at": "2026-10-07T11:06:04+09:00",
         "observed_at": null,
         "source": "data/days/2026-10-07.md",
-        "submitted_at": null
+        "submitted_at": null,
+        "cancellation_instruction_reference": {
+          "exit_trigger_id": "exit-trigger-20261007-genians-01",
+          "issued_at": "2026-10-07T14:32:53+09:00",
+          "cancel_completion_confirmed": false
+        }
       }
     ],
     "confirmation_text": "0003 지니언스2070주 매수·SAMG전량미체결, 0004 지니언스26450원 전량 매도주문 등록",
@@ -1108,7 +1115,7 @@
     "scope": "GENIANS_FULL_POSITION_TAKE_PROFIT_SELL_ORDER_REGISTERED26450"
   },
   "last_received_report": "account-report-20261007-0004",
-  "updated_at": "2026-10-07T14:05:13+09:00",
+  "updated_at": "2026-10-07T14:32:53+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -1134,7 +1141,7 @@
   "latest_plan_reference": {
     "plan_id": "portfolio-20261007-01",
     "version": 2,
-    "status": "GENIANS_HELD_SAMG_CANCEL_REQUIRED_KCTECH_PRICE_ONLY",
+    "status": "GENIANS_STOP_EXIT_REQUIRED_SAMG_CANCEL_PENDING_KCTECH_WINDOW_EXPIRED",
     "path": "data/days/2026-10-07.md"
   },
   "monitoring_authorization": {
@@ -1196,7 +1203,7 @@
     {
       "plan_id": "plan-20261007-genians-01",
       "version": 1,
-      "status": "HELD_TAKE_PROFIT_REGISTERED",
+      "status": "EXIT_REQUIRED_STOP_OBSERVED",
       "path": "data/days/2026-10-07.md",
       "plan_is_not_order_or_fill": true
     },
@@ -1212,9 +1219,9 @@
     "recorded_at": "2026-10-07T11:06:04+09:00",
     "portfolio_plan_id": "portfolio-20261007-01",
     "version": 2,
-    "state": "GENIANS_HELD_SAMG_CANCEL_REQUIRED_KCTECH_PRICE_ONLY",
+    "state": "GENIANS_STOP_EXIT_REQUIRED_SAMG_CANCEL_PENDING_KCTECH_WINDOW_EXPIRED",
     "source": "data/days/2026-10-07.md",
-    "next_review_at": "2026-10-07T14:30:00+09:00",
+    "next_review_at": "2026-10-07T15:00:00+09:00",
     "required_report_when_changed": [
       "order_submission",
       "cumulative_buy_fills_and_average_price",
@@ -1231,19 +1238,26 @@
     ],
     "post_order_cash_reported": false,
     "exact_app_observation_at": null,
-    "latest_market_review_reference": "review-20261007-1400",
+    "latest_market_review_reference": "review-20261007-1430",
     "cancellation_instruction_reference": "plan-20261007-samg-01 v2",
-    "replacement_sizing_requires_new_actual_cash_reconciliation": true
+    "replacement_sizing_requires_new_actual_cash_reconciliation": true,
+    "active_exit_trigger_reference": "exit-trigger-20261007-genians-01",
+    "required_report_for_exit_completion": [
+      "app_observation_time_KST",
+      "GENIANS_actual_sell_fills_average_price_and_remaining",
+      "SAMG_cancel_completion_race_buy_fills_and_remaining",
+      "actual_orderable_cash"
+    ]
   },
   "latest_market_review": {
-    "review_id": "review-20261007-1400",
-    "recorded_at": "2026-10-07T14:05:13+09:00",
-    "nominal_slot": "2026-10-07T14:00:00+09:00",
-    "heartbeat_received_at": "2026-10-07T14:00:15.069+09:00",
-    "clock_verified_at": "2026-10-07T14:01:03+09:00",
-    "information_as_of": "2026-10-07T14:01:03+09:00",
+    "review_id": "review-20261007-1430",
+    "recorded_at": "2026-10-07T14:32:53+09:00",
+    "nominal_slot": "2026-10-07T14:30:00+09:00",
+    "heartbeat_received_at": "2026-10-07T14:30:15.498+09:00",
+    "clock_verified_at": "2026-10-07T14:31:08+09:00",
+    "information_as_of": "2026-10-07T14:31:08+09:00",
     "source": "data/days/2026-10-07.md",
-    "decision": "PORTFOLIO_V2_SAMG_CANCEL_REQUIRED_GENIANS_HOLD_KCTECH_PRICE_ONLY_PENDING_RECONCILIATION",
+    "decision": "GENIANS_EXISTING_STOP_TRIGGERED_EXIT_FIRST_SAMG_CANCEL_PENDING_KCTECH_WINDOW_EXPIRED_NO_NEW_ENTRY",
     "portfolio_plan_id": "portfolio-20261007-01",
     "version": 2,
     "account_reports_reused": [
@@ -1252,77 +1266,65 @@
       "account-report-20261007-0004"
     ],
     "actual_account_state_refreshed": false,
-    "new_exit_trigger": false,
+    "new_exit_trigger": true,
+    "exit_trigger_reference": "exit-trigger-20261007-genians-01",
     "price_path_between_reviews_verified": false,
     "new_order_or_fill_report_received": false,
-    "next_review_at": "2026-10-07T14:30:00+09:00",
+    "next_review_at": "2026-10-07T15:00:00+09:00",
     "quotes": [
       {
         "code": "263860",
-        "price_krw": 23250,
-        "observed_at": "2026-10-07T14:01:03.302678+09:00",
-        "fetched_at": "2026-10-07T14:01:03.301220+09:00",
+        "price_krw": 22850,
+        "observed_at": "2026-10-07T14:31:08.73835+09:00",
+        "fetched_at": "2026-10-07T14:31:08.725353+09:00",
         "source": "https://polling.finance.naver.com/api/realtime/domestic/stock/263860",
         "price_type": "pure_KRX_polling_primary_fields_excluding_NXT_integrated",
         "provider_delay_seconds": 0,
         "day_high_krw": 25100,
-        "day_low_krw": 23150
+        "day_low_krw": 22750
       },
       {
         "code": "419530",
-        "price_krw": 23200,
-        "observed_at": "2026-10-07T14:01:03.299834+09:00",
-        "fetched_at": "2026-10-07T14:01:03.301220+09:00",
+        "price_krw": 22750,
+        "observed_at": "2026-10-07T14:31:08.739865+09:00",
+        "fetched_at": "2026-10-07T14:31:08.725353+09:00",
         "source": "https://polling.finance.naver.com/api/realtime/domestic/stock/419530",
         "price_type": "pure_KRX_polling_primary_fields_excluding_NXT_integrated",
         "provider_delay_seconds": 0,
         "day_high_krw": 23300,
         "day_low_krw": 18090
+      },
+      {
+        "code": "281820",
+        "price_krw": 126300,
+        "observed_at": "2026-10-07T14:31:08.740395+09:00",
+        "fetched_at": "2026-10-07T14:31:08.725353+09:00",
+        "source": "https://polling.finance.naver.com/api/realtime/domestic/stock/281820",
+        "price_type": "pure_KRX_polling_primary_fields_excluding_NXT_integrated",
+        "provider_delay_seconds": 0,
+        "day_high_krw": 134100,
+        "day_low_krw": 108400
       }
     ],
-    "GENIANS_observed_distance_to_stop_krw": 100,
-    "GENIANS_day_low_touch_review_reference": "review-20261007-1300",
-    "SAMG_required_pullback_to_original_limit_percent": 12.284482758620685,
-    "SAMG_remaining_upside_to_original_target_at_observed_price_percent": 1.0775862068965525,
-    "replacement_candidate_reference": "plan-20261007-kctech-01 v1 PRICE_ONLY",
+    "GENIANS_observed_distance_to_stop_krw": -300,
+    "replacement_candidate_reference": "plan-20261007-kctech-01 v1 PRICE_ONLY input window expired",
     "replacement_comparison": {
-      "JNTC_price_krw": 25700,
-      "JNTC_observed_at": "2026-10-07T14:00:52.300863+09:00",
+      "JNTC_price_krw": 26000,
+      "JNTC_observed_at": "2026-10-07T14:30:59.942033+09:00",
       "JNTC_price_source": "https://polling.finance.naver.com/api/realtime/domestic/stock/204270",
-      "JNTC_day_high_krw": 27600,
-      "KC_price_krw": 128000,
-      "KC_observed_at": "2026-10-07T14:00:52.339920+09:00",
-      "KC_price_source": "https://polling.finance.naver.com/api/realtime/domestic/stock/281820",
-      "KC_day_high_krw": 134100,
-      "prior_small_KC_upside_objection_superseded": true,
-      "decision": "KCTECH_PRICE_LEADERSHIP_PREFERRED_TO_SAMG_DEEP_LIMIT_WAIT_REQUIRES_CASH_RECONCILIATION"
+      "decision": "KCTECH_FUTURE_REVIEW_CANDIDATE_ONLY_EXISTING_PRICE_TABLE_CANNOT_AUTHORIZE_CURRENT_OR_NEXT_DAY_BUY",
+      "no_superior_new_direct_catalyst_found": true
     },
     "target_contribution_review": {
       "source_performance_report": "account-report-20261007-0002",
-      "genians_actual_entry_target_scenario_reference": "review-20261007-1130",
-      "actual_KC_quantity_unassigned": true,
-      "actual_funded_portfolio_contribution_pp": null,
-      "formal_cap_maximum_not_recommended_quantity": 390,
-      "formal_cap_target_contribution_pp": 2.1863439,
-      "formal_cap_plus_G_target_scenario_contribution_pp": 6.893613324,
-      "remaining_gap_even_at_formal_cap_scenario_pp": 8.956386676,
-      "scenario_not_forecast": true,
-      "original_v1_full_target_scenarios_retained_in_journal": true
+      "last_reported_rank_gap_pp": 15.85,
+      "GENIANS_take_profit_scenario_no_longer_active": true,
+      "prior_replacement_scenario_reference": "review-20261007-1400",
+      "active_funded_new_entry_contribution_pp": null,
+      "post_exit_actual_performance_and_recovery_requirement_unassigned": true
     },
-    "event_review": {
-      "event": "NURI_5TH_LAUNCH",
-      "confirmed_scheduled_at": "2026-10-07T12:25:00+09:00",
-      "official_source": "https://www.kasa.go.kr/prog/plcyBrf/brief/kor/sub01_01_04/view.do?plcyBrfNo=514",
-      "official_latest_list_checked_source": "https://www.kasa.go.kr/prog/plcyBrf/brief/kor/sub01_01_04/list.do",
-      "latest_list_check_completed_by": "2026-10-07T14:02:51+09:00",
-      "current_official_latest_release": "launch_time_confirmation",
-      "media_reported_launch_and_15_satellite_separation": true,
-      "media_source": "https://mobile.newsis.com/view/NISX20261007_0003816789",
-      "media_published_at": "2026-10-07T12:42:59+09:00",
-      "media_updated_at": "2026-10-07T12:46:09+09:00",
-      "official_final_success_confirmed": false,
-      "success_based_entry_authorized": false
-    }
+    "event_review_reference": "review-20261007-1400",
+    "new_official_final_success_source_found": false
   },
   "prior_portfolio_screen_summaries": [
     {
@@ -7094,7 +7096,7 @@
   "current_portfolio_plan": {
     "plan_id": "portfolio-20261007-01",
     "version": 2,
-    "status": "GENIANS_HELD_SAMG_CANCEL_REQUIRED_KCTECH_PRICE_ONLY",
+    "status": "GENIANS_STOP_EXIT_REQUIRED_SAMG_CANCEL_PENDING_KCTECH_WINDOW_EXPIRED",
     "generated_at": "2026-10-07T10:45:58+09:00",
     "source": "data/days/2026-10-07.md",
     "policy_reference": "policy-20261002-prize-objective-flexibility",
@@ -7136,10 +7138,12 @@
     "funded_portfolio_target_contribution_percentage_points": null,
     "superseded_scenario_reference": "data/days/2026-10-07.md portfolio v1 and review-20261007-1130",
     "next_action_sequence": [
-      "SAMG_cancel_actual_remaining",
-      "reconcile_cancel_race_fills_and_current_cash",
-      "new_KCTECH_READY_version_required"
-    ]
+      "SAMG_cancel_any_actual_remaining",
+      "GENIANS_take_profit_cancel_and_race_fill_reconciliation",
+      "GENIANS_actual_remaining_market_exit",
+      "reconcile_actual_cash_before_any_new_plan"
+    ],
+    "active_exit_trigger_reference": "exit-trigger-20261007-genians-01"
   },
   "corporate_action_review": {
     "reviewed_at": "2026-09-28T09:41:23+09:00",
@@ -7340,15 +7344,16 @@
     "same_event_stress_loss_budget_enforced": false
   },
   "latest_session_summary": {
-    "review_id": "review-20261007-1400",
-    "recorded_at": "2026-10-07T14:05:13+09:00",
-    "decision": "PORTFOLIO_V2_SAMG_CANCEL_REQUIRED_GENIANS_HOLD_KCTECH_PRICE_ONLY_PENDING_RECONCILIATION",
+    "review_id": "review-20261007-1430",
+    "recorded_at": "2026-10-07T14:32:53+09:00",
+    "decision": "GENIANS_EXISTING_STOP_TRIGGERED_EXIT_FIRST_SAMG_CANCEL_PENDING_KCTECH_WINDOW_EXPIRED_NO_NEW_ENTRY",
     "source": "data/days/2026-10-07.md",
     "account_report": "account-report-20261007-0004",
     "buy_fill_and_pending_report": "account-report-20261007-0003",
     "actual_account_state_refreshed": false,
-    "next_review_at": "2026-10-07T14:30:00+09:00",
-    "portfolio_version": 2
+    "next_review_at": "2026-10-07T15:00:00+09:00",
+    "portfolio_version": 2,
+    "active_exit_trigger_reference": "exit-trigger-20261007-genians-01"
   },
   "account_report_request_policy": {
     "source_report": "account-report-20260930-0008",
@@ -7445,7 +7450,7 @@
     {
       "plan_id": "plan-20261007-genians-01",
       "version": 1,
-      "status": "HELD_TAKE_PROFIT_REGISTERED",
+      "status": "EXIT_REQUIRED_STOP_OBSERVED",
       "generated_at": "2026-10-07T10:45:58+09:00",
       "information_as_of": "2026-10-07T10:45:50+09:00",
       "code": "263860",
@@ -7466,7 +7471,7 @@
       },
       "unfilled_buy_cancel_at": "2026-10-07T15:00:00+09:00",
       "first_review_at": "2026-10-07T11:00:00+09:00",
-      "next_review_at": "2026-10-07T14:30:00+09:00",
+      "next_review_at": "2026-10-07T15:00:00+09:00",
       "mandatory_first_day_reconciliation_at": "2026-10-07T15:00:00+09:00",
       "exit_deadline": "2026-10-08T15:10:00+09:00",
       "exit_evaluation_mode": "manual_on_observation",
@@ -7516,7 +7521,7 @@
         "price_type": "pure_KRX_polling_datas_primary_fields_excluding_NXT_and_integrated",
         "price_krw": 24150
       },
-      "latest_market_review_reference": "review-20261007-1400",
+      "latest_market_review_reference": "review-20261007-1430",
       "first_review_market_completed_at": "2026-10-07T11:01:57+09:00",
       "first_review_execution_reconciliation_status": "BUY_FILL_AND_TAKE_PROFIT_REGISTRATION_REPORTED_EXACT_TIME_UNREPORTED",
       "latest_execution_report": "account-report-20261007-0003",
@@ -7524,7 +7529,9 @@
       "remaining_planned_entry_quantity": 0,
       "take_profit_order_submission_confirmed": true,
       "take_profit_order_quantity": 2070,
-      "take_profit_order_source_report": "account-report-20261007-0004"
+      "take_profit_order_source_report": "account-report-20261007-0004",
+      "exit_trigger_reference": "exit-trigger-20261007-genians-01",
+      "exit_required_now": true
     },
     {
       "plan_id": "plan-20261007-samg-01",
@@ -7550,7 +7557,7 @@
       },
       "unfilled_buy_cancel_at": "2026-10-07T15:00:00+09:00",
       "first_review_at": "2026-10-07T11:00:00+09:00",
-      "next_review_at": "2026-10-07T14:30:00+09:00",
+      "next_review_at": "2026-10-07T15:00:00+09:00",
       "mandatory_first_day_reconciliation_at": "2026-10-07T15:00:00+09:00",
       "exit_deadline": "2026-10-08T15:10:00+09:00",
       "exit_evaluation_mode": "manual_on_observation",
@@ -7600,7 +7607,7 @@
         "price_type": "pure_KRX_polling_datas_primary_fields_excluding_NXT_and_integrated",
         "price_krw": 21300
       },
-      "latest_market_review_reference": "review-20261007-1400",
+      "latest_market_review_reference": "review-20261007-1430",
       "first_review_market_completed_at": "2026-10-07T11:01:57+09:00",
       "first_review_execution_reconciliation_status": "ZERO_FILL_ALL_BUY_UNFILLED_REPORTED_EXACT_ORDER_DETAILS_UNREPORTED",
       "latest_execution_report": "account-report-20261007-0003",
@@ -7674,7 +7681,7 @@
       "end_exclusive": "2026-10-07T14:30:00+09:00"
     },
     "tentative_first_review_at": "2026-10-07T14:30:00+09:00",
-    "next_review_at": "2026-10-07T14:30:00+09:00",
+    "next_review_at": "2026-10-07T15:00:00+09:00",
     "unfilled_buy_cancel_at": "2026-10-07T15:00:00+09:00",
     "exit_deadline": "2026-10-08T15:10:00+09:00",
     "exit_evaluation_mode": "manual_on_observation",
@@ -7702,6 +7709,53 @@
     },
     "source": "data/days/2026-10-07.md",
     "is_order_or_fill": false,
-    "orders_submitted_by_assistant": false
-  }
+    "orders_submitted_by_assistant": false,
+    "entry_window_expired_at": "2026-10-07T14:30:00+09:00",
+    "availability": "PRICE_ONLY_WINDOW_EXPIRED_NO_READY_VERSION_ISSUED",
+    "next_day_reuse_authorized": false,
+    "latest_market_review_reference": "review-20261007-1430"
+  },
+  "exit_trigger_history": [
+    {
+      "trigger_id": "exit-trigger-20261007-genians-01",
+      "plan_id": "plan-20261007-genians-01",
+      "plan_version": 1,
+      "portfolio_plan_id": "portfolio-20261007-01",
+      "portfolio_version_at_trigger": 2,
+      "code": "263860",
+      "name": "지니언스",
+      "reason": "OBSERVED_CURRENT_KRX_PRICE_AT_OR_BELOW_EXISTING_STOP",
+      "exit_evaluation_mode": "manual_on_observation",
+      "stop_loss_price_krw": 23150,
+      "observed_price_krw": 22850,
+      "observed_at": "2026-10-07T14:31:00.005697+09:00",
+      "parent_confirmed_observation_at": "2026-10-07T14:31:08.73835+09:00",
+      "parent_quote_fetched_at": "2026-10-07T14:31:08.725353+09:00",
+      "recorded_at": "2026-10-07T14:32:53+09:00",
+      "price_source": "https://polling.finance.naver.com/api/realtime/domestic/stock/263860",
+      "price_type": "pure_KRX_polling_primary_fields_excluding_NXT_integrated",
+      "reported_holding_quantity": 2070,
+      "quantity_source_report": "account-report-20261007-0003",
+      "actual_remaining_sellable_quantity": null,
+      "take_profit_price_krw": 26450,
+      "take_profit_order_source_report": "account-report-20261007-0004",
+      "status": "EXIT_REQUIRED_EXECUTION_UNCONFIRMED",
+      "required_action": "cancel_remaining_buys_cancel_take_profit_reconcile_race_fills_market_sell_actual_sellable_remainder_now",
+      "execution_sequence": [
+        "cancel_any_actual_SAMG_remaining_buy",
+        "cancel_actual_remaining_GENIANS_take_profit_sell_and_confirm_completion",
+        "reconcile_cancel_race_fills_and_actual_sellable_remaining",
+        "market_sell_actual_sellable_remaining_only",
+        "report_actual_sell_fills_remaining_open_orders_and_orderable_cash"
+      ],
+      "action_timing": "NOW_AFTER_REQUIRED_CANCEL_AND_RECONCILIATION",
+      "original_final_operating_deadline": "2026-10-08T15:10:00+09:00",
+      "survives_later_rebound": true,
+      "existing_stop_and_evaluation_mode_not_amended": true,
+      "actual_cancel_confirmed": false,
+      "actual_sell_confirmed": false,
+      "is_order_or_fill": false
+    }
+  ],
+  "active_exit_instruction_reference": "exit-trigger-20261007-genians-01"
 }
