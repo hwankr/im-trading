@@ -53,13 +53,13 @@
   "first_execution_evidence": "Read-only native automations.last_run_at=1789520509195; first 10:00-slot review and public observations appended to private daily record. No account fill inferred.",
   "next_run_verified_at_kst": null,
   "last_completed_review": {
-    "review_id": "review-20261007-1230",
-    "recorded_at": "2026-10-07T12:32:59+09:00",
+    "review_id": "review-20261007-1300",
+    "recorded_at": "2026-10-07T13:03:41+09:00",
     "source": "data/days/2026-10-07.md",
     "origin": "authorized_heartbeat_30",
-    "heartbeat_received_at": "2026-10-07T12:30:11.437+09:00",
-    "nominal_slot_kst": "2026-10-07T12:30:00+09:00",
-    "scope": "observed_exit_check_hold_and_pending_buy_alternatives_and_launch_result_unconfirmed"
+    "heartbeat_received_at": "2026-10-07T13:00:11.929+09:00",
+    "nominal_slot_kst": "2026-10-07T13:00:00+09:00",
+    "scope": "current_price_exit_check_historical_day_low_touch_hold_and_pending_alternatives"
   },
   "record_visibility": "public_paper_trading_records_user_authorized_20260916",
   "publication_policy": "docs/record-publication.md",
@@ -625,7 +625,7 @@
     "verified_at": "2026-09-29T13:53:00+09:00",
     "verification": "native_update_success_and_persisted_toml_prompt_schedule_target_status_comparison"
   },
-  "next_nominal_slot_kst": "2026-10-07T13:00:00+09:00",
+  "next_nominal_slot_kst": "2026-10-07T13:30:00+09:00",
   "single_writer_handoff_prepared_at": "2026-10-07T10:44:07+09:00",
   "single_writer_handoff_status": "ACCEPTED_SINGLE_WRITER",
   "risk_policy_update_history": [
@@ -848,8 +848,8 @@
     "recorded_at": "2026-10-07T10:44:07+09:00",
     "destination_writer_accepted_at": "2026-10-07T10:47:28+09:00"
   },
-  "latest_review_id": "review-20261007-1230",
-  "latest_review_recorded_at": "2026-10-07T12:32:59+09:00",
+  "latest_review_id": "review-20261007-1300",
+  "latest_review_recorded_at": "2026-10-07T13:03:41+09:00",
   "new_plan_prompt_update": {
     "automation_id": "30",
     "portfolio_plan_id": "portfolio-20261007-01",
