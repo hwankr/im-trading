@@ -604,8 +604,8 @@
     "destination_thread_id": "01a11403-4d89-75e1-b3a3-0c3f1aee31c6",
     "source": "data/days/2026-10-07.md"
   },
-  "single_writer_handoff_accepted_at": null,
-  "single_writer_handoff_publication_commit": null,
+  "single_writer_handoff_accepted_at": "2026-10-07T10:47:28+09:00",
+  "single_writer_handoff_publication_commit": "13f9d7497505b5e85cfe9cfc85fafdac3eceb33b",
   "single_writer_handoff_base_commit": "d0f121d7deb7aed3cbf142a06a627365e0b5fef7",
   "risk_policy_update": {
     "policy_id": "policy-20260929-stress-cap-removal",
@@ -624,7 +624,7 @@
   },
   "next_nominal_slot_kst": "2026-10-07T11:00:00+09:00",
   "single_writer_handoff_prepared_at": "2026-10-07T10:44:07+09:00",
-  "single_writer_handoff_status": "PREPARED_RELEASE_AFTER_SYNCED_COMMIT_AND_EXPLICIT_HANDOFF",
+  "single_writer_handoff_status": "ACCEPTED_SINGLE_WRITER",
   "risk_policy_update_history": [
     {
       "authorized_on": "2026-09-28",
@@ -824,8 +824,20 @@
     "target_thread_id": "01a11403-4d89-75e1-b3a3-0c3f1aee31c6",
     "thread_running_verified": true,
     "research_completed": false,
-    "single_writer_release_pending_publication": true,
+    "single_writer_release_pending_publication": false,
     "additional_schedule_created": false,
-    "recorded_at": "2026-10-07T10:44:07+09:00"
+    "recorded_at": "2026-10-07T10:44:07+09:00",
+    "destination_writer_accepted_at": "2026-10-07T10:47:28+09:00"
+  },
+  "latest_review_id": "review-20261007-1045-new-plans",
+  "latest_review_recorded_at": "2026-10-07T10:47:28+09:00",
+  "new_plan_prompt_update": {
+    "automation_id": "30",
+    "portfolio_plan_id": "portfolio-20261007-01",
+    "version": 1,
+    "native_update_verified": true,
+    "persisted_full_prompt_target_status_schedule_verified_at": "2026-10-07T10:47:28+09:00",
+    "future_execution_verified": false,
+    "notification_delivery_verified": false
   }
 }

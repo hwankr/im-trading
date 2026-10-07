@@ -986,7 +986,7 @@
     "scope": "official_rank_return_and_top10_cutoff"
   },
   "last_received_report": "account-report-20261007-0002",
-  "updated_at": "2026-10-07T10:44:07+09:00",
+  "updated_at": "2026-10-07T10:47:28+09:00",
   "history_reference": {
     "last_instruction": "order-instruction-0001",
     "final_status": "CANCELLED_UNFILLED_CONFIRMED",
@@ -1010,11 +1010,10 @@
     "risk_anchor_reset": false
   },
   "latest_plan_reference": {
-    "plan_id": "plan-20261002-rf-materials-01",
-    "version": 3,
-    "status": "CLOSED_STOP_EXIT_USER_CONFIRMED",
-    "path": "data/days/2026-10-02.md",
-    "plan_is_not_order_or_fill": true
+    "plan_id": "portfolio-20261007-01",
+    "version": 1,
+    "status": "READY_NEW_PLANS_NOT_EXECUTION_CONFIRMED",
+    "path": "data/days/2026-10-07.md"
   },
   "monitoring_authorization": {
     "authorized_on": "2026-10-01",
@@ -1071,98 +1070,54 @@
     "preserve_history": true,
     "github_sync_authorized": true
   },
-  "active_plan_references": [],
+  "active_plan_references": [
+    {
+      "plan_id": "plan-20261007-genians-01",
+      "version": 1,
+      "status": "READY",
+      "path": "data/days/2026-10-07.md",
+      "plan_is_not_order_or_fill": true
+    },
+    {
+      "plan_id": "plan-20261007-samg-01",
+      "version": 1,
+      "status": "READY",
+      "path": "data/days/2026-10-07.md",
+      "plan_is_not_order_or_fill": true
+    }
+  ],
   "execution_follow_up": {
-    "checked_at": "2026-10-07T10:44:07+09:00",
-    "source": "current_day_user_report_and_new_chat_handoff",
-    "latest_account_report": "account-report-20261007-0002",
-    "latest_cash_report": "account-report-20261007-0001",
-    "latest_holdings_report": "account-report-20261007-0001",
-    "plan_reference": null,
-    "plan_references": [],
-    "known_positions": [],
-    "closed_positions": [
-      {
-        "code": "028300",
-        "remaining_quantity": 0,
-        "source_report": "account-report-20261002-0008"
-      },
-      {
-        "code": "327260",
-        "remaining_quantity": 0,
-        "source_report": "account-report-20261002-0012",
-        "trigger_reference": "exit-trigger-20261002-rf-150322"
-      },
-      {
-        "code": "010120",
-        "remaining_quantity": 0,
-        "source_report": "account-report-20261002-0013",
-        "trigger_reference": "exit-trigger-20261002-ls-time1510"
-      }
+    "recorded_at": "2026-10-07T10:47:28+09:00",
+    "portfolio_plan_id": "portfolio-20261007-01",
+    "version": 1,
+    "state": "NEW_PLANS_PUBLISHED_AWAIT_USER_EXECUTION_REPORT",
+    "source": "data/days/2026-10-07.md",
+    "next_review_at": "2026-10-07T11:00:00+09:00",
+    "required_report_when_changed": [
+      "order_submission",
+      "cumulative_buy_fills_and_average_price",
+      "buy_remaining",
+      "take_profit_sell_fills_and_remaining",
+      "actual_orderable_cash"
     ],
-    "remaining_prior_RF_planned_buy_quantity": 0,
-    "planned_additional_buy_quantity": 0,
-    "additional_buy_order_submitted": true,
-    "additional_buy_filled_quantity": 628,
-    "additional_buy_remaining_quantity": null,
-    "order_submission_and_fill_report_pending": false,
-    "pending_details": [
-      "historical_actual_sale_prices_costs_and_original_order_dispositions"
-    ],
-    "execution_reconfirmation_status": "ALL_HOLDINGS_AND_BUY_SELL_OPEN_ORDERS_NONE_CONFIRMED",
-    "exit_obligation_status": "ALL_RF_LS_TRIGGERED_EXITS_COMPLETED",
-    "new_entry_status": "NEW_DAY_CASH_CONFIRMED_AWAIT_SEPARATE_READY_PLAN",
-    "next_position_review_at": null,
-    "next_guidance_slot": "2026-10-07T11:00:00+09:00",
-    "mandatory_reconciliation_at": null,
-    "exit_deadline": null,
-    "orders_submitted_by_assistant": false,
-    "instructions": "10/7 10:35 보유·모든미체결없음과현금확인. 새채팅이당일신규계획비교중. 10/2계획은종료,중복청산/같은계획재진입없음. 새계획의첫당일점검·청산기한을별도설정.",
-    "LS_execution_reference": "plan-20261002-ls-electric-01_v2",
-    "post_sale_account_report_pending": false,
-    "new_sizing_account_report_pending": false,
-    "replacement_reconciliation_required": false,
-    "original_HLB_order_cancel_fill_split_unreported": true,
-    "take_profit_order_report_pending": false,
-    "actual_RF_take_profit_submitted": true,
-    "actual_RF_take_profit_source_report": "account-report-20261002-0011",
-    "latest_completed_exit_report": "account-report-20261002-0013",
-    "latest_instruction_reference": "review-20261007-1030-handoff",
-    "instruction_recorded_at": "2026-10-07T10:44:07+09:00",
-    "last_price_review_reference": "review-20261007-1030-handoff",
-    "original_additional_buy_plan_quantity": 628,
-    "remaining_additional_planned_entry_quantity": 0,
-    "take_profit_fill_report_pending": false,
-    "post_additional_buy_cash_report_pending": false,
-    "current_cash_reusable_for_new_order": false,
-    "last_execution_report": "account-report-20261002-0013",
-    "post_RF_sale_cash_report_pending": false,
-    "mandatory_reconciliation_status": "ALL_HOLDINGS_AND_BUY_SELL_OPEN_ORDERS_NONE_CONFIRMED",
-    "RF_triggered_exit_reference": "exit-trigger-20261002-rf-150322",
-    "LS_triggered_exit_reference": "exit-trigger-20261002-ls-time1510",
-    "pending_exit_action": null,
-    "confirmed_cash_for_future_new_plan_krw": 97468563,
-    "pending_details_block_further_today_actions": false,
-    "cash_usable_for_new_plan_sizing": true,
-    "new_cash_report_required_before_plan_sizing": false
+    "mandatory_cancel_and_race_reconciliation_at": "2026-10-07T15:00:00+09:00"
   },
   "latest_market_review": {
-    "review_id": "review-20261007-1030-handoff",
-    "recorded_at": "2026-10-07T10:44:07+09:00",
-    "heartbeat_received_at": "2026-10-07T10:35:09.526+09:00",
-    "nominal_slot": "2026-10-07T10:30:00+09:00",
+    "review_id": "review-20261007-1045-new-plans",
+    "recorded_at": "2026-10-07T10:47:28+09:00",
+    "information_as_of": "2026-10-07T10:45:50+09:00",
     "source": "data/days/2026-10-07.md",
-    "decision": "ACCOUNT_RECONCILED_RESEARCH_HANDED_TO_NEW_CHAT_NO_PLAN_ISSUED",
-    "account_reports": [
+    "decision": "READY_GENIANS_AND_SAMG_FIXED_LIMITS",
+    "portfolio_plan_id": "portfolio-20261007-01",
+    "version": 1,
+    "account_reports_reused": [
       "account-report-20261007-0001",
       "account-report-20261007-0002"
     ],
-    "actual_account_state_refreshed": true,
+    "actual_account_state_refreshed": false,
     "new_exit_trigger": false,
-    "active_plan_references": [],
     "price_path_between_reviews_verified": false,
-    "next_review_at": "2026-10-07T11:00:00+09:00",
-    "destination_thread_id": "01a11403-4d89-75e1-b3a3-0c3f1aee31c6"
+    "next_review_at": "2026-10-07T11:00:00+09:00"
   },
   "prior_portfolio_screen_summaries": [
     {
@@ -2444,6 +2399,14 @@
         }
       ],
       "source": "data/days/2026-10-02.md"
+    },
+    {
+      "recorded_at": "2026-10-07T10:47:28+09:00",
+      "event": "NEW_OCT7_PORTFOLIO_PUBLISHED",
+      "portfolio_plan_id": "portfolio-20261007-01",
+      "version": 1,
+      "source": "data/days/2026-10-07.md",
+      "prior_portfolio_plan": "portfolio-20261002-01 v3 closed"
     }
   ],
   "current_entry_plan": {
@@ -6340,7 +6303,8 @@
     "handoff_base_commit": "d0f121d7deb7aed3cbf142a06a627365e0b5fef7",
     "old_entry_plan_reuse_prohibited": true,
     "destination_research_running_verified": true,
-    "destination_writer_accepted_at": null
+    "destination_writer_accepted_at": "2026-10-07T10:47:28+09:00",
+    "handoff_publication_commit": "13f9d7497505b5e85cfe9cfc85fafdac3eceb33b"
   },
   "additional_entry_plans": [
     {
@@ -6873,44 +6837,45 @@
     }
   ],
   "current_portfolio_plan": {
-    "plan_id": "portfolio-20261002-01",
-    "version": 3,
-    "replaces_version": 2,
-    "status": "CLOSED_ALL_POSITIONS_EXITED_ALL_OPEN_ORDERS_NONE",
-    "generated_at": "2026-10-02T12:36:04+09:00",
-    "source": "data/days/2026-10-02.md",
+    "plan_id": "portfolio-20261007-01",
+    "version": 1,
+    "status": "READY_NEW_PLANS_NOT_EXECUTION_CONFIRMED",
+    "generated_at": "2026-10-07T10:45:58+09:00",
+    "source": "data/days/2026-10-07.md",
     "policy_reference": "policy-20261002-prize-objective-flexibility",
-    "positions": [],
-    "actual_holdings_and_orders_remain_original_reports": false,
-    "actual_holdings_source_report": "account-report-20261002-0013",
-    "cash_source_report": "account-report-20261002-0013",
-    "new_sell_or_buy_fills_confirmed": true,
-    "decision": "0013에서LS전량매도·보유/매수/매도미체결모두0·주문가능현금97,468,563원확인. RF/LS발동이력보존,오늘추가입력없음.",
-    "conditional_full_allocation_reference": "RF_v3_TOTAL936_ACTUALLY_FILLED_0010_NO_FURTHER_BUY",
-    "scenario": {
-      "actual_post_execution_cash_source_report": "account-report-20261002-0008",
-      "RF_existing_quantity": 308,
-      "RF_additional_quantity": 628,
-      "RF_conditional_total_quantity": 936,
-      "LS_existing_quantity": 215,
-      "assumed_additional_buy_cost_krw": 33538553.52,
-      "assumed_all_remaining_targets_reached_equity_krw": 104706110.48,
-      "fixed_10th_equity_krw": 110580000,
-      "remaining_shortfall_krw": 5873889.519999996,
-      "further_return_needed_if_scenario_realized_percent": 5.609882262909549,
-      "cash_based_scenario_not_current_app_equity_or_return_prediction": true,
-      "no_existing_paper_gains_double_counted": true,
-      "historical_pre_actual_additional_fill_scenario": true,
-      "not_current_after_execution_report": "account-report-20261002-0010"
-    },
-    "actual_sources_by_position": {
-      "HLB": "account-report-20261002-0008",
-      "RF": "account-report-20261002-0012",
-      "RF_sell_state": "account-report-20261002-0012",
-      "LS": "account-report-20261002-0013"
-    },
-    "last_execution_reconciliation_report": "account-report-20261002-0013",
-    "closed_report": "account-report-20261002-0013"
+    "cash_source_report": "account-report-20261007-0001",
+    "official_performance_source_report": "account-report-20261007-0002",
+    "positions": [
+      {
+        "plan_id": "plan-20261007-genians-01",
+        "version": 1,
+        "code": "263860",
+        "planned_total_quantity": 2070
+      },
+      {
+        "plan_id": "plan-20261007-samg-01",
+        "version": 1,
+        "code": "419530",
+        "planned_total_quantity": 2332
+      }
+    ],
+    "order_submission_sequence": [
+      "263860",
+      "419530"
+    ],
+    "assumed_buy_commission_fraction": 0.0001,
+    "assumed_sell_total_cost_fraction": 0.0021,
+    "total_buy_cost_after_assumed_commission_krw": 97456444.67,
+    "residual_confirmed_cash_scenario_krw": 12118.329999998212,
+    "after_assumed_cost_all_targets_gain_krw": 11750637.840000004,
+    "all_targets_initial_capital_contribution_percentage_points": 11.750637840000003,
+    "remaining_gap_after_both_targets_percentage_points": 4.0993621599999965,
+    "planned_stop_loss_after_assumed_cost_krw": 5770689.940000003,
+    "stress_loss_after_assumed_cost_krw": 11795571.063999996,
+    "scenario_not_forecast": true,
+    "actual_equity_fraction": null,
+    "actual_orders_and_fills_confirmed": false,
+    "detail_reference": "data/days/2026-10-07.md"
   },
   "corporate_action_review": {
     "reviewed_at": "2026-09-28T09:41:23+09:00",
@@ -7102,13 +7067,13 @@
     "same_event_stress_loss_budget_enforced": false
   },
   "latest_session_summary": {
-    "review_id": "review-20261007-1030-handoff",
-    "recorded_at": "2026-10-07T10:44:07+09:00",
-    "decision": "NEW_CHAT_HANDOFF_FRESH_PLAN_RESEARCH_IN_PROGRESS",
+    "review_id": "review-20261007-1045-new-plans",
+    "recorded_at": "2026-10-07T10:47:28+09:00",
+    "decision": "TWO_NEW_READY_PLANS_NO_ORDERS_OR_FILLS_REPORTED",
     "source": "data/days/2026-10-07.md",
     "account_report": "account-report-20261007-0002",
     "cash_and_holdings_report": "account-report-20261007-0001",
-    "actual_account_state_refreshed": true,
+    "actual_account_state_refreshed": false,
     "next_review_at": "2026-10-07T11:00:00+09:00"
   },
   "account_report_request_policy": {
@@ -7201,5 +7166,157 @@
     "source": "data/days/2026-10-07.md",
     "is_entry_plan": false,
     "destination_thread_id": "01a11403-4d89-75e1-b3a3-0c3f1aee31c6"
-  }
+  },
+  "current_entry_plans": [
+    {
+      "plan_id": "plan-20261007-genians-01",
+      "version": 1,
+      "status": "READY",
+      "generated_at": "2026-10-07T10:45:58+09:00",
+      "information_as_of": "2026-10-07T10:45:50+09:00",
+      "code": "263860",
+      "name": "지니언스",
+      "market": "KRX_KOSDAQ",
+      "side": "buy",
+      "order_type": "limit",
+      "entry_limit_price_krw": 24150,
+      "take_profit_price_krw": 26450,
+      "stop_loss_price_krw": 23150,
+      "quantity": 2070,
+      "total_planned_quantity": 2070,
+      "quantity_is_total_not_additional": true,
+      "notional_krw": 49990500,
+      "entry_submission_window": {
+        "start": "2026-10-07T10:46:00+09:00",
+        "end_exclusive": "2026-10-07T14:30:00+09:00"
+      },
+      "unfilled_buy_cancel_at": "2026-10-07T15:00:00+09:00",
+      "first_review_at": "2026-10-07T11:00:00+09:00",
+      "next_review_at": "2026-10-07T11:00:00+09:00",
+      "mandatory_first_day_reconciliation_at": "2026-10-07T15:00:00+09:00",
+      "exit_deadline": "2026-10-08T15:10:00+09:00",
+      "exit_evaluation_mode": "manual_on_observation",
+      "evaluation_mode_applies_from": "first_actual_fill_after_publication",
+      "monitoring_risk_acknowledged": true,
+      "manual_window": {
+        "start": "2026-10-07T15:00:00+09:00",
+        "end": "2026-10-07T15:15:00+09:00"
+      },
+      "capital_source_report": "account-report-20261007-0001",
+      "cash_source_report": "account-report-20261007-0001",
+      "source": "data/days/2026-10-07.md",
+      "detail_reference": "data/days/2026-10-07.md",
+      "policy_reference": "policy-20261002-prize-objective-flexibility",
+      "entry_execution_allowed": true,
+      "order_submission_confirmed": false,
+      "actual_filled_quantity": null,
+      "orders_submitted_by_assistant": false,
+      "plan_is_not_order_or_fill": true,
+      "execution": {
+        "entry": "Fixed limit once in dated window; no chase. Account report 0001 is 10:35 pre-order state.",
+        "take_profit": "Limit for actual filled sellable shares only; reconcile existing sell quantities before adding uncovered shares.",
+        "exit": "Cancel unfilled buys and existing take-profit sells, reconcile race fills, then market sell actual sellable remainder on observed stop or final deadline.",
+        "next_day": "At 2026-10-08 10:00 reconcile actual holdings and sell orders; replace expired take-profit only for uncovered actual remainder; no next-day buy carry."
+      },
+      "metrics": {
+        "target_percent": 9.523809523809534,
+        "stop_width_percent": 4.140786749482405,
+        "reward_risk_ratio": 2.3,
+        "after_assumed_cost_target_gain_krw": 4641022.800000002,
+        "planned_stop_loss_after_assumed_cost_krw": 2175632.100000005,
+        "stress_reference_price_krw": 21450,
+        "stress_loss_after_assumed_cost_krw": 5687242.199999998,
+        "scenario_not_forecast": true,
+        "probability": null
+      },
+      "entry_invalid_if": [
+        "current_KRX_price_at_or_below_23150",
+        "current_KRX_price_at_or_above_26450",
+        "confirmed_restriction_or_thesis_invalidation",
+        "duplicate_order_or_unreconciled_account_change"
+      ],
+      "take_profit_order_quantity_basis": "actual_sellable_remaining_quantity_not_planned_quantity",
+      "price_source": {
+        "source": "https://polling.finance.naver.com/api/realtime/domestic/stock/263860",
+        "observed_at": "2026-10-07T10:45:50+09:00",
+        "price_type": "pure_KRX_polling_datas_primary_fields_excluding_NXT_and_integrated",
+        "price_krw": 24150
+      }
+    },
+    {
+      "plan_id": "plan-20261007-samg-01",
+      "version": 1,
+      "status": "READY",
+      "generated_at": "2026-10-07T10:45:58+09:00",
+      "information_as_of": "2026-10-07T10:45:50+09:00",
+      "code": "419530",
+      "name": "SAMG엔터",
+      "market": "KRX_KOSDAQ",
+      "side": "buy",
+      "order_type": "limit",
+      "entry_limit_price_krw": 20350,
+      "take_profit_price_krw": 23450,
+      "stop_loss_price_krw": 18850,
+      "quantity": 2332,
+      "total_planned_quantity": 2332,
+      "quantity_is_total_not_additional": true,
+      "notional_krw": 47456200,
+      "entry_submission_window": {
+        "start": "2026-10-07T10:46:00+09:00",
+        "end_exclusive": "2026-10-07T14:30:00+09:00"
+      },
+      "unfilled_buy_cancel_at": "2026-10-07T15:00:00+09:00",
+      "first_review_at": "2026-10-07T11:00:00+09:00",
+      "next_review_at": "2026-10-07T11:00:00+09:00",
+      "mandatory_first_day_reconciliation_at": "2026-10-07T15:00:00+09:00",
+      "exit_deadline": "2026-10-08T15:10:00+09:00",
+      "exit_evaluation_mode": "manual_on_observation",
+      "evaluation_mode_applies_from": "first_actual_fill_after_publication",
+      "monitoring_risk_acknowledged": true,
+      "manual_window": {
+        "start": "2026-10-07T15:00:00+09:00",
+        "end": "2026-10-07T15:15:00+09:00"
+      },
+      "capital_source_report": "account-report-20261007-0001",
+      "cash_source_report": "account-report-20261007-0001",
+      "source": "data/days/2026-10-07.md",
+      "detail_reference": "data/days/2026-10-07.md",
+      "policy_reference": "policy-20261002-prize-objective-flexibility",
+      "entry_execution_allowed": true,
+      "order_submission_confirmed": false,
+      "actual_filled_quantity": null,
+      "orders_submitted_by_assistant": false,
+      "plan_is_not_order_or_fill": true,
+      "execution": {
+        "entry": "Fixed limit once in dated window; no chase. Account report 0001 is 10:35 pre-order state.",
+        "take_profit": "Limit for actual filled sellable shares only; reconcile existing sell quantities before adding uncovered shares.",
+        "exit": "Cancel unfilled buys and existing take-profit sells, reconcile race fills, then market sell actual sellable remainder on observed stop or final deadline.",
+        "next_day": "At 2026-10-08 10:00 reconcile actual holdings and sell orders; replace expired take-profit only for uncovered actual remainder; no next-day buy carry."
+      },
+      "metrics": {
+        "target_percent": 15.233415233415236,
+        "stop_width_percent": 7.3710073710073765,
+        "reward_risk_ratio": 2.066666666666667,
+        "after_assumed_cost_target_gain_krw": 7109615.040000003,
+        "planned_stop_loss_after_assumed_cost_krw": 3595057.8399999975,
+        "stress_reference_price_krw": 17770,
+        "stress_loss_after_assumed_cost_krw": 6108328.863999997,
+        "scenario_not_forecast": true,
+        "probability": null
+      },
+      "entry_invalid_if": [
+        "current_KRX_price_at_or_below_18850",
+        "current_KRX_price_at_or_above_23450",
+        "confirmed_restriction_or_thesis_invalidation",
+        "duplicate_order_or_unreconciled_account_change"
+      ],
+      "take_profit_order_quantity_basis": "actual_sellable_remaining_quantity_not_planned_quantity",
+      "price_source": {
+        "source": "https://polling.finance.naver.com/api/realtime/domestic/stock/419530",
+        "observed_at": "2026-10-07T10:45:50+09:00",
+        "price_type": "pure_KRX_polling_datas_primary_fields_excluding_NXT_and_integrated",
+        "price_krw": 21300
+      }
+    }
+  ]
 }
